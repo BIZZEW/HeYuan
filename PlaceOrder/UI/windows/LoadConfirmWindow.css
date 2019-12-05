@@ -1,0 +1,399 @@
+ #LoadConfirmWindow {
+halign:center;
+height:fill;
+width:fill;
+layout:vbox;
+valign:TOP;
+}
+ #viewPage0 {
+halign:center;
+height:fill;
+background:#F5F5F5;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #navigatorbar0 {
+halign:LEFT;
+}
+ #button0 {
+height:44;
+width:44;
+background-image:icon_back.png;
+}
+ #label0 {
+halign:center;
+weight:1;
+height:fill;
+width:0;
+font-family:default;
+valign:center;
+}
+ #imgbtn_scanCode {
+icon-height:35;
+height:35;
+font-size:10;
+width:35;
+icon-background-image:scaner.png;
+icon-width:35;
+icon-pressed-image:scaner.png;
+font-pressed-color:#e50011;
+icon-text-spacing:3;
+}
+ #wloginpanel {
+halign:center;
+height:fill;
+layout:vbox;
+background:#f2f2f2;
+width:fill;
+valign:TOP;
+}
+ #panel0 {
+margin-right:5;
+halign:LEFT;
+height:35;
+layout:hbox;
+background:#ffffff;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label1 {
+halign:left;
+height:fill;
+widthWrap:75.0;
+color:#000000;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #lbl_factory {
+halign:right;
+height:fill;
+color:#000000;
+font-size:14;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel1 {
+margin-right:5;
+halign:LEFT;
+height:35;
+layout:hbox;
+background:#ffffff;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label3 {
+halign:left;
+height:fill;
+widthWrap:75.0;
+color:#000000;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #txt_msbillcode {
+padding-left:4;
+halign:RIGHT;
+height:33;
+weight:1;
+color:#167ef8;
+font-size:17;
+background:#ffffff;
+width:0;
+font-family:default;
+}
+ #imgbtn_selectMSBill {
+icon-height:15;
+height:33;
+font-size:10;
+width:33;
+icon-background-image:arrow.png;
+icon-width:15;
+icon-pressed-image:arrow.png;
+font-pressed-color:#e50011;
+icon-text-spacing:3;
+}
+ #panel2 {
+margin-right:5;
+halign:LEFT;
+height:35;
+layout:hbox;
+background:#ffffff;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label4 {
+halign:left;
+height:fill;
+widthWrap:45.0;
+color:#000000;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #txt_vlicense {
+padding-left:4;
+halign:RIGHT;
+height:33;
+color:#167ef8;
+font-size:17;
+background:#ffffff;
+width:fill;
+font-family:default;
+}
+ #panel3 {
+margin-right:5;
+halign:LEFT;
+height:35;
+layout:hbox;
+background:#ffffff;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label5 {
+halign:left;
+height:fill;
+widthWrap:45.0;
+color:#000000;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #lbl_customer {
+halign:right;
+height:fill;
+color:#000000;
+font-size:14;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel4 {
+margin-right:5;
+halign:LEFT;
+height:35;
+background:#ffffff;
+layout:hbox;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label7 {
+halign:left;
+height:fill;
+widthWrap:45.0;
+color:#000000;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #label8 {
+halign:right;
+height:fill;
+color:#000000;
+font-size:14;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel5 {
+margin-right:5;
+halign:CENTER;
+height:130;
+layout:hbox;
+background:#ffffff;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #panel6 {
+margin-right:2;
+halign:center;
+height:fill;
+weight:1;
+layout:vbox;
+width:0;
+margin-left:5;
+margin-top:5;
+valign:TOP;
+}
+ #label2 {
+halign:center;
+height:25;
+color:#000000;
+font-size:14;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #picker_bz {
+height:100;
+width:fill;
+}
+ #panel11 {
+margin-right:5;
+halign:center;
+height:fill;
+weight:1;
+layout:vbox;
+width:0;
+margin-left:2;
+margin-top:5;
+valign:TOP;
+}
+ #label6 {
+halign:center;
+height:25;
+color:#000000;
+font-size:14;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #picker_zxlx {
+height:100;
+width:fill;
+}
+ #panel7 {
+margin-right:5;
+halign:LEFT;
+height:35;
+background:#ffffff;
+layout:hbox;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label9 {
+halign:left;
+height:fill;
+widthWrap:60.0;
+color:#000000;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #panel8 {
+halign:LEFT;
+height:35;
+background:#ffffff;
+layout:hbox;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label10 {
+halign:left;
+height:fill;
+widthWrap:45.0;
+color:#000000;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #panel9 {
+margin-right:5;
+halign:LEFT;
+height:35;
+background:#ffffff;
+layout:hbox;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label11 {
+halign:center;
+height:fill;
+widthWrap:75.0;
+color:#000000;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #lbl_canfetchnum {
+halign:right;
+height:fill;
+weight:1;
+color:#000000;
+font-size:14;
+width:0;
+font-family:default;
+valign:center;
+}
+ #label13 {
+margin-right:5;
+halign:center;
+height:fill;
+widthWrap:15.0;
+color:#000000;
+font-size:14;
+width:wrap;
+margin-left:5;
+font-family:default;
+valign:center;
+}
+ #panel10 {
+margin-right:5;
+halign:LEFT;
+height:35;
+background:#ffffff;
+layout:hbox;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label14 {
+halign:left;
+height:fill;
+widthWrap:75.0;
+color:#000000;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #number0 {
+padding-right:4;
+padding-left:4;
+halign:RIGHT;
+height:fill;
+color:#167ef8;
+font-size:17;
+background:#ffffff;
+width:fill;
+font-family:default;
+}
+ #btn_confirm {
+margin-right:5;
+height:40;
+color:#ffffff;
+background:#ff0000;
+width:fill;
+margin-left:5;
+margin-top:5;
+font-pressed-color:#ffffff;
+}

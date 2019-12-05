@@ -1,0 +1,222 @@
+#LongtermOrderList {
+    halign: center;
+    height: fill;
+    width: fill;
+    layout: vbox;
+    valign: TOP;
+}
+
+#viewPage0 {
+    halign: center;
+    height: fill;
+    background: #F7F8F8;
+    layout: vbox;
+    width: fill;
+    valign: TOP;
+}
+
+#navigatorbar0 {
+    halign: LEFT;
+    font-size: 16;
+    background: #13b5f2;
+}
+
+#button0 {
+    padding-left: 20;
+    halign: left;
+    height: 44;
+    pressed-image: btn_back_touch;
+    width: 88;
+    background-image: btn_back;
+}
+
+#panel0 {
+    halign: center;
+    height: fill;
+    layout: vbox;
+    width: fill;
+    valign: TOP;
+}
+
+#panel1 {
+    halign: center;
+    height: fill;
+    layout: vbox;
+    width: fill;
+    valign: TOP;
+}
+
+#list_all {
+    halign: center;
+    height: 0;
+    weight: 1;
+    layout: vbox;
+    width: fill;
+    valign: TOP;
+}
+
+#panel5 {
+    border-bottom-width: 1;
+    halign: LEFT;
+    height: 110;
+    layout: hbox;
+    background: #FFFFFF;
+    width: fill;
+    valign: center;
+    border-bottom-color: #C7C7C7;
+}
+
+#panel6 {
+    margin-right: 5;
+    halign: LEFT;
+    height: fill;
+    layout: hbox;
+    width: 44;
+    margin-left: 5;
+    valign: center;
+}
+
+#image0 {
+    height: 44;
+    width: 44;
+}
+
+#panel7 {
+    halign: left;
+    height: fill;
+    layout: vbox;
+    width: 210;
+    valign: CENTER;
+}
+
+#label2 {
+    halign: left;
+    height: 20.0;
+    color: #363636;
+    font-size: 14;
+    width: fill;
+    font-family: default;
+    valign: center;
+}
+
+#label3 {
+    halign: left;
+    height: 20;
+    color: #707070;
+    font-size: 12;
+    width: fill;
+    font-family: default;
+    valign: center;
+}
+
+#label1 {
+    halign: left;
+    height: 20;
+    color: #707070;
+    font-size: 13;
+    width: fill;
+    font-family: default;
+    valign: center;
+}
+
+#label6 {
+    halign: left;
+    height: 20;
+    color: #707070;
+    font-size: 13;
+    width: fill;
+    font-family: default;
+    valign: center;
+}
+
+#label7 {
+    halign: left;
+    height: 20;
+    color: #000000;
+    font-size: 14;
+    width: fill;
+    font-family: default;
+    valign: center;
+}
+
+#panel8 {
+    margin-right: 5;
+    halign: center;
+    height: fill;
+    layout: vbox;
+    width: fill;
+    valign: CENTER;
+}
+
+#panel18 {
+    halign: CENTER;
+    height: 20;
+    background: #FFFFFF;
+    layout: hbox;
+    width: fill;
+    margin-top: 5;
+    valign: center;
+}
+
+#label5 {
+    halign: center;
+    height: fill;
+    widthWrap: 16.0;
+    color: #000000;
+    font-size: 14;
+    width: wrap;
+    font-family: default;
+    valign: center;
+}
+
+#label8 {
+    halign: center;
+    height: fill;
+    widthWrap: 30.0;
+    color: #000000;
+    font-size: 14;
+    width: wrap;
+    font-family: default;
+    valign: center;
+}
+
+#label4 {
+    halign: center;
+    height: 20;
+    color: #000000;
+    font-size: 14;
+    width: fill;
+    font-family: default;
+    margin-top: 5;
+    valign: center;
+}
+
+#label25 {
+    halign: center;
+    height: 20;
+    color: #000000;
+    font-size: 14;
+    width: fill;
+    margin-bottom: 5;
+    font-family: default;
+    margin-top: 5;
+    valign: center;
+}
+
+#pnl_bottom {
+    halign: CENTER;
+    height: 40;
+    layout: hbox;
+    width: fill;
+    valign: center;
+}
+
+#lbl_pagenum {
+    halign: center;
+    height: 20;
+    color: #000000;
+    font-size: 14;
+    width: fill;
+    font-family: default;
+    valign: center;
+}

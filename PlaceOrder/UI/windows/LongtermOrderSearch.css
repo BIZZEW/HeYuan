@@ -1,0 +1,399 @@
+#LongtermOrderSearch {
+    halign: center;
+    height: fill;
+    width: fill;
+    layout: vbox;
+    valign: TOP;
+}
+
+#viewPage0 {
+    halign: center;
+    height: fill;
+    layout: vbox;
+    width: fill;
+    valign: TOP;
+}
+
+#panel1 {
+    halign: LEFT;
+    height: 50;
+    layout: hbox;
+    width: fill;
+    valign: top;
+}
+
+#navigatorbar0 {
+    halign: CENTER;
+    height: 50;
+    background: #13b5f2;
+    font-size: 16;
+}
+
+#back {
+    padding-left: 20;
+    halign: left;
+    height: 44;
+    pressed-image: btn_back_touch;
+    width: 88;
+    background-image: btn_back;
+}
+
+#label0 {
+    halign: center;
+    height: fill;
+    weight: 1;
+    color: #000000;
+    font-size: 14;
+    width: 0;
+    font-family: default;
+    valign: center;
+}
+
+#panel0 {
+    halign: center;
+    height: fill;
+    layout: vbox;
+    width: fill;
+    margin-top: 10;
+    valign: TOP;
+}
+
+#panel6 {
+    margin-right: 15;
+    halign: LEFT;
+    height: 30;
+    layout: hbox;
+    background: #fcfcfc;
+    width: fill;
+    margin-left: 15;
+    margin-top: 5;
+    valign: center;
+}
+
+#label4 {
+    halign: left;
+    height: fill;
+    widthWrap: 75.0;
+    color: #585858;
+    font-size: 14;
+    background: #fcfcfc;
+    width: wrap;
+    font-family: default;
+    valign: center;
+}
+
+#div_stockorg {
+    halign: LEFT;
+    height: fill;
+    layout: hbox;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+}
+
+#lbl_stockorg {
+    halign: right;
+    height: fill;
+    weight: 1;
+    color: #000000;
+    font-size: 14;
+    background: #fcfcfc;
+    width: 0;
+    font-family: default;
+    valign: center;
+}
+
+#image1 {
+    margin-right: 5;
+    height: 16;
+    width: 11;
+    margin-left: 5;
+}
+
+#startdatepanel {
+    margin-right: 15;
+    halign: CENTER;
+    height: 30;
+    layout: hbox;
+    background: #fcfcfc;
+    width: fill;
+    margin-left: 15;
+    margin-top: 5;
+    valign: center;
+}
+
+#startdatelabel {
+    halign: left;
+    height: fill;
+    widthWrap: 75.0;
+    color: #585858;
+    font-size: 14;
+    background: #fcfcfc;
+    width: wrap;
+    font-family: default;
+    valign: center;
+}
+
+#begindate {
+    padding-left: 4;
+    halign: RIGHT;
+    height: fill;
+    color: #167ef8;
+    font-size: 15;
+    background: #fcfcfc;
+    width: fill;
+    font-family: default;
+}
+
+#overdatepanel {
+    margin-right: 15;
+    halign: CENTER;
+    height: 30;
+    layout: hbox;
+    background: #fcfcfc;
+    width: fill;
+    margin-left: 15;
+    margin-top: 5;
+    valign: center;
+}
+
+#overdatelabel {
+    halign: left;
+    height: fill;
+    widthWrap: 75.0;
+    color: #585858;
+    font-size: 14;
+    background: #fcfcfc;
+    width: wrap;
+    font-family: default;
+    valign: center;
+}
+
+#enddate {
+    padding-left: 4;
+    halign: RIGHT;
+    height: fill;
+    color: #167ef8;
+    font-size: 15;
+    background: #fcfcfc;
+    width: fill;
+    font-family: default;
+}
+
+#panel10 {
+    margin-right: 15;
+    halign: LEFT;
+    height: 30;
+    layout: hbox;
+    background: #fcfcfc;
+    width: fill;
+    margin-left: 15;
+    margin-top: 5;
+    valign: center;
+}
+
+#label5 {
+    halign: left;
+    height: fill;
+    widthWrap: 60.0;
+    color: #585858;
+    font-size: 14;
+    background: #fcfcfc;
+    width: wrap;
+    font-family: default;
+    valign: center;
+}
+
+#div_supplier {
+    halign: LEFT;
+    height: fill;
+    layout: hbox;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+}
+
+#txt_supplier {
+    halign: right;
+    height: fill;
+    weight: 1;
+    color: #000000;
+    font-size: 14;
+    background: #fcfcfc;
+    width: 0;
+    font-family: default;
+    valign: center;
+}
+
+#image3 {
+    margin-right: 5;
+    height: 16;
+    width: 11;
+    margin-left: 5;
+}
+
+#panel4 {
+    margin-right: 15;
+    halign: CENTER;
+    height: 30;
+    layout: hbox;
+    background: #f7f7f7;
+    width: fill;
+    margin-left: 15;
+    margin-top: 5;
+    valign: center;
+}
+
+#label2 {
+    halign: left;
+    height: fill;
+    widthWrap: 45.0;
+    color: #585858;
+    font-size: 14;
+    background: #fcfcfc;
+    width: wrap;
+    font-family: default;
+    valign: center;
+}
+
+#changegoodsname {
+    halign: LEFT;
+    height: fill;
+    background: #fcfcfc;
+    layout: hbox;
+    width: fill;
+    valign: center;
+}
+
+#panel8 {
+    halign: LEFT;
+    height: fill;
+    layout: hbox;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+}
+
+#lbl_material {
+    halign: right;
+    height: fill;
+    weight: 1;
+    color: #000000;
+    font-size: 14;
+    background: #fcfcfc;
+    width: 0;
+    font-family: default;
+    valign: center;
+}
+
+#image0 {
+    margin-right: 5;
+    height: 16;
+    width: 11;
+    margin-left: 5;
+}
+
+#panel5 {
+    margin-right: 15;
+    halign: LEFT;
+    height: 30;
+    layout: hbox;
+    background: #fcfcfc;
+    width: fill;
+    margin-left: 15;
+    margin-top: 5;
+    valign: center;
+}
+
+#label3 {
+    halign: left;
+    height: fill;
+    color: #585858;
+    font-size: 14;
+    background: #fcfcfc;
+    width: 75.0;
+    font-family: default;
+    valign: center;
+}
+
+#panel9 {
+    halign: LEFT;
+    height: fill;
+    layout: hbox;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+}
+
+#txt_vlicense {
+    padding-left: 4;
+    halign: RIGHT;
+    height: fill;
+    weight: 1;
+    color: #167ef8;
+    font-size: 14;
+    background: #ffffff;
+    width: 0;
+    font-family: default;
+}
+
+#image2 {
+    margin-right: 5;
+    height: 16;
+    width: 11;
+    margin-left: 5;
+}
+
+#panel3 {
+    margin-right: 15;
+    halign: CENTER;
+    height: 30;
+    layout: hbox;
+    background: #fcfcfc;
+    width: fill;
+    margin-left: 15;
+    margin-top: 5;
+    valign: center;
+}
+
+#label1 {
+    halign: left;
+    height: fill;
+    widthWrap: 60.0;
+    color: #585858;
+    font-size: 14;
+    background: #fcfcfc;
+    width: wrap;
+    font-family: default;
+    valign: center;
+}
+
+#panel2 {
+    halign: LEFT;
+    height: fill;
+    background: #fcfcfc;
+    layout: hbox;
+    width: fill;
+    valign: center;
+}
+
+#txt_billcode {
+    padding-left: 4;
+    halign: RIGHT;
+    height: fill;
+    weight: 1;
+    color: #167ef8;
+    font-size: 14;
+    background: #fcfcfc;
+    width: 0;
+    font-family: default;
+}
+
+#btn_search {
+    height: 40;
+    border-radius: 3;
+    color: #FFFFFF;
+    background: #ff8000;
+    width: 150;
+    margin-top: 20;
+}

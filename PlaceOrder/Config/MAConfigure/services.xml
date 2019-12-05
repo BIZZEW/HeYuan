@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gateway>
+	<service id="loginService" provider="nclocator" method="checkLogin"
+			returntype="java.util.Map">
+		<properties>
+			<params>user:string|password:string|ncusercode:string|ncuserpassword:string</params>
+			<interface>com.yun.mobile.itf.IMobileTrainServItf</interface>
+			<security>false</security>
+		</properties>
+		<ds-set>
+			<datasource name="nc65hlg" />
+		</ds-set>
+	</service>
+	<service id="appUserService" provider="nclocator" method="callServiceAction"
+			returntype="java.lang.String">
+		<properties>
+			<params>action:int|param:string|ncusercode:string|ncuserpassword:string</params>
+			<interface>nc.pubitf.bd.poapp.user.ma.IAppUserService4MA</interface>
+			<security>false</security>
+		</properties>
+		<ds-set>
+			<datasource name="nc65hlg" />
+		</ds-set>
+	</service>
+	<service id="refInfoService" provider="nclocator" method="callServiceAction"
+			returntype="java.lang.String">
+		<properties>
+			<params>action:int|param:string|ncusercode:string|ncuserpassword:string</params>
+			<interface>nc.pubitf.bd.poapp.ma.IRefInfoService4MA</interface>
+			<security>false</security>
+		</properties>
+		<ds-set>
+			<datasource name="nc65hlg" />
+		</ds-set>
+	</service>
+	<service id="deliveryOrderService" provider="nclocator" method="callServiceAction"
+			returntype="java.lang.String">
+		<properties>
+			<params>action:int|param:string|ncusercode:string|ncuserpassword:string</params>
+			<interface>nc.pubitf.bd.poapp.placeorder.ma.IDeliveryOrderService4MA</interface>
+			<security>false</security>
+		</properties>
+		<ds-set>
+			<datasource name="nc65hlg" />
+		</ds-set>
+	</service>
+	<service id="receiveOrderService" provider="nclocator" method="callServiceAction"
+			returntype="java.lang.String">
+		<properties>
+			<params>action:int|param:string|ncusercode:string|ncuserpassword:string</params>
+			<interface>nc.pubitf.bd.poapp.placeorder.ma.IReceiveOrderService4MA</interface>
+			<security>false</security>
+		</properties>
+		<ds-set>
+			<datasource name="nc65hlg" />
+		</ds-set>
+	</service>
+</gateway>

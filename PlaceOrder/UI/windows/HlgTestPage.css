@@ -1,0 +1,194 @@
+ #HlgTestPage {
+halign:center;
+height:fill;
+width:fill;
+layout:vbox;
+valign:TOP;
+}
+ #viewPage0 {
+halign:center;
+height:fill;
+layout:vbox;
+background:#F5F5F5;
+width:fill;
+valign:TOP;
+}
+ #wloginpanel {
+halign:center;
+height:fill;
+layout:vbox;
+background:#f2f2f2;
+width:fill;
+valign:TOP;
+}
+ #wuserpanel {
+margin-right:10;
+halign:LEFT;
+height:44;
+layout:hbox;
+width:fill;
+margin-left:10;
+margin-top:10;
+valign:center;
+background-image:textboxbg.png;
+}
+ #wuserimg {
+height:44;
+width:48;
+}
+ #wusertext {
+halign:LEFT;
+height:44;
+color:#a6a6a6;
+width:fill;
+font-size:14;
+font-family:default;
+}
+ #wpasspanel {
+margin-right:10;
+halign:LEFT;
+height:44;
+layout:hbox;
+width:fill;
+margin-left:10;
+valign:center;
+background-image:textboxbg.png;
+}
+ #wpassimg {
+height:44;
+width:48;
+}
+ #wpasstext {
+halign:LEFT;
+height:44;
+color:#a6a6a6;
+width:fill;
+font-size:14;
+font-family:default;
+}
+ #wloginbutton {
+margin-right:10;
+height:44;
+width:fill;
+margin-left:10;
+}
+ #txt_ip {
+padding-left:4;
+halign:LEFT;
+height:44;
+color:#167ef8;
+font-size:17;
+background:#ffffff;
+width:200;
+font-family:default;
+}
+ #txt_port {
+padding-left:4;
+halign:LEFT;
+height:44;
+color:#167ef8;
+font-size:17;
+background:#ffffff;
+width:200;
+font-family:default;
+}
+ #pnl_btns {
+halign:LEFT;
+height:35;
+layout:hbox;
+width:300;
+valign:center;
+}
+ #btn_createtbl {
+margin-right:10;
+height:30;
+width:40;
+margin-left:10;
+}
+ #btn_add {
+margin-right:10;
+height:30;
+width:40;
+margin-left:10;
+}
+ #btn_query {
+margin-right:10;
+height:30;
+width:40;
+margin-left:10;
+}
+ #btn_test {
+margin-right:10;
+height:30;
+width:40;
+margin-left:10;
+}
+ #panel2 {
+halign:LEFT;
+height:35;
+layout:hbox;
+width:300;
+margin-top:10;
+valign:center;
+}
+ #lbl_availgoods {
+halign:left;
+height:35;
+color:#000000;
+font-size:14;
+width:270;
+font-family:default;
+valign:center;
+}
+ #lbl_goagref {
+halign:center;
+height:35;
+color:#000000;
+font-size:14;
+width:30;
+font-family:default;
+valign:center;
+}
+ #panel0 {
+halign:LEFT;
+height:80;
+layout:hbox;
+width:fill;
+margin-bottom:5;
+margin-top:5;
+valign:center;
+}
+ #picker_license1 {
+margin-right:1;
+height:80;
+width:80;
+margin-left:1;
+}
+ #textbox0 {
+margin-right:1;
+halign:CENTER;
+height:40;
+color:#167ef8;
+background:#ffffff;
+font-size:17;
+width:40;
+margin-left:1;
+font-family:default;
+}
+ #textbox1 {
+margin-right:1;
+halign:CENTER;
+height:40;
+color:#167ef8;
+background:#ffffff;
+font-size:17;
+width:40;
+margin-left:1;
+font-family:default;
+}
+ #btn_picker {
+margin-right:1;
+height:40;
+width:40;
+margin-left:1;
+}

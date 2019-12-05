@@ -1,0 +1,147 @@
+ #BalanceQuerySearch{
+halign:center;
+height:fill;
+width:fill;
+layout:vbox;
+}
+ #viewPage0 {
+halign:center;
+height:fill;
+layout:vbox;
+background:#F5F5F5;
+width:fill;
+}
+ #navigatorbar0 {
+padding-right:8;
+padding-left:8;
+height:44.0;
+color:#000000;
+font-size:17;
+layout:hbox;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #button0 {
+padding-left:20;
+hAlign:left;
+height:44;
+color:#e50011;
+pressed-image:btn_back_touch;
+font-size:17;
+width:88;
+font-family:default;
+font-pressed-color:#f2adb2;
+vAlign:center;
+background-image:btn_back;
+}
+ #label0 {
+hAlign:center;
+weight:1;
+height:fill;
+color:#000000;
+font-size:14;
+width:0;
+font-family:default;
+vAlign:center;
+}
+ #wloginpanel {
+halign:center;
+height:fill;
+width:fill;
+layout:vbox;
+background:#f2f2f2;
+}
+ #wuserpanel {
+margin-right:10;
+height:44;
+width:fill;
+layout:hbox;
+margin-left:10;
+margin-top:10;
+valign:center;
+background-image:textboxbg.png;
+}
+ #wuserlabel {
+hAlign:left;
+height:fill;
+color:#333333;
+width:72;
+font-size:17;
+margin-left:24;
+font-family:default;
+vAlign:center;
+}
+ #wusertext {
+padding-left:24;
+halign:LEFT;
+height:44;
+color:#167ef8;
+width:fill;
+font-size:17;
+font-family:default;
+}
+ #wpasspanel {
+margin-right:10;
+height:44;
+width:fill;
+layout:hbox;
+margin-left:10;
+valign:center;
+background-image:textboxbg.png;
+}
+ #wpasslabel {
+hAlign:left;
+height:fill;
+color:#333333;
+width:72;
+font-size:17;
+margin-left:24;
+font-family:default;
+vAlign:center;
+}
+ #wpasstext {
+padding-left:24;
+halign:LEFT;
+height:44;
+color:#167ef8;
+width:fill;
+font-size:17;
+font-family:default;
+}
+ #wrepasspanel {
+margin-right:10;
+height:44;
+width:fill;
+layout:hbox;
+margin-left:10;
+valign:center;
+background-image:textboxbg.png;
+}
+ #wrepasslabel {
+hAlign:left;
+height:fill;
+color:#333333;
+width:72;
+font-size:17;
+margin-left:24;
+font-family:default;
+vAlign:center;
+}
+ #wrepasstext {
+padding-left:24;
+halign:LEFT;
+height:44;
+color:#167ef8;
+width:fill;
+font-size:17;
+font-family:default;
+}
+ #wregisterbutton {
+margin-right:10;
+height:44;
+width:fill;
+margin-left:10;
+margin-top:20;
+}
+

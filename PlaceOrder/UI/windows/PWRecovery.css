@@ -1,0 +1,160 @@
+ #PWRecovery {
+halign:center;
+height:fill;
+width:fill;
+layout:vbox;
+valign:TOP;
+}
+ #viewPage0 {
+halign:center;
+height:fill;
+width:fill;
+background:#F5F5F5;
+layout:vbox;
+valign:TOP;
+}
+ #panel0 {
+border-bottom-width:2;
+halign:LEFT;
+height:50;
+layout:hbox;
+width:fill;
+valign:center;
+border-bottom-color:#808080;
+}
+ #navigatorbar0 {
+halign:CENTER;
+height:fill;
+font-size:16;
+background:#13b5f2;
+valign:bottom;
+}
+ #button0 {
+padding-left:20;
+halign:left;
+pressed-image:btn_back_touch;
+width:88;
+valign:bottom;
+background-image:btn_back.png;
+}
+ #label0 {
+halign:center;
+height:fill;
+weight:1;
+color:#000000;
+font-size:14;
+width:0;
+font-family:default;
+valign:bottom;
+}
+ #panel1 {
+margin-right:25;
+halign:LEFT;
+height:40;
+border-radius:15;
+layout:hbox;
+width:fill;
+margin-left:25;
+margin-top:30;
+valign:center;
+}
+ #txt_telephone {
+padding-left:4;
+halign:LEFT;
+height:fill;
+color:#167ef8;
+background:#ffffff;
+font-size:15;
+width:fill;
+font-family:default;
+}
+ #panel2 {
+margin-right:25;
+halign:LEFT;
+height:40;
+border-radius:15;
+layout:hbox;
+width:fill;
+margin-left:25;
+margin-top:15;
+valign:center;
+}
+ #txt_vcode {
+padding-left:4;
+halign:LEFT;
+height:44;
+weight:1;
+color:#167ef8;
+background:#ffffff;
+font-size:15;
+width:0;
+font-family:default;
+}
+ #sendmessage {
+background-color-dis:#808080;
+height:30;
+color:#ffffff;
+background:#ff8040;
+font-size:15;
+width:90;
+margin-left:10;
+}
+ #panel3 {
+margin-right:25;
+halign:LEFT;
+height:40;
+layout:hbox;
+width:fill;
+margin-left:25;
+margin-top:15;
+valign:center;
+}
+ #txt_password1 {
+padding-left:4;
+halign:LEFT;
+height:44;
+weight:1;
+color:#167ef8;
+background:#ffffff;
+font-size:15;
+width:0;
+font-family:default;
+}
+ #txt_password2 {
+padding-left:4;
+margin-right:25;
+halign:LEFT;
+height:44;
+color:#167ef8;
+background:#ffffff;
+font-size:15;
+width:fill;
+margin-left:25;
+font-family:default;
+margin-top:15;
+}
+ #panel4 {
+margin-right:25;
+halign:LEFT;
+height:40;
+border-radius:5;
+layout:hbox;
+width:fill;
+margin-left:25;
+margin-top:15;
+valign:center;
+}
+ #button2 {
+border-bottom-width:2;
+border-radius:5;
+width:fill;
+border-bottom-color:#edf1fe;
+border-top-width:2;
+border-left-color:#edf1fe;
+border-top-color:#edf1fe;
+color:#ffffff;
+border-right-color:#edf1fe;
+background:#13b5f2;
+border-right-width:1;
+border-left-width:1;
+}

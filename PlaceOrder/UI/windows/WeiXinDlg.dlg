@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window xmlns:web="http://www.yonyou.com/uapmobile/dsl" controller="WeiXinDlgController" namespace="com.yonyou.placeorder" id="WeiXinDlg" type="dialog">  
+    <import ref="WeiXinDlg.css" type="css"/>  
+    <link href="sys/theme.css" type="text/css"/>  
+    <div id="viewPage0"> 
+        <div id="panel0"> 
+            <label id="label0">分享到</label> 
+        </div>  
+        <div id="panel1"> 
+            <div id="panel3"> 
+                <input istogglebutton="false" onclick="shareInFriendsCircle()" checked="false" id="imagebutton0" type="imagebutton" value="微信朋友圈" class="imagebuttonclass"/>  
+                <input istogglebutton="false" onclick="shareToFriend()" checked="false" id="imagebutton1" type="imagebutton" value="微信好友" class="imagebuttonclass"/> 
+            </div>  
+            <div id="panel4"> 
+                <input istogglebutton="false" onclick="this.imagebutton0_onclick()" checked="false" id="imagebutton2" type="imagebutton" value="微信朋友圈" class="imagebuttonclass"/>  
+                <input istogglebutton="false" onclick="this.imagebutton1_onclick()" checked="false" id="imagebutton3" type="imagebutton" value="微信好友" class="imagebuttonclass"/> 
+            </div> 
+        </div>  
+        <div id="panel2"> 
+            <label onclick="closeOnClicck()" id="label1">取消</label> 
+        </div> 
+    </div> 
+</window>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<windows> 
+  <DeliveryOrder> 
+    <file name="DeliveryOrderDetail.dsl"/>  
+    <file name="DeliveryOrderList.dsl"/>  
+    <file name="DeliveryOrderSearch.dsl"/>  
+    <file name="SalesOrderList.dsl"/> 
+  </DeliveryOrder>  
+  <SalesAdvOrder> 
+    <file name="SalesAdvOrderList.dsl"/>  
+    <file name="SalesAdvOrderDetail.dsl"/>  
+    <file name="OrderListbrowsing.dsl"/>  
+    <file name="SalesAdvOrderSearch.dsl"/> 
+  </SalesAdvOrder>  
+  <ReceiveOrder> 
+    <file name="ReceiveOrderSearch.dsl"/>  
+    <file name="ReceiveOrders.dsl"/>  
+    <file name="ReceiveOrderList.dsl"/>  
+    <file name="ReceiveOrderDetail.dsl"/>  
+    <file name="PurchaseOrderList.dsl"/> 
+  </ReceiveOrder>  
+  <CanBeDeleted> 
+    <file name="CustomerProfiles.dsl"/>  
+    <file name="PurchaseOrderSearch.dsl"/>  
+    <file name="SalesOrderSearch.dsl"/>  
+    <file name="Usercenter.dsl"/>  
+    <file name="HlgTestPage.dsl"/>  
+    <file name="HomePage3.dsl"/>  
+    <file name="MaSet.dsl"/> 
+  </CanBeDeleted>  
+  <User> 
+    <file name="Login.dsl"/>  
+    <file name="Register.dsl"/>  
+    <file name="PersonalCenter.dsl"/>  
+    <file name="HomePage.dsl"/>  
+    <file name="ModifyPassword.dsl"/>  
+    <file name="PWRecovery.dsl"/> 
+  </User>  
+  <System> 
+    <file name="Matest.dsl"/>  
+    <file name="BaseInfoRefWindow.dsl"/>  
+    <file name="NotifcationWindow.dsl"/>  
+    <file name="WebViewWindow.dsl"/>  
+    <file name="ConfirmDlg.dlg"/>  
+    <file name="ProvinceAbbrDlg.dlg"/>  
+    <file name="SelfInputDialog.dlg"/>  
+    <file name="WeiXinDlg.dlg"/> 
+  </System>  
+  <WarehouseConfirm> 
+    <file name="LoadConfirmWindow.dsl"/>  
+    <file name="UnloadConfirmWindow.dsl"/>  
+    <file name="ShareTwoCodeAndInfo.dsl"/> 
+  </WarehouseConfirm>  
+  <BalanceQuery> 
+    <file name="BalanceQuerySearch.dsl"/>  
+    <file name="BalanceQuerySelectCustomer.dsl"/>  
+    <file name="BalanceQueryList.dsl"/> 
+  </BalanceQuery>  
+  <MyCredit> 
+    <file name="MyCredit.dsl"/> 
+  </MyCredit>  
+  <LongtermOrder> 
+    <file name="LongtermOrderDetail.dsl"/>  
+    <file name="LongtermOrderSearch.dsl"/>  
+    <file name="LongtermOrderList.dsl"/> 
+  </LongtermOrder>  
+  <StatisticalReport> 
+    <file name="StatisticalReportMenu.dsl"/>  
+    <file name="Overallreport.dsl"/>  
+    <file name="Detailreport.dsl"/>  
+    <file name="BIllreport.dsl"/>  
+    <file name="ReportSearch.dsl"/>
+  </StatisticalReport> 
+</windows>

@@ -1,0 +1,170 @@
+ #Login {
+layout:vbox;
+width:fill;
+valign:TOP;
+halign:center;
+height:fill;
+}
+ #viewPage0 {
+layout:vbox;
+background:#77d7ff;
+width:fill;
+valign:CENTER;
+halign:center;
+height:fill;
+}
+ #wloginpanel {
+layout:vbox;
+background:#f6f6f6;
+width:fill;
+valign:TOP;
+halign:center;
+height:fill;
+}
+ #panel2 {
+layout:vbox;
+background:#13b5f2;
+width:fill;
+valign:TOP;
+halign:center;
+height:200;
+}
+ #panel0 {
+layout:hbox;
+background:#13b5f2;
+width:fill;
+valign:center;
+halign:LEFT;
+height:45;
+}
+ #image0 {
+padding-top:20;
+width:180;
+height:99;
+}
+ #label3 {
+color:#ffffff;
+heightWrap:20.0;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+margin-top:5;
+halign:center;
+widthWrap:45.0;
+height:wrap;
+}
+ #wuserpanel {
+border-bottom-color:#c0c0c0;
+valign:center;
+margin-right:25;
+layout:hbox;
+margin-left:25;
+background:#f5f5f5;
+border-bottom-width:1;
+width:fill;
+margin-top:10;
+halign:LEFT;
+margin-bottom:5;
+height:44;
+}
+ #wuserimg {
+width:48;
+height:44;
+}
+ #wusertext {
+color:#a6a6a6;
+width:fill;
+font-size:14;
+font-family:default;
+halign:LEFT;
+height:44;
+}
+ #wpasspanel {
+layout:hbox;
+margin-left:25;
+border-bottom-color:#c0c0c0;
+background:#f5f5f5;
+border-bottom-width:1;
+width:fill;
+valign:center;
+halign:LEFT;
+margin-bottom:10;
+margin-right:25;
+height:44;
+}
+ #wpassimg {
+width:48;
+height:44;
+}
+ #wpasstext {
+color:#a6a6a6;
+width:fill;
+font-size:14;
+font-family:default;
+halign:LEFT;
+height:44;
+}
+ #wforgetpasspanel {
+layout:hbox;
+margin-left:10;
+background:#f5f5f5;
+width:fill;
+valign:center;
+halign:CENTER;
+margin-right:10;
+height:35;
+}
+ #remeber {
+check-off-image:checkbox_noselect.png;
+check-on-image:checkbox_select.png;
+width:35;
+height:35;
+}
+ #wforgetpasslabel {
+color:#9b9b9b;
+heightWrap:20.0;
+width:140;
+font-size:14;
+valign:center;
+halign:left;
+height:wrap;
+}
+ #label1 {
+color:#9b9b9b;
+heightWrap:20.0;
+width:140;
+font-size:14;
+valign:center;
+halign:right;
+margin-right:10;
+height:wrap;
+}
+ #wloginbutton {
+font-pressed-color:#0000ff;
+border-bottom-color:#edf1fe;
+border-top-width:2;
+border-right-width:1;
+border-left-color:#edf1fe;
+font-size:18;
+border-right-color:#edf1fe;
+border-left-width:1;
+margin-right:25;
+border-radius:5;
+margin-left:25;
+background:#13b5f2;
+border-bottom-width:2;
+width:fill;
+border-top-color:#edf1fe;
+margin-top:15;
+height:40;
+}
+ #panel1 {
+layout:hbox;
+background:#f5f5f5;
+width:fill;
+valign:center;
+margin-top:15;
+halign:LEFT;
+height:30;
+}

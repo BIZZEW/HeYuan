@@ -1,0 +1,160 @@
+ #Matest {
+halign:center;
+height:fill;
+width:fill;
+layout:vbox;
+valign:TOP;
+}
+ #viewPage0 {
+halign:center;
+height:fill;
+background:#F5F5F5;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #wloginpanel {
+halign:center;
+height:fill;
+layout:vbox;
+background:#f2f2f2;
+width:fill;
+valign:TOP;
+}
+ #navigatorbar0 {
+halign:LEFT;
+font-size:16;
+background:#13b5f2;
+font-family:monospace;
+}
+ #button0 {
+padding-left:20;
+halign:left;
+height:44;
+color:#e50011;
+pressed-image:btn_back_touch;
+width:88;
+font-pressed-color:#f2adb2;
+background-image:btn_back;
+}
+ #label2 {
+halign:center;
+height:fill;
+weight:1;
+color:#000000;
+font-size:14;
+width:0;
+font-family:default;
+valign:center;
+}
+ #wotherpanel {
+margin-right:25;
+halign:left;
+height:250;
+layout:vbox;
+width:fill;
+margin-left:25;
+valign:TOP;
+}
+ #panel0 {
+border-bottom-width:1;
+padding-right:10;
+halign:CENTER;
+height:40;
+layout:hbox;
+background:#ffffff;
+width:fill;
+margin-top:30;
+valign:center;
+border-bottom-color:#e2e2e2;
+}
+ #label0 {
+halign:center;
+height:10;
+color:#e50011;
+font-size:14;
+width:10;
+font-family:default;
+valign:center;
+}
+ #label1 {
+margin-right:4;
+halign:left;
+height:fill;
+color:#333333;
+font-size:15;
+width:16.0;
+font-family:default;
+valign:center;
+}
+ #textip {
+padding-left:4;
+padding-right:4;
+halign:RIGHT;
+height:fill;
+weight:1;
+color:#666666;
+font-size:14;
+width:0;
+margin-left:10;
+font-family:default;
+}
+ #panel2 {
+border-bottom-width:1;
+padding-right:10;
+halign:CENTER;
+height:40;
+layout:hbox;
+background:#ffffff;
+width:fill;
+margin-top:15;
+valign:center;
+border-bottom-color:#e2e2e2;
+}
+ #label4 {
+halign:center;
+height:10;
+color:#e50011;
+font-size:14;
+width:10;
+font-family:default;
+valign:center;
+}
+ #label5 {
+margin-right:4;
+halign:left;
+height:fill;
+widthWrap:43.0;
+color:#333333;
+font-size:15;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #textport {
+padding-left:4;
+padding-right:4;
+halign:RIGHT;
+height:fill;
+weight:1;
+color:#666666;
+font-size:14;
+width:0;
+font-family:default;
+}
+ #wloginbutton {
+border-bottom-width:2;
+border-radius:5;
+width:fill;
+border-bottom-color:#edf1fe;
+border-top-width:2;
+border-top-color:#edf1fe;
+border-left-color:#edf1fe;
+height:40;
+border-right-color:#edf1fe;
+background:#13b5f2;
+font-size:17;
+border-right-width:1;
+margin-top:15;
+border-left-width:1;
+}

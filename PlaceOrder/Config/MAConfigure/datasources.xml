@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dsset>
+	<datasource id="nc65hlg" isdefault="true">
+		<url>http://127.0.0.1:80</url>
+		<ncds>design</ncds>
+	</datasource>
+	<datasource id="nc65test" isdefault="true">
+		<url>http://172.19.4.90:8081</url>
+		<ncds>trnc65</ncds>
+	</datasource>
+</dsset>

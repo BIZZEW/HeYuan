@@ -1,0 +1,13 @@
+.login-panel {
+    background: rgba(68, 68, 68, 0.9);
+    border-radius: 8px;
+    box-shadow: 3px 5px 10px rgba(82, 82, 82, 0.74);
+    width: 96%;
+    position: fixed;
+    bottom: 8px;
+}
+
+.login-form {
+    padding: 5px;
+    color: #525252;
+}

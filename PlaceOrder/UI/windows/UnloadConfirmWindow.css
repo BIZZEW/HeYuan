@@ -1,0 +1,409 @@
+ #UnloadConfirmWindow {
+halign:center;
+height:fill;
+width:fill;
+layout:vbox;
+valign:TOP;
+}
+ #viewPage0 {
+halign:center;
+height:fill;
+width:fill;
+background:#F5F5F5;
+layout:vbox;
+valign:TOP;
+}
+ #navigatorbar0 {
+halign:LEFT;
+}
+ #button0 {
+height:44;
+width:44;
+background-image:icon_back.png;
+}
+ #label0 {
+halign:center;
+weight:1;
+height:fill;
+width:0;
+font-family:default;
+valign:center;
+}
+ #btn_scanCode {
+height:44;
+background-image:scaner.png;
+}
+ #wloginpanel {
+halign:center;
+height:fill;
+background:#f2f2f2;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #panel0 {
+margin-right:5;
+halign:LEFT;
+height:35;
+background:#ffffff;
+layout:hbox;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label1 {
+halign:center;
+height:fill;
+widthWrap:90.0;
+color:#000000;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #txt_pocode {
+padding-left:4;
+halign:RIGHT;
+height:fill;
+color:#167ef8;
+background:#ffffff;
+font-size:17;
+width:fill;
+font-family:default;
+}
+ #panel1 {
+margin-right:5;
+halign:LEFT;
+height:35;
+background:#ffffff;
+layout:hbox;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label2 {
+halign:center;
+height:fill;
+widthWrap:60.0;
+color:#000000;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #label3 {
+halign:right;
+height:fill;
+color:#000000;
+font-size:14;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel2 {
+margin-right:5;
+halign:LEFT;
+height:35;
+background:#ffffff;
+layout:hbox;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label4 {
+halign:center;
+height:fill;
+widthWrap:75.0;
+color:#000000;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #label5 {
+halign:right;
+height:fill;
+color:#000000;
+font-size:14;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel3 {
+halign:LEFT;
+height:35;
+background:#ffffff;
+layout:hbox;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label6 {
+halign:center;
+height:fill;
+widthWrap:45.0;
+color:#000000;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #label7 {
+halign:right;
+height:fill;
+color:#000000;
+font-size:14;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel4 {
+margin-right:5;
+halign:LEFT;
+height:35;
+background:#ffffff;
+layout:hbox;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label8 {
+halign:center;
+height:fill;
+widthWrap:45.0;
+color:#000000;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #label9 {
+halign:right;
+height:fill;
+color:#000000;
+font-size:14;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel5 {
+margin-right:5;
+halign:LEFT;
+height:35;
+background:#ffffff;
+layout:hbox;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label10 {
+halign:center;
+height:fill;
+widthWrap:75.0;
+color:#000000;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #label11 {
+halign:right;
+height:fill;
+color:#000000;
+font-size:14;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel6 {
+margin-right:5;
+halign:LEFT;
+height:35;
+background:#ffffff;
+layout:hbox;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label12 {
+halign:center;
+height:fill;
+widthWrap:75.0;
+color:#000000;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #label13 {
+halign:right;
+height:fill;
+weight:1;
+color:#000000;
+font-size:14;
+width:0;
+font-family:default;
+valign:center;
+}
+ #imagebutton0 {
+icon-height:15;
+height:33;
+font-size:10;
+width:33;
+icon-background-image:arrow.png;
+icon-width:15;
+icon-pressed-image:arrow.png;
+icon-text-spacing:3;
+}
+ #panel7 {
+margin-right:5;
+halign:LEFT;
+height:35;
+background:#ffffff;
+layout:hbox;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label14 {
+halign:left;
+height:fill;
+weight:1;
+color:#000000;
+font-size:14;
+width:0;
+font-family:default;
+valign:center;
+}
+ #cbox_xhfs1 {
+height:33;
+width:33;
+check-on-image:checkbox_select;
+check-off-image:checkbox_noselect;
+}
+ #label15 {
+margin-right:5;
+halign:left;
+height:fill;
+color:#000000;
+font-size:14;
+width:40;
+font-family:default;
+valign:center;
+}
+ #cbox_xhfs2 {
+height:33;
+width:33;
+check-on-image:checkbox_select;
+check-off-image:checkbox_noselect;
+}
+ #label16 {
+margin-right:30;
+halign:left;
+height:fill;
+color:#000000;
+font-size:14;
+width:40;
+font-family:default;
+valign:center;
+}
+ #panel8 {
+margin-right:5;
+halign:LEFT;
+height:35;
+background:#ffffff;
+layout:hbox;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label17 {
+halign:center;
+height:fill;
+widthWrap:45.0;
+color:#000000;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #textbox1 {
+padding-left:4;
+halign:RIGHT;
+height:fill;
+color:#167ef8;
+background:#ffffff;
+font-size:17;
+width:fill;
+font-family:default;
+}
+ #panel9 {
+margin-right:5;
+halign:LEFT;
+height:35;
+background:#ffffff;
+layout:hbox;
+width:fill;
+margin-left:5;
+margin-top:5;
+valign:center;
+}
+ #label18 {
+halign:left;
+height:fill;
+weight:1;
+color:#000000;
+font-size:14;
+width:0;
+font-family:default;
+valign:center;
+}
+ #cbox_zcth1 {
+height:33;
+width:33;
+check-on-image:checkbox_select;
+check-off-image:checkbox_noselect;
+}
+ #label19 {
+margin-right:5;
+halign:left;
+height:fill;
+color:#000000;
+font-size:14;
+width:40;
+font-family:default;
+valign:center;
+}
+ #cbox_zcth2 {
+height:33;
+width:33;
+check-on-image:checkbox_select;
+check-off-image:checkbox_noselect;
+}
+ #label20 {
+margin-right:30;
+halign:left;
+height:fill;
+color:#000000;
+font-size:14;
+width:40;
+font-family:default;
+valign:center;
+}
+ #wregisterbutton {
+margin-right:10;
+height:40;
+background:#ff0000;
+width:fill;
+margin-left:10;
+margin-top:20;
+}

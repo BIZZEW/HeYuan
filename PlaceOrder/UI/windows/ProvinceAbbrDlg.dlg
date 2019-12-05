@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window xmlns:web="http://www.yonyou.com/uapmobile/dsl" id="ProvinceAbbrDlg" canvaswidth="300" canvasheight="200" orientation="horizontal" controller="ProvinceAbbrDlgController" type="dialog" namespace="com.yonyou.placeorder">
+    <import ref="ProvinceAbbrDlg.css" type="css"/>
+    <link type="text/css" href="sys/theme.css"/>
+    <div id="viewPage0">
+        <div id="panel0">
+            <input id="button0" value="京" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button1" value="津" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button2" value="冀" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button3" value="晋" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button4" value="蒙" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button5" value="辽" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button6" value="吉" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/> 
+        </div>
+        <div id="panel1">
+            <input id="button7" value="黑" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button8" value="沪" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button9" value="苏" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button10" value="浙" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button11" value="皖" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button12" value="闽" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button13" value="赣" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/> 
+        </div>
+        <div id="panel2">
+            <input id="button14" value="鲁" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button15" value="豫" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button16" value="鄂" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button17" value="湘" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button18" value="粤" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button19" value="桂" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button20" value="琼" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/> 
+        </div>
+        <div id="panel3">
+            <input id="button21" value="川" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button22" value="贵" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button23" value="云" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button24" value="渝" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button25" value="藏" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button26" value="陕" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button27" value="甘" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/> 
+        </div>
+        <div id="panel4">
+            <input id="button28" value="青" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button29" value="宁" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <input id="button30" value="新" class="textbtnclass" onclick="this.prcbtnOnclick()" type="button"/>
+            <label id="label0"/>
+            <input id="button31" value="取消" class="textbtnclass" onclick="this.cancelOnclick()" type="button"/> 
+        </div> 
+    </div> 
+</window>

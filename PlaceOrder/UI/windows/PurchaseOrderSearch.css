@@ -1,0 +1,265 @@
+ #PurchaseOrderSearch {
+halign:center;
+height:fill;
+width:fill;
+layout:vbox;
+valign:TOP;
+}
+ #viewPage0 {
+halign:center;
+height:fill;
+layout:vbox;
+background:#f7f7f7;
+width:fill;
+valign:TOP;
+}
+ #panel1 {
+halign:LEFT;
+height:50;
+layout:hbox;
+width:fill;
+valign:top;
+}
+ #navigatorbar0 {
+halign:CENTER;
+height:50;
+font-size:16;
+background:#13b5f2;
+}
+ #back {
+padding-left:20;
+halign:left;
+height:44;
+pressed-image:btn_back_touch;
+width:88;
+background-image:btn_back;
+}
+ #label0 {
+halign:center;
+height:fill;
+weight:1;
+color:#000000;
+font-size:14;
+width:0;
+font-family:default;
+valign:center;
+}
+ #imagebutton0 {
+icon-height:25;
+height:44;
+font-size:10;
+width:44;
+icon-background-image:home2.png;
+icon-width:25;
+icon-pressed-image:home2.png;
+icon-text-spacing:3;
+}
+ #panel0 {
+halign:center;
+height:fill;
+background:#f7f7f7;
+layout:vbox;
+width:fill;
+margin-top:30;
+valign:TOP;
+}
+ #pnl_query1 {
+margin-right:25;
+halign:CENTER;
+height:40;
+background:#f7f7f7;
+layout:hbox;
+width:fill;
+margin-left:25;
+valign:center;
+}
+ #lbl_begindate {
+margin-right:5;
+halign:center;
+height:fill;
+widthWrap:60.0;
+color:#585858;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #begindate {
+padding-left:4;
+halign:LEFT;
+height:40;
+color:#167ef8;
+background:#fcfcfc;
+font-size:15;
+width:fill;
+font-family:default;
+}
+ #pnl_query2 {
+margin-right:25;
+halign:CENTER;
+height:40;
+background:#f7f7f7;
+layout:hbox;
+width:fill;
+margin-left:25;
+margin-top:10;
+valign:center;
+}
+ #lbl_enddate {
+margin-right:5;
+halign:center;
+height:fill;
+widthWrap:60.0;
+color:#585858;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #enddate {
+padding-left:4;
+halign:LEFT;
+height:40;
+color:#167ef8;
+background:#fcfcfc;
+font-size:15;
+width:fill;
+font-family:default;
+}
+ #pnl_query3 {
+margin-right:25;
+halign:CENTER;
+height:40;
+background:#f7f7f7;
+layout:hbox;
+width:fill;
+margin-left:25;
+margin-top:10;
+valign:center;
+}
+ #lbl_billcode {
+margin-right:5;
+halign:center;
+height:fill;
+color:#585858;
+font-size:14;
+width:60.0;
+font-family:default;
+valign:center;
+}
+ #pnl_order {
+halign:LEFT;
+height:fill;
+background:#fcfcfc;
+layout:hbox;
+width:fill;
+valign:center;
+}
+ #orderno {
+padding-left:4;
+halign:LEFT;
+height:40;
+color:#167ef8;
+background:#fcfcfc;
+font-size:15;
+width:fill;
+font-family:default;
+}
+ #pnl_query4 {
+margin-right:25;
+halign:CENTER;
+height:40;
+background:#f7f7f7;
+layout:hbox;
+width:fill;
+margin-left:25;
+margin-top:10;
+valign:center;
+}
+ #lbl_material {
+margin-right:5;
+halign:center;
+height:fill;
+widthWrap:60.0;
+color:#585858;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #pnl_selectmat {
+halign:LEFT;
+height:fill;
+background:#fcfcfc;
+layout:hbox;
+width:fill;
+valign:center;
+}
+ #lbl_matname {
+halign:left;
+height:40;
+weight:9;
+color:#000000;
+font-size:14;
+width:0;
+font-family:default;
+valign:center;
+}
+ #img_goselectmat {
+height:15;
+widthWrap:15.0;
+width:wrap;
+}
+ #pnl_query5 {
+margin-right:25;
+halign:CENTER;
+height:40;
+background:#f7f7f7;
+layout:hbox;
+width:fill;
+margin-left:25;
+margin-top:10;
+valign:center;
+}
+ #lbl_queryvlience {
+margin-right:5;
+halign:center;
+height:fill;
+widthWrap:60.0;
+color:#585858;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #queryvlicense {
+padding-left:4;
+halign:LEFT;
+height:40;
+color:#167ef8;
+background:#fcfcfc;
+font-size:15;
+width:fill;
+font-family:default;
+}
+ #search {
+border-bottom-width:1;
+halign:CENTER;
+height:40;
+border-radius:8;
+layout:hbox;
+background:#ff8f59;
+width:150;
+border-right-width:1;
+margin-top:25;
+valign:center;
+border-left-width:1;
+border-top-width:1;
+}
+ #btn_search {
+weight:1;
+border-radius:3;
+color:#ffffff;
+width:0;
+font-pressed-color:#13b5f2;
+}

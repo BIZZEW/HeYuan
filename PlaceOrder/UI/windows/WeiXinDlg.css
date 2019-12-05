@@ -1,0 +1,118 @@
+ #WeiXinDlg {
+layout:vbox;
+width:fill;
+valign:TOP;
+halign:center;
+height:160;
+}
+ #viewPage0 {
+layout:vbox;
+background:#F5F5F5;
+width:fill;
+valign:CENTER;
+halign:left;
+height:160;
+}
+ #panel0 {
+layout:hbox;
+border-bottom-color:#c0c0c0;
+border-bottom-width:1;
+width:fill;
+valign:center;
+halign:CENTER;
+height:40;
+}
+ #label0 {
+color:#808080;
+heightWrap:26.0;
+width:wrap;
+font-size:18;
+valign:center;
+font-family:default;
+halign:center;
+widthWrap:57.0;
+height:wrap;
+}
+ #panel1 {
+layout:vbox;
+width:fill;
+valign:TOP;
+halign:center;
+height:70;
+}
+ #panel3 {
+layout:hbox;
+width:fill;
+valign:center;
+margin-top:10;
+halign:LEFT;
+height:65;
+}
+ #imagebutton0 {
+icon-pressed-image:icon_friend.png;
+icon-height:35;
+font-size:10;
+icon-text-spacing:3;
+icon-background-image:icon_friend.png;
+width:64;
+icon-width:35;
+height:fill;
+}
+ #imagebutton1 {
+icon-pressed-image:icon_weixin.png;
+icon-height:35;
+font-size:10;
+icon-text-spacing:3;
+icon-background-image:icon_weixin.png;
+width:64;
+icon-width:35;
+height:fill;
+}
+ #panel4 {
+layout:hbox;
+width:fill;
+valign:center;
+margin-top:10;
+halign:LEFT;
+height:60.0;
+}
+ #imagebutton2 {
+icon-pressed-image:icon_friend.png;
+icon-height:25;
+font-size:10;
+icon-text-spacing:3;
+icon-background-image:icon_friend.png;
+width:64;
+icon-width:25;
+height:49;
+}
+ #imagebutton3 {
+icon-pressed-image:icon_weixin.png;
+icon-height:25;
+font-size:10;
+icon-text-spacing:3;
+icon-background-image:icon_weixin.png;
+width:64;
+icon-width:25;
+height:49;
+}
+ #panel2 {
+layout:hbox;
+border-top-width:1;
+width:fill;
+border-top-color:#c0c0c0;
+valign:center;
+halign:CENTER;
+height:55;
+}
+ #label1 {
+color:#0080ff;
+heightWrap:26.0;
+width:wrap;
+font-size:18;
+valign:center;
+font-family:default;
+halign:center;
+widthWrap:38.0;
+height:wrap;
+}

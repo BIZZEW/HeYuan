@@ -1,0 +1,932 @@
+#LongtermOrderDetail {
+    layout: vbox;
+    width: fill;
+    valign: TOP;
+    halign: center;
+    height: fill;
+}
+
+#startdatepanel {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 35;
+}
+
+#startdatelabel {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 90.0;
+    height: fill;
+}
+
+#denddate {
+    color: #737373;
+    width: fill;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: right;
+    height: fill;
+}
+
+#viewPage0 {
+    layout: vbox;
+    background: #f7f7f7;
+    width: fill;
+    valign: TOP;
+    halign: center;
+    height: wrap;
+}
+
+#navigatorbar0 {
+    background: #13b5f2;
+    font-size: 16;
+    halign: LEFT;
+    height: 35;
+}
+
+#button0 {
+    width: 115;
+    font-size: 17;
+    background-image: btn_back;
+    halign: right;
+    padding-right: 3;
+    height: 35;
+    pressed-image: btn_back_touch;
+}
+
+#goodsname {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 5;
+    halign: LEFT;
+    margin-right: 5;
+    height: 30;
+}
+
+#label0 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 90.0;
+    height: fill;
+}
+
+#panel14 {
+    layout: hbox;
+    background: #FFFFFF;
+    width: fill;
+    valign: center;
+    halign: LEFT;
+    height: fill;
+}
+
+#lbl_orderno {
+    color: #737373;
+    font-weight: bold;
+    width: 0;
+    weight: 1;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: right;
+    height: fill;
+}
+
+#imgbtn_selectorder {
+    icon-pressed-image: arrow.png;
+    icon-height: 15;
+    font-size: 10;
+    icon-text-spacing: 3;
+    icon-background-image: arrow.png;
+    width: 15;
+    icon-width: 15;
+    height: 15;
+}
+
+#pnl_posimple {
+    layout: hbox;
+    width: fill;
+    valign: center;
+    halign: LEFT;
+    height: 30;
+}
+
+#lbl_posimple {
+    color: #000000;
+    width: 0;
+    weight: 1;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: center;
+    height: fill;
+}
+
+#btn_showdetail {
+    border-bottom-color: #c0c0c0;
+    border-top-width: 1;
+    border-right-width: 1;
+    border-left-color: #c0c0c0;
+    border-right-color: #c0c0c0;
+    border-left-width: 1;
+    border-radius: 5;
+    border-bottom-width: 1;
+    width: 30;
+    border-top-color: #c0c0c0;
+    height: 30;
+}
+
+#pnl_podetail {
+    layout: vbox;
+    display: none;
+    width: fill;
+    valign: TOP;
+    halign: center;
+    height: 190;
+}
+
+#panel6 {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 30;
+}
+
+#label14 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 105.0;
+    height: fill;
+}
+
+#lbl_dbilldate {
+    color: #737373;
+    width: fill;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: right;
+    height: fill;
+}
+
+#panel4 {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 30;
+}
+
+#label6 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 75.0;
+    height: fill;
+}
+
+#lbl_porgname {
+    color: #737373;
+    width: fill;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: right;
+    height: fill;
+}
+
+#panel7 {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 35;
+}
+
+#label10 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 75.0;
+    height: fill;
+}
+
+#lbl_rcvstockorg {
+    color: #737373;
+    width: fill;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: right;
+    height: fill;
+}
+
+#panel0 {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 30;
+}
+
+#label1 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 60.0;
+    height: fill;
+}
+
+#lbl_splrname {
+    color: #737373;
+    width: fill;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: right;
+    height: fill;
+}
+
+#panel9 {
+    layout: hbox;
+    margin-left: 5;
+    border-bottom-color: #eeeeee;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 30;
+}
+
+#label2 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 45.0;
+    height: fill;
+}
+
+#lbl_matname {
+    color: #737373;
+    width: fill;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: right;
+    height: fill;
+}
+
+#panel3 {
+    layout: hbox;
+    margin-left: 5;
+    border-bottom-color: #eeeeee;
+    background: #ffffff;
+    border-bottom-width: 1;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 30;
+}
+
+#label7 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 45.0;
+    height: fill;
+}
+
+#lbl_remainnum {
+    font-pressed-color: #459dfe;
+    color: #737373;
+    width: 0;
+    weight: 1;
+    font-size: 14;
+    valign: center;
+    halign: right;
+    padding-right: 4;
+}
+
+#label8 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: center;
+    widthWrap: 15.0;
+    height: fill;
+}
+
+#pnl_rcvorder {
+    layout: vbox;
+    width: fill;
+    valign: TOP;
+    margin-top: 3;
+    halign: center;
+    height: 220;
+}
+
+#panel15 {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 35;
+}
+
+#label18 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 75.0;
+    height: fill;
+}
+
+#lbl_rcvordercode {
+    color: #737373;
+    width: fill;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: right;
+    height: fill;
+}
+
+#panel16 {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 35;
+}
+
+#label20 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 90.0;
+    height: fill;
+}
+
+#lbl_rcvorderdate {
+    color: #737373;
+    width: fill;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: right;
+    height: fill;
+}
+
+#panel5 {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 35;
+}
+
+#label12 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 75.0;
+    height: fill;
+}
+
+#num_yfjz {
+    color: #167ef8;
+    background: #ffffff;
+    padding-left: 4;
+    width: 0;
+    weight: 1;
+    font-size: 16;
+    font-family: default;
+    halign: RIGHT;
+    padding-right: 4;
+    height: 32;
+}
+
+#lbl_dw1 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: center;
+    widthWrap: 30.0;
+    height: fill;
+}
+
+#panel11 {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 35;
+}
+
+#label17 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 60.0;
+    height: fill;
+}
+
+#num_dhl {
+    color: #167ef8;
+    background: #ffffff;
+    padding-left: 4;
+    width: 0;
+    weight: 1;
+    font-size: 17;
+    font-family: default;
+    halign: RIGHT;
+    padding-right: 4;
+    height: 32;
+}
+
+#lbl_dw2 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: center;
+    widthWrap: 30.0;
+    height: fill;
+}
+
+#panel2 {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    border-top-color: #e3e3e3;
+    valign: center;
+    margin-top: 3;
+    halign: LEFT;
+    margin-right: 5;
+    height: 35;
+}
+
+#label5 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 75.0;
+    height: fill;
+}
+
+#lbl_fmtvlicense {
+    color: #737373;
+    width: 0;
+    weight: 1;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: right;
+    margin-right: 5;
+    height: fill;
+}
+
+#btn_freelicense {
+    font-pressed-color: #ffffff;
+    color: #ffffff;
+    background: #0080ff;
+    width: wrap;
+    widthWrap: 54.0;
+    height: 33;
+}
+
+#img_goselectcar {
+    icon-pressed-image: arrow.png;
+    icon-height: 15;
+    font-size: 10;
+    icon-text-spacing: 3;
+    background: #FFFFFF;
+    icon-background-image: arrow.png;
+    width: 32;
+    icon-width: 15;
+    height: 32;
+}
+
+#txt_vlicense {
+    margin-left: 5;
+    color: #167ef8;
+    background: #ffffff;
+    padding-left: 4;
+    display: none;
+    width: fill;
+    font-size: 17;
+    font-family: default;
+    halign: RIGHT;
+    margin-right: 5;
+    height: 35;
+}
+
+#panel1 {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 35;
+}
+
+#label3 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: center;
+    widthWrap: 75.0;
+    height: fill;
+}
+
+#panel10 {
+    layout: hbox;
+    width: fill;
+    valign: center;
+    halign: LEFT;
+    height: fill;
+}
+
+#panel12 {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 35;
+}
+
+#panel1222 {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 35;
+}
+
+#label32 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: center;
+    widthWrap: 75.0;
+    height: fill;
+}
+
+#panel102 {
+    layout: hbox;
+    width: fill;
+    valign: center;
+    halign: LEFT;
+    height: fill;
+}
+
+#txt_drivername {
+    color: #167ef8;
+    background: #ffffff;
+    padding-left: 4;
+    width: 0;
+    weight: 1;
+    font-size: 15;
+    font-family: default;
+    halign: RIGHT;
+    height: fill;
+}
+
+#txt_transporter {
+    color: #167ef8;
+    background: #ffffff;
+    padding-left: 4;
+    width: 0;
+    weight: 1;
+    font-size: 15;
+    font-family: default;
+    halign: RIGHT;
+    height: fill;
+}
+
+#invisiblelabel {
+    color: #167ef8;
+    background: #ffffff;
+    padding-left: 4;
+    width: 0;
+    weight: 1;
+    font-size: 15;
+    font-family: default;
+    halign: RIGHT;
+    height: fill;
+}
+
+#imgbtn_selectDriver {
+    icon-pressed-image: arrow.png;
+    icon-height: 15;
+    font-size: 10;
+    icon-text-spacing: 3;
+    background: #FFFFFF;
+    icon-background-image: arrow.png;
+    width: 32;
+    icon-width: 15;
+    height: 32;
+}
+
+#imgbtn_selectTransporter {
+    icon-pressed-image: arrow.png;
+    icon-height: 15;
+    font-size: 10;
+    icon-text-spacing: 3;
+    background: #FFFFFF;
+    icon-background-image: arrow.png;
+    width: 32;
+    icon-width: 15;
+    height: 32;
+}
+
+#panel122 {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 35;
+}
+
+#label11 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: center;
+    widthWrap: 60.0;
+    height: fill;
+}
+
+#label112 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: center;
+    widthWrap: 60.0;
+    height: fill;
+}
+
+#txt_drivertelephone {
+    color: #167ef8;
+    background: #ffffff;
+    padding-left: 4;
+    width: fill;
+    font-size: 15;
+    font-family: default;
+    halign: RIGHT;
+    height: fill;
+}
+
+#container_no {
+    color: #167ef8;
+    background: #ffffff;
+    padding-left: 4;
+    width: fill;
+    font-size: 15;
+    font-family: default;
+    halign: RIGHT;
+    height: fill;
+}
+
+#panel13 {
+    layout: hbox;
+    margin-left: 5;
+    border-bottom-color: #eeeeee;
+    background: #ffffff;
+    border-bottom-width: 1;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 35;
+}
+
+#label16 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: center;
+    widthWrap: 75.0;
+    height: fill;
+}
+
+#txt_driverid {
+    color: #167ef8;
+    background: #ffffff;
+    padding-left: 4;
+    width: fill;
+    font-size: 15;
+    font-family: default;
+    halign: RIGHT;
+    height: fill;
+}
+
+#panel8 {
+    layout: hbox;
+    width: fill;
+    valign: center;
+    margin-top: 5;
+    halign: CENTER;
+    margin-bottom: 20;
+    height: 35;
+}
+
+#btn_submit {
+    color: #ffffff;
+    margin-right: 4;
+    border-radius: 8;
+    margin-left: 4;
+    background-color-dis: #808080;
+    background: #ff8f59;
+    width: 110;
+}
+
+#btn_invalid {
+    color: #ffffff;
+    margin-right: 4;
+    border-radius: 8;
+    margin-left: 4;
+    background-color-dis: #808080;
+    background: #ff8f59;
+    width: 110;
+}
+
+#btn_share {
+    font-pressed-color: #ffffff;
+    color: #ffffff;
+    margin-right: 4;
+    border-radius: 8;
+    margin-left: 4;
+    background-color-dis: #808080;
+    background: #ff8f59;
+    width: 110;
+}
+
+#pnl_share {
+    layout: hbox;
+    background: #ffffff;
+    display: none;
+    width: fill;
+    valign: center;
+    halign: CENTER;
+    height: 70;
+}
+
+#imgbtn_wechatshare {
+    icon-pressed-image: button_image_touch;
+    icon-height: 60;
+    font-size: 10;
+    icon-text-spacing: 3;
+    margin-right: 10;
+    margin-left: 10;
+    icon-background-image: wechatshare.png;
+    width: 60;
+    icon-width: 60;
+    height: 60;
+}
+
+#imgbtn_qqshare {
+    icon-pressed-image: qqshare.png;
+    icon-height: 60;
+    font-size: 10;
+    icon-text-spacing: 3;
+    margin-right: 10;
+    margin-left: 10;
+    icon-background-image: qqshare.png;
+    width: 60;
+    icon-width: 60;
+    height: 60;
+}
+
+#imgbtn_msgshare {
+    icon-pressed-image: messageshare.png;
+    icon-height: 60;
+    font-size: 10;
+    icon-text-spacing: 3;
+    margin-right: 10;
+    margin-left: 10;
+    icon-background-image: messageshare.png;
+    width: 60;
+    icon-width: 60;
+    height: 60;
+}

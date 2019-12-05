@@ -1,0 +1,250 @@
+ #OrderListbrowsing {
+halign:center;
+height:fill;
+width:fill;
+layout:vbox;
+valign:TOP;
+}
+ #viewPage0 {
+halign:center;
+height:wrap;
+layout:vbox;
+background:#f7f7f7;
+width:fill;
+valign:TOP;
+}
+ #navigatorbar0 {
+halign:LEFT;
+height:35;
+background:#13b5f2;
+font-size:14;
+}
+ #back {
+padding-right:3;
+halign:right;
+height:35;
+pressed-image:btn_back_touch;
+font-size:17;
+width:110;
+background-image:btn_back;
+}
+ #panel4 {
+halign:CENTER;
+height:55;
+layout:hbox;
+background:#ffffff;
+width:fill;
+valign:center;
+}
+ #image0 {
+height:35;
+width:35;
+margin-left:12;
+}
+ #label0 {
+halign:center;
+height:22;
+color:#313131;
+font-size:15;
+width:55;
+font-family:default;
+valign:center;
+}
+ #goods {
+halign:left;
+height:fill;
+widthWrap:38.0;
+color:#494949;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #panel9 {
+halign:CENTER;
+height:50;
+layout:hbox;
+background:#ffffff;
+width:fill;
+valign:top;
+}
+ #weight {
+halign:right;
+height:fill;
+widthWrap:63.0;
+color:#4d4d4d;
+font-size:45;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #label6 {
+halign:center;
+height:fill;
+color:#000000;
+font-size:14;
+width:15;
+font-family:default;
+valign:bottom;
+}
+ #panel10 {
+halign:CENTER;
+height:35;
+layout:hbox;
+background:#ffffff;
+width:fill;
+valign:center;
+}
+ #stutas {
+halign:center;
+height:wrap;
+widthWrap:45.0;
+color:#5e5e5e;
+heightWrap:20.0;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #panel0 {
+halign:LEFT;
+height:35;
+layout:hbox;
+background:#ffffff;
+width:fill;
+valign:center;
+}
+ #label1 {
+halign:left;
+height:fill;
+color:#414141;
+font-size:14;
+width:75;
+margin-left:15;
+font-family:default;
+valign:center;
+}
+ #billcode {
+margin-right:15;
+halign:right;
+height:fill;
+color:#737373;
+font-size:14;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel1 {
+halign:LEFT;
+height:35;
+layout:hbox;
+background:#ffffff;
+width:fill;
+valign:center;
+}
+ #label3 {
+halign:left;
+height:fill;
+color:#414141;
+font-size:14;
+width:75;
+margin-left:15;
+font-family:default;
+valign:center;
+}
+ #sender {
+margin-right:15;
+halign:right;
+height:fill;
+color:#737373;
+font-size:14;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel2 {
+halign:LEFT;
+height:35;
+layout:hbox;
+background:#ffffff;
+width:fill;
+valign:center;
+}
+ #label5 {
+halign:left;
+height:fill;
+color:#414141;
+font-size:14;
+width:75;
+margin-left:15;
+font-family:default;
+valign:center;
+}
+ #customer {
+margin-right:15;
+halign:right;
+height:fill;
+color:#737373;
+font-size:14;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel6 {
+halign:LEFT;
+height:35;
+background:#ffffff;
+layout:hbox;
+width:fill;
+valign:center;
+}
+ #label14 {
+halign:left;
+height:fill;
+color:#414141;
+font-size:14;
+width:75;
+margin-left:15;
+font-family:default;
+valign:center;
+}
+ #carno {
+margin-right:15;
+halign:right;
+height:fill;
+color:#737373;
+font-size:14;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel7 {
+border-top-color:#d8d8d8;
+halign:LEFT;
+height:55;
+background:#ffffff;
+layout:hbox;
+width:fill;
+valign:center;
+border-top-width:1;
+}
+ #label15 {
+halign:left;
+height:fill;
+color:#414141;
+font-size:14;
+width:75;
+margin-left:15;
+font-family:default;
+valign:center;
+}
+ #billdate {
+margin-right:15;
+halign:right;
+height:fill;
+color:#737373;
+font-size:14;
+width:fill;
+font-family:default;
+valign:center;
+}

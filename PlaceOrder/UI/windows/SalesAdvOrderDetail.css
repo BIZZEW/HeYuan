@@ -1,0 +1,514 @@
+ #SalesAdvOrderDetail {
+     halign: center;
+     height: fill;
+     width: fill;
+     layout: vbox;
+     valign: TOP;
+ }
+
+ #viewPage0 {
+     halign: center;
+     height: wrap;
+     layout: vbox;
+     background: #f7f7f7;
+     width: fill;
+     valign: TOP;
+ }
+
+ #navigatorbar0 {
+     halign: LEFT;
+     height: 35;
+     background: #13b5f2;
+     font-size: 16;
+ }
+
+ #back {
+     padding-right: 3;
+     halign: right;
+     height: 35;
+     pressed-image: btn_back_touch;
+     font-size: 17;
+     width: 115;
+     background-image: btn_back;
+ }
+
+ #panel0 {
+     halign: center;
+     height: 100;
+     layout: vbox;
+     width: fill;
+     valign: TOP;
+ }
+
+ #label6 {
+     margin-right: 5;
+     halign: left;
+     height: 20;
+     color: #ff8080;
+     font-size: 14;
+     width: fill;
+     margin-left: 5;
+     font-family: default;
+     margin-top: 5;
+     valign: center;
+ }
+
+ #changecustomer {
+     margin-right: 5;
+     halign: LEFT;
+     height: 35;
+     layout: hbox;
+     background: #ffffff;
+     width: fill;
+     margin-left: 5;
+     margin-top: 5;
+     valign: center;
+ }
+
+ #label5 {
+     halign: left;
+     height: fill;
+     widthWrap: 45.0;
+     color: #414141;
+     font-size: 14;
+     width: wrap;
+     font-family: default;
+     valign: center;
+ }
+
+ #customer {
+     halign: right;
+     height: 33;
+     weight: 1;
+     color: #737373;
+     font-size: 14;
+     width: 0;
+     font-family: default;
+     valign: center;
+ }
+
+ #image4 {
+     height: 16;
+     width: 11;
+     margin-left: 5;
+ }
+
+ #changeseller {
+     margin-right: 5;
+     halign: LEFT;
+     height: 35;
+     layout: hbox;
+     background: #ffffff;
+     width: fill;
+     margin-left: 5;
+     margin-top: 1;
+     valign: center;
+ }
+
+ #label1 {
+     halign: left;
+     height: fill;
+     widthWrap: 75.0;
+     color: #414141;
+     font-size: 14;
+     width: wrap;
+     font-family: default;
+     valign: center;
+ }
+
+ #seller {
+     halign: right;
+     height: fill;
+     weight: 1;
+     color: #737373;
+     font-size: 14;
+     width: 0;
+     font-family: default;
+     valign: center;
+ }
+
+ #image1 {
+     height: 16;
+     width: 11;
+     margin-left: 5;
+ }
+
+ #changesender {
+     margin-right: 5;
+     halign: LEFT;
+     height: 35;
+     layout: hbox;
+     background: #ffffff;
+     width: fill;
+     margin-left: 5;
+     margin-top: 1;
+     valign: center;
+ }
+
+ #label3 {
+     halign: left;
+     height: fill;
+     widthWrap: 75.0;
+     color: #414141;
+     font-size: 14;
+     width: wrap;
+     font-family: default;
+     valign: center;
+ }
+
+ #sender {
+     halign: right;
+     height: fill;
+     weight: 1;
+     color: #737373;
+     font-size: 14;
+     width: 0;
+     font-family: default;
+     valign: center;
+ }
+
+ #image2 {
+     height: 16;
+     width: 11;
+     margin-left: 5;
+ }
+
+ #panel1 {
+     halign: center;
+     height: 100;
+     layout: vbox;
+     width: fill;
+     valign: TOP;
+ }
+
+ #label8 {
+     margin-right: 5;
+     halign: left;
+     height: 20;
+     color: #ff8080;
+     font-size: 14;
+     width: fill;
+     margin-left: 5;
+     font-family: default;
+     valign: center;
+ }
+
+ #goodsname {
+     margin-right: 5;
+     halign: LEFT;
+     height: 35;
+     layout: hbox;
+     background: #ffffff;
+     width: fill;
+     margin-left: 5;
+     margin-top: 5;
+     valign: center;
+ }
+
+ #label0 {
+     halign: center;
+     height: fill;
+     widthWrap: 45.0;
+     color: #414141;
+     font-size: 14;
+     width: wrap;
+     font-family: default;
+     valign: center;
+ }
+
+ #goods {
+     halign: right;
+     height: fill;
+     weight: 1;
+     color: #737373;
+     font-size: 14;
+     width: 0;
+     font-family: default;
+     valign: center;
+ }
+
+ #image0 {
+     height: 16;
+     width: 11;
+     margin-left: 5;
+ }
+
+ #panel9 {
+     border-bottom-width: 1;
+     margin-right: 5;
+     halign: LEFT;
+     height: 35;
+     layout: hbox;
+     background: #ffffff;
+     width: fill;
+     margin-left: 5;
+     margin-top: 1;
+     valign: center;
+     border-bottom-color: #eeeeee;
+ }
+
+ #label2 {
+     halign: left;
+     height: fill;
+     widthWrap: 75.0;
+     color: #414141;
+     font-size: 14;
+     width: wrap;
+     font-family: default;
+     valign: center;
+ }
+
+ #weight {
+     padding-left: 4;
+     padding-right: 4;
+     halign: RIGHT;
+     height: fill;
+     weight: 1;
+     color: #808080;
+     background: #ffffff;
+     font-size: 15;
+     width: 0;
+     font-family: default;
+ }
+
+ #lbl_dw {
+     halign: center;
+     height: wrap;
+     widthWrap: 30.0;
+     color: #737373;
+     heightWrap: 20.0;
+     font-size: 14;
+     width: wrap;
+     font-family: default;
+     valign: center;
+ }
+
+ #panel2 {
+     halign: center;
+     height: 205;
+     layout: vbox;
+     width: fill;
+     valign: TOP;
+ }
+
+ #label9 {
+     margin-right: 5;
+     halign: left;
+     height: 20;
+     color: #ff8080;
+     font-size: 14;
+     width: fill;
+     margin-left: 5;
+     font-family: default;
+     valign: center;
+ }
+
+ #changecar {
+     margin-right: 5;
+     border-top-color: #eeeeee;
+     halign: LEFT;
+     height: 35;
+     background: #ffffff;
+     layout: hbox;
+     width: fill;
+     margin-left: 5;
+     margin-top: 5;
+     valign: center;
+     border-top-width: 1;
+ }
+
+ #label14 {
+     halign: left;
+     height: fill;
+     widthWrap: 75.0;
+     color: #414141;
+     font-size: 14;
+     width: wrap;
+     font-family: default;
+     valign: center;
+ }
+
+ #lbl_fmtvlicense {
+     margin-right: 5;
+     halign: right;
+     height: fill;
+     weight: 1;
+     color: #737373;
+     font-size: 14;
+     width: 0;
+     font-family: default;
+     valign: center;
+ }
+
+ #btn_freelicense {
+     height: 33;
+     widthWrap: 54.0;
+     color: #ffffff;
+     background: #0080ff;
+     width: wrap;
+     font-pressed-color: #ffffff;
+ }
+
+ #image3 {
+     margin-right: 5;
+     height: 16;
+     width: 11;
+     margin-left: 5;
+ }
+
+ #pnl_carno {
+     halign: center;
+     height: 35;
+     layout: vbox;
+     width: fill;
+     display: none;
+     valign: TOP;
+ }
+
+ #carno {
+     padding-left: 4;
+     margin-right: 5;
+     halign: RIGHT;
+     height: fill;
+     color: #167ef8;
+     background: #ffffff;
+     font-size: 17;
+     width: fill;
+     margin-left: 5;
+     font-family: default;
+ }
+
+ #panel3 {
+     margin-right: 5;
+     halign: LEFT;
+     height: 35;
+     background: #ffffff;
+     layout: hbox;
+     width: fill;
+     margin-left: 5;
+     margin-top: 1;
+     valign: center;
+ }
+
+ #label7 {
+     halign: left;
+     height: fill;
+     color: #414141;
+     font-size: 14;
+     width: 75;
+     font-family: default;
+     valign: center;
+ }
+
+ #drivername {
+     halign: RIGHT;
+     height: fill;
+     weight: 1;
+     color: #167ef8;
+     background: #ffffff;
+     font-size: 14;
+     width: 0;
+     font-family: default;
+ }
+
+ #image5 {
+     margin-right: 5;
+     height: 16;
+     width: 11;
+     margin-left: 5;
+ }
+
+ #panel5 {
+     margin-right: 5;
+     halign: LEFT;
+     height: 35;
+     background: #ffffff;
+     layout: hbox;
+     width: fill;
+     margin-left: 5;
+     margin-top: 1;
+     valign: center;
+ }
+
+ #label12 {
+     halign: left;
+     height: fill;
+     color: #414141;
+     font-size: 14;
+     width: 95;
+     font-family: default;
+     valign: center;
+ }
+
+ #drivertel {
+     halign: RIGHT;
+     height: fill;
+     weight: 1;
+     color: #167ef8;
+     background: #ffffff;
+     font-size: 14;
+     width: 0;
+     font-family: default;
+ }
+
+ #panel11 {
+     margin-right: 5;
+     halign: LEFT;
+     height: 35;
+     layout: hbox;
+     background: #ffffff;
+     width: fill;
+     margin-left: 5;
+     margin-top: 1;
+     valign: center;
+ }
+
+ #label17 {
+     halign: left;
+     height: fill;
+     color: #414141;
+     font-size: 14;
+     width: 95;
+     font-family: default;
+     valign: center;
+ }
+
+ #driverid {
+     halign: RIGHT;
+     height: 33;
+     weight: 1;
+     color: #167ef8;
+     background: #ffffff;
+     font-size: 14;
+     width: 0;
+     font-family: default;
+ }
+
+ #panel8 {
+     halign: CENTER;
+     height: 35;
+     border-radius: 5;
+     layout: hbox;
+     background: #f7f7f7;
+     width: fill;
+     valign: center;
+ }
+
+ #post {
+     background-color-dis: #808080;
+     height: 35;
+     border-radius: 8;
+     color: #ffffff;
+     background: #ff8000;
+     width: 150;
+ }
+
+ #invalid {
+     background-color-dis: #808080;
+     height: 35;
+     border-radius: 8;
+     color: #ffffff;
+     background: #ff8000;
+     width: 150;
+     margin-left: 20;
+ }

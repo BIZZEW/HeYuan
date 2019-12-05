@@ -1,0 +1,94 @@
+.switch {
+    position: relative;
+    margin: 20px auto;
+    width: 242px;
+    background: rgba(146, 146, 146, 0.25);
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0px 0px 4px 1px rgba(53, 53, 53, 0.64), 0 1px rgba(136, 136, 136, 0.1);
+    box-shadow: inset 0px 0px 4px 1px rgba(53, 53, 53, 0.64), 0 1px rgba(136, 136, 136, 0.1);
+    position: relative;
+    text-align: center;
+    width: 92%;
+    margin: 4%;
+    display: flex;
+}
+
+.switch-label {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 20%;
+    line-height: 19px;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(142, 142, 142);
+    text-align: center;
+    cursor: pointer;
+}
+
+.switch-input {
+    display: none;
+}
+
+.switch-input:checked+.switch-label {
+    color: rgb(255, 255, 255);
+    -webkit-transition: 0.15s ease-out;
+    -moz-transition: 0.15s ease-out;
+    -o-transition: 0.15s ease-out;
+    transition: 0.15s ease-out;
+}
+
+.switch-input:checked+.switch-label-two~.switch-selection {
+    left: 20%;
+}
+
+.switch-input:checked+.switch-label-three~.switch-selection {
+    left: 40%;
+}
+
+.switch-input:checked+.switch-label-four~.switch-selection {
+    left: 60%;
+}
+
+.switch-input:checked+.switch-label-five~.switch-selection {
+    left: 80%;
+}
+
+.switch-selection {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 6px;
+    /* border radius */
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    /* prevents bg color from leaking outside the border */
+    background-color: #277ceb;
+    -webkit-transition: left 0.15s ease-out;
+    -moz-transition: left 0.15s ease-out;
+    -o-transition: left 0.15s ease-out;
+    transition: left 0.15s ease-out;
+}
+
+.login-panel {
+    background: rgba(68, 68, 68, 0.9);
+    border-radius: 8px;
+    box-shadow: 3px 5px 10px rgba(82, 82, 82, 0.74);
+    width: 96%;
+    position: fixed;
+    /* bottom: 8px; */
+    bottom: -45px;
+}
+
+.login-form {
+    /* padding: 5px; */
+    padding: 5px 5px 50px 5px;
+    color: #525252;
+}

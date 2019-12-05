@@ -1,0 +1,46 @@
+ #ConfirmDlg {
+halign:center;
+height:125;
+layout:vbox;
+width:250;
+valign:TOP;
+}
+ #viewPage0 {
+halign:center;
+height:fill;
+background:#ffffff;
+layout:vbox;
+width:fill;
+valign:BOTTOM;
+}
+ #lbl_info {
+halign:center;
+height:wrap;
+widthWrap:172.0;
+color:#000000;
+heightWrap:25.0;
+font-size:17;
+width:wrap;
+margin-bottom:10;
+font-family:default;
+valign:center;
+}
+ #panel0 {
+halign:CENTER;
+height:60;
+layout:hbox;
+width:fill;
+valign:center;
+}
+ #btn_ok {
+weight:1;
+color:#ff0000;
+background:#ffffff;
+width:0;
+}
+ #btn_cancel {
+weight:1;
+color:#0080ff;
+background:#ffffff;
+width:0;
+}

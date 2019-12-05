@@ -1,0 +1,673 @@
+ #DeliveryOrderDetail {
+layout:vbox;
+width:fill;
+valign:TOP;
+halign:center;
+height:fill;
+}
+ #viewPage0 {
+layout:vbox;
+width:fill;
+valign:TOP;
+halign:center;
+height:wrap;
+}
+ #navigatorbar0 {
+background:#13b5f2;
+font-size:16;
+halign:LEFT;
+height:35;
+}
+ #back {
+width:115;
+font-size:17;
+background-image:btn_back;
+halign:right;
+padding-right:3;
+height:35;
+pressed-image:btn_back_touch;
+}
+ #panel4 {
+layout:hbox;
+margin-left:5;
+background:#FFFFFF;
+width:fill;
+valign:center;
+margin-top:10;
+halign:LEFT;
+margin-right:5;
+height:30;
+}
+ #billid {
+color:#414141;
+heightWrap:20.0;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:90.0;
+height:wrap;
+}
+ #div_selectsaleorder {
+layout:hbox;
+background:#FFFFFF;
+width:fill;
+valign:center;
+halign:LEFT;
+height:fill;
+}
+ #lbl_orderno {
+color:#737373;
+font-weight:bold;
+width:0;
+weight:1;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #imagebutton0 {
+icon-pressed-image:arrow.png;
+icon-height:15;
+font-size:10;
+icon-text-spacing:3;
+icon-background-image:arrow.png;
+width:15;
+icon-width:15;
+height:15;
+}
+ #pnl_sosimple {
+layout:hbox;
+margin-left:5;
+width:fill;
+valign:center;
+halign:LEFT;
+margin-right:5;
+height:30;
+}
+ #lbl_sosimple {
+margin-left:5;
+color:#000000;
+width:0;
+weight:1;
+font-size:14;
+valign:center;
+font-family:default;
+halign:center;
+margin-right:5;
+height:fill;
+}
+ #btn_showdetail {
+border-bottom-color:#c0c0c0;
+border-top-width:1;
+border-right-width:1;
+border-left-color:#c0c0c0;
+border-right-color:#c0c0c0;
+border-left-width:1;
+border-radius:5;
+border-bottom-width:1;
+width:30;
+border-top-color:#c0c0c0;
+height:30;
+}
+ #pnl_sodetails {
+layout:vbox;
+display:none;
+width:fill;
+valign:TOP;
+halign:center;
+height:190;
+}
+ #panel2 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:1;
+halign:LEFT;
+margin-right:5;
+height:30;
+}
+ #label5 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:105.0;
+height:fill;
+}
+ #lbl_dbilldate {
+color:#737373;
+width:0;
+weight:1;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #goodsname {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:1;
+halign:LEFT;
+margin-right:5;
+height:30;
+}
+ #label0 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:75.0;
+height:fill;
+}
+ #lbl_saleorg {
+color:#737373;
+width:0;
+weight:1;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #panel0 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:1;
+halign:LEFT;
+margin-right:5;
+height:20;
+}
+ #label1 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:75.0;
+height:fill;
+}
+ #lbl_sendstockorg {
+color:#737373;
+width:0;
+weight:1;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #panel1 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:1;
+halign:LEFT;
+margin-right:5;
+height:30;
+}
+ #label3 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:45.0;
+height:fill;
+}
+ #lbl_customer {
+color:#737373;
+width:0;
+weight:1;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #panel7 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:1;
+halign:LEFT;
+margin-right:5;
+height:30;
+}
+ #label11 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:45.0;
+height:fill;
+}
+ #lbl_matname {
+color:#737373;
+width:fill;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #panel12 {
+layout:hbox;
+margin-left:5;
+border-bottom-color:#eeeeee;
+background:#ffffff;
+border-bottom-width:1;
+width:fill;
+valign:center;
+margin-top:1;
+halign:LEFT;
+margin-right:5;
+height:30;
+}
+ #label8 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:45.0;
+height:fill;
+}
+ #lbl_remainnum {
+color:#737373;
+width:0;
+weight:1;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+margin-right:4;
+height:fill;
+}
+ #label10 {
+color:#000000;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:center;
+widthWrap:15.0;
+height:fill;
+}
+ #panel10 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:4;
+halign:LEFT;
+margin-right:5;
+height:30;
+}
+ #label6 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:75.0;
+height:fill;
+}
+ #lbl_fchordercode {
+color:#737373;
+width:fill;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #panel13 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:1;
+halign:LEFT;
+margin-right:5;
+height:30;
+}
+ #label13 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:90.0;
+height:fill;
+}
+ #lbl_ftcorderdate {
+color:#737373;
+width:fill;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #panel9 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:1;
+halign:LEFT;
+margin-right:5;
+height:35;
+}
+ #label2 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:75.0;
+height:fill;
+}
+ #txt_fetchnum {
+color:#167ef8;
+background:#ffffff;
+padding-left:4;
+width:0;
+weight:1;
+font-size:16;
+font-family:default;
+halign:RIGHT;
+padding-right:4;
+height:fill;
+}
+ #lbl_dw {
+color:#737373;
+heightWrap:20.0;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:center;
+widthWrap:30.0;
+height:wrap;
+}
+ #panel6 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:4;
+halign:LEFT;
+margin-right:5;
+height:35;
+}
+ #label14 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:45.0;
+height:fill;
+}
+ #lbl_fmtvlicense {
+color:#737373;
+width:0;
+weight:1;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+margin-right:5;
+height:fill;
+}
+ #button0 {
+font-pressed-color:#ffffff;
+color:#ffffff;
+background:#0080ff;
+width:wrap;
+widthWrap:54.0;
+height:33;
+}
+ #imgbtn_selectcar {
+icon-pressed-image:arrow.png;
+icon-height:15;
+font-size:10;
+icon-text-spacing:3;
+icon-background-image:arrow.png;
+width:32;
+icon-width:15;
+height:32;
+}
+ #txt_vlicense {
+margin-left:5;
+color:#167ef8;
+background:#ffffff;
+display:none;
+width:fill;
+font-size:14;
+font-family:default;
+halign:RIGHT;
+margin-right:5;
+height:35;
+}
+ #panel3 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+halign:LEFT;
+margin-right:5;
+height:35;
+}
+ #label7 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:75.0;
+height:fill;
+}
+ #txt_drivername {
+color:#167ef8;
+background:#ffffff;
+width:0;
+weight:1;
+font-size:14;
+font-family:default;
+halign:RIGHT;
+height:fill;
+}
+ #imgbtn_selectDriver {
+icon-pressed-image:arrow.png;
+icon-height:15;
+font-size:10;
+icon-text-spacing:3;
+background:#ffffff;
+icon-background-image:arrow.png;
+width:32;
+icon-width:15;
+height:32;
+}
+ #panel5 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+halign:LEFT;
+margin-right:5;
+height:35;
+}
+ #label12 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:60.0;
+height:fill;
+}
+ #txt_drivertelephone {
+color:#167ef8;
+background:#ffffff;
+width:fill;
+font-size:14;
+font-family:default;
+halign:RIGHT;
+height:fill;
+}
+ #panel11 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+halign:LEFT;
+margin-right:5;
+height:35;
+}
+ #label17 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:75.0;
+height:fill;
+}
+ #txt_driveridcode {
+color:#167ef8;
+background:#ffffff;
+width:0;
+weight:1;
+font-size:14;
+font-family:default;
+halign:RIGHT;
+height:fill;
+}
+ #panel8 {
+layout:hbox;
+width:fill;
+valign:center;
+margin-top:5;
+halign:CENTER;
+margin-bottom:20;
+height:35;
+}
+ #btn_submit {
+color:#ffffff;
+margin-right:10;
+border-radius:8;
+background-color-dis:#808080;
+background:#ff8f59;
+width:110;
+height:35;
+}
+ #btn_invalid {
+font-pressed-color:#ffffff;
+color:#ffffff;
+margin-right:10;
+border-radius:8;
+background-color-dis:#808080;
+background:#ff8f59;
+width:110;
+height:35;
+}
+ #btn_share {
+border-radius:8;
+font-pressed-color:#ffffff;
+color:#ffffff;
+background:#ff8f59;
+width:110;
+height:35;
+}
+ #pnl_share {
+padding-top:5;
+padding-left:5;
+display:none;
+padding-bottom:5;
+valign:center;
+margin-right:5;
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+halign:CENTER;
+padding-right:5;
+height:70;
+}
+ #imgbtn_wechatshare {
+icon-pressed-image:wechatshare.png;
+icon-height:60;
+font-size:10;
+icon-text-spacing:3;
+margin-right:10;
+margin-left:10;
+icon-background-image:wechatshare.png;
+width:60;
+icon-width:60;
+height:60;
+}
+ #imgbtn_qqshare {
+icon-pressed-image:qqshare.png;
+icon-height:60;
+font-size:10;
+icon-text-spacing:3;
+margin-right:10;
+margin-left:10;
+icon-background-image:qqshare.png;
+width:60;
+icon-width:60;
+height:60;
+}
+ #imgbtn_msgshare {
+icon-pressed-image:messageshare.png;
+icon-height:60;
+font-size:10;
+icon-text-spacing:3;
+margin-right:10;
+margin-left:10;
+icon-background-image:messageshare.png;
+width:60;
+icon-width:60;
+height:60;
+}

@@ -1,0 +1,519 @@
+ #HomePage3 {
+halign:center;
+height:fill;
+width:fill;
+layout:vbox;
+valign:TOP;
+}
+ #viewPage0 {
+halign:center;
+height:fill;
+layout:vbox;
+background:#F5F5F5;
+width:fill;
+valign:TOP;
+}
+ #panel0 {
+halign:center;
+height:fill;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #flipperdefine0 {
+halign:center;
+height:0;
+weight:1;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #panel1 {
+halign:center;
+height:fill;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #panel3 {
+halign:CENTER;
+height:40;
+background:#f7f7f7;
+layout:hbox;
+width:fill;
+valign:center;
+}
+ #label0 {
+halign:center;
+height:wrap;
+widthWrap:144.0;
+color:#ff8040;
+heightWrap:25.0;
+font-size:17;
+width:wrap;
+font-family:default;
+font-weight:bold;
+valign:center;
+}
+ #panel6 {
+halign:LEFT;
+height:230;
+background:#F5F5F5;
+layout:hbox;
+width:fill;
+valign:center;
+}
+ #imageflipper0 {
+height:fill;
+width:fill;
+}
+ #panel7 {
+halign:CENTER;
+height:125;
+background:#F7F7F7;
+layout:hbox;
+width:fill;
+valign:center;
+}
+ #myseles {
+padding-left:15;
+halign:center;
+height:125;
+background:#F7F7F7;
+layout:vbox;
+width:125;
+valign:CENTER;
+}
+ #imagebutton0 {
+width:70;
+icon-width:25;
+icon-height:25;
+height:70;
+font-size:10;
+icon-background-image:order11copy.png;
+icon-pressed-image:order11copy.png;
+background-image:order11copy.png;
+icon-text-spacing:3;
+}
+ #label2 {
+halign:center;
+height:wrap;
+widthWrap:75.0;
+color:#6c6c6c;
+heightWrap:20.0;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #mydeliveryorder {
+margin-right:10;
+halign:center;
+height:125;
+background:#F7F7F7;
+layout:vbox;
+width:125;
+margin-left:10;
+valign:CENTER;
+}
+ #imagebutton1 {
+width:70;
+icon-width:25;
+icon-height:25;
+height:70;
+font-size:10;
+icon-background-image:order01copy.png;
+icon-pressed-image:order01copy.png;
+background-image:order01copy.png;
+icon-text-spacing:3;
+}
+ #label3 {
+halign:center;
+height:wrap;
+widthWrap:75.0;
+color:#6c6c6c;
+heightWrap:20.0;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #mypickup {
+padding-right:15;
+halign:center;
+height:125;
+background:#F7F7F7;
+layout:vbox;
+width:125;
+valign:CENTER;
+}
+ #imagebutton2 {
+width:70;
+icon-width:25;
+icon-height:25;
+height:70;
+font-size:10;
+icon-background-image:order2copy.png;
+icon-pressed-image:order2copy.png;
+background-image:order2copy.png;
+icon-text-spacing:3;
+}
+ #label4 {
+halign:center;
+height:wrap;
+widthWrap:75.0;
+color:#6c6c6c;
+heightWrap:20.0;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #addseleorder {
+height:44;
+widthWrap:36.0;
+width:wrap;
+}
+ #selebill {
+halign:center;
+height:wrap;
+widthWrap:108.0;
+color:#00a1ea;
+heightWrap:25.0;
+font-size:17;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #Purchases {
+halign:center;
+height:wrap;
+widthWrap:72.0;
+color:#00a1ea;
+heightWrap:25.0;
+font-size:17;
+width:wrap;
+font-family:default;
+margin-top:10;
+valign:center;
+}
+ #panel2 {
+halign:center;
+height:fill;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #panel11 {
+halign:center;
+height:fill;
+layout:vbox;
+background:#f2f2f2;
+width:fill;
+valign:CENTER;
+}
+ #panel16 {
+halign:center;
+height:0;
+weight:1;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #panel17 {
+halign:center;
+height:200;
+layout:vbox;
+width:fill;
+valign:CENTER;
+background-image:center2.png;
+}
+ #icon {
+height:75;
+width:75;
+}
+ #telephone {
+halign:center;
+height:22.0;
+color:#ffffff;
+font-size:16;
+width:80;
+font-family:default;
+margin-top:18;
+valign:center;
+}
+ #panel18 {
+padding-right:15;
+halign:LEFT;
+height:43;
+background:#ffffff;
+layout:hbox;
+width:fill;
+valign:center;
+}
+ #image10 {
+padding-left:5;
+padding-top:10;
+height:44;
+width:44;
+padding-bottom:10;
+}
+ #customer {
+padding-left:4;
+halign:left;
+height:fill;
+weight:1;
+color:#6e6e6e;
+font-size:15;
+background:#ffffff;
+width:0;
+font-family:default;
+valign:center;
+}
+ #image1 {
+height:16;
+width:11;
+margin-left:10;
+}
+ #panel19 {
+padding-right:15;
+halign:LEFT;
+height:43;
+layout:hbox;
+background:#ffffff;
+width:fill;
+margin-top:1;
+valign:center;
+}
+ #image12 {
+padding-left:5;
+padding-top:10;
+height:44;
+width:44;
+padding-bottom:10;
+}
+ #billtype {
+padding-left:4;
+halign:left;
+height:fill;
+weight:1;
+color:#6e6e6e;
+font-size:15;
+background:#ffffff;
+width:0;
+font-family:default;
+valign:center;
+}
+ #image3 {
+height:16;
+width:11;
+margin-left:10;
+}
+ #panel20 {
+padding-right:15;
+halign:LEFT;
+height:43;
+layout:hbox;
+background:#ffffff;
+width:fill;
+margin-top:1;
+valign:center;
+}
+ #image11 {
+padding-left:5;
+padding-top:10;
+height:44;
+width:44;
+padding-bottom:10;
+}
+ #seller {
+padding-left:4;
+halign:left;
+height:fill;
+weight:1;
+color:#6e6e6e;
+font-size:15;
+background:#ffffff;
+width:0;
+font-family:default;
+valign:center;
+}
+ #image4 {
+height:16;
+width:11;
+margin-left:10;
+}
+ #panel21 {
+padding-right:15;
+halign:LEFT;
+height:43;
+layout:hbox;
+background:#ffffff;
+width:fill;
+margin-top:1;
+valign:center;
+}
+ #image14 {
+padding-left:5;
+padding-top:10;
+height:44;
+width:44;
+padding-bottom:10;
+}
+ #poster {
+padding-left:4;
+halign:left;
+height:fill;
+weight:1;
+color:#6e6e6e;
+font-size:15;
+background:#ffffff;
+width:0;
+font-family:default;
+valign:center;
+}
+ #image5 {
+height:16;
+width:11;
+margin-left:10;
+}
+ #panel4 {
+halign:LEFT;
+height:7;
+layout:hbox;
+width:fill;
+valign:center;
+}
+ #panel22 {
+padding-right:15;
+halign:LEFT;
+height:43;
+layout:hbox;
+background:#ffffff;
+width:fill;
+valign:center;
+}
+ #image15 {
+padding-left:5;
+padding-top:10;
+height:44;
+width:44;
+padding-bottom:10;
+}
+ #vender {
+padding-left:4;
+halign:left;
+height:fill;
+weight:1;
+color:#6e6e6e;
+font-size:15;
+background:#ffffff;
+width:0;
+font-family:default;
+valign:center;
+}
+ #image6 {
+height:16;
+width:11;
+margin-left:10;
+}
+ #panel23 {
+padding-right:15;
+halign:LEFT;
+height:43;
+layout:hbox;
+background:#ffffff;
+width:fill;
+margin-top:1;
+valign:center;
+}
+ #image16 {
+padding-left:5;
+padding-top:10;
+height:44;
+width:44;
+padding-bottom:10;
+}
+ #buyer {
+padding-left:4;
+halign:left;
+height:fill;
+weight:1;
+color:#6e6e6e;
+font-size:15;
+background:#ffffff;
+width:0;
+font-family:default;
+valign:center;
+}
+ #image7 {
+height:16;
+width:11;
+margin-left:10;
+}
+ #panel5 {
+padding-right:15;
+halign:LEFT;
+height:43;
+background:#ffffff;
+layout:hbox;
+width:fill;
+margin-top:1;
+valign:center;
+}
+ #image0 {
+padding-left:5;
+padding-top:10;
+height:44;
+width:44;
+padding-bottom:10;
+}
+ #getter {
+padding-left:4;
+halign:left;
+height:fill;
+weight:1;
+color:#6e6e6e;
+font-size:15;
+background:#ffffff;
+width:0;
+font-family:default;
+valign:center;
+}
+ #image8 {
+height:16;
+width:11;
+margin-left:10;
+}
+ #panel24 {
+padding-right:15;
+halign:LEFT;
+height:43;
+layout:hbox;
+background:#ffffff;
+width:fill;
+margin-top:8;
+valign:center;
+}
+ #image13 {
+padding-left:5;
+padding-top:10;
+height:44;
+width:44;
+padding-bottom:10;
+}
+ #label1 {
+padding-left:4;
+halign:left;
+height:fill;
+weight:1;
+color:#6e6e6e;
+font-size:15;
+width:0;
+font-family:default;
+valign:center;
+}
+ #image9 {
+height:16;
+width:11;
+}

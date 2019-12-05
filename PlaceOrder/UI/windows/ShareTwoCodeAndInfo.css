@@ -1,0 +1,279 @@
+ #ShareTwoCodeAndInfo {
+layout:vbox;
+width:fill;
+valign:TOP;
+halign:center;
+height:fill;
+}
+ #viewPage0 {
+layout:vbox;
+background:#ffffff;
+width:fill;
+valign:TOP;
+halign:center;
+height:fill;
+}
+ #panel0 {
+layout:vbox;
+width:fill;
+valign:TOP;
+halign:center;
+height:44;
+}
+ #navigatorbar0 {
+halign:LEFT;
+}
+ #button0 {
+padding-left:20;
+width:88;
+background-image:btn_back;
+halign:left;
+height:44;
+pressed-image:btn_back_touch;
+}
+ #label0 {
+color:#000000;
+width:0;
+weight:1;
+font-size:14;
+valign:center;
+font-family:default;
+halign:center;
+height:fill;
+}
+ #imagebutton0 {
+icon-pressed-image:button_image_touch;
+icon-height:45;
+font-size:10;
+icon-text-spacing:3;
+icon-background-image:icon_share.png;
+width:64;
+icon-width:45;
+height:fill;
+}
+ #panel1 {
+layout:vbox;
+padding-left:20;
+width:fill;
+valign:TOP;
+halign:center;
+height:230;
+}
+ #image0 {
+width:230;
+height:230;
+}
+ #panel2 {
+layout:vbox;
+width:fill;
+valign:TOP;
+halign:center;
+height:35;
+}
+ #panel3 {
+layout:hbox;
+margin-left:30;
+border-top-width:1;
+background:#ffffff;
+width:fill;
+border-top-color:#000000;
+valign:center;
+halign:LEFT;
+margin-right:30;
+height:25;
+}
+ #label_carno {
+color:#000000;
+width:90;
+font-size:17;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #label_vlicense {
+color:#000000;
+font-weight:bold;
+width:fill;
+font-size:18;
+valign:center;
+font-family:default;
+halign:left;
+height:fill;
+}
+ #panel4 {
+layout:hbox;
+margin-left:30;
+width:fill;
+valign:center;
+halign:LEFT;
+margin-right:30;
+height:35;
+}
+ #label_providerorclient {
+color:#000000;
+width:90;
+font-size:17;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #label_splrorpicker_name {
+color:#000000;
+width:fill;
+font-size:15;
+valign:center;
+font-family:default;
+halign:left;
+height:fill;
+}
+ #panel5 {
+layout:hbox;
+margin-left:30;
+width:fill;
+valign:center;
+halign:LEFT;
+margin-right:30;
+height:35;
+}
+ #label5 {
+color:#000000;
+width:90;
+font-size:17;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #label_matname {
+color:#000000;
+width:fill;
+font-size:15;
+valign:center;
+font-family:default;
+halign:left;
+height:fill;
+}
+ #panel6 {
+layout:hbox;
+margin-left:30;
+width:fill;
+valign:center;
+halign:LEFT;
+margin-right:30;
+height:25;
+}
+ #label_rcvorpick {
+color:#000000;
+width:90;
+font-size:17;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #label_rcvorpick_no {
+color:#000000;
+width:35;
+font-size:18;
+valign:center;
+font-family:default;
+halign:left;
+height:fill;
+}
+ #label1 {
+color:#000000;
+heightWrap:22.0;
+width:wrap;
+font-size:15;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:16.0;
+height:wrap;
+}
+ #panel7 {
+layout:hbox;
+margin-left:30;
+width:fill;
+valign:center;
+halign:LEFT;
+margin-right:30;
+height:35;
+}
+ #label_rcvorpick_stockorg {
+color:#000000;
+width:90;
+font-size:17;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #label_rcvorpick_stockorg_name {
+color:#000000;
+width:fill;
+font-size:15;
+valign:center;
+font-family:default;
+halign:left;
+height:fill;
+}
+ #panel8 {
+layout:hbox;
+margin-left:30;
+display:none;
+width:fill;
+valign:center;
+halign:LEFT;
+margin-right:30;
+height:25;
+}
+ #label_rcvorpick_warehouse {
+color:#000000;
+width:90;
+font-size:17;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #label_rcvorpick_warehouse_name {
+color:#000000;
+width:fill;
+font-size:18;
+valign:center;
+font-family:default;
+halign:left;
+height:fill;
+}
+ #panel9 {
+layout:hbox;
+margin-left:30;
+border-bottom-color:#000000;
+width:fill;
+border-bottom-width:1;
+valign:center;
+halign:LEFT;
+margin-right:30;
+height:25;
+}
+ #label_fetchorscv_dt {
+color:#000000;
+width:90;
+font-size:17;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #label_fetchorrcv_date {
+color:#000000;
+width:fill;
+font-size:18;
+valign:center;
+font-family:default;
+halign:left;
+height:fill;
+}

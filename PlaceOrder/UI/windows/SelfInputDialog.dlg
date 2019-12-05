@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window xmlns:web="http://www.yonyou.com/uapmobile/dsl" id="SelfInputDialog" canvaswidth="310" canvasheight="400" orientation="vertical" controller="SelfInputDialogController" type="dialog" namespace="com.yonyou.placeorder">
+    <import ref="SelfInputDialog.css" type="css"/>
+    <link type="text/css" href="sys/theme.css"/>
+    <link type="text/css" href="user/selfinput.css"/>
+    <div id="viewPage0" onload="this.pageOnload()">
+        <div id="panel4">
+            <div id="pnl_vlicense">
+                <label id="lbl_vlicense1">京</label>
+                <label id="lbl_vlicense2">A</label>
+                <label id="label2">▪</label>
+                <label id="lbl_vlicense3">00000</label> 
+            </div>
+            <input id="btn_cancel" value="取消" class="textbtnclass" onclick="this.cancelOnclick()" type="button"/>
+            <input id="btn_done" value="完成" class="textbtnclass" onclick="this.doneOnclick()" type="button"/> 
+        </div>
+        <div id="pnl_numchar">
+            <div id="panel0">
+                <input id="btn_numchar1" value="1" class="textbtnclass" onclick="this.numOnclick()" type="button"/>
+                <input id="btn_numchar2" value="2" class="textbtnclass" onclick="this.numOnclick()" type="button"/>
+                <input id="btn_numchar3" value="3" class="textbtnclass" onclick="this.numOnclick()" type="button"/>
+                <input id="btn_numchar4" value="4" class="textbtnclass" onclick="this.numOnclick()" type="button"/>
+                <input id="btn_numchar5" value="5" class="textbtnclass" onclick="this.numOnclick()" type="button"/>
+                <input id="btn_numchar6" value="6" class="textbtnclass" onclick="this.numOnclick()" type="button"/>
+                <input id="btn_numchar7" value="7" class="textbtnclass" onclick="this.numOnclick()" type="button"/>
+                <input id="btn_numchar8" value="8" class="textbtnclass" onclick="this.numOnclick()" type="button"/>
+                <input id="btn_numchar9" value="9" class="textbtnclass" onclick="this.numOnclick()" type="button"/>
+                <input id="btn_numchar0" value="0" class="textbtnclass" onclick="this.numOnclick()" type="button"/> 
+            </div>
+            <div id="panel1">
+                <input id="btn_numcharQ" value="Q" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharW" value="W" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharE" value="E" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharR" value="R" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharT" value="T" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharY" value="Y" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharU" value="U" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharI" value="I" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharO" value="O" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharP" value="P" class="textbtnclass" onclick="this.charOnclick()" type="button"/> 
+            </div>
+            <div id="panel2">
+                <input id="btn_numcharA" value="A" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharS" value="S" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharD" value="D" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharF" value="F" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharG" value="G" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharH" value="H" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharJ" value="J" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharK" value="K" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharL" value="L" class="textbtnclass" onclick="this.charOnclick()" type="button"/> 
+            </div>
+            <div id="panel3">
+                <input id="btn_showhz" value="中" class="textbtnclass" onclick="this.showFirstHzPanel()" type="button"/>
+                <input id="btn_numcharZ" value="Z" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharX" value="X" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharC" value="C" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharV" value="V" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharB" value="B" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharN" value="N" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_numcharM" value="M" class="textbtnclass" onclick="this.charOnclick()" type="button"/>
+                <input id="btn_delete" value="←" class="textbtnclass" onclick="this.deleteOnclick()" type="button"/> 
+            </div> 
+        </div>
+        <div id="pnl_firsthz">
+            <div id="panel6">
+                <input id="btn_pabbr1" value="京" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="bbtn_pabbr2" value="津" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr3" value="冀" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr4" value="晋" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr5" value="蒙" class="textbtnclass" onclick="this.hzOnclick()" type="button"/> 
+            </div>
+            <div id="panel7">
+                <input id="btn_pabbr6" value="辽" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr7" value="吉" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr8" value="黑" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr9" value="沪" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr10" value="苏" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr11" value="浙" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr12" value="皖" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr13" value="闽" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr14" value="赣" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr15" value="鲁" class="textbtnclass" onclick="this.hzOnclick()" type="button"/> 
+            </div>
+            <div id="panel8">
+                <input id="btn_pabbr16" value="豫" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr17" value="鄂" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr18" value="湘" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr19" value="粤" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr20" value="桂" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr21" value="琼" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr22" value="川" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr23" value="贵" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr24" value="云" class="textbtnclass" onclick="this.hzOnclick()" type="button"/> 
+            </div>
+            <div id="panel9">
+                <input id="btn_pabbr25" value="渝" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr26" value="藏" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr27" value="陕" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr28" value="甘" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr29" value="青" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr30" value="宁" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_pabbr31" value="新" class="textbtnclass" onclick="this.hzOnclick()" type="button"/>
+                <input id="btn_showywsz" value="英/数字" class="textbtnclass" onclick="this.showYwszPanel()" type="button"/> 
+            </div> 
+        </div> 
+    </div> 
+</window>

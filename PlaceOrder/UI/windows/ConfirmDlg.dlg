@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window xmlns:web="http://www.yonyou.com/uapmobile/dsl" id="ConfirmDlg" controller="ConfirmDlgController" type="dialog" namespace="com.yonyou.placeorder">
+    <import ref="ConfirmDlg.css" type="css"/>
+    <link type="text/css" href="sys/theme.css"/>
+    <div id="viewPage0" onload="this.pageOnload()">
+        <label id="lbl_info">是否确定执行此操作?</label>
+        <div id="panel0">
+            <input id="btn_ok" value="确定" class="textbtnclass" onclick="this.ok()" type="button"/>
+            <input id="btn_cancel" value="取消" class="textbtnclass" onclick="this.cancel()" type="button"/> 
+        </div> 
+    </div> 
+</window>

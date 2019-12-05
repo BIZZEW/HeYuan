@@ -1,0 +1,372 @@
+ #DeliveryOrderSearch {
+halign:center;
+height:fill;
+width:fill;
+layout:vbox;
+valign:TOP;
+}
+ #viewPage0 {
+halign:center;
+height:fill;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #panel1 {
+halign:LEFT;
+height:50;
+layout:hbox;
+width:fill;
+valign:top;
+}
+ #navigatorbar0 {
+halign:CENTER;
+height:fill;
+font-size:16;
+background:#13b5f2;
+}
+ #back {
+padding-left:20;
+halign:left;
+height:44;
+pressed-image:btn_back_touch;
+width:88;
+background-image:btn_back;
+}
+ #label0 {
+halign:center;
+height:fill;
+weight:1;
+color:#000000;
+font-size:14;
+width:0;
+font-family:default;
+valign:center;
+}
+ #imagebutton0 {
+width:44;
+icon-width:25;
+display:none;
+icon-height:25;
+height:44;
+font-size:10;
+icon-background-image:home2.png;
+icon-pressed-image:home2.png;
+icon-text-spacing:3;
+}
+ #panel0 {
+halign:center;
+height:fill;
+layout:vbox;
+width:fill;
+margin-top:15;
+valign:TOP;
+}
+ #panel6 {
+margin-right:15;
+halign:LEFT;
+height:30;
+layout:hbox;
+background:#fcfcfc;
+width:fill;
+margin-left:15;
+margin-top:5;
+valign:center;
+}
+ #label4 {
+halign:center;
+height:fill;
+widthWrap:75.0;
+color:#585858;
+background:#fcfcfc;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #changesender {
+halign:LEFT;
+height:fill;
+layout:hbox;
+width:fill;
+background:#ffffff;
+valign:center;
+}
+ #stockorg {
+halign:right;
+height:fill;
+weight:1;
+color:#000000;
+font-size:14;
+background:#fcfcfc;
+width:0;
+font-family:default;
+valign:center;
+}
+ #image1 {
+margin-right:5;
+height:16;
+width:11;
+margin-left:5;
+}
+ #startdatepanel {
+margin-right:15;
+halign:CENTER;
+height:30;
+layout:hbox;
+background:#fcfcfc;
+width:fill;
+margin-left:15;
+margin-top:5;
+valign:center;
+}
+ #startdatelabel {
+halign:center;
+height:fill;
+widthWrap:75.0;
+color:#585858;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #begindate {
+padding-left:4;
+halign:RIGHT;
+height:fill;
+color:#167ef8;
+background:#fcfcfc;
+font-size:14;
+width:fill;
+font-family:default;
+}
+ #overdatepanel {
+margin-right:15;
+halign:CENTER;
+height:30;
+layout:hbox;
+background:#fcfcfc;
+width:fill;
+margin-left:15;
+margin-top:5;
+valign:center;
+}
+ #overdatelabel {
+halign:center;
+height:fill;
+widthWrap:75.0;
+color:#585858;
+background:#fcfcfc;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #enddate {
+padding-left:4;
+halign:RIGHT;
+height:fill;
+color:#167ef8;
+background:#fcfcfc;
+font-size:14;
+width:fill;
+font-family:default;
+}
+ #panel12 {
+margin-right:15;
+halign:LEFT;
+height:30;
+layout:hbox;
+background:#fcfcfc;
+width:fill;
+margin-left:15;
+margin-top:5;
+valign:center;
+}
+ #label7 {
+halign:center;
+height:fill;
+widthWrap:45.0;
+color:#585858;
+background:#fcfcfc;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #changecustomer {
+halign:LEFT;
+height:fill;
+layout:hbox;
+width:fill;
+background:#ffffff;
+valign:center;
+}
+ #customer {
+halign:right;
+height:fill;
+weight:1;
+color:#000000;
+font-size:14;
+background:#fcfcfc;
+width:0;
+font-family:default;
+valign:center;
+}
+ #image4 {
+margin-right:5;
+height:16;
+width:11;
+margin-left:5;
+}
+ #panel4 {
+margin-right:15;
+halign:CENTER;
+height:30;
+layout:hbox;
+background:#fcfcfc;
+width:fill;
+margin-left:15;
+margin-top:5;
+valign:center;
+}
+ #label2 {
+halign:center;
+height:fill;
+widthWrap:45.0;
+color:#585858;
+background:#fcfcfc;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #panel7 {
+halign:LEFT;
+height:fill;
+background:#fcfcfc;
+layout:hbox;
+width:fill;
+valign:center;
+}
+ #changegoods {
+halign:LEFT;
+height:fill;
+layout:hbox;
+width:fill;
+background:#ffffff;
+valign:center;
+}
+ #cmaterialid {
+halign:right;
+height:fill;
+weight:1;
+color:#000000;
+font-size:14;
+background:#fcfcfc;
+width:0;
+font-family:default;
+valign:center;
+}
+ #image0 {
+margin-right:5;
+height:16;
+width:11;
+margin-left:5;
+}
+ #panel5 {
+margin-right:15;
+halign:LEFT;
+height:30;
+layout:hbox;
+background:#fcfcfc;
+width:fill;
+margin-left:15;
+margin-top:5;
+valign:center;
+}
+ #label3 {
+halign:center;
+height:fill;
+widthWrap:75.0;
+color:#585858;
+background:#fcfcfc;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #changecar {
+halign:LEFT;
+height:fill;
+layout:hbox;
+width:fill;
+background:#ffffff;
+valign:center;
+}
+ #vlicense {
+padding-left:4;
+halign:RIGHT;
+height:fill;
+weight:1;
+color:#167ef8;
+background:#fcfcfc;
+font-size:14;
+width:0;
+font-family:default;
+}
+ #image2 {
+margin-right:5;
+height:16;
+width:11;
+margin-left:5;
+}
+ #panel3 {
+margin-right:15;
+halign:CENTER;
+height:30;
+layout:hbox;
+background:#fcfcfc;
+width:fill;
+margin-left:15;
+margin-top:5;
+valign:center;
+}
+ #label1 {
+halign:center;
+height:fill;
+widthWrap:60.0;
+color:#585858;
+background:#fcfcfc;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:center;
+}
+ #panel2 {
+halign:LEFT;
+height:fill;
+background:#fcfcfc;
+layout:hbox;
+width:fill;
+valign:center;
+}
+ #ordercode {
+padding-left:4;
+halign:RIGHT;
+height:fill;
+color:#167ef8;
+background:#fcfcfc;
+font-size:14;
+width:fill;
+font-family:default;
+}
+ #search {
+height:40;
+border-radius:3;
+color:#ffffff;
+background:#ff8000;
+width:150;
+margin-top:20;
+font-pressed-color:#13b5f2;
+}
