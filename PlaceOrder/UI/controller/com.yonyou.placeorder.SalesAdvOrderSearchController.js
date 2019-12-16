@@ -87,9 +87,11 @@ try {
 			"pk_stockorg": pk_stockorg,
 
 			"cmaterialid": pk_material,
-			"vlicense": $id("vlicense").get("value")
-
+			"vlicense": $id("vlicense").get("value"),
+			"driver_name": $id("txt_drivername").get("value")
 		};
+
+		alert("json: " + JSON.stringify(json));
 		var data = $param.getJSONObject("data");
 		$view.open({
 			viewid: "com.yonyou.placeorder.SalesAdvOrderList", //目标页面（首字母大写）全名
@@ -113,16 +115,16 @@ try {
 	//选择物料
 	function com$yonyou$placeorder$SalesAdvOrderSearchController$changegoods(sender, args) {
 		// if (pk_stockorg) {
-			var otherparams = {
-				"pk_stockorg": pk_stockorg
-			};
-			$view.open({
-				viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
-				isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
-				"reftype": Globals.RefInfoType.AVAILGOODS,
-				"otherparams": otherparams,
-				"callback": "changegoods()"
-			})
+		var otherparams = {
+			"pk_stockorg": pk_stockorg
+		};
+		$view.open({
+			viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
+			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
+			"reftype": Globals.RefInfoType.AVAILGOODS,
+			"otherparams": otherparams,
+			"callback": "changegoods()"
+		})
 		// } else {
 		// 	$alert("请先选择发货企业");
 		// }
@@ -239,6 +241,58 @@ try {
 		}
 	}
 
+	function com$yonyou$placeorder$SalesAdvOrderSearchController$goSelectDriver(sender, args) {
+		// var isfldisplay=$id("txt_vlicense").get("display");
+		// var carno="";
+		// if(isfldisplay=="none"){
+		// 	if($id("lbl_fmtvlicense").get("value")!="点击输入车号"){
+		// 		carno=$id("lbl_fmtvlicense").get("value");
+		// 	}
+		// }else{
+		// 	carno=$id("txt_vlicense").get("value");
+		// }
+		// if(!carno){
+		// 	$alert("参照司机前请先填写正确的车牌号");
+		// 	return;
+		// }
+		$view.open({
+			viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
+			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
+			"otherparams": {
+				"vlicense": "浙A00000"
+			},
+			"reftype": Globals.RefInfoType.VEHICLE_DRIVER,
+			"callback": function () {
+				var retvalue = $param.getJSONObject("result");
+				SqliteUtil.updateRctMostUseData(Globals.RefInfoType.VEHICLE_DRIVER, retvalue);
+				var driverinfo = retvalue.name.split(" ");
+				$id("txt_drivername").set("value", retvalue.code);
+				$id("txt_drivertelephone").set("value", driverinfo[1]);
+				$id("txt_driveridcode").set("value", retvalue.pk);
+			}
+		})
+	}
+
+	function com$yonyou$placeorder$SalesAdvOrderSearchController$selectstatus(sender, args) {
+		// if (pk_customer) {
+		// 	$view.open({
+		// 		viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
+		// 		isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
+		// 		"reftype": Globals.RefInfoType.CURUSER_VEHICLE,
+		// 		"otherparams": {
+		// 			"pk_customer": pk_customer
+		// 		},
+		// 		"callback": function () {
+		// 			var retvalue = $param.getJSONObject("result");
+		// 			SqliteUtil.updateRctMostUseData(Globals.RefInfoType.CURUSER_VEHICLE, retvalue);
+		// 			$id("vlicense").set("value", retvalue.code);
+		// 		}
+		// 	})
+		// } else {
+		// 	$alert("选择车辆信息前必须选择客户");
+		// }
+	}
+
 	function com$yonyou$placeorder$SalesAdvOrderSearchController$picker0_onload(sender, args) {
 		var context = {
 			statuses: ["未完成", "已作废", "已完成"],
@@ -249,6 +303,8 @@ try {
 	com.yonyou.placeorder.SalesAdvOrderSearchController.prototype = {
 		picker0_onload: com$yonyou$placeorder$SalesAdvOrderSearchController$picker0_onload,
 		selectcar: com$yonyou$placeorder$SalesAdvOrderSearchController$selectcar,
+		goSelectDriver: com$yonyou$placeorder$SalesAdvOrderSearchController$goSelectDriver,
+		selectstatus: com$yonyou$placeorder$SalesAdvOrderSearchController$selectstatus,
 		cleargoods: com$yonyou$placeorder$SalesAdvOrderSearchController$cleargoods,
 		clearsender: com$yonyou$placeorder$SalesAdvOrderSearchController$clearsender,
 		clearseller: com$yonyou$placeorder$SalesAdvOrderSearchController$clearseller,

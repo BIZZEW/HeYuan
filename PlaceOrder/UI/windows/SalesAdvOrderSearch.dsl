@@ -55,7 +55,7 @@
                 <label id="label11">订单状态：</label>
                 <div id="panel22">
                     <picker id="picker0" showsSelectionIndicator="true" onload="this.picker0_onload()">
-                        <pickeritem bindfield="status" datasource="statuses" onselectedchange="this.selectcar()" id="picker0_0" value="订单状态"/> 
+                        <pickeritem bindfield="status" datasource="statuses" onselectedchange="this.selectstatus()" id="picker0_0" value="订单状态"/> 
                     </picker> 
                 </div> 
             </div>

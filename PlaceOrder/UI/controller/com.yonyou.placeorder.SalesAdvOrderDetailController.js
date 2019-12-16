@@ -1,7 +1,7 @@
 //JavaScript Framework 2.0 Code
 try {
 	Type.registerNamespace('com.yonyou.placeorder.SalesAdvOrderDetailController');
-	com.yonyou.placeorder.SalesAdvOrderDetailController = function() {
+	com.yonyou.placeorder.SalesAdvOrderDetailController = function () {
 		com.yonyou.placeorder.SalesAdvOrderDetailController.initializeBase(this);
 		this.initialize();
 	}
@@ -39,49 +39,49 @@ try {
 	function com$yonyou$placeorder$SalesAdvOrderDetailController$button0_onclick(sender, args) {
 		$view.close()
 	}
-	function com$yonyou$placeorder$SalesAdvOrderDetailController$testInput(sender, args){
+	function com$yonyou$placeorder$SalesAdvOrderDetailController$testInput(sender, args) {
 		var params = {
-			"viewid" : "pnl_input",
-			"isTouch" : "true",
-			"single" : "true",
-			"animation-direction":"bottom"
+			"viewid": "pnl_input",
+			"isTouch": "true",
+			"single": "true",
+			"animation-direction": "bottom"
 		};
 		$view.openPop(params);
 	}
-	function com$yonyou$placeorder$SalesAdvOrderDetailController$testInput2(sender, args){
-		$id("pnl_input").set("visible","true");
+	function com$yonyou$placeorder$SalesAdvOrderDetailController$testInput2(sender, args) {
+		$id("pnl_input").set("visible", "true");
 		var params = {
-			"viewid" : "pnl_input",
-			"isTouch" : "true",
-			"single" : "true",
-			"animation-direction":"bottom"
+			"viewid": "pnl_input",
+			"isTouch": "true",
+			"single": "true",
+			"animation-direction": "bottom"
 		};
 		$view.openPop(params);
 	}
 	//初始化
 	var saleorg, //销售组织主键
-	    sendstockorg, //发货库存组织主键
-	    ccustomerid, //客户主键
-	    cmaterialid, //物料主键
-	    ordernum, //订单数量
-	    vlicense, //车牌号
-	    drivername, //司机姓名
-	    drivertelephone, //司机手机
-	    driveridcode, //司机身份证
-	    cpreorderid,
-	    cpreorderbid;
+		sendstockorg, //发货库存组织主键
+		ccustomerid, //客户主键
+		cmaterialid, //物料主键
+		ordernum, //订单数量
+		vlicense, //车牌号
+		drivername, //司机姓名
+		drivertelephone, //司机手机
+		driveridcode, //司机身份证
+		cpreorderid,
+		cpreorderbid;
 	function com$yonyou$placeorder$SalesAdvOrderDetailController$changebill(sender, args) {
 		var data = $param.getJSONObject("data");
-		var license1value=$cache.read("license1value");
-		if(license1value){
-			$id("btn_license1").set("value",license1value);
+		var license1value = $cache.read("license1value");
+		if (license1value) {
+			$id("btn_license1").set("value", license1value);
 		}
-		var license2value=$cache.read("license2value");
-		if(license2value){
-			$id("txt_license2").set("value",license2value);
+		var license2value = $cache.read("license2value");
+		if (license2value) {
+			$id("txt_license2").set("value", license2value);
 		}
 		if (data) {
-			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata=data;
+			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata = data;
 			$id("goods").set("value", data.cmaterialid.name);
 			$id("weight").set("value", data.ordernum);
 			$id("seller").set("value", data.saleorg.name);
@@ -92,11 +92,11 @@ try {
 			$id("drivertel").set("value", data.drivertelephone);
 			$id("drivername").set("value", data.drivername);
 			$id("driverid").set("value", data.vdriverid);
-			vlicense=data.vlicense;
-			if(Globals.checkvlicense(vlicense)){
-				$id("pnl_carno").set("display","block");
-			}else{
-				$id("lbl_fmtvlicense").set("value",vlicense);
+			vlicense = data.vlicense;
+			if (Globals.checkvlicense(vlicense)) {
+				$id("pnl_carno").set("display", "block");
+			} else {
+				$id("lbl_fmtvlicense").set("value", vlicense);
 			}
 			saleorg = data.saleorg.pk_org;
 			sendstockorg = data.sendstockorg.pk_org;
@@ -105,15 +105,15 @@ try {
 
 			cpreorderid = data.cpreorderid;
 			cpreorderbid = data.cpreorderbid;
-			if(data.billstatus.code=="1"){
+			if (data.billstatus.code == "1") {
 				$id("invalid").set("disabled", false);
-			}else{
+			} else {
 				$id("post").set("disabled", "disabled");
 			}
 		} else {
 			defaultInfo();
 		}
-		
+
 	}
 	function defaultInfo() {
 		var user = JSON.parse($ctx.getApp("appuser"));
@@ -150,8 +150,8 @@ try {
 		}
 		*/
 	}
-	function getUserInfoSuccess(){
-		var user=$ctx.getJSONObject("result").datas;
+	function getUserInfoSuccess() {
+		var user = $ctx.getJSONObject("result").datas;
 		if (user.dfltcstm) {
 			$id("customer").set("value", user.dfltcstm.name);
 			ccustomerid = user.dfltcstm.pk_customer;
@@ -170,10 +170,10 @@ try {
 	//修改客户
 	function com$yonyou$placeorder$SalesAdvOrderDetailController$changecustomer(sender, args) {
 		$view.open({
-			viewid : "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
-			isKeep : "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
-			"reftype" : Globals.RefInfoType.CURUSER_CUSTOMER,
-			"callback" : "changecustomerbac()"
+			viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
+			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
+			"reftype": Globals.RefInfoType.CURUSER_CUSTOMER,
+			"callback": "changecustomerbac()"
 		})
 	}
 	function changecustomerbac() {
@@ -181,22 +181,22 @@ try {
 		SqliteUtil.updateRctMostUseData(Globals.RefInfoType.CURUSER_CUSTOMER, retvalue);
 		$id("customer").set("value", retvalue.name);
 		ccustomerid = retvalue.pk;
-		if(com.yonyou.placeorder.SalesAdvOrderDetailController.olddata){
-			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.ccustomerid.name=retvalue.name;
-			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.ccustomerid.pk_customer=retvalue.pk;
+		if (com.yonyou.placeorder.SalesAdvOrderDetailController.olddata) {
+			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.ccustomerid.name = retvalue.name;
+			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.ccustomerid.pk_customer = retvalue.pk;
 		}
 	}
 	//修改销售单位
 	function com$yonyou$placeorder$SalesAdvOrderDetailController$changeseller(sender, args) {
 
 		$view.open({
-			viewid : "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
-			isKeep : "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
-			"otherparams" : {
-				"pk_customer" : ccustomerid
+			viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
+			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
+			"otherparams": {
+				"pk_customer": ccustomerid
 			},
-			"reftype" : Globals.RefInfoType.SALE_ORG,
-			"callback" : "changesellerbac()"
+			"reftype": Globals.RefInfoType.SALE_ORG,
+			"callback": "changesellerbac()"
 		})
 	}
 	function changesellerbac() {
@@ -204,18 +204,18 @@ try {
 		SqliteUtil.updateRctMostUseData(Globals.RefInfoType.SALE_ORG, retvalue);
 		$id("seller").set("value", retvalue.name);
 		saleorg = retvalue.pk;
-		if(com.yonyou.placeorder.SalesAdvOrderDetailController.olddata){
-			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.saleorg.name=retvalue.name;
-			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.saleorg.pk_org=retvalue.pk;
+		if (com.yonyou.placeorder.SalesAdvOrderDetailController.olddata) {
+			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.saleorg.name = retvalue.name;
+			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.saleorg.pk_org = retvalue.pk;
 		}
 	}
 	//修改发货企业
 	function com$yonyou$placeorder$SalesAdvOrderDetailController$changesender(sender, args) {
 		$view.open({
-			viewid : "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
-			isKeep : "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
-			"reftype" : Globals.RefInfoType.SEND_STOCK_ORG,
-			"callback" : "changesenderbac()"
+			viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
+			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
+			"reftype": Globals.RefInfoType.SEND_STOCK_ORG,
+			"callback": "changesenderbac()"
 		})
 	}
 	function changesenderbac() {
@@ -223,79 +223,80 @@ try {
 		SqliteUtil.updateRctMostUseData(Globals.RefInfoType.SEND_STOCK_ORG, retvalue);
 		$id("sender").set("value", retvalue.name);
 		sendstockorg = retvalue.pk;
-		if(com.yonyou.placeorder.SalesAdvOrderDetailController.olddata){
-			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.sendstockorg.name=retvalue.name;
-			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.sendstockorg.pk_org=retvalue.pk;
+		if (com.yonyou.placeorder.SalesAdvOrderDetailController.olddata) {
+			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.sendstockorg.name = retvalue.name;
+			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.sendstockorg.pk_org = retvalue.pk;
 		}
 	}
 	//修改货物
 	function changegoodsname(sender, args) {
 		$view.open({
-			viewid : "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
-			isKeep : "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
-			"otherparams" : {
-				"pk_stockorg" : sendstockorg
+			viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
+			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
+			"otherparams": {
+				"pk_stockorg": sendstockorg,
+				"pk_customer": ccustomerid
 			},
-			"reftype" : Globals.RefInfoType.AVAILGOODS,
-			"callback" : "changgoods()"
+			"reftype": Globals.RefInfoType.AVAILGOODS,
+			"callback": "changgoods()"
 		})
 	}
 	function changgoods() {
 		var retvalue = $param.getJSONObject("result");
 		SqliteUtil.updateRctMostUseData(Globals.RefInfoType.AVAILGOODS, retvalue);
 		$id("goods").set("value", retvalue.name);
-		if(retvalue.dw){
-			$id("lbl_dw").set("value",retvalue.dw);
+		if (retvalue.dw) {
+			$id("lbl_dw").set("value", retvalue.dw);
 		}
 		cmaterialid = retvalue.pk;
-		if(com.yonyou.placeorder.SalesAdvOrderDetailController.olddata){
-			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.cmaterialid.name=retvalue.name;
-			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.cmaterialid.pk_material=retvalue.pk;
+		if (com.yonyou.placeorder.SalesAdvOrderDetailController.olddata) {
+			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.cmaterialid.name = retvalue.name;
+			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.cmaterialid.pk_material = retvalue.pk;
 		}
 	}
 	//修改车牌
-	function com$yonyou$placeorder$SalesAdvOrderDetailController$fmtvlicenseOnclick(sender, args){
-		var vlicense=$id("lbl_fmtvlicense").get("value");
-		if(vlicense=="点击输入车号"){
-			vlicense="";
+	function com$yonyou$placeorder$SalesAdvOrderDetailController$fmtvlicenseOnclick(sender, args) {
+		var vlicense = $id("lbl_fmtvlicense").get("value");
+		if (vlicense == "点击输入车号") {
+			vlicense = "";
 		}
 		$window.showModalDialog({
-			dialogId : "com.yonyou.placeorder.SelfInputDialog",
-			arguments : {
-				"vlicense":vlicense
+			dialogId: "com.yonyou.placeorder.SelfInputDialog",
+			arguments: {
+				"vlicense": vlicense
 			},
-			features : {
-				"dialogWidth" : $device.getScreenWidth(),
-				"dialogHeight" : 210,
-				"dialogTop":$device.getScreenHeight()-290
+			features: {
+				"dialogWidth": $device.getScreenWidth(),
+				"dialogHeight": 210,
+				"dialogTop": $device.getScreenHeight() - 290
 			},
-			callback : "selfInputDialogBack()"
+			callback: "selfInputDialogBack()"
 		});
 	}
-	function selfInputDialogBack(){
+	function selfInputDialogBack() {
 		var vlicense = $jsonToString($param.getString("vlicense"));
-		if (vlicense!="cancel") {
-			$id("lbl_fmtvlicense").set("value",vlicense);
+		if (vlicense != "cancel") {
+			$id("lbl_fmtvlicense").set("value", vlicense);
 		}
-	}	
-	function com$yonyou$placeorder$SalesAdvOrderDetailController$freelicenseOnclick(sender, args){
-		var isfldisplay=$id("pnl_carno").get("display");
-		if(isfldisplay=="none"){
-			$id("pnl_carno").set("display","block");
-		}else{
-			$id("pnl_carno").set("display","none");
+	}
+	function com$yonyou$placeorder$SalesAdvOrderDetailController$freelicenseOnclick(sender, args) {
+		var isfldisplay = $id("pnl_carno").get("display");
+		if (isfldisplay == "none") {
+			$id("pnl_carno").set("display", "block");
+		} else {
+			$id("pnl_carno").set("display", "none");
 		}
 	}
 	//修改参照车牌
 	function com$yonyou$placeorder$SalesAdvOrderDetailController$changecar(sender, args) {
 		$view.open({
-			viewid : "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
-			isKeep : "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
-			"otherparams":{
-		        	"pk_customer":ccustomerid
-		        },
-			"reftype" : Globals.RefInfoType.CURUSER_VEHICLE,
-			"callback" : "changecarbac()"
+			viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
+			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
+			"otherparams": {
+				"pk_customer": ccustomerid
+			},
+			"reftype": Globals.RefInfoType.CURUSER_VEHICLE,
+			"callback": "changecarbac()"
 		})
 	}
 	function changecarbac() {
@@ -303,10 +304,10 @@ try {
 		SqliteUtil.updateRctMostUseData(Globals.RefInfoType.CURUSER_VEHICLE, retvalue);
 		$id("carno").set("value", retvalue.code);
 		vlicense = retvalue.code;
-		if(Globals.checkvlicense(vlicense)){
-			$id("pnl_carno").set("display","block");
-		}else{
-			$id("lbl_fmtvlicense").set("value",vlicense);
+		if (Globals.checkvlicense(vlicense)) {
+			$id("pnl_carno").set("display", "block");
+		} else {
+			$id("lbl_fmtvlicense").set("value", vlicense);
 		}
 		/*天瑞要求选择车牌时不带出司机信息
 		var driverinfo = retvalue.name.split(" ");
@@ -321,31 +322,31 @@ try {
 
 	}
 	//修改司机参照
-	function com$yonyou$placeorder$SalesAdvOrderDetailController$selectDriverOnclick(sender, args){
-		var isfldisplay=$id("pnl_carno").get("display");
-		var carno="";
-		if(isfldisplay=="none"){
-			if($id("lbl_fmtvlicense").get("value")!="点击输入车号"){
-				carno=$id("lbl_fmtvlicense").get("value")
+	function com$yonyou$placeorder$SalesAdvOrderDetailController$selectDriverOnclick(sender, args) {
+		var isfldisplay = $id("pnl_carno").get("display");
+		var carno = "";
+		if (isfldisplay == "none") {
+			if ($id("lbl_fmtvlicense").get("value") != "点击输入车号") {
+				carno = $id("lbl_fmtvlicense").get("value")
 			}
-		}else{
-			carno=$id("carno").get("value");
+		} else {
+			carno = $id("carno").get("value");
 		}
-		if(!carno){
+		if (!carno) {
 			$alert("参照司机前请先填写正确的车牌号");
 			return;
 		}
 		$view.open({
-			viewid : "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
-			isKeep : "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
-			"otherparams":{
-		        	"vlicense":carno
-		        },
-			"reftype" : Globals.RefInfoType.VEHICLE_DRIVER,
-			"callback" : "selectDriverCallback()"
+			viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
+			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
+			"otherparams": {
+				"vlicense": carno
+			},
+			"reftype": Globals.RefInfoType.VEHICLE_DRIVER,
+			"callback": "selectDriverCallback()"
 		})
 	}
-	function selectDriverCallback(){
+	function selectDriverCallback() {
 		var retvalue = $param.getJSONObject("result");
 		SqliteUtil.updateRctMostUseData(Globals.RefInfoType.VEHICLE_DRIVER, retvalue);
 		driveridcode = retvalue.pk;
@@ -362,30 +363,30 @@ try {
 			$alert("请选择物料");
 			return;
 		}
-		var weight=$id("weight").get("value");
+		var weight = $id("weight").get("value");
 		if (!weight) {
 			$alert("请输入数量");
 			return;
 		}
-		var weightnum=parseFloat(weight);
-		if(weightnum<=0){
+		var weightnum = parseFloat(weight);
+		if (weightnum <= 0) {
 			$alert("数量必须大于0");
 			return;
 		}
-		var isfldisplay=$id("pnl_carno").get("display");
-		var carno="";
-		if(isfldisplay=="none"){
-			if($id("lbl_fmtvlicense").get("value")!="点击输入车号"){
-				carno=$id("lbl_fmtvlicense").get("value")
+		var isfldisplay = $id("pnl_carno").get("display");
+		var carno = "";
+		if (isfldisplay == "none") {
+			if ($id("lbl_fmtvlicense").get("value") != "点击输入车号") {
+				carno = $id("lbl_fmtvlicense").get("value")
 			}
-		}else{
-			carno=$id("carno").get("value");
-			if(!carno){
+		} else {
+			carno = $id("carno").get("value");
+			if (!carno) {
 				$alert("请输入自定义车牌号码");
 				return;
 			}
 		}
-		com.yonyou.placeorder.SalesAdvOrderDetailController.carno=carno;
+		com.yonyou.placeorder.SalesAdvOrderDetailController.carno = carno;
 		if ($id("drivername").get("value") == "") {
 			$alert("请输入司机姓名");
 			return;
@@ -408,58 +409,60 @@ try {
 		}
 		var data = $param.getJSONObject("data");
 		if (data != null && typeof (data) != undefined) {
-			var json = {"usercode":$cache.read("telephone"),
-			"user":$cache.read("telephone"),
-				"pk_appuser" : $ctx.getApp("pk_appuser"),
-				"saleorg" : saleorg, //销售组织主键
-				"sendstockorg" : sendstockorg, //发货库存组织主键
-				"ccustomerid" : ccustomerid, //客户主键
-				"cmaterialid" : cmaterialid, //物料主键
-				"ordernum" : $id("weight").get("value"), //订单数量
-				"vlicense" : carno, //车牌号
-				"drivername" : $id("drivername").get("value"), //司机姓名
-				"drivertelephone" : $id("drivertel").get("value"), //司机手机
-				"vdriverid" : $id("driverid").get("value"),
-				"cpreorderid" : cpreorderid,
-				"cpreorderbid" : cpreorderbid//司机身份证
+			var json = {
+				"usercode": $cache.read("telephone"),
+				"user": $cache.read("telephone"),
+				"pk_appuser": $ctx.getApp("pk_appuser"),
+				"saleorg": saleorg, //销售组织主键
+				"sendstockorg": sendstockorg, //发货库存组织主键
+				"ccustomerid": ccustomerid, //客户主键
+				"cmaterialid": cmaterialid, //物料主键
+				"ordernum": $id("weight").get("value"), //订单数量
+				"vlicense": carno, //车牌号
+				"drivername": $id("drivername").get("value"), //司机姓名
+				"drivertelephone": $id("drivertel").get("value"), //司机手机
+				"vdriverid": $id("driverid").get("value"),
+				"cpreorderid": cpreorderid,
+				"cpreorderbid": cpreorderbid//司机身份证
 			};
 			$service.callAction({
-			"usercode":$cache.read("telephone"),
-			"user":$cache.read("telephone"),
-			"appid":"PlaceOrder",
-				"viewid" : "com.yonyou.placeorder.SaleAdvOrderUMController", //后台Controller(带包名)的类名
-				"action" : "update", //后台Controller的方法名,
-				"params" : json, //自定义参数
-				"autoDataBinding" : false, //请求回来会是否进行数据绑定，默认不绑定
-				"contextmapping" : "result", //将返回结果映射到指定的Context字段上，默认为替换整个Context
-				"callback" : "addsuccess()", //请求成功后回调js方法
-				"error" : "adderror()"//请求失败回调的js方法
+				"usercode": $cache.read("telephone"),
+				"user": $cache.read("telephone"),
+				"appid": "PlaceOrder",
+				"viewid": "com.yonyou.placeorder.SaleAdvOrderUMController", //后台Controller(带包名)的类名
+				"action": "update", //后台Controller的方法名,
+				"params": json, //自定义参数
+				"autoDataBinding": false, //请求回来会是否进行数据绑定，默认不绑定
+				"contextmapping": "result", //将返回结果映射到指定的Context字段上，默认为替换整个Context
+				"callback": "addsuccess()", //请求成功后回调js方法
+				"error": "adderror()"//请求失败回调的js方法
 			});
 		} else {
-			var json = {"usercode":$cache.read("telephone"),
-			"user":$cache.read("telephone"),
-				"pk_appuser" : $ctx.getApp("pk_appuser"),
-				"saleorg" : saleorg, //销售组织主键
-				"sendstockorg" : sendstockorg, //发货库存组织主键
-				"ccustomerid" : ccustomerid, //客户主键
-				"cmaterialid" : cmaterialid, //物料主键
-				"ordernum" : $id("weight").get("value"), //订单数量
-				"vlicense" : carno, //车牌号
-				"drivername" : $id("drivername").get("value"), //司机姓名
-				"drivertelephone" : $id("drivertel").get("value"), //司机手机
-				"vdriverid" : $id("driverid").get("value")//司机身份证
+			var json = {
+				"usercode": $cache.read("telephone"),
+				"user": $cache.read("telephone"),
+				"pk_appuser": $ctx.getApp("pk_appuser"),
+				"saleorg": saleorg, //销售组织主键
+				"sendstockorg": sendstockorg, //发货库存组织主键
+				"ccustomerid": ccustomerid, //客户主键
+				"cmaterialid": cmaterialid, //物料主键
+				"ordernum": $id("weight").get("value"), //订单数量
+				"vlicense": carno, //车牌号
+				"drivername": $id("drivername").get("value"), //司机姓名
+				"drivertelephone": $id("drivertel").get("value"), //司机手机
+				"vdriverid": $id("driverid").get("value")//司机身份证
 			};
 			$service.callAction({
-			"usercode":$cache.read("telephone"),
-			"user":$cache.read("telephone"),
-			"appid":"PlaceOrder",
-				"viewid" : "com.yonyou.placeorder.SaleAdvOrderUMController", //后台Controller(带包名)的类名
-				"action" : "add", //后台Controller的方法名,
-				"params" : json, //自定义参数
-				"autoDataBinding" : false, //请求回来会是否进行数据绑定，默认不绑定
-				"contextmapping" : "result", //将返回结果映射到指定的Context字段上，默认为替换整个Context
-				"callback" : "addsuccess()", //请求成功后回调js方法
-				"error" : "adderror()"//请求失败回调的js方法
+				"usercode": $cache.read("telephone"),
+				"user": $cache.read("telephone"),
+				"appid": "PlaceOrder",
+				"viewid": "com.yonyou.placeorder.SaleAdvOrderUMController", //后台Controller(带包名)的类名
+				"action": "add", //后台Controller的方法名,
+				"params": json, //自定义参数
+				"autoDataBinding": false, //请求回来会是否进行数据绑定，默认不绑定
+				"contextmapping": "result", //将返回结果映射到指定的Context字段上，默认为替换整个Context
+				"callback": "addsuccess()", //请求成功后回调js方法
+				"error": "adderror()"//请求失败回调的js方法
 			})
 		}
 		$js.showLoadingBar();
@@ -478,18 +481,18 @@ try {
 			$alert("用户未注册（该用户档案密码为空）");
 		} else if (status == "0") {
 			$alert("提交成功");
-			if(com.yonyou.placeorder.SalesAdvOrderDetailController.olddata){
-				com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.ordernum=$id("weight").get("value");
-				com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.vlicense=com.yonyou.placeorder.SalesAdvOrderDetailController.carno;
-				com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.vdriverid=$id("driverid").get("value");
-				com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.drivertelephone=$id("drivertel").get("value");
-				com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.drivername=$id("drivername").get("value");
+			if (com.yonyou.placeorder.SalesAdvOrderDetailController.olddata) {
+				com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.ordernum = $id("weight").get("value");
+				com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.vlicense = com.yonyou.placeorder.SalesAdvOrderDetailController.carno;
+				com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.vdriverid = $id("driverid").get("value");
+				com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.drivertelephone = $id("drivertel").get("value");
+				com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.drivername = $id("drivername").get("value");
 				$view.closeWithCallBack({
-	            	"result" : com.yonyou.placeorder.SalesAdvOrderDetailController.olddata
-	            });
-            }else{
-            	$view.close();
-            }
+					"result": com.yonyou.placeorder.SalesAdvOrderDetailController.olddata
+				});
+			} else {
+				$view.close();
+			}
 		} else if (status == "1") {
 			var errinfo = json.errinfo;
 			$alert("系统错误：" + errinfo);
@@ -502,37 +505,38 @@ try {
 	//作废订单
 	function com$yonyou$placeorder$SalesAdvOrderDetailController$invalid_onclick(sender, args) {
 		$window.showModalDialog({
-			dialogId : "com.yonyou.placeorder.ConfirmDlg",
-			arguments : {
-				"content":"是否确认作废本预订单？"
+			dialogId: "com.yonyou.placeorder.ConfirmDlg",
+			arguments: {
+				"content": "是否确认作废本预订单？"
 			},
-			features : {
-				"dialogWidth" : 250,
-				"dialogHeight" : 125
+			features: {
+				"dialogWidth": 250,
+				"dialogHeight": 125
 			},
-			callback : "dialogcallback()"
+			callback: "dialogcallback()"
 		})
 
 	}
 	function dialogcallback(sender, args) {
 		var result = $jsonToString($param.getString("code"));
 		if (result == "0") {
-			var json = {"usercode":$cache.read("telephone"),
-			"user":$cache.read("telephone"),
-				"cpreorderid" : cpreorderid,
-				"cpreorderbid" : cpreorderbid//司机身份证
+			var json = {
+				"usercode": $cache.read("telephone"),
+				"user": $cache.read("telephone"),
+				"cpreorderid": cpreorderid,
+				"cpreorderbid": cpreorderbid//司机身份证
 			};
 			$service.callAction({
-			"usercode":$cache.read("telephone"),
-			"user":$cache.read("telephone"),
-			"appid":"PlaceOrder",
-				"viewid" : "com.yonyou.placeorder.SaleAdvOrderUMController", //后台Controller(带包名)的类名
-				"action" : "invalid", //后台Controller的方法名,
-				"params" : json, //自定义参数
-				"autoDataBinding" : false, //请求回来会是否进行数据绑定，默认不绑定
-				"contextmapping" : "result", //将返回结果映射到指定的Context字段上，默认为替换整个Context
-				"callback" : "invalidsuccess()", //请求成功后回调js方法
-				"error" : "invaliderror()"//请求失败回调的js方法
+				"usercode": $cache.read("telephone"),
+				"user": $cache.read("telephone"),
+				"appid": "PlaceOrder",
+				"viewid": "com.yonyou.placeorder.SaleAdvOrderUMController", //后台Controller(带包名)的类名
+				"action": "invalid", //后台Controller的方法名,
+				"params": json, //自定义参数
+				"autoDataBinding": false, //请求回来会是否进行数据绑定，默认不绑定
+				"contextmapping": "result", //将返回结果映射到指定的Context字段上，默认为替换整个Context
+				"callback": "invalidsuccess()", //请求成功后回调js方法
+				"error": "invaliderror()"//请求失败回调的js方法
 			});
 			$js.showLoadingBar();
 		}
@@ -544,11 +548,11 @@ try {
 		var status = json.statuscode;
 		if (status == "0") {
 			$alert("已作废");
-			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.billstatus.code=7;
-			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.billstatus.name="单据失效";
+			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.billstatus.code = 7;
+			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.billstatus.name = "单据失效";
 			$view.closeWithCallBack({
-            	"result" : com.yonyou.placeorder.SalesAdvOrderDetailController.olddata
-            });
+				"result": com.yonyou.placeorder.SalesAdvOrderDetailController.olddata
+			});
 		} else if (status == "1") {
 			var errinfo = json.errinfo;
 			$alert("系统错误：" + errinfo);
@@ -563,23 +567,23 @@ try {
 
 
 	com.yonyou.placeorder.SalesAdvOrderDetailController.prototype = {
-    	fmtvlicenseOnclick : com$yonyou$placeorder$SalesAdvOrderDetailController$fmtvlicenseOnclick,
-    	testInput2 : com$yonyou$placeorder$SalesAdvOrderDetailController$testInput2,
-    	testInput : com$yonyou$placeorder$SalesAdvOrderDetailController$testInput,
-    	selectDriverOnclick : com$yonyou$placeorder$SalesAdvOrderDetailController$selectDriverOnclick,
-    	freelicenseOnclick : com$yonyou$placeorder$SalesAdvOrderDetailController$freelicenseOnclick,
-		invalid_onclick : com$yonyou$placeorder$SalesAdvOrderDetailController$invalid_onclick,
-		changebill : com$yonyou$placeorder$SalesAdvOrderDetailController$changebill,
-		postbill : com$yonyou$placeorder$SalesAdvOrderDetailController$postbill,
-		changecar : com$yonyou$placeorder$SalesAdvOrderDetailController$changecar,
-		changecustomer : com$yonyou$placeorder$SalesAdvOrderDetailController$changecustomer,
-		changesender : com$yonyou$placeorder$SalesAdvOrderDetailController$changesender,
-		changeseller : com$yonyou$placeorder$SalesAdvOrderDetailController$changeseller,
-		button0_onclick : com$yonyou$placeorder$SalesAdvOrderDetailController$button0_onclick,
-		initialize : com$yonyou$placeorder$SalesAdvOrderDetailController$initialize,
-		evaljs : com$yonyou$placeorder$SalesAdvOrderDetailController$evaljs
+		fmtvlicenseOnclick: com$yonyou$placeorder$SalesAdvOrderDetailController$fmtvlicenseOnclick,
+		testInput2: com$yonyou$placeorder$SalesAdvOrderDetailController$testInput2,
+		testInput: com$yonyou$placeorder$SalesAdvOrderDetailController$testInput,
+		selectDriverOnclick: com$yonyou$placeorder$SalesAdvOrderDetailController$selectDriverOnclick,
+		freelicenseOnclick: com$yonyou$placeorder$SalesAdvOrderDetailController$freelicenseOnclick,
+		invalid_onclick: com$yonyou$placeorder$SalesAdvOrderDetailController$invalid_onclick,
+		changebill: com$yonyou$placeorder$SalesAdvOrderDetailController$changebill,
+		postbill: com$yonyou$placeorder$SalesAdvOrderDetailController$postbill,
+		changecar: com$yonyou$placeorder$SalesAdvOrderDetailController$changecar,
+		changecustomer: com$yonyou$placeorder$SalesAdvOrderDetailController$changecustomer,
+		changesender: com$yonyou$placeorder$SalesAdvOrderDetailController$changesender,
+		changeseller: com$yonyou$placeorder$SalesAdvOrderDetailController$changeseller,
+		button0_onclick: com$yonyou$placeorder$SalesAdvOrderDetailController$button0_onclick,
+		initialize: com$yonyou$placeorder$SalesAdvOrderDetailController$initialize,
+		evaljs: com$yonyou$placeorder$SalesAdvOrderDetailController$evaljs
 	};
 	com.yonyou.placeorder.SalesAdvOrderDetailController.registerClass('com.yonyou.placeorder.SalesAdvOrderDetailController', UMP.UI.Mvc.Controller);
-} catch(e) {
+} catch (e) {
 	$e(e);
 }

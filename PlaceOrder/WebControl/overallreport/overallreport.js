@@ -54,8 +54,8 @@ var source = [
 
 // 页面加载完成后请求表格数据
 window.onload = function () {
-    // requestData();
-    loadData();
+    requestData();
+    // loadData();
 
     $('input:radio[name="searchType"]').click(function () {
         var checkValue = $('input:radio[name="searchType"]:checked').val();
