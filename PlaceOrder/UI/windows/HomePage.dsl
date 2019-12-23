@@ -42,6 +42,26 @@
                             <label id="label6">统计报表</label> 
                         </div> 
                     </div>  
+                    <div id="div_deliveryorder"> 
+                        <div onclick="this.myposts()" id="panel4"> 
+                            <input imagebuttontype="icon" istogglebutton="false" onclick="this.myposts()" checked="false" id="imagebutton3" type="imagebutton" value="图标名称" class="imagebuttonclass"/>  
+                            <label id="label1">新增送货单</label> 
+                        </div>  
+                        <div id="panel5"> 
+                            <input imagebuttontype="icon" istogglebutton="false" onclick="this.deliverydetailclick()" checked="false" id="img_deliverydetail" type="imagebutton" value="图标名称" class="imagebuttonclass"/>  
+                            <label id="label5">送货单查询</label> 
+                        </div>  
+                        <div id="panel44"> 
+                            <input imagebuttontype="icon" istogglebutton="false" onclick="this.longtermclick()" checked="false" id="img_longterm" type="imagebutton" value="图标名称" class="imagebuttonclass"/>  
+                            <label id="label11">新增长期</label>  
+                            <label id="label11z">送货单</label> 
+                        </div>  
+                        <div id="panel444"> 
+                            <input imagebuttontype="icon" istogglebutton="false" onclick="this.longtermclickquery()" checked="false" id="img_longterm2" type="imagebutton" value="图标名称" class="imagebuttonclass"/>  
+                            <label id="label111">长期送货</label>  
+                            <label id="label111z">单查询</label> 
+                        </div> 
+                    </div>  
                 </div> 
             </Scrollview> 
         </div> 

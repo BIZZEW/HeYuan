@@ -49,7 +49,7 @@ try {
 				"user": $cache.read("telephone"),
 				"appid": "PlaceOrder",
 				"viewid": "com.yonyou.placeorder.SaleOrderUMController",
-				"action": "querySaleOrderCredit",
+				"action": "DeliverySummaryAction",
 				"params": param,
 				"timeout": 300,
 				"autoDataBinding": false,

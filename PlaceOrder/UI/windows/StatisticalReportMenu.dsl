@@ -14,9 +14,9 @@
         <Scrollview id="Scrollview_panel4" height="0" weight="1" width="fill" hScrollEnabled="disabled">
             <div id="panel4">
                 <div id="row0">
-                    <div id="th00"></div><input id="menu11" value="销售汇总报表" onclick="this.overallreport_onclick()"
+                    <div id="th00"></div><input id="menu11" value="提货汇总报表" onclick="this.overallreport_onclick()"
                         class="imagebuttonclass" istogglebutton="false" type="imagebutton" checked="false"></input>
-                    <div id="th01"></div><input id="menu12" value="销售明细报表" onclick="this.detailreport_onclick()"
+                    <div id="th01"></div><input id="menu12" value="提货明细报表" onclick="this.detailreport_onclick()"
                         class="imagebuttonclass" istogglebutton="false" type="imagebutton" checked="false"></input>
                     <div id="th02"></div><input id="menu13" value="账单报表"  onclick="this.billreport_onclick()"
                         class="imagebuttonclass" istogglebutton="false" type="imagebutton" checked="false"></input>

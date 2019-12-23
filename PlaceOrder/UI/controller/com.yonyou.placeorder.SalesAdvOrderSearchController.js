@@ -91,7 +91,7 @@ try {
 			"driver_name": $id("txt_drivername").get("value")
 		};
 
-		alert("json: " + JSON.stringify(json));
+		// alert("json: " + JSON.stringify(json));
 		var data = $param.getJSONObject("data");
 		$view.open({
 			viewid: "com.yonyou.placeorder.SalesAdvOrderList", //目标页面（首字母大写）全名
@@ -259,16 +259,17 @@ try {
 			viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
 			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
 			"otherparams": {
-				"vlicense": "浙A00000"
+				"pk_customer": pk_customer
 			},
 			"reftype": Globals.RefInfoType.VEHICLE_DRIVER,
 			"callback": function () {
 				var retvalue = $param.getJSONObject("result");
 				SqliteUtil.updateRctMostUseData(Globals.RefInfoType.VEHICLE_DRIVER, retvalue);
 				var driverinfo = retvalue.name.split(" ");
-				$id("txt_drivername").set("value", retvalue.code);
-				$id("txt_drivertelephone").set("value", driverinfo[1]);
-				$id("txt_driveridcode").set("value", retvalue.pk);
+				alert(JSON.stringify(driverinfo));
+				// $id("txt_drivername").set("value", retvalue.code);
+				// $id("txt_drivertelephone").set("value", driverinfo[1]);
+				// $id("txt_driveridcode").set("value", retvalue.pk);
 			}
 		})
 	}

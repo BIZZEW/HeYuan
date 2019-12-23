@@ -68,6 +68,11 @@ try {
 			code: "1009",
 			action: "getVehicleDriverInfo",
 			title: "司机档案信息"
+		},
+		VEHICLE_DRIVER_NEW: {
+			code: "1010",
+			action: "FixInferterAction",
+			title: "司机档案信息"
 		}
 	};
 	Globals.callActionError = function () {

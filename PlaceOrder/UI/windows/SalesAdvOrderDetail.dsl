@@ -22,11 +22,11 @@
                     <label id="seller">请选择销售单位</label>  
                     <image id="image1" scaletype="fitcenter" src="arrow.png"/> 
                 </div>  
-                <!-- <div id="changesender" onclick="this.changesender()"> 
+                <div id="changesender" onclick="this.changesender()"> 
                     <label id="label3">发货企业：</label>  
                     <label id="sender">请选择发货企业</label>  
                     <image id="image2" scaletype="fitcenter" src="arrow.png"/> 
-                </div>  -->
+                </div> 
             </div>  
             <div id="panel1"> 
                 <label id="label8">货物信息</label>  

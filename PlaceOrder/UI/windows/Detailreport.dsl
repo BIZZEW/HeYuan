@@ -7,7 +7,7 @@
     <script src="#{path.controller}/common/sqliteutil.js" type="text/javascript"/>
     </link>
     <div id="viewPage0">
-        <navigatorbar id="navigatorbar0" title="销售明细报表" class="navigatorbarclass">
+        <navigatorbar id="navigatorbar0" title="提货明细报表" class="navigatorbarclass">
             <input id="back" class="ngbbuttonclass" onclick="this.button0_onclick()" type="button"/> 
         </navigatorbar>
         <toggleButtonGroup id="togglebuttongroup0" onchange="changetogglebutton()">

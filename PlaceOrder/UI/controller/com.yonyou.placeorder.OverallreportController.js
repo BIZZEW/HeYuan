@@ -57,13 +57,12 @@ try {
 
 			param.pk_appuser = $cache.read("pk_appuser");
 			param.usercode = $cache.read("telephone");
-			param.searchType = $cache.read("searchType");
 
 			$service.callAction({
 				"user": $cache.read("telephone"),
 				"appid": "PlaceOrder",
-				"viewid": "com.yonyou.placeorder.SaleOrderUMController",
-				"action": "querySaleOrderCredit",
+				"viewid": "com.yonyou.placeorder.ReportController",
+				"action": "DeliverySummaryAction",
 				"params": param,
 				"timeout": 300,
 				"autoDataBinding": false,
