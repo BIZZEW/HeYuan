@@ -43,19 +43,26 @@ window.onload = function () {
 // JSController中获取到数据之后会调用该方法以在页面上加载获得到的数据
 function loadData() {
     var result = $ctx.get("result");
-
     if (result) {
-        var parsedResult = JSON.parse(result).datas;
-        alert(JSON.stringify(parsedResult));
-        // $("#plan").html(get_contain(JSON.stringify(parsedResult)));
-
-        // let tranformedData = source.replace(/\{/g, "[").replace(/\}/g, "]");
-        // alert(tranformedData);
-
-        // $("#reportTable").html(get_contain(tranformedData));
-        // } else {
-        //     return;
+        result = JSON.parse(result);
+        alert(JSON.stringify(result));
+    } else {
+        alert("获取数据出错！");
+        return;
     }
+
+    // if (result) {
+    // var parsedResult = JSON.parse(result).datas;
+    // alert(JSON.stringify(result));
+    // $("#plan").html(get_contain(JSON.stringify(parsedResult)));
+
+    // let tranformedData = source.replace(/\{/g, "[").replace(/\}/g, "]");
+    // alert(tranformedData);
+
+    // $("#reportTable").html(get_contain(tranformedData));
+    // } else {
+    //     return;
+    // }
 }
 
 // 调用位于JSController中的请求表格数据方法
