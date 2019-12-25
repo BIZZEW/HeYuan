@@ -62,6 +62,12 @@
                             <label id="label111z">单查询</label> 
                         </div> 
                     </div>  
+                    <div id="div_notification"> 
+                        <div id="panel55"> 
+                            <input imagebuttontype="icon" istogglebutton="false" onclick="this.goNotif()" checked="false" id="imagebutton33" type="imagebutton" value="图标名称" class="imagebuttonclass"/>  
+                            <label id="label1notif">消息中心</label> 
+                        </div>  
+                    </div>  
                 </div> 
             </Scrollview> 
         </div> 

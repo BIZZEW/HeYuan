@@ -472,3 +472,29 @@
     margin-top: 20;
     height: 35;
 }
+
+#pnl_selectmat {
+    halign: LEFT;
+    height: fill;
+    background: #fcfcfc;
+    layout: hbox;
+    width: fill;
+    valign: center;
+}
+
+#lbl_matname {
+    halign: left;
+    height: 40;
+    weight: 9;
+    color: #000000;
+    font-size: 14;
+    width: 0;
+    font-family: default;
+    valign: center;
+}
+
+#img_goselectmat {
+    height: 15;
+    widthWrap: 15.0;
+    width: wrap;
+}

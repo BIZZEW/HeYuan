@@ -29,18 +29,22 @@
                 </div> 
             </div>
             <div id="panel333">
-                <label id="label11">水泥品种：</label>
-                <div id="panel22">
+                <label id="label11">物料：</label>
+                <div id="pnl_selectmat" onclick="this.selectMaterial()">
+                    <label id="lbl_matname">请选择物料</label>
+                    <image id="img_goselectmat" scaletype="fitcenter" src="arrow.png"/> 
+                </div> 
+                <!-- <div id="panel22">
                     <picker id="picker0" showsSelectionIndicator="true" onload="this.picker0_onload()">
                         <pickeritem bindfield="status" datasource="statuses" onselectedchange="this.selectcar()" id="picker0_0" value="订单状态"/> 
                     </picker> 
-                </div> 
+                </div>  -->
             </div>
-            <div id="panel33">
+            <!-- <div id="panel33">
                 <label id="label7">司机姓名：</label>
                 <input maxlength="256" id="txt_drivername" placeholder="司机姓名" type="text"/>
                 <input imagebuttontype="icon" istogglebutton="false" onclick="this.goSelectDriver()" checked="false" id="imgbtn_selectDriver" type="imagebutton" value="图标名称" class="imagebuttonclass"/> 
-            </div>
+            </div> -->
             <!-- <div id="panel4">
                 <label id="label2">货物：</label>
                 <div onlongclick="this.cleargoods()" onclick="this.changegoods()" id="changegoodsname">
@@ -48,7 +52,9 @@
                     <image src="arrow.png" id="image0" scaletype="fitcenter"/> 
                 </div> 
             </div> -->
-            <div id="panel5">
+
+
+            <!-- <div id="panel5">
                 <label id="label3">车牌号码：</label>
                 <input maxlength="256" id="vlicense" placeholder="请选择或输入车牌号码" type="text"/>
                 <input imagebuttontype="icon" istogglebutton="false" onclick="this.selectcar()" checked="false" id="imgbtn_selectcar" type="imagebutton" value="图标名称" class="imagebuttonclass"/> 
@@ -56,14 +62,17 @@
             <div id="outfactorypanel">
                 <label id="outfactorylabel">出厂日期：</label>
                 <input format="yyyy-MM-dd" id="outfactory" placeholder="请选择结束时间" type="date"/> 
-            </div>
+            </div> -->
+
+
             <!-- <div id="panel3">
                 <label id="label1">订单号：</label>
                 <div id="panel2">
                     <input maxlength="256" id="billcode" placeholder="请输入订单号" type="text"/> 
                 </div> 
             </div> -->
-            <input onclick="this.searchbutton_onclick()" id="searchbutton" type="button" value="查询" class="textbtnclass"/> 
+            <!-- <input onclick="this.searchbutton_onclick()" id="searchbutton" type="button" value="查询" class="textbtnclass"/>  -->
+            <input onclick="this.requestData()" id="searchbutton" type="button" value="查询" class="textbtnclass"/>             
         </div> 
     </div> 
 </window>

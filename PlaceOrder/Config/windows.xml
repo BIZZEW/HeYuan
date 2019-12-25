@@ -70,6 +70,9 @@
     <file name="Overallreport.dsl"/>  
     <file name="Detailreport.dsl"/>  
     <file name="BIllreport.dsl"/>  
-    <file name="ReportSearch.dsl"/>
-  </StatisticalReport> 
+    <file name="ReportSearch.dsl"/> 
+  </StatisticalReport>  
+  <Notification> 
+    <file name="NotificationMenu.dsl"/> 
+  </Notification> 
 </windows>

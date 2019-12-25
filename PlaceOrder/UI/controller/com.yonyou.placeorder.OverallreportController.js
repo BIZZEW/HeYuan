@@ -57,6 +57,15 @@ try {
 
 			param.pk_appuser = $cache.read("pk_appuser");
 			param.usercode = $cache.read("telephone");
+			param.searchType = $cache.read("searchType") || "currentday";
+
+
+			param.start_time = "2019-05-01";
+			param.end_time = "2019-12-20";
+			param.type = "铜锍含铜";
+			param.customer_name = "安徽省枞阳县金岭矿业有限公司";
+			
+			alert("传参为： " + JSON.stringify(param));
 
 			$service.callAction({
 				"user": $cache.read("telephone"),

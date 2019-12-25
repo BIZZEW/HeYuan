@@ -220,7 +220,7 @@ halign:center;
 widthWrap:70.0;
 height:wrap;
 }
- #div_deliveryorder {
+#div_deliveryorder {
 layout:hbox;
 background:#F7F7F7;
 width:fill;
@@ -229,7 +229,16 @@ margin-top:3;
 halign:LEFT;
 height:150;
 }
- #panel4 {
+#div_notification {
+layout:hbox;
+background:#F7F7F7;
+width:fill;
+valign:center;
+margin-top:3;
+halign:LEFT;
+height:150;
+}
+#panel4 {
 layout:vbox;
 margin-left:10;
 background:#F7F7F7;
@@ -239,7 +248,24 @@ halign:center;
 margin-right:9;
 height:fill;
 }
- #imagebutton3 {
+#panel55 {
+layout:vbox;
+margin-left:10;
+background:#F7F7F7;
+width:75.0;
+valign:CENTER;
+halign:center;
+margin-right:9;
+height:fill;
+}
+#imagebutton3 {
+width:70;
+font-size:10;
+background-image:order5.png;
+icon-text-spacing:3;
+height:70;
+}
+#imagebutton33 {
 width:70;
 font-size:10;
 background-image:order5.png;
@@ -247,6 +273,17 @@ icon-text-spacing:3;
 height:70;
 }
  #label1 {
+color:#6c6c6c;
+heightWrap:50.0;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:center;
+widthWrap:70.0;
+height:wrap;
+}
+#label1notif {
 color:#6c6c6c;
 heightWrap:50.0;
 width:wrap;

@@ -35,46 +35,6 @@ try {
 		eval(js)
 	}
 
-	function com$yonyou$placeorder$ReportSearchController$requestData() {
-		$js.showLoadingBar();
-
-		try {
-			var param = {};
-
-			param.pk_appuser = $cache.read("pk_appuser");
-			param.usercode = $cache.read("telephone") || "";
-			param.searchType = $cache.read("searchType") || "";
-
-			$service.callAction({
-				"user": $cache.read("telephone"),
-				"appid": "PlaceOrder",
-				"viewid": "com.yonyou.placeorder.SaleOrderUMController",
-				"action": "DeliverySummaryAction",
-				"params": param,
-				"timeout": 300,
-				"autoDataBinding": false,
-				"contextmapping": "result",
-				"callback": "callbackSuccess()",
-				"error": "callbackFail()"
-			});
-		} catch (e) { $alert(e); }
-	}
-
-	function callbackSuccess() {
-		$js.hideLoadingBar();
-
-		$js.runjs({
-			"controlid": "webcontrol0",//webControl的id
-			"func": "loadData()"//要执行位于webControl中的js方法名
-		})
-	}
-
-	function callbackFail(sender, args) {
-		$js.hideLoadingBar();
-
-		$alert("访问MA服务器错误:" + JSON.stringify(args));
-	}
-
 	function com$yonyou$placeorder$ReportSearchController$billcode(sender, args) {
 
 	}
@@ -92,51 +52,122 @@ try {
 		$view.close()
 	}
 
-	function com$yonyou$placeorder$ReportSearchController$searchbutton_onclick(sender, args) {
-		var begindate = $id("begindate").get("value");
-		var enddate = $id("enddate").get("value");
-		if (begindate && enddate) {
-			if (Globals.compareDate(begindate, enddate) > 0) {
-				$alert("开始日期不能大于结束日期");
-				return;
-			}
-		}
-		var user = JSON.parse($ctx.getApp("appuser"));
-		var vlicense = $id("vlicense").get("value");
-		if (vlicense) {
-			if (Globals.checkSpecialChar(vlicense)) {
-				$alert("车牌号不能包含特殊字符%或_");
-				return;
-			}
-		}
-		var billcode = $id("billcode").get("value");
-		if (billcode) {
-			if (Globals.checkSpecialChar(billcode)) {
-				$alert("订单号不能包含特殊字符%或_");
-				return;
-			}
-		}
-		var json = {
-			"pk_appuser": user.pk_appuser,
-			"begindate": $id("begindate").get("value"),
-			"enddate": $id("enddate").get("value"),
-			"orderno": $id("billcode").get("value"),
+	function com$yonyou$placeorder$ReportSearchController$requestData() {
+		$js.showLoadingBar();
 
-			"pk_customer": pk_customer,
-			"pk_saleorg": pk_saleorg,
-			"pk_stockorg": pk_stockorg,
+		try {
+			var param = {};
 
-			"cmaterialid": pk_material,
-			"vlicense": $id("vlicense").get("value")
+			param.pk_appuser = $cache.read("pk_appuser");
+			param.usercode = $cache.read("telephone");
+			param.searchType = $cache.read("searchType") || "currentday";
 
-		};
-		var data = $param.getJSONObject("data");
-		$view.open({
-			viewid: "com.yonyou.placeorder.SalesAdvOrderList", //目标页面（首字母大写）全名
-			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
-			"param": json
-		});
 
+			param.start_time = "2019-05-01";
+			param.end_time = "2019-12-20";
+			param.type = "铜锍含铜";
+			param.customer_name = "安徽省枞阳县金岭矿业有限公司";
+			
+			alert("传参为： " + JSON.stringify(param));
+
+			$service.callAction({
+				"user": $cache.read("telephone"),
+				"appid": "PlaceOrder",
+				"viewid": "com.yonyou.placeorder.ReportController",
+				"action": "DeliverySummaryAction",
+				"params": param,
+				"timeout": 300,
+				"autoDataBinding": false,
+				"contextmapping": "result",
+				"callback": "callbackSuccess()",
+				"error": "callbackFail()"
+			});
+		} catch (e) { $alert(e); }
+	}
+
+	// function com$yonyou$placeorder$ReportSearchController$searchbutton_onclick(sender, args) {
+	// 	var begindate = $id("begindate").get("value");
+	// 	var enddate = $id("enddate").get("value");
+	// 	var cmaterialname = $ctx.getString("cmaterialname");
+	// 	var cmaterialid = $ctx.getString("cmaterialid");
+	// 	if (begindate && enddate) {
+	// 		if (Globals.compareDate(begindate, enddate) > 0) {
+	// 			$alert("开始日期不能大于结束日期");
+	// 			return;
+	// 		}
+	// 	}
+	// 	// var user = JSON.parse($ctx.getApp("appuser"));
+	// 	// var vlicense = $id("vlicense").get("value");
+	// 	// if (vlicense) {
+	// 	// 	if (Globals.checkSpecialChar(vlicense)) {
+	// 	// 		$alert("车牌号不能包含特殊字符%或_");
+	// 	// 		return;
+	// 	// 	}
+	// 	// }
+	// 	// var billcode = $id("billcode").get("value");
+	// 	// if (billcode) {
+	// 	// 	if (Globals.checkSpecialChar(billcode)) {
+	// 	// 		$alert("订单号不能包含特殊字符%或_");
+	// 	// 		return;
+	// 	// 	}
+	// 	// }
+
+	// 	$js.showLoadingBar();
+
+	// 	try {
+	// 		var param = {
+	// 			"pk_appuser": user.pk_appuser,
+
+	// 			// 起止日期
+	// 			"start_time": $id("begindate").get("value"),
+	// 			"end_time": $id("enddate").get("value"),
+	// 			// 客户
+	// 			"pk_customer": pk_customer,
+	// 			"customer_name": customer_name,
+	// 			// 物料品种
+	// 			"type": cmaterialname,
+	// 			"cmaterialid": cmaterialid,
+	// 			// 查询类型
+	// 			"searchType": "advanced"
+
+	// 			// "orderno": $id("billcode").get("value"),
+	// 			// "pk_saleorg": pk_saleorg,
+	// 			// "pk_stockorg": pk_stockorg,
+	// 			// "vlicense": $id("vlicense").get("value")
+	// 		};
+
+	// 		alert("传参为： " + JSON.stringify(param));
+
+	// 		$service.callAction({
+	// 			"user": $cache.read("telephone"),
+	// 			"appid": "PlaceOrder",
+	// 			"viewid": "com.yonyou.placeorder.ReportController",
+	// 			"action": "DeliverySummaryAction",
+	// 			"params": param,
+	// 			"timeout": 300,
+	// 			"autoDataBinding": false,
+	// 			"contextmapping": "result",
+	// 			"callback": "callbackSuccess()",
+	// 			"error": "callbackFail()"
+	// 		});
+	// 	} catch (e) { $alert(e); }
+	// }
+
+	function callbackSuccess() {
+		$js.hideLoadingBar();
+
+		$js.runjs({
+			"controlid": "webcontrol0",//webControl的id
+			"func": "loadData()"//要执行位于webControl中的js方法名
+		})
+
+		$view.close();
+	}
+
+	function callbackFail(sender, args) {
+		$js.hideLoadingBar();
+
+		$alert("访问MA服务器错误:" + JSON.stringify(args));
 	}
 
 	function com$yonyou$placeorder$ReportSearchController$back_onclick(sender, args) {
@@ -194,6 +225,7 @@ try {
 	}
 
 	var pk_customer,
+		customer_name,
 		pk_saleorg,
 		pk_stockorg,
 		pk_material;
@@ -220,6 +252,7 @@ try {
 
 		$id("customer").set("value", retvalue.name);
 		pk_customer = retvalue.pk;
+		customer_name = retvalue.name;
 	}
 
 	function com$yonyou$placeorder$ReportSearchController$changesender(sender, args) {
@@ -257,6 +290,22 @@ try {
 	function com$yonyou$placeorder$ReportSearchController$cleargoods(sender, args) {
 		$id("goodsname").set("value", "请选择物料");
 		pk_material = null;
+	}
+
+
+	function com$yonyou$placeorder$ReportSearchController$selectMaterial(sender, args) {
+		$view.open({
+			"viewid": "com.yonyou.placeorder.HlgRefPage",
+			"isKeep": "true",
+			"reftype": Globals.RefInfoType.AVAILGOODS,
+			"callback": function () {
+				var retvalue = $param.getJSONObject("result");
+				SqliteUtil.updateRctMostUseData(Globals.RefInfoType.AVAILGOODS, retvalue);
+				$ctx.put("cmaterialid", retvalue.pk);
+				$ctx.put("cmaterialname", retvalue.name);
+				$id("lbl_matname").set("value", retvalue.name);
+			}
+		});
 	}
 
 	function com$yonyou$placeorder$ReportSearchController$selectcar(sender, args) {
@@ -299,13 +348,14 @@ try {
 		dateOnload: com$yonyou$placeorder$ReportSearchController$dateOnload,
 		changegoods: com$yonyou$placeorder$ReportSearchController$changegoods,
 		back_onclick: com$yonyou$placeorder$ReportSearchController$back_onclick,
-		searchbutton_onclick: com$yonyou$placeorder$ReportSearchController$searchbutton_onclick,
+		// searchbutton_onclick: com$yonyou$placeorder$ReportSearchController$searchbutton_onclick,
 		back: com$yonyou$placeorder$ReportSearchController$back,
 		goodsname: com$yonyou$placeorder$ReportSearchController$goodsname,
 		billcode: com$yonyou$placeorder$ReportSearchController$billcode,
 		initialize: com$yonyou$placeorder$ReportSearchController$initialize,
 		evaljs: com$yonyou$placeorder$ReportSearchController$evaljs,
 		requestData: com$yonyou$placeorder$ReportSearchController$requestData,
+		selectMaterial: com$yonyou$placeorder$ReportSearchController$selectMaterial,
 	};
 	com.yonyou.placeorder.ReportSearchController.registerClass('com.yonyou.placeorder.ReportSearchController', UMP.UI.Mvc.Controller);
 } catch (e) {

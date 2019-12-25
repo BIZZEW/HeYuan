@@ -78,6 +78,13 @@ try {
 		})
 	}
 
+	function com$yonyou$placeorder$HomePageController$goNotif(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.NotificationMenu", //目标页面（首字母大写）全名
+			isKeep: "true"//打开新页面的同时是否保留当前页面，true为保留，false为不保留
+		})
+	}
+
 	function com$yonyou$placeorder$HomePageController$balancequery(sender, args) {
 		$view.open({
 			viewid: "com.yonyou.placeorder.BalanceQuerySearch", //目标页面（首字母大写）全名
@@ -239,7 +246,8 @@ try {
 		usercenter_onclick: com$yonyou$placeorder$HomePageController$usercenter_onclick,
 		creditonclick: com$yonyou$placeorder$HomePageController$creditonclick,
 		initialize: com$yonyou$placeorder$HomePageController$initialize,
-		evaljs: com$yonyou$placeorder$HomePageController$evaljs
+		evaljs: com$yonyou$placeorder$HomePageController$evaljs,
+		goNotif: com$yonyou$placeorder$HomePageController$goNotif
 	};
 	com.yonyou.placeorder.HomePageController.registerClass('com.yonyou.placeorder.HomePageController', UMP.UI.Mvc.Controller);
 } catch (e) {

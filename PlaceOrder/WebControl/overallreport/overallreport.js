@@ -22,11 +22,14 @@ var source = '{{"散装测试","散装测试客户","600.00000000","38.65000000"
 
 // 页面加载完成后请求表格数据
 window.onload = function () {
-    requestData();
-    // loadData();
+    $cache.write("searchType", "currentday");
+
+    // 页面加载请求数据
+    // requestData();
 
     $('input:radio[name="searchType"]').click(function () {
         var checkValue = $('input:radio[name="searchType"]:checked').val();
+        $cache.write("searchType", checkValue);
 
         if (checkValue == "advanced") {
             // 如果点击的是高级查询则跳转到对应的页面
@@ -36,7 +39,7 @@ window.onload = function () {
             })
         }
         else
-            $cache.write("searchType", checkValue);
+            requestData();
     });
 }
 
@@ -45,24 +48,19 @@ function loadData() {
     var result = $ctx.get("result");
     if (result) {
         result = JSON.parse(result);
-        alert(JSON.stringify(result));
+        var datas = result.datas;
+        if (datas) {
+            var tranformedData = datas.replace(/\{/g, "[").replace(/\}/g, "]");
+            // alert("转换后数据： " + tranformedData);
+            $("#reportTable").html(get_contain(tranformedData));
+        } else {
+            alert("获取数据出错！");
+            return;
+        }
     } else {
         alert("获取数据出错！");
         return;
     }
-
-    // if (result) {
-    // var parsedResult = JSON.parse(result).datas;
-    // alert(JSON.stringify(result));
-    // $("#plan").html(get_contain(JSON.stringify(parsedResult)));
-
-    // let tranformedData = source.replace(/\{/g, "[").replace(/\}/g, "]");
-    // alert(tranformedData);
-
-    // $("#reportTable").html(get_contain(tranformedData));
-    // } else {
-    //     return;
-    // }
 }
 
 // 调用位于JSController中的请求表格数据方法
@@ -72,8 +70,6 @@ function requestData() {
 
 // 把json转换成table
 function get_contain(result) {
-    // alert("接收到的数据格式： " + result);
-
     var html = "";
     var data = eval(result);
     try {
@@ -82,7 +78,7 @@ function get_contain(result) {
                 html += "<thead><tr>";
                 $.each(item, function (vlaIndex, valItem) {
                     html += "<th><div class='heading'>";
-                    html += valItem;
+                    html += (valItem + "");
                     html += "</div></th>";
                 });
                 html += "</tr></thead><tbody>";
@@ -90,7 +86,7 @@ function get_contain(result) {
                 html += (index % 2 == 0) ? "<tr class='sub'>" : "<tr>";
                 $.each(item, function (vlaIndex, valItem) {
                     html += (vlaIndex % 2 == 0) ? "<td class='current'>" : "<td>";
-                    html += valItem;
+                    html += (valItem + "");
                     html += "</td>";
                 });
                 html += "</tr>";

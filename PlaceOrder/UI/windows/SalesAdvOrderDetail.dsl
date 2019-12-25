@@ -68,7 +68,8 @@
             </div>  
             <div id="panel8"> 
                 <input id="post" value="提交订单" class="textbtnclass" onclick="this.postbill()" type="button"/>  
-                <!--<input id="invalid" value="作废订单" class="textbtnclass" onclick="this.invalid_onclick()" type="button" disabled="disabled"/> --> 
+                <input id="invalid" value="作废订单" class="textbtnclass" onclick="this.invalid_onclick()" type="button"/> 
+                <!-- <input id="invalid" value="作废订单" class="textbtnclass" onclick="this.invalid_onclick()" type="button" disabled="disabled"/>  -->
             </div> 
         </div> 
     </Scrollview> 
