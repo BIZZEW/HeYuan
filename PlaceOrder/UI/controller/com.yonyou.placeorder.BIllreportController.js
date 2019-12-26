@@ -1,7 +1,7 @@
 //JavaScript Framework 2.0 Code
 try {
 	Type.registerNamespace('com.yonyou.placeorder.BIllreportController');
-	com.yonyou.placeorder.BIllreportController = function() {
+	com.yonyou.placeorder.BIllreportController = function () {
 		com.yonyou.placeorder.BIllreportController.initializeBase(this);
 		this.initialize();
 	}
@@ -51,16 +51,70 @@ try {
 		//调用MA获取数据
 		action = "getPendingReports";
 		$service.callAction({
-			"viewid" : "com.yonyou.uap.haiguan.HaiguanController", //后台Controller(带包名)的类名
-			"action" : action, //后台Controller的方法名,
-			"userName" : userName,
-			"pageIndex" : pageIndex,
-			"pageCount" : pageCount,
-			"autoDataBinding" : false, //请求回来会是否进行数据绑定，默认不绑定
-			"contextmapping" : "fieldPath", //将返回结果映射到指定的Context字段上，默认为替换整个Context
-			"callback" : "pendingReportsCallBack()", //请求成功后回调js方法
-			"error" : "pendingReportsErrCallBack()"//请求失败回调的js方法
+			"viewid": "com.yonyou.uap.haiguan.HaiguanController", //后台Controller(带包名)的类名
+			"action": action, //后台Controller的方法名,
+			"userName": userName,
+			"pageIndex": pageIndex,
+			"pageCount": pageCount,
+			"autoDataBinding": false, //请求回来会是否进行数据绑定，默认不绑定
+			"contextmapping": "fieldPath", //将返回结果映射到指定的Context字段上，默认为替换整个Context
+			"callback": "pendingReportsCallBack()", //请求成功后回调js方法
+			"error": "pendingReportsErrCallBack()"//请求失败回调的js方法
 		});
+	}
+
+	function com$yonyou$placeorder$BillreportController$requestData() {
+		$js.showLoadingBar();
+
+		try {
+			var param = {};
+
+			param.pk_appuser = $cache.read("pk_appuser");
+			param.usercode = $cache.read("telephone");
+			param.searchType = $cache.read("searchType") || "currentday";
+
+			// param.start_time = "2019-05-01";
+			// param.end_time = "2019-12-20";
+			// param.type = "铜锍含铜";
+			// param.customer_name = "安徽省枞阳县金岭矿业有限公司";
+
+			$service.callAction({
+				"user": $cache.read("telephone"),
+				"appid": "PlaceOrder",
+				"viewid": "com.yonyou.placeorder.ReportController",
+				"action": "BillReportAction",
+				"params": param,
+				"timeout": 300,
+				"autoDataBinding": false,
+				"contextmapping": "result",
+				"callback": "callbackSuccess()",
+				"error": "callbackFail()"
+			});
+		} catch (e) { $alert(e); }
+	}
+
+	function com$yonyou$placeorder$BillreportController$goSearch() {
+		// 如果点击的是高级查询则跳转到对应的页面
+		$view.open({
+			viewid: "com.yonyou.placeorder.ReportSearchBill",
+			isKeep: "true",
+			callback: "callbackSuccess()"
+		})
+	}
+
+	function callbackSuccess() {
+		$js.hideLoadingBar();
+
+		$js.runjs({
+			"controlid": "webcontrol2",//webControl的id
+			"func": "loadData()"//要执行位于webControl中的js方法名
+		})
+	}
+
+	function callbackFail(sender, args) {
+		$js.hideLoadingBar();
+
+		$alert("访问MA服务器错误:" + JSON.stringify(args));
 	}
 
 	function changetogglebutton(sender, args) {
@@ -84,15 +138,15 @@ try {
 		pageIndex = 1;
 		finalret = [];
 		$service.callAction({
-			"viewid" : "com.yonyou.uap.haiguan.HaiguanController", //后台Controller(带包名)的类名
-			"action" : action, //后台Controller的方法名,
-			"userName" : userName,
-			"pageIndex" : pageIndex,
-			"pageCount" : pageCount,
-			"autoDataBinding" : false, //请求回来会是否进行数据绑定，默认不绑定
-			"contextmapping" : "fieldPath", //将返回结果映射到指定的Context字段上，默认为替换整个Context
-			"callback" : "pendingReportsCallBack()", //请求成功后回调js方法
-			"error" : "pendingReportsErrCallBack()"//请求失败回调的js方法
+			"viewid": "com.yonyou.uap.haiguan.HaiguanController", //后台Controller(带包名)的类名
+			"action": action, //后台Controller的方法名,
+			"userName": userName,
+			"pageIndex": pageIndex,
+			"pageCount": pageCount,
+			"autoDataBinding": false, //请求回来会是否进行数据绑定，默认不绑定
+			"contextmapping": "fieldPath", //将返回结果映射到指定的Context字段上，默认为替换整个Context
+			"callback": "pendingReportsCallBack()", //请求成功后回调js方法
+			"error": "pendingReportsErrCallBack()"//请求失败回调的js方法
 		});
 	}
 
@@ -123,14 +177,14 @@ try {
 			value = "关闭";
 		}
 		$id("checklistview").initListItem({
-			"itemtype" : "child",
-			"childindex" : checklist.childindex, //当前的child行的索引号
-			"row" : [{
-				"controlid" : "panel3",
-				"background" : color
+			"itemtype": "child",
+			"childindex": checklist.childindex, //当前的child行的索引号
+			"row": [{
+				"controlid": "panel3",
+				"background": color
 			}, {
-				"controlid" : "label6",
-				"value" : value
+				"controlid": "label6",
+				"value": value
 			}]
 		})
 	}
@@ -138,9 +192,9 @@ try {
 	function com$yonyou$placeorder$BIllreportController$onitemclick(sender, args) {
 		var row = $stringToJSON($id("checklistview").get("row"));
 		$view.open({
-			"viewid" : "com.yonyou.hgdeclare.DeclareDetail", //目标页面（首字母大写）全名，
-			"seq_no" : row.seq_no,
-			"isKeep" : "true" //保留当前页面不关闭
+			"viewid": "com.yonyou.hgdeclare.DeclareDetail", //目标页面（首字母大写）全名，
+			"seq_no": row.seq_no,
+			"isKeep": "true" //保留当前页面不关闭
 		});
 	}
 
@@ -148,15 +202,15 @@ try {
 	function com$yonyou$placeorder$BIllreportController$ondownrefresh(sender, args) {
 		pageIndex++;
 		$service.callAction({
-			"viewid" : "com.yonyou.uap.haiguan.HaiguanController", //后台Controller(带包名)的类名
-			"action" : action, //后台Controller的方法名,
-			"userName" : userName,
-			"pageIndex" : pageIndex,
-			"pageCount" : pageCount,
-			"autoDataBinding" : false, //请求回来会是否进行数据绑定，默认不绑定
-			"contextmapping" : "fieldPath", //将返回结果映射到指定的Context字段上，默认为替换整个Context
-			"callback" : "pendingReportsCallBack()", //请求成功后回调js方法
-			"error" : "pendingReportsErrCallBack()"//请求失败回调的js方法
+			"viewid": "com.yonyou.uap.haiguan.HaiguanController", //后台Controller(带包名)的类名
+			"action": action, //后台Controller的方法名,
+			"userName": userName,
+			"pageIndex": pageIndex,
+			"pageCount": pageCount,
+			"autoDataBinding": false, //请求回来会是否进行数据绑定，默认不绑定
+			"contextmapping": "fieldPath", //将返回结果映射到指定的Context字段上，默认为替换整个Context
+			"callback": "pendingReportsCallBack()", //请求成功后回调js方法
+			"error": "pendingReportsErrCallBack()"//请求失败回调的js方法
 		});
 	}
 
@@ -167,7 +221,7 @@ try {
 			finalret = finalret.concat(newret)
 		}
 		$ctx.push({
-			"result" : finalret
+			"result": finalret
 		});
 	}
 
@@ -181,16 +235,18 @@ try {
 
 
 	com.yonyou.placeorder.BIllreportController.prototype = {
-		imagebutton0_onclick : com$yonyou$placeorder$BIllreportController$imagebutton0_onclick,
-		ondownrefresh : com$yonyou$placeorder$BIllreportController$ondownrefresh,
-		onitemclick : com$yonyou$placeorder$BIllreportController$onitemclick,
-		onitemcreate : com$yonyou$placeorder$BIllreportController$onitemcreate,
-		listviewdefine0_onload : com$yonyou$placeorder$BIllreportController$listviewdefine0_onload,
-		initialize : com$yonyou$placeorder$BIllreportController$initialize,
-		evaljs : com$yonyou$placeorder$BIllreportController$evaljs,
+		imagebutton0_onclick: com$yonyou$placeorder$BIllreportController$imagebutton0_onclick,
+		ondownrefresh: com$yonyou$placeorder$BIllreportController$ondownrefresh,
+		onitemclick: com$yonyou$placeorder$BIllreportController$onitemclick,
+		onitemcreate: com$yonyou$placeorder$BIllreportController$onitemcreate,
+		listviewdefine0_onload: com$yonyou$placeorder$BIllreportController$listviewdefine0_onload,
+		initialize: com$yonyou$placeorder$BIllreportController$initialize,
+		evaljs: com$yonyou$placeorder$BIllreportController$evaljs,
 		button0_onclick: com$yonyou$placeorder$BIllreportController$button0_onclick,
+		requestData: com$yonyou$placeorder$BillreportController$requestData,
+		goSearch: com$yonyou$placeorder$BillreportController$goSearch,
 	};
 	com.yonyou.placeorder.BIllreportController.registerClass('com.yonyou.placeorder.BIllreportController', UMP.UI.Mvc.Controller);
-} catch(e) {
+} catch (e) {
 	$e(e);
 }

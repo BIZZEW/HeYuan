@@ -170,7 +170,9 @@
   <view id="Detailreport" ref="Detailreport.dsl" include="true"/>  
   <view id="BIllreport" ref="BIllreport.dsl" include="true"/>  
   <view id="ReportSearch" ref="ReportSearch.dsl" include="true"/>  
-  <view id="NotificationMenu" ref="NotificationMenu.dsl" include="true"/> 
+  <view id="NotificationMenu" ref="NotificationMenu.dsl" include="true"/>  
+  <view id="ReportSearchDetail" ref="ReportSearchDetail.dsl" include="true"/>  
+  <view id="ReportSearchBill" ref="ReportSearchBill.dsl" include="true"/>
 </application>
 <!--
 【屏幕显示方向】

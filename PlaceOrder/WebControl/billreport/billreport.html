@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="billreport.css">
+    <link type="text/css" rel="stylesheet" href="ultratoggle.css">
+    <!-- <link type="text/css" rel="stylesheet" href="../common/public.css"> -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script language="JavaScript" src="../../Frameworks/iuapmobile.native.all.js"></script>
+    <script type="text/javascript" src="billreport.js"></script>
+</head>
+
+<body>
+    <table id='reportTable'>
+    </table>
+
+    <div class="login-panel" v-if="loginStatus==0">
+        <div class="login-form">
+            <div class="container">
+                <div class="switch">
+                    <input type="radio" class="switch-input" name="searchType" value="current day" id="currentday"
+                        checked="checked">
+                    <label for="currentday" class="switch-label switch-label-one">本日</label>
+                    <input type="radio" class="switch-input" name="searchType" value="currentmonth" id="currentmonth">
+                    <label for="currentmonth" class="switch-label switch-label-two">本月</label>
+                    <input type="radio" class="switch-input" name="searchType" value="currentseason" id="currentseason">
+                    <label for="currentseason" class="switch-label switch-label-three">本季</label>
+                    <input type="radio" class="switch-input" name="searchType" value="currentyear" id="currentyear">
+                    <label for="currentyear" class="switch-label switch-label-four">本年</label>
+                    <input type="radio" class="switch-input" name="searchType" value="advanced" id="advanced">
+                    <label for="advanced" class="switch-label switch-label-five">查询</label>
+                    <span class="switch-selection"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

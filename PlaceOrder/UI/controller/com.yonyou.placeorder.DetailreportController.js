@@ -96,7 +96,7 @@ try {
 	function com$yonyou$placeorder$DetailreportController$goSearch() {
 		// 如果点击的是高级查询则跳转到对应的页面
 		$view.open({
-			viewid: "com.yonyou.placeorder.ReportSearch",
+			viewid: "com.yonyou.placeorder.ReportSearchDetail",
 			isKeep: "true",
 			callback: "callbackSuccess()"
 		})
