@@ -126,15 +126,15 @@ try {
 				// 起止日期
 				"start_time": $id("begindate").get("value"),
 				"end_time": $id("enddate").get("value"),
-				// 类型
-				"payment_status":$id("picker0").get("value"),
+				// 账单类型
+				"payment_status": $ctx.getString("status"),
 				// 物料品种
 				"type": cmaterialname,
 				"cmaterialid": cmaterialid,
 				// 查询类型
 				"searchType": "advanced"
 
-				
+
 				// // 客户
 				// "pk_customer": pk_customer,
 				// "customer_name": customer_name,
@@ -151,7 +151,7 @@ try {
 				"user": $cache.read("telephone"),
 				"appid": "PlaceOrder",
 				"viewid": "com.yonyou.placeorder.ReportController",
-				"action": "DeliverySummaryAction",
+				"action": "BillReportAction",
 				"params": param,
 				"timeout": 300,
 				"autoDataBinding": false,

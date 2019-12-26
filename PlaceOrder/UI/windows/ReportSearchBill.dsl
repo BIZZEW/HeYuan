@@ -21,13 +21,6 @@
                 <label id="overdatelabel">结束日期：</label>
                 <input format="yyyy-MM-dd" id="enddate" placeholder="请选择结束时间" type="date"/> 
             </div>
-            <!-- <div id="panel6">
-                <label id="label4">客户：</label>
-                <div onlongclick="this.clearcustomer()" onclick="this.changecustomer()" id="changecustomer">
-                    <label id="customer">请选择客户</label>
-                    <image src="arrow.png" id="image1" scaletype="fitcenter"/> 
-                </div> 
-            </div> -->
             <div id="panel3335">
                 <label id="label115">类型</label>
                 <div id="panel225">
@@ -42,12 +35,12 @@
                     <label id="lbl_matname">请选择物料</label>
                     <image id="img_goselectmat" scaletype="fitcenter" src="arrow.png"/> 
                 </div> 
-                <!-- <div id="panel22">
-                    <picker id="picker0" showsSelectionIndicator="true" onload="this.picker0_onload()">
-                        <pickeritem bindfield="status" datasource="statuses" onselectedchange="this.selectcar()" id="picker0_0" value="订单状态"/> 
-                    </picker> 
-                </div>  -->
             </div>
+
+
+
+
+            
             <!-- <div id="panel33">
                 <label id="label7">司机姓名：</label>
                 <input maxlength="256" id="txt_drivername" placeholder="司机姓名" type="text"/>

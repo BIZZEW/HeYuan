@@ -152,7 +152,7 @@ try {
 				"user": $cache.read("telephone"),
 				"appid": "PlaceOrder",
 				"viewid": "com.yonyou.placeorder.ReportController",
-				"action": "DeliverySummaryAction",
+				"action": "DeliveryDetailsAction",
 				"params": param,
 				"timeout": 300,
 				"autoDataBinding": false,
