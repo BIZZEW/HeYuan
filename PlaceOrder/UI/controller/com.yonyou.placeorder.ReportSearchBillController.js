@@ -121,6 +121,7 @@ try {
 			var param = {
 				"pk_appuser": user.pk_appuser,
 				"usercode": $cache.read("telephone"),
+				"phone_customer": "安徽省枞阳县金岭矿业有限公司",
 
 
 				// 起止日期
