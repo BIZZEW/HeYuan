@@ -75,7 +75,7 @@ try {
 			title: "司机档案信息"
 		},
 		MATERIAL: {
-			code: "1011",
+			code: "1013",
 			action: "SearchMaterialAction",
 			title: "物料档案信息"
 		},
