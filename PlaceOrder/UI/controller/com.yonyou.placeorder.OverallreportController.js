@@ -59,13 +59,10 @@ try {
 			param.usercode = $cache.read("telephone");
 			param.searchType = $cache.read("searchType") || "currentday";
 
-
-			param.start_time = "2019-05-01";
-			param.end_time = "2019-12-20";
-			param.type = "铜锍含铜";
-			param.customer_name = "安徽省枞阳县金岭矿业有限公司";
-			
-			alert("传参为： " + JSON.stringify(param));
+			// param.start_time = "2019-05-01";
+			// param.end_time = "2019-12-20";
+			// param.type = "铜锍含铜";
+			// param.customer_name = "安徽省枞阳县金岭矿业有限公司";
 
 			$service.callAction({
 				"user": $cache.read("telephone"),
@@ -80,6 +77,15 @@ try {
 				"error": "callbackFail()"
 			});
 		} catch (e) { $alert(e); }
+	}
+
+	function com$yonyou$placeorder$OverallreportController$goSearch() {
+		// 如果点击的是高级查询则跳转到对应的页面
+		$view.open({
+			viewid: "com.yonyou.placeorder.ReportSearch",
+			isKeep: "true",
+			callback: "callbackSuccess()"
+		})
 	}
 
 	function callbackSuccess() {
@@ -247,6 +253,7 @@ try {
 		evaljs: com$yonyou$placeorder$OverallreportController$evaljs,
 		button0_onclick: com$yonyou$placeorder$OverallreportController$button0_onclick,
 		requestData: com$yonyou$placeorder$OverallreportController$requestData,
+		goSearch: com$yonyou$placeorder$OverallreportController$goSearch,
 	};
 	com.yonyou.placeorder.OverallreportController.registerClass('com.yonyou.placeorder.OverallreportController', UMP.UI.Mvc.Controller);
 } catch (e) {

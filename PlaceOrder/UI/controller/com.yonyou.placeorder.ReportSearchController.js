@@ -52,89 +52,21 @@ try {
 		$view.close()
 	}
 
-	function com$yonyou$placeorder$ReportSearchController$requestData() {
-		$js.showLoadingBar();
-
-		try {
-			var param = {};
-
-			param.pk_appuser = $cache.read("pk_appuser");
-			param.usercode = $cache.read("telephone");
-			param.searchType = $cache.read("searchType") || "currentday";
-
-
-			param.start_time = "2019-05-01";
-			param.end_time = "2019-12-20";
-			param.type = "铜锍含铜";
-			param.customer_name = "安徽省枞阳县金岭矿业有限公司";
-			
-			alert("传参为： " + JSON.stringify(param));
-
-			$service.callAction({
-				"user": $cache.read("telephone"),
-				"appid": "PlaceOrder",
-				"viewid": "com.yonyou.placeorder.ReportController",
-				"action": "DeliverySummaryAction",
-				"params": param,
-				"timeout": 300,
-				"autoDataBinding": false,
-				"contextmapping": "result",
-				"callback": "callbackSuccess()",
-				"error": "callbackFail()"
-			});
-		} catch (e) { $alert(e); }
-	}
-
-	// function com$yonyou$placeorder$ReportSearchController$searchbutton_onclick(sender, args) {
-	// 	var begindate = $id("begindate").get("value");
-	// 	var enddate = $id("enddate").get("value");
-	// 	var cmaterialname = $ctx.getString("cmaterialname");
-	// 	var cmaterialid = $ctx.getString("cmaterialid");
-	// 	if (begindate && enddate) {
-	// 		if (Globals.compareDate(begindate, enddate) > 0) {
-	// 			$alert("开始日期不能大于结束日期");
-	// 			return;
-	// 		}
-	// 	}
-	// 	// var user = JSON.parse($ctx.getApp("appuser"));
-	// 	// var vlicense = $id("vlicense").get("value");
-	// 	// if (vlicense) {
-	// 	// 	if (Globals.checkSpecialChar(vlicense)) {
-	// 	// 		$alert("车牌号不能包含特殊字符%或_");
-	// 	// 		return;
-	// 	// 	}
-	// 	// }
-	// 	// var billcode = $id("billcode").get("value");
-	// 	// if (billcode) {
-	// 	// 	if (Globals.checkSpecialChar(billcode)) {
-	// 	// 		$alert("订单号不能包含特殊字符%或_");
-	// 	// 		return;
-	// 	// 	}
-	// 	// }
-
+	// function com$yonyou$placeorder$ReportSearchController$requestData() {
 	// 	$js.showLoadingBar();
 
 	// 	try {
-	// 		var param = {
-	// 			"pk_appuser": user.pk_appuser,
+	// 		var param = {};
 
-	// 			// 起止日期
-	// 			"start_time": $id("begindate").get("value"),
-	// 			"end_time": $id("enddate").get("value"),
-	// 			// 客户
-	// 			"pk_customer": pk_customer,
-	// 			"customer_name": customer_name,
-	// 			// 物料品种
-	// 			"type": cmaterialname,
-	// 			"cmaterialid": cmaterialid,
-	// 			// 查询类型
-	// 			"searchType": "advanced"
+	// 		param.pk_appuser = $cache.read("pk_appuser");
+	// 		param.usercode = $cache.read("telephone");
+	// 		param.searchType = $cache.read("searchType") || "currentday";
 
-	// 			// "orderno": $id("billcode").get("value"),
-	// 			// "pk_saleorg": pk_saleorg,
-	// 			// "pk_stockorg": pk_stockorg,
-	// 			// "vlicense": $id("vlicense").get("value")
-	// 		};
+
+	// 		param.start_time = "2019-05-01";
+	// 		param.end_time = "2019-12-20";
+	// 		param.type = "铜锍含铜";
+	// 		param.customer_name = "安徽省枞阳县金岭矿业有限公司";
 
 	// 		alert("传参为： " + JSON.stringify(param));
 
@@ -153,15 +85,85 @@ try {
 	// 	} catch (e) { $alert(e); }
 	// }
 
+	function com$yonyou$placeorder$ReportSearchController$requestData(sender, args) {
+		// 起止日期
+		var begindate = $id("begindate").get("value");
+		var enddate = $id("enddate").get("value");
+		// 物料
+		var cmaterialname = $ctx.getString("cmaterialname");
+		var cmaterialid = $ctx.getString("cmaterialid");
+		// 起止日期校验
+		if (begindate && enddate) {
+			if (Globals.compareDate(begindate, enddate) > 0) {
+				$alert("开始日期不能大于结束日期");
+				return;
+			}
+		}
+		var user = JSON.parse($ctx.getApp("appuser"));
+		// var vlicense = $id("vlicense").get("value");
+		// if (vlicense) {
+		// 	if (Globals.checkSpecialChar(vlicense)) {
+		// 		$alert("车牌号不能包含特殊字符%或_");
+		// 		return;
+		// 	}
+		// }
+		// var billcode = $id("billcode").get("value");
+		// if (billcode) {
+		// 	if (Globals.checkSpecialChar(billcode)) {
+		// 		$alert("订单号不能包含特殊字符%或_");
+		// 		return;
+		// 	}
+		// }
+
+		$js.showLoadingBar();
+
+		try {
+			var param = {
+				"pk_appuser": user.pk_appuser,
+				"usercode": $cache.read("telephone"),
+
+
+				// 起止日期
+				"start_time": $id("begindate").get("value"),
+				"end_time": $id("enddate").get("value"),
+				// 客户
+				"pk_customer": pk_customer,
+				"customer_name": customer_name,
+				// 物料品种
+				"type": cmaterialname,
+				"cmaterialid": cmaterialid,
+				// 查询类型
+				"searchType": "advanced"
+
+				// "orderno": $id("billcode").get("value"),
+				// "pk_saleorg": pk_saleorg,
+				// "pk_stockorg": pk_stockorg,
+				// "vlicense": $id("vlicense").get("value")
+			};
+
+			alert("传参为： " + JSON.stringify(param));
+
+			$service.callAction({
+				"user": $cache.read("telephone"),
+				"appid": "PlaceOrder",
+				"viewid": "com.yonyou.placeorder.ReportController",
+				"action": "DeliverySummaryAction",
+				"params": param,
+				"timeout": 300,
+				"autoDataBinding": false,
+				"contextmapping": "result",
+				"callback": "callbackSuccess()",
+				"error": "callbackFail()"
+			});
+		} catch (e) { $alert(e); }
+	}
+
 	function callbackSuccess() {
 		$js.hideLoadingBar();
 
-		$js.runjs({
-			"controlid": "webcontrol0",//webControl的id
-			"func": "loadData()"//要执行位于webControl中的js方法名
-		})
-
-		$view.close();
+		$view.close({
+			"resultcode": "15",
+		});
 	}
 
 	function callbackFail(sender, args) {
