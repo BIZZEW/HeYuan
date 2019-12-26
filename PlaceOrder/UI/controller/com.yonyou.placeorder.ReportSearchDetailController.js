@@ -303,12 +303,12 @@ try {
 
 	function com$yonyou$placeorder$ReportSearchDetailController$selectMaterial(sender, args) {
 		$view.open({
-			"viewid": "com.yonyou.placeorder.HlgRefPage",
+			"viewid": "com.yonyou.placeorder.BaseInfoRefWindow",
 			"isKeep": "true",
-			"reftype": Globals.RefInfoType.AVAILGOODS,
+			"reftype": Globals.RefInfoType.MATERIAL,
 			"callback": function () {
 				var retvalue = $param.getJSONObject("result");
-				SqliteUtil.updateRctMostUseData(Globals.RefInfoType.AVAILGOODS, retvalue);
+				SqliteUtil.updateRctMostUseData(Globals.RefInfoType.MATERIAL, retvalue);
 				$ctx.put("cmaterialid", retvalue.pk);
 				$ctx.put("cmaterialname", retvalue.name);
 				$id("lbl_matname").set("value", retvalue.name);

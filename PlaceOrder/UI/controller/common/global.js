@@ -73,7 +73,12 @@ try {
 			code: "1010",
 			action: "FixInferterAction",
 			title: "司机档案信息"
-		}
+		},
+		MATERIAL: {
+			code: "1011",
+			action: "SearchMaterialAction",
+			title: "物料档案信息"
+		},
 	};
 	Globals.callActionError = function () {
 		$alert("访问MA服务器异常");
