@@ -132,13 +132,18 @@ try {
 				// 物料品种
 				"type": cmaterialname,
 				"cmaterialid": cmaterialid,
+				// 车牌号
+				"vlicense": $id("vlicense").get("value"),
+				// 出厂日期：
+				"outfactory": $id("outfactory").get("value"),
+
+
 				// 查询类型
 				"searchType": "advanced"
 
 				// "orderno": $id("billcode").get("value"),
 				// "pk_saleorg": pk_saleorg,
 				// "pk_stockorg": pk_stockorg,
-				// "vlicense": $id("vlicense").get("value")
 			};
 
 			alert("传参为： " + JSON.stringify(param));

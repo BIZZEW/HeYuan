@@ -126,14 +126,18 @@ try {
 				// 起止日期
 				"start_time": $id("begindate").get("value"),
 				"end_time": $id("enddate").get("value"),
-				// 客户
-				"pk_customer": pk_customer,
-				"customer_name": customer_name,
+				// 类型
+				"payment_status":$id("picker0").get("value"),
 				// 物料品种
 				"type": cmaterialname,
 				"cmaterialid": cmaterialid,
 				// 查询类型
 				"searchType": "advanced"
+
+				
+				// // 客户
+				// "pk_customer": pk_customer,
+				// "customer_name": customer_name,
 
 				// "orderno": $id("billcode").get("value"),
 				// "pk_saleorg": pk_saleorg,
@@ -330,9 +334,12 @@ try {
 		}
 	}
 
+	function com$yonyou$placeorder$ReportSearchBillController$selectstatus(sender, args) {
+	}
+
 	function com$yonyou$placeorder$ReportSearchBillController$picker0_onload(sender, args) {
 		var context = {
-			statuses: ["未完成", "已作废", "已完成"],
+			statuses: ["已付款", "应付款"],
 		}
 		$ctx.push(context); //数据绑定,将context的值与picker进行绑定
 	}
@@ -358,6 +365,7 @@ try {
 		evaljs: com$yonyou$placeorder$ReportSearchBillController$evaljs,
 		requestData: com$yonyou$placeorder$ReportSearchBillController$requestData,
 		selectMaterial: com$yonyou$placeorder$ReportSearchBillController$selectMaterial,
+		selectstatus: com$yonyou$placeorder$ReportSearchBillController$selectstatus,
 	};
 	com.yonyou.placeorder.ReportSearchBillController.registerClass('com.yonyou.placeorder.ReportSearchBillController', UMP.UI.Mvc.Controller);
 } catch (e) {

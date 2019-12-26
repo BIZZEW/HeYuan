@@ -21,11 +21,19 @@
                 <label id="overdatelabel">结束日期：</label>
                 <input format="yyyy-MM-dd" id="enddate" placeholder="请选择结束时间" type="date"/> 
             </div>
-            <div id="panel6">
+            <!-- <div id="panel6">
                 <label id="label4">客户：</label>
                 <div onlongclick="this.clearcustomer()" onclick="this.changecustomer()" id="changecustomer">
                     <label id="customer">请选择客户</label>
                     <image src="arrow.png" id="image1" scaletype="fitcenter"/> 
+                </div> 
+            </div> -->
+            <div id="panel3335">
+                <label id="label115">类型</label>
+                <div id="panel225">
+                    <picker id="picker05" showsSelectionIndicator="true" onload="this.picker0_onload()">
+                        <pickeritem bindfield="status" datasource="statuses" onselectedchange="this.selectstatus()" id="picker0_0" value="类型"/> 
+                    </picker> 
                 </div> 
             </div>
             <div id="panel333">

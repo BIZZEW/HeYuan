@@ -498,3 +498,49 @@
     widthWrap: 15.0;
     width: wrap;
 }
+
+#panel3335 {
+    layout: hbox;
+    margin-left: 15;
+    background: #fcfcfc;
+    width: fill;
+    valign: center;
+    margin-top: 15;
+    halign: CENTER;
+    margin-right: 15;
+    height: 30;
+}
+
+#label115 {
+    color: #585858;
+    background: #fcfcfc;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 60.0;
+    margin-right: 5;
+    height: fill;
+}
+
+#panel225 {
+    layout: hbox;
+    background: #fcfcfc;
+    width: fill;
+    valign: center;
+    halign: LEFT;
+    height: fill;
+}
+
+#picker05 {
+    color: #167ef8;
+    background: #fcfcfc;
+    padding-left: 4;
+    width: fill;
+    font-size: 15;
+    font-family: default;
+    halign: RIGHT;
+    padding-right: 4;
+    height: fill;
+}
