@@ -65,6 +65,15 @@ function requestData() {
 function get_contain(result) {
     var html = "";
     var data = eval(result);
+
+    if (!data) {
+        alert("抱歉，获取数据出错！");
+        return;
+    } else if (data.length <= 0) {
+        alert("抱歉，暂时没有数据！");
+        return;
+    }
+
     try {
         $.each(data, function (index, item) {
             if (index === 0) {
