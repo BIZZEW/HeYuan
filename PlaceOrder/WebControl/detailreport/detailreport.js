@@ -44,7 +44,7 @@ function loadData() {
         var datas = result.datas;
         if (datas) {
             var tranformedData = datas.replace(/\{/g, "[").replace(/\}/g, "]");
-            // alert("转换后数据： " + tranformedData);
+            alert("转换后数据： " + tranformedData);
             $("#reportTable").html(get_contain(tranformedData));
         } else {
             alert("获取数据出错！");

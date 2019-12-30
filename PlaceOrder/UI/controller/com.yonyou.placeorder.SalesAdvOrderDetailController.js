@@ -72,6 +72,24 @@ try {
 		cpreorderbid;
 	function com$yonyou$placeorder$SalesAdvOrderDetailController$changebill(sender, args) {
 		var data = $param.getJSONObject("data");
+
+		var flg = "";
+
+		var otherparam = $param.getJSONObject("otherparams");
+
+		alert(JSON.stringify(otherparam));
+
+		if (otherparam != null && typeof (otherparam) != undefined)
+			if (otherparam.flg != null && typeof (otherparam.flg) != undefined)
+				flg = otherparam.flg
+
+		alert(flg);
+
+		if (flg == "SalesAdvOrderListController")
+			$id("invalid").set('display', 'block');
+		else
+			$id("invalid").set('display', 'none');
+
 		var license1value = $cache.read("license1value");
 		if (license1value) {
 			$id("btn_license1").set("value", license1value);

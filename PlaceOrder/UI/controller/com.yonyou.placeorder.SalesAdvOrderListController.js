@@ -1,7 +1,7 @@
 //JavaScript Framework 2.0 Code
 try {
 	Type.registerNamespace('com.yonyou.placeorder.SalesAdvOrderListController');
-	com.yonyou.placeorder.SalesAdvOrderListController = function() {
+	com.yonyou.placeorder.SalesAdvOrderListController = function () {
 		com.yonyou.placeorder.SalesAdvOrderListController.initializeBase(this);
 		this.initialize();
 	}
@@ -43,14 +43,14 @@ try {
 		var json = $param.getJSONObject("param");
 		com.yonyou.placeorder.SalesAdvOrderListController.queryparam = json;
 		com.yonyou.placeorder.SalesAdvOrderListController.listdatas = {
-			list : []
+			list: []
 		};
 		getDatas();
 	}
 	function com$yonyou$placeorder$SalesAdvOrderListController$listup(sender, args) {
 		com.yonyou.placeorder.SalesAdvOrderListController.page = 1;
 		com.yonyou.placeorder.SalesAdvOrderListController.listdatas = {
-			list : []
+			list: []
 		};
 		getDatas();
 	}
@@ -59,34 +59,37 @@ try {
 	}
 	function com$yonyou$placeorder$SalesAdvOrderListController$itemclick(sender, args) {
 		var item = JSON.parse($id("totallist").get("row"));
-		com.yonyou.placeorder.SalesAdvOrderListController.clickItemIndex=$id("totallist").get("rowindex");
+		com.yonyou.placeorder.SalesAdvOrderListController.clickItemIndex = $id("totallist").get("rowindex");
 		$view.open({
-			viewid : "com.yonyou.placeorder.SalesAdvOrderDetail", //目标页面（首字母大写）全名
-			isKeep : "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
-			data : item,
-			callback : "itemClickCallback()"
+			viewid: "com.yonyou.placeorder.SalesAdvOrderDetail", //目标页面（首字母大写）全名
+			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
+			data: item,
+			callback: "itemClickCallback()",
+			"otherparams": {
+				"flg": "SalesAdvOrderListController"
+			},
 		})
 	}
-	function itemClickCallback(){
+	function itemClickCallback() {
 		var retvalue = $param.getJSONObject("result");
-		com.yonyou.placeorder.SalesAdvOrderListController.listdatas.list[com.yonyou.placeorder.SalesAdvOrderListController.clickItemIndex]=retvalue;
+		com.yonyou.placeorder.SalesAdvOrderListController.listdatas.list[com.yonyou.placeorder.SalesAdvOrderListController.clickItemIndex] = retvalue;
 		$ctx.push(com.yonyou.placeorder.SalesAdvOrderListController.listdatas);
 	}
 	function getDatas() {
 		var param = com.yonyou.placeorder.SalesAdvOrderListController.queryparam;
 		param["page"] = com.yonyou.placeorder.SalesAdvOrderListController.page;
-		param["usercode"]=$cache.read("telephone");
+		param["usercode"] = $cache.read("telephone");
 		$service.callAction({
-		"usercode":$cache.read("telephone"),
-		"user":$cache.read("telephone"),
-			"appid":"PlaceOrder",
-			"viewid" : "com.yonyou.placeorder.SaleAdvOrderUMController", //后台Controller(带包名)的类名
-			"action" : "query", //后台Controller的方法名,
-			"params" : param, //自定义参数
-			"autoDataBinding" : false, //请求回来会是否进行数据绑定，默认不绑定
-			"contextmapping" : "result", //将返回结果映射到指定的Context字段上，默认为替换整个Context
-			"callback" : "connectSuccess()", //请求成功后回调js方法
-			"error" : "connectError()"//请求失败回调的js方法
+			"usercode": $cache.read("telephone"),
+			"user": $cache.read("telephone"),
+			"appid": "PlaceOrder",
+			"viewid": "com.yonyou.placeorder.SaleAdvOrderUMController", //后台Controller(带包名)的类名
+			"action": "query", //后台Controller的方法名,
+			"params": param, //自定义参数
+			"autoDataBinding": false, //请求回来会是否进行数据绑定，默认不绑定
+			"contextmapping": "result", //将返回结果映射到指定的Context字段上，默认为替换整个Context
+			"callback": "connectSuccess()", //请求成功后回调js方法
+			"error": "connectError()"//请求失败回调的js方法
 		});
 		$js.showLoadingBar();
 	}
@@ -94,22 +97,22 @@ try {
 		$js.hideLoadingBar();
 		var result = $ctx.getJSONObject("result");
 		var olddatas = com.yonyou.placeorder.SalesAdvOrderListController.listdatas.list;
-		if(result){
-			if(result.statuscode=="0"){
-				if(result.datas&&result.datas.queryresults){
-					var newdatas=olddatas.concat(result.datas.queryresults);
+		if (result) {
+			if (result.statuscode == "0") {
+				if (result.datas && result.datas.queryresults) {
+					var newdatas = olddatas.concat(result.datas.queryresults);
 					com.yonyou.placeorder.SalesAdvOrderListController.listdatas = {
-						list : newdatas
+						list: newdatas
 					}
 					com.yonyou.placeorder.SalesAdvOrderListController.page++;
 					$ctx.push(com.yonyou.placeorder.SalesAdvOrderListController.listdatas);
-					var pagenuminfo=result.datas.maxindex+"/"+result.datas.allnums;
-					$id("lbl_nums").set("value",pagenuminfo);
-				}else{
+					var pagenuminfo = result.datas.maxindex + "/" + result.datas.allnums;
+					$id("lbl_nums").set("value", pagenuminfo);
+				} else {
 					$alert("没有更多数据了");
 				}
-			}else if(result.statuscode=="1"){
-				$alert("系统错误："+result.errinfo);
+			} else if (result.statuscode == "1") {
+				$alert("系统错误：" + result.errinfo);
 			}
 		}
 	}
@@ -119,14 +122,14 @@ try {
 		$alert("连接MA服务器异常");
 	}
 	com.yonyou.placeorder.SalesAdvOrderListController.prototype = {
-		itemclick : com$yonyou$placeorder$SalesAdvOrderListController$itemclick,
-		pageOnload : com$yonyou$placeorder$SalesAdvOrderListController$pageOnload,
-		listup : com$yonyou$placeorder$SalesAdvOrderListController$listup,
-		listdown : com$yonyou$placeorder$SalesAdvOrderListController$listdown,
-		initialize : com$yonyou$placeorder$SalesAdvOrderListController$initialize,
-		evaljs : com$yonyou$placeorder$SalesAdvOrderListController$evaljs
+		itemclick: com$yonyou$placeorder$SalesAdvOrderListController$itemclick,
+		pageOnload: com$yonyou$placeorder$SalesAdvOrderListController$pageOnload,
+		listup: com$yonyou$placeorder$SalesAdvOrderListController$listup,
+		listdown: com$yonyou$placeorder$SalesAdvOrderListController$listdown,
+		initialize: com$yonyou$placeorder$SalesAdvOrderListController$initialize,
+		evaljs: com$yonyou$placeorder$SalesAdvOrderListController$evaljs
 	};
 	com.yonyou.placeorder.SalesAdvOrderListController.registerClass('com.yonyou.placeorder.SalesAdvOrderListController', UMP.UI.Mvc.Controller);
-} catch(e) {
+} catch (e) {
 	$e(e);
 }

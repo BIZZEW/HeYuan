@@ -88,7 +88,7 @@ try {
 
 			"cmaterialid": pk_material,
 			"vlicense": $id("vlicense").get("value"),
-			"driver_name": $id("txt_drivername").get("value"),
+			// "driver_name": $id("txt_drivername").get("value"),
 			// 订单状态
 			"status": $ctx.getString("status"),
 		};

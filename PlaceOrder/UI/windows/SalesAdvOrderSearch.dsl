@@ -28,11 +28,11 @@
                     <image src="arrow.png" id="image1" scaletype="fitcenter"/> 
                 </div> 
             </div>
-            <div id="panel33">
+            <!-- <div id="panel33">
                 <label id="label7">司机姓名：</label>
                 <input maxlength="256" id="txt_drivername" placeholder="司机姓名" type="text"/>
                 <input imagebuttontype="icon" istogglebutton="false" onclick="this.goSelectDriver()" checked="false" id="imgbtn_selectDriver" type="imagebutton" value="图标名称" class="imagebuttonclass"/> 
-            </div>
+            </div> -->
             <div id="panel4">
                 <label id="label2">货物：</label>
                 <div onlongclick="this.cleargoods()" onclick="this.changegoods()" id="changegoodsname">

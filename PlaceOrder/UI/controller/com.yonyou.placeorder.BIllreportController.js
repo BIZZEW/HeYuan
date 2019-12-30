@@ -73,7 +73,7 @@ try {
 			param.usercode = $cache.read("telephone");
 			param.searchType = $cache.read("searchType") || "currentday";
 
-			// alert(JSON.stringify(param));
+			alert(JSON.stringify(param));
 
 			// param.phone_customer = "安徽省枞阳县金岭矿业有限公司";
 
