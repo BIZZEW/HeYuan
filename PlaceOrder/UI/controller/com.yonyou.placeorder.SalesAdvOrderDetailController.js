@@ -77,13 +77,13 @@ try {
 
 		var otherparam = $param.getJSONObject("otherparams");
 
-		alert(JSON.stringify(otherparam));
+		// alert(JSON.stringify(otherparam));
 
 		if (otherparam != null && typeof (otherparam) != undefined)
 			if (otherparam.flg != null && typeof (otherparam.flg) != undefined)
 				flg = otherparam.flg
 
-		alert(flg);
+		// alert(flg);
 
 		if (flg == "SalesAdvOrderListController")
 			$id("invalid").set('display', 'block');
