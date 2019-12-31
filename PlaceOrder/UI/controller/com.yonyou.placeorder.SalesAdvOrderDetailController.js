@@ -405,26 +405,28 @@ try {
 			}
 		}
 		com.yonyou.placeorder.SalesAdvOrderDetailController.carno = carno;
-		if ($id("drivername").get("value") == "") {
-			$alert("请输入司机姓名");
-			return;
-		} else if (Globals.checktruename($id("drivername").get("value"))) {
-			$alert("请输入真实姓名");
-			return;
 
-		} else if ($id("drivertel").get("value") == "") {
-			$alert("请输入司机电话");
-			return;
-		} else if (Globals.checktelephone($id("drivertel").get("value"))) {
-			$alert("请输入正确的手机号码");
-			return;
-		} else if ($id("driverid").get("value") == "") {
-			$alert("请输入司机身份证号");
-			return;
-		} else if (Globals.checkidnum($id("driverid").get("value"))) {
-			$alert("请输入正确的身份证号");
-			return;
-		}
+		// if ($id("drivername").get("value") == "") {
+		// 	$alert("请输入司机姓名");
+		// 	return;
+		// } else if (Globals.checktruename($id("drivername").get("value"))) {
+		// 	$alert("请输入真实姓名");
+		// 	return;
+
+		// } else if ($id("drivertel").get("value") == "") {
+		// 	$alert("请输入司机电话");
+		// 	return;
+		// } else if (Globals.checktelephone($id("drivertel").get("value"))) {
+		// 	$alert("请输入正确的手机号码");
+		// 	return;
+		// } else if ($id("driverid").get("value") == "") {
+		// 	$alert("请输入司机身份证号");
+		// 	return;
+		// } else if (Globals.checkidnum($id("driverid").get("value"))) {
+		// 	$alert("请输入正确的身份证号");
+		// 	return;
+		// }
+		
 		var data = $param.getJSONObject("data");
 		if (data != null && typeof (data) != undefined) {
 			var json = {
