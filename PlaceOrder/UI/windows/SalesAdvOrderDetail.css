@@ -34,7 +34,7 @@
 
  #panel0 {
      halign: center;
-     height: 100;
+     height: 140;
      layout: vbox;
      width: fill;
      valign: TOP;

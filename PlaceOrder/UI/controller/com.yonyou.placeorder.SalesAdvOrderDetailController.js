@@ -470,6 +470,7 @@ try {
 				"drivertelephone": $id("drivertel").get("value"), //司机手机
 				"vdriverid": $id("driverid").get("value")//司机身份证
 			};
+			// alert(JSON.stringify(json));
 			$service.callAction({
 				"usercode": $cache.read("telephone"),
 				"user": $cache.read("telephone"),
