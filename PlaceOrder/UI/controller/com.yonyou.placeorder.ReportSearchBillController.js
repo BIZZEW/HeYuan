@@ -146,7 +146,7 @@ try {
 				// "vlicense": $id("vlicense").get("value")
 			};
 
-			alert("传参为： " + JSON.stringify(param));
+			// alert("传参为： " + JSON.stringify(param));
 
 			$service.callAction({
 				"user": $cache.read("telephone"),
@@ -304,10 +304,10 @@ try {
 		$view.open({
 			"viewid": "com.yonyou.placeorder.BaseInfoRefWindow",
 			"isKeep": "true",
-			"reftype": Globals.RefInfoType.MATERIAL,
+			"reftype": Globals.RefInfoType.AVAILGOODS,
 			"callback": function () {
 				var retvalue = $param.getJSONObject("result");
-				SqliteUtil.updateRctMostUseData(Globals.RefInfoType.MATERIAL, retvalue);
+				SqliteUtil.updateRctMostUseData(Globals.RefInfoType.AVAILGOODS, retvalue);
 				$ctx.put("cmaterialid", retvalue.pk);
 				$ctx.put("cmaterialname", retvalue.name);
 				$id("lbl_matname").set("value", retvalue.name);

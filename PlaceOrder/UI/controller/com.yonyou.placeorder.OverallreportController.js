@@ -60,7 +60,7 @@ try {
 			param.searchType = $cache.read("searchType") || "currentday";
 			// param.phone_customer = "安徽省枞阳县金岭矿业有限公司";
 
-			alert(JSON.stringify(param));
+			// alert(JSON.stringify(param));
 
 			// param.start_time = "2019-05-01";
 			// param.end_time = "2019-12-20";
