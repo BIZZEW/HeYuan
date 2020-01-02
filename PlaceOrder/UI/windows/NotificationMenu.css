@@ -385,7 +385,6 @@
     height: 120;
     width: fill;
     layout: hbox;
-    margin-left: 10;
     valign: center;
     border-bottom-color: #C7C7C7;
     background: #ffffff;
@@ -500,7 +499,6 @@
     height: 120;
     width: fill;
     layout: hbox;
-    margin-left: 10;
     margin-top: 10;
     valign: center;
     border-bottom-color: #C7C7C7;
@@ -616,7 +614,6 @@
     height: 120;
     width: fill;
     layout: hbox;
-    margin-left: 10;
     margin-top: 10;
     valign: center;
     border-bottom-color: #C7C7C7;

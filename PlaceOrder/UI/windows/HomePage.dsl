@@ -9,7 +9,7 @@
             <Scrollview width="fill" hScrollEnabled="disabled" id="Scrollview_panel1" height="fill"> 
                 <div id="panel1"> 
                     <div id="panel3"> 
-                        <label id="label0">手机下单服务中心</label>  
+                        <label id="label0">金圆环保供销平台</label>  
                         <div id="panel10"> 
                             <input imagebuttontype="icon" istogglebutton="false" onclick="this.usercenter_onclick()" checked="false" id="usercenter" type="imagebutton" value="图标名称" class="imagebuttonclass"/> 
                         </div> 
@@ -24,49 +24,49 @@
                             <imageflipperitem src="banner6.png" description="" id="imageflipper0_5" title=""/> 
                         </imageflipper> 
                     </div>
-                    <div id="div_pickuporder"> 
-                        <div onclick="this.addseleorder_onclick()" id="myseles"> 
-                            <input imagebuttontype="text" istogglebutton="false" onclick="this.addseleorder_onclick()" checked="false" id="imagebutton0" type="imagebutton" class="imagebuttonclass"/>  
-                            <label id="label2">车辆下单</label>
-                        </div>  
-                        <div onclick="this.myseles()" id="mydeliveryorder"> 
-                            <input imagebuttontype="text" istogglebutton="false" onclick="this.myseles()" checked="false" id="imagebutton1" type="imagebutton" class="imagebuttonclass"/>  
-                            <label id="label3">订单查询</label>  
-                        </div>  
-                        <div onclick="this.creditonclick()" id="creditpanel"> 
-                            <input imagebuttontype="icon" istogglebutton="false" onclick="this.creditonclick()" checked="false" id="imagebutton18" type="imagebutton" class="imagebuttonclass"/>  
-                            <label id="label21">余额查询</label> 
-                        </div>  
-                        <div onclick="this.report_onclick()" id="panel8"> 
-                            <input imagebuttontype="icon" istogglebutton="false" onclick="this.report_onclick()" checked="false" id="imagebutton5" type="imagebutton" value="图标名称" class="imagebuttonclass"/>  
-                            <label id="label6">统计报表</label> 
-                        </div> 
-                    </div>  
-                    <div id="div_deliveryorder"> 
-                        <div onclick="this.myposts()" id="panel4"> 
-                            <input imagebuttontype="icon" istogglebutton="false" onclick="this.myposts()" checked="false" id="imagebutton3" type="imagebutton" value="图标名称" class="imagebuttonclass"/>  
-                            <label id="label1">新增送货单</label> 
-                        </div>  
-                        <div id="panel5"> 
-                            <input imagebuttontype="icon" istogglebutton="false" onclick="this.deliverydetailclick()" checked="false" id="img_deliverydetail" type="imagebutton" value="图标名称" class="imagebuttonclass"/>  
-                            <label id="label5">送货单查询</label> 
-                        </div>  
-                        <div id="panel44"> 
-                            <input imagebuttontype="icon" istogglebutton="false" onclick="this.longtermclick()" checked="false" id="img_longterm" type="imagebutton" value="图标名称" class="imagebuttonclass"/>  
-                            <label id="label11">新增长期</label>  
-                            <label id="label11z">送货单</label> 
-                        </div>  
-                        <div id="panel444"> 
-                            <input imagebuttontype="icon" istogglebutton="false" onclick="this.longtermclickquery()" checked="false" id="img_longterm2" type="imagebutton" value="图标名称" class="imagebuttonclass"/>  
-                            <label id="label111">长期送货</label>  
-                            <label id="label111z">单查询</label> 
-                        </div> 
-                    </div>  
-                    <div id="div_notification"> 
-                        <div id="panel55"> 
-                            <input imagebuttontype="icon" istogglebutton="false" onclick="this.goNotif()" checked="false" id="imagebutton33" type="imagebutton" value="图标名称" class="imagebuttonclass"/>  
-                            <label id="label1notif">消息中心</label> 
-                        </div>  
+                    <div id="viewPage1">
+                        <div id="div_pickuporder">
+                            <div id="panel39">
+                                <input imagebuttontype="text" istogglebutton="false" onclick="this.addseleorder_onclick()" checked="false" id="imagebutton0" type="imagebutton" class="imagebuttonclass" value="车辆下单" />  
+                            </div>
+                            <div id="panel49">
+                                <input imagebuttontype="text" istogglebutton="false" onclick="this.myseles()" checked="false" id="imagebutton1" type="imagebutton" class="imagebuttonclass" value="订单查询" />
+                            </div>
+                            <div id="panel59">
+                                <input imagebuttontype="text" istogglebutton="false" onclick="this.creditonclick()" checked="false" id="imagebutton2" type="imagebutton" class="imagebuttonclass" value="余额查询" /> 
+                            </div>
+                        </div>
+                        <div id="div_pickuporder2">
+                            <div id="panel89">
+                                <input imagebuttontype="text" istogglebutton="false" onclick="this.report_onclick()" checked="false" id="imagebutton3" type="imagebutton" class="imagebuttonclass" value="统计报表" />  
+                            </div>
+                            <div id="panel79">
+                                <input imagebuttontype="text" istogglebutton="false" onclick="this.mypickups()" checked="false" id="imagebutton4" type="imagebutton" class="imagebuttonclass" value="提货单查询" />
+                            </div>
+                            <div id="panel69">
+                                <input imagebuttontype="text" istogglebutton="false" onclick="this.goNotif()" checked="false" id="imagebutton5" type="imagebutton" class="imagebuttonclass" value="消息中心" />  
+                            </div>
+                        </div>
+                        <div id="div_deliveryorder">
+                            <div id="panel99">
+                                <input imagebuttontype="text" istogglebutton="false" onclick="this.myposts()" checked="false" id="imagebutton6" type="imagebutton" class="imagebuttonclass" value="新增送货单" /> 
+                            </div>
+                            <div id="panel109">
+                                <input imagebuttontype="text" istogglebutton="false" onclick="this.deliverydetailclick()" checked="false" id="imagebutton7" type="imagebutton" class="imagebuttonclass" value="送货单查询" /> 
+                            </div>
+                            <div id="panel119">
+                                <input imagebuttontype="text" istogglebutton="false" onclick="this.longtermclick()" checked="false" id="imagebutton8" type="imagebutton" class="imagebuttonclass" value="新增长期送货单" /> 
+                            </div>
+                        </div>
+                        <div id="div_deliveryorder2">
+                            <div id="panel999">
+                                <input imagebuttontype="text" istogglebutton="false" onclick="this.longtermclickquery()" checked="false" id="imagebutton9" type="imagebutton" class="imagebuttonclass" value="长期送货单查询" />  
+                            </div>
+                            <div id="panel9992">
+                            </div>
+                            <div id="panel9993">
+                            </div>
+                        </div>
                     </div>  
                 </div> 
             </Scrollview> 

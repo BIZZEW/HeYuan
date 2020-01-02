@@ -97,9 +97,11 @@ try {
 		var user = JSON.parse($ctx.getApp("appuser"));
 		if (user.dfltcstm == undefined || user.dfltcstm == null) {
 			$id("div_pickuporder").set("display", "none");
+			$id("div_pickuporder2").set("display", "none");
 		}
 		if (user.dfltsupplier == undefined || user.dfltsupplier == null) {
 			$id("div_deliveryorder").set("display", "none");
+			$id("div_deliveryorder2").set("display", "none");
 		}
 		SqliteUtil.createRctMostUseTbl();
 	}
