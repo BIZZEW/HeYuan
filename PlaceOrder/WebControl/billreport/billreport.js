@@ -1,22 +1,5 @@
 /* by zhuhy */
 
-// function formatJson(ary) {
-//     var result = [];
-//     var keys = ary[0];
-
-//     for (var i = 1; i < ary.length; i++) {
-
-//         var obj = {};
-//         var vals = ary[i];
-//         for (var j = 0; j < vals.length; j++) {
-//             obj[keys[j]] = vals[j];
-//         }
-//         result.push(obj);
-//     }
-
-//     return result;
-// }
-
 // 页面加载完成后请求表格数据
 window.onload = function () {
     $cache.write("searchType", "currentday");
@@ -37,7 +20,10 @@ window.onload = function () {
 
 // JSController中获取到数据之后会调用该方法以在页面上加载获得到的数据
 function loadData() {
-    var result = $ctx.get("result");
+    var searchType = $cache.read("searchType") || "currentday";
+
+    var result = $ctx.get(searchType);
+    // alert(searchType + " 的原始数据： " + result);
 
     if (result) {
         result = JSON.parse(result);
@@ -47,11 +33,11 @@ function loadData() {
             // alert("转换后数据： " + tranformedData);
             $("#reportTable").html(get_contain(tranformedData));
         } else {
-            alert("获取数据出错！");
+            alert("获取数据出错！code: 01");
             return;
         }
     } else {
-        alert("抱歉，获取数据出错！");
+        alert("获取数据出错！code: 02");
         return;
     }
 }
@@ -64,14 +50,18 @@ function requestData() {
 // 把json转换成table
 function get_contain(result) {
     var html = "";
-    var data = eval(result);
+    var data = null;
 
-    if (!data) {
-        alert("抱歉，获取数据出错！");
-        return;
-    } else if (data.length <= 0) {
+    try {
+        data = eval(result);
+    } catch (e) {
         alert("抱歉，暂时没有数据！");
-        return;
+        return html;
+    }
+
+    if (data.length <= 0) {
+        alert("抱歉，暂时没有数据！");
+        return html;
     }
 
     try {

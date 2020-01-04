@@ -69,17 +69,33 @@ try {
 		try {
 			var param = {};
 
+			var user = JSON.parse($ctx.getApp("appuser"));
+
+			var searchType = $cache.read("searchType") || "currentday";
+
+			if (searchType == "advanced") {
+				// 从高级查询过来的,所以取出额外参数
+
+				var searchParam = $cache.read("searchParam");
+				// alert("searchParam: " + searchParam);
+
+				var parsedSearchParam = JSON.parse(searchParam);
+
+				if (parsedSearchParam)
+					param = parsedSearchParam;
+				else
+					alert("抱歉，获取数据出错！code: 05");
+			}
+
+			var dfltsaleorg = user.dfltsaleorg;
+			var pk_org = "";
+			if (dfltsaleorg)
+				pk_org = dfltsaleorg.pk_org
+
 			param.pk_appuser = $cache.read("pk_appuser");
 			param.usercode = $cache.read("telephone");
-			param.searchType = $cache.read("searchType") || "currentday";
-			// param.phone_customer = "安徽省枞阳县金岭矿业有限公司";
-
-			// alert(JSON.stringify(param));
-
-			// param.start_time = "2019-05-01";
-			// param.end_time = "2019-12-20";
-			// param.type = "铜锍含铜";
-			// param.customer_name = "安徽省枞阳县金岭矿业有限公司";
+			param.searchType = searchType;
+			param.pk_org = pk_org;
 
 			$service.callAction({
 				"user": $cache.read("telephone"),
@@ -89,11 +105,11 @@ try {
 				"params": param,
 				"timeout": 300,
 				"autoDataBinding": false,
-				"contextmapping": "result",
+				"contextmapping": searchType,
 				"callback": "callbackSuccess()",
 				"error": "callbackFail()"
 			});
-		} catch (e) { $alert(e); }
+		} catch (e) { $alert(e + "，查询出错！code: 07"); }
 	}
 
 	function com$yonyou$placeorder$DetailreportController$goSearch() {
@@ -101,7 +117,7 @@ try {
 		$view.open({
 			viewid: "com.yonyou.placeorder.ReportSearchDetail",
 			isKeep: "true",
-			callback: "callbackSuccess()"
+			callback: "com$yonyou$placeorder$DetailreportController$requestData()"
 		})
 	}
 
