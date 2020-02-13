@@ -82,8 +82,8 @@
                 <input maxlength="256" id="txt_driveridcode" placeholder="身份证号" type="text"/> 
             </div>
             <div id="panel8">
-                <input onclick="this.submitOnclick()" id="btn_submit" type="button" value="提交订单" class="textbtnclass"/>
-                <input onclick="this.invalidOnclick()" disabled="disabled" id="btn_invalid" type="button" value="作废订单" class="textbtnclass"/>
+                <!-- <input onclick="this.submitOnclick()" id="btn_submit" type="button" value="提交订单" class="textbtnclass"/>
+                <input onclick="this.invalidOnclick()" disabled="disabled" id="btn_invalid" type="button" value="作废订单" class="textbtnclass"/> -->
                 <input onclick="jumpToSharePage()" id="btn_share" type="button" value="二维码转发" class="textbtnclass"/> 
             </div>
             <div id="pnl_share">

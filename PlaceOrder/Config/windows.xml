@@ -72,9 +72,11 @@
     <file name="BIllreport.dsl"/>  
     <file name="ReportSearch.dsl"/>  
     <file name="ReportSearchDetail.dsl"/>  
-    <file name="ReportSearchBill.dsl"/>
+    <file name="ReportSearchBill.dsl"/> 
   </StatisticalReport>  
   <Notification> 
-    <file name="NotificationMenu.dsl"/> 
+    <file name="NotificationMenu.dsl"/>  
+    <file name="InfoList.dsl"/>  
+    <file name="InfoDetail.dsl"/>
   </Notification> 
 </windows>

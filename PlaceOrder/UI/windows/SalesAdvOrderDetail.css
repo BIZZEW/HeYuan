@@ -15,6 +15,17 @@
      valign: TOP;
  }
 
+ #btn_share {
+    font-pressed-color: #ffffff;
+    color: #ffffff;
+    margin-right: 4;
+    border-radius: 8;
+    margin-left: 4;
+    background-color-dis: #808080;
+    background: #ff8f59;
+    width: 110;
+}
+
  #navigatorbar0 {
      halign: LEFT;
      height: 35;

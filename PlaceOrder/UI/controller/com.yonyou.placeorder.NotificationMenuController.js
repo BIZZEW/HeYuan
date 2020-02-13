@@ -48,8 +48,61 @@ try {
 	}
 
 	function com$yonyou$placeorder$NotificationMenuController$onload(sender, args) {
-		$id("label1").set("value", $cache.read("userName"));
-		$js.backConfirm();
+		// $id("label1").set("value", $cache.read("userName"));
+		// $js.backConfirm();
+
+		$js.showLoadingBar();
+
+		try {
+			var param = {};
+
+			param.pk_appuser = $cache.read("pk_appuser");
+			param.usercode = $cache.read("telephone");
+
+			param.telephone = $cache.read("telephone");
+
+			$service.callAction({
+				"user": $cache.read("telephone"),
+				"appid": "PlaceOrder",
+				"viewid": "com.yonyou.placeorder.MessageBillUMController",
+				"action": "queryMessageCenterNum",
+				"params": param,
+				"timeout": 300,
+				"autoDataBinding": false,
+				"contextmapping": "result",
+				"callback": "callbackSuccess()",
+				"error": "callbackFail()"
+			});
+		} catch (e) { $alert(e + "，查询出错！code: 07"); }
+	}
+
+	function callbackSuccess() {
+		$js.hideLoadingBar();
+
+		var result = $ctx.get("result");
+		result = JSON.parse(result);
+
+		var datas = result.datas;
+		if (datas) {
+			// 收款
+			if (datas.runread) $id("label16").set("value", datas.runread);
+			if (datas.rread) $id("label18").set("value", datas.rread);
+			// 提货
+			if (datas.sunread) $id("label162").set("value", datas.sunread);
+			if (datas.sread) $id("label182").set("value", datas.sread);
+			// 节假日
+			if (datas.hunread) $id("label163").set("value", datas.hunread);
+			if (datas.hread) $id("label183").set("value", datas.hread);
+		} else {
+			alert("获取数据出错！code: 01");
+			return;
+		}
+	}
+
+	function callbackFail(sender, args) {
+		$js.hideLoadingBar();
+
+		$alert("访问MA服务器错误:" + JSON.stringify(args));
 	}
 
 	function com$yonyou$placeorder$NotificationMenuController$openDeclareList(sender, args) {
@@ -66,7 +119,33 @@ try {
 			"viewid": "com.yonyou.hgdeclare.DeclareChart",//目标页面（首字母大写）全名，
 			"isKeep": "true"
 		});
-	} com.yonyou.placeorder.NotificationMenuController.prototype = {
+	}
+
+	function com$yonyou$placeorder$NotificationMenuController$goPayInfoList(sender, args) {
+		$view.open({
+			"viewid": "com.yonyou.placeorder.InfoList",//目标页面（首字母大写）全名，
+			"isKeep": "true",
+			"mestype": "1",
+		});
+	}
+
+	function com$yonyou$placeorder$NotificationMenuController$goPickInfoList(sender, args) {
+		$view.open({
+			"viewid": "com.yonyou.placeorder.InfoList",//目标页面（首字母大写）全名，
+			"isKeep": "true",
+			"mestype": "2",
+		});
+	}
+
+	function com$yonyou$placeorder$NotificationMenuController$goHolidayInfoList(sender, args) {
+		$view.open({
+			"viewid": "com.yonyou.placeorder.InfoList",//目标页面（首字母大写）全名，
+			"isKeep": "true",
+			"mestype": "3",
+		});
+	}
+
+	com.yonyou.placeorder.NotificationMenuController.prototype = {
 		menu23_onclick: com$yonyou$placeorder$NotificationMenuController$menu23_onclick,
 		openDeclareList: com$yonyou$placeorder$NotificationMenuController$openDeclareList,
 		onload: com$yonyou$placeorder$NotificationMenuController$onload,
@@ -74,6 +153,9 @@ try {
 		initialize: com$yonyou$placeorder$NotificationMenuController$initialize,
 		evaljs: com$yonyou$placeorder$NotificationMenuController$evaljs,
 		button0_onclick: com$yonyou$placeorder$NotificationMenuController$button0_onclick,
+		goPayInfoList: com$yonyou$placeorder$NotificationMenuController$goPayInfoList,
+		goPickInfoList: com$yonyou$placeorder$NotificationMenuController$goPickInfoList,
+		goHolidayInfoList: com$yonyou$placeorder$NotificationMenuController$goHolidayInfoList,
 	};
 	com.yonyou.placeorder.NotificationMenuController.registerClass('com.yonyou.placeorder.NotificationMenuController', UMP.UI.Mvc.Controller);
 } catch (e) {

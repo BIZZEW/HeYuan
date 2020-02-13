@@ -1,0 +1,78 @@
+body {
+    background: #3e74c7;
+    margin: 0;
+}
+
+#infoList{
+    margin: 3%;
+    width: 94%;
+}
+
+#infoList .infoItem{
+    background: white;
+    margin: 0 0 10px 0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 5px 0px #325b9a;
+    position: relative;
+}
+
+#infoList .infoItem.read{
+    background: rgb(230, 230, 230);
+    color: #808080;
+}
+
+#infoList .infoItem.read .status{
+    background: rgb(206, 206, 206);
+    color: #929292;
+}
+
+#infoList .infoItem .status{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    background: #3e74c7;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 50px;
+    text-align: center;
+}
+
+#nomoreInfo{
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    color: #2c4265;
+}
+
+.notificationBox{
+    margin: 5%;
+    width: 80%;
+    background: white;
+    padding: 5%;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px 0px #325b9a;
+}
+
+.notificationBox .title{
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #325b9a;
+}
+
+.notificationBox .content{
+}
+
+.notificationBox .date{
+    width: 100%;
+    text-align: right;
+    margin-top: 15px;
+    font-size: 15px;
+    color: #325b9a;
+}
+

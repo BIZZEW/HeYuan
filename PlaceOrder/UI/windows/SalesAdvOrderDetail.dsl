@@ -70,6 +70,7 @@
                 <input id="post" value="提交订单" class="textbtnclass" onclick="this.postbill()" type="button"/>  
                 <input id="invalid" value="作废订单" class="textbtnclass" onclick="this.invalid_onclick()" type="button"/> 
                 <!-- <input id="invalid" value="作废订单" class="textbtnclass" onclick="this.invalid_onclick()" type="button" disabled="disabled"/>  -->
+                <input onclick="this.jumpToSharePage()" id="btn_share" type="button" value="二维码转发" class="textbtnclass"/> 
             </div> 
         </div> 
     </Scrollview> 

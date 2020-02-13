@@ -12,40 +12,40 @@
         <Scrollview id="Scrollview_panel4" height="0" weight="1" width="fill" hScrollEnabled="disabled">
             <div id="panel4">
             
-                <div id="panel8" onclick="this.menu23_onclick()">
+                <div id="panel8" onclick="this.goPayInfoList()">
                     <div id="panel14">
                         <input id="menu21" value="付款" class="imagebuttonclass" istogglebutton="false" type="imagebutton" checked="false"></input>
                         <div id="panel155"><label id="label14" type="multiline">付款后消息提醒</label>
                             <div id="panel165"><label bindfield="price" id="label15">未读</label><label bindfield="present"
-                                    id="label16">0</label> </div>
+                                    id="label16">0</label></div>
                             <div id="panel175"><label bindfield="rate" id="label17">已读</label><label bindfield="num"
-                                    id="label18">0</label> </div>
+                                    id="label18">0</label></div>
                         </div>
                         <image id="image0" scaletype="fitcenter" src="arrow.png"></image>
                     </div>
                 </div>
 
-                <div id="panel9">
+                <div id="panel9" onclick="this.goPickInfoList()">
                     <div id="panel142">
                         <input id="menu22" value="提货" class="imagebuttonclass" istogglebutton="false" type="imagebutton" checked="false"></input>
                         <div id="panel1552"><label id="label142" type="multiline">提货后消息提醒</label>
                             <div id="panel1652"><label bindfield="price" id="label152">未读</label><label bindfield="present"
-                                    id="label162">0</label> </div>
+                                    id="label162">0</label></div>
                             <div id="panel1752"><label bindfield="rate" id="label172">已读</label><label bindfield="num"
-                                    id="label182">0</label> </div>
+                                    id="label182">0</label></div>
                         </div>
                         <image id="image1" scaletype="fitcenter" src="arrow.png"></image>
                     </div>
                 </div>
 
-                <div id="panel10">
+                <div id="panel10" onclick="this.goHolidayInfoList()">
                     <div id="panel143">
                         <input id="menu23" value="节假日" onclick="this.menu23_onclick()" class="imagebuttonclass" istogglebutton="false" type="imagebutton" checked="false"></input>
                         <div id="panel1553"><label id="label143" type="multiline">节假日消息提醒</label>
                             <div id="panel1653"><label bindfield="price" id="label153">未读</label><label bindfield="present"
-                                    id="label163">0</label> </div>
+                                    id="label163">0</label></div>
                             <div id="panel1753"><label bindfield="rate" id="label173">已读</label><label bindfield="num"
-                                    id="label183">0</label> </div>
+                                    id="label183">0</label></div>
                         </div>
                         <image id="image222" scaletype="fitcenter" src="arrow.png"></image>
                     </div>

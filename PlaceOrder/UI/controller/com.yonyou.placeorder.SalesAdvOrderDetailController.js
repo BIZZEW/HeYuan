@@ -133,6 +133,50 @@ try {
 		}
 
 	}
+
+	function jumpToSharePage(sender, args) {
+		var vlicense = $id("carno").get("value");//自定义车牌号
+		var isfldisplay = $id("carno").get("display");
+		if (isfldisplay == "none") {//非自定义车牌号
+			vlicense = $id("lbl_fmtvlicense").get("value");
+		}
+		var customer = $id("customer").get("value");//客户
+		var matname = $id("goods").get("value");//物料
+		
+		// var fetchnum = $id("txt_fetchnum").get("value");//提货数量
+		// var sendstockorg = $id("lbl_sendstockorg").get("value");//提货库存组织
+		// var pickwarehouse = "pickwarehouse";//提货仓库，待加入(待修改)
+		// var ftcorderdate = $id("lbl_ftcorderdate").get("value");//提货日期
+
+		var billtype = "pickbill";//表示类型为提货单
+		var pk_pickbill = "PK00000000";
+
+		// if (com.yonyou.placeorder.DeliveryOrderDetailController.DeliveryOrderObj &&
+		// 	com.yonyou.placeorder.DeliveryOrderDetailController.DeliveryOrderObj.pk_noticeorder) {
+		// 	pk_pickbill = com.yonyou.placeorder.DeliveryOrderDetailController.DeliveryOrderObj.pk_noticeorder;
+		// } else {
+		// 	pk_pickbill = com.yonyou.placeorder.DeliveryOrderDetailController.pk_noticeorder;
+		// }
+
+		//pk_pickbill="PK00000000";
+		var params = {
+			"vlicense": vlicense,
+			"customer": customer,
+			"matname": matname,
+			// "fetchnum": fetchnum,
+			// "sendstockorg": sendstockorg,
+			// "pickwarehouse": pickwarehouse,
+			// "ftcorderdate": ftcorderdate,
+			"billtype": billtype,
+			"pk_pickbill": pk_pickbill
+		}
+		$view.open({
+			"viewid": "com.yonyou.placeorder.ShareTwoCodeAndInfo",
+			"isKeep": "true",
+			"shareparams": params
+		});
+	}
+
 	function defaultInfo() {
 		var user = JSON.parse($ctx.getApp("appuser"));
 
@@ -426,7 +470,7 @@ try {
 		// 	$alert("请输入正确的身份证号");
 		// 	return;
 		// }
-		
+
 		var data = $param.getJSONObject("data");
 		if (data != null && typeof (data) != undefined) {
 			var json = {
