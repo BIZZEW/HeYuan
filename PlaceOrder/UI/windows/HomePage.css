@@ -78,7 +78,7 @@
      width: fill;
      valign: center;
      halign: LEFT;
-     height: 150;
+     height: 120;
  }
 
  #imageflipper0 {
@@ -120,8 +120,7 @@
 
  #div_pickuporder {
      halign: CENTER;
-     height: 0;
-     weight: 1;
+     height: 120;
      layout: hbox;
      background: #F5F5F5;
      width: fill;
@@ -138,8 +137,9 @@
  }
 
  #imagebutton0 {
+     border-radius:46;
      border-bottom-width: 2;
-     border-radius: 0;
+     
      width: 92;
      border-bottom-color: #0080ff;
      border-top-width: 2;
@@ -164,8 +164,9 @@
  }
 
  #imagebutton1 {
+     border-radius:46;
      border-bottom-width: 2;
-     border-radius: 0;
+     
      width: 92;
      border-bottom-color: #0062c4;
      border-top-width: 2;
@@ -190,8 +191,9 @@
  }
 
  #imagebutton2 {
+     border-radius:46;
      border-bottom-width: 2;
-     border-radius: 0;
+     
      width: 92;
      border-bottom-color: #00458a;
      border-top-width: 2;
@@ -208,8 +210,7 @@
 
  #div_pickuporder2 {
      halign: CENTER;
-     height: 0;
-     weight: 1;
+     height: 120;
      layout: hbox;
      background: #F5F5F5;
      width: fill;
@@ -226,8 +227,9 @@
  }
 
  #imagebutton3 {
+     border-radius:46;
      border-bottom-width: 2;
-     border-radius: 0;
+     
      width: 92;
      border-bottom-color: #00e1ff;
      border-top-width: 2;
@@ -252,8 +254,9 @@
  }
 
  #imagebutton4 {
+     border-radius:46;
      border-bottom-width: 2;
-     border-radius: 0;
+     
      width: 92;
      border-bottom-color: #00a4b9;
      border-top-width: 2;
@@ -270,7 +273,7 @@
 
  #panel69 {
      halign: CENTER;
-     height: 120;
+     height: 100;
      weight: 1;
      layout: hbox;
      width: 0;
@@ -278,8 +281,9 @@
  }
 
  #imagebutton5 {
+     border-radius:46;
      border-bottom-width: 2;
-     border-radius: 0;
+     
      width: 92;
      border-bottom-color: #006e7c;
      border-top-width: 2;
@@ -296,8 +300,7 @@
 
  #div_deliveryorder {
      halign: CENTER;
-     height: 0;
-     weight: 1;
+     height: 120;
      layout: hbox;
      background: #F5F5F5;
      width: fill;
@@ -306,8 +309,7 @@
 
  #div_deliveryorder2 {
     halign: CENTER;
-    height: 0;
-    weight: 1;
+    height: 120;
     layout: hbox;
     background: #F5F5F5;
     width: fill;
@@ -351,8 +353,9 @@
 }
 
  #imagebutton6{
+     border-radius:46;
      border-bottom-width: 2;
-     border-radius: 0;
+     
      width: 92;
      border-top-width: 2;
      height: 92;
@@ -361,7 +364,6 @@
      font-size: 15;
      border-right-width: 2;
      border-left-width: 2;
-
      border-bottom-color: #00ff4c;
      border-left-color: #00ff4c;
      border-top-color: #00ff4c;
@@ -382,8 +384,9 @@
  }
 
  #imagebutton7 {
+     border-radius:46;
      border-bottom-width: 2;
-     border-radius: 0;
+     
      width: 92;
      border-top-width: 2;
      height: 92;
@@ -392,7 +395,6 @@
      font-size: 15;
      border-right-width: 2;
      border-left-width: 2;
-
      border-bottom-color: #00c03a;
      border-left-color: #00c03a;
      border-top-color: #00c03a;
@@ -409,8 +411,9 @@
  }
 
  #imagebutton8 {
+     border-radius:46;
      border-bottom-width: 2;
-     border-radius: 0;
+     
      width: 92;
      border-top-width: 2;
      height: 92;
@@ -419,7 +422,6 @@
      font-size: 10;
      border-right-width: 2;
      border-left-width: 2;
-
      border-bottom-color: #008127;
      border-left-color: #008127;
      border-top-color: #008127;
@@ -427,8 +429,9 @@
  }
 
  #imagebutton9{
+    border-radius:46;
     border-bottom-width: 2;
-    border-radius: 0;
+    
     width: 92;
     border-top-width: 2;
     height: 92;
@@ -437,7 +440,6 @@
     font-size: 10;
     border-right-width: 2;
     border-left-width: 2;
-
     border-bottom-color: #88ff00;
     border-left-color: #88ff00;
     border-top-color: #88ff00;
