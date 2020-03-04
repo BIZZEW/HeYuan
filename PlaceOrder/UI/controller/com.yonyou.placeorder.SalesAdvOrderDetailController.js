@@ -567,7 +567,7 @@ try {
 		$js.hideLoadingBar();
 		$alert("连接MA服务器异常");
 	}
-	//作废订单
+	//取消订单
 	function com$yonyou$placeorder$SalesAdvOrderDetailController$invalid_onclick(sender, args) {
 		$window.showModalDialog({
 			dialogId: "com.yonyou.placeorder.ConfirmDlg",
