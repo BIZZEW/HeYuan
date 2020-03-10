@@ -9,7 +9,7 @@
             <Scrollview width="fill" hScrollEnabled="disabled" id="Scrollview_panel1" height="fill"> 
                 <div id="panel1"> 
                     <div id="panel3"> 
-                        <label id="label0">金圆环保供销平台</label>  
+                        <label id="label0">金圆水泥</label>  
                         <div id="panel10"> 
                             <input imagebuttontype="icon" istogglebutton="false" onclick="this.usercenter_onclick()" checked="false" id="usercenter" type="imagebutton" value="图标名称" class="imagebuttonclass"/> 
                         </div> 

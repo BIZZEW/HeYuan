@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<application id="PlaceOrder" appname="金圆供销平台" versionCode="1" versionName="1" icon="app" theme="blue" jsengine="v2.0" package="com.yonyou.placeorder" language="zh_cn" reinforcement="false" sandbox="false" isLibrary="false" push_enable="true" versionBuild=""> 
+<application id="PlaceOrder" appname="金圆水泥" versionCode="1" versionName="1" icon="app" theme="blue" jsengine="v2.0" package="com.yonyou.placeorder" language="zh_cn" reinforcement="false" sandbox="false" isLibrary="false" push_enable="true" versionBuild=""> 
   <start view="Login"/>  
   <!--配置示例-->  
   <!--view id="demo" ref="demo.dsl"><extend screenOrientation="landscape|portrait|unspecified"/></view-->  
