@@ -20,7 +20,7 @@ function initPage() {
             goDetail: function (index) {
                 var billno = this.items[index].billno;
                 $cache.write("currbillno", billno);
-                $js.runjs({ "func": "com$yonyou$placeorder$InfoListController$goDetail()" })
+                $js.runjs({ "func": "com$yonyou$placeorder$InfoListController$goDetail()" });
             }
         }
     })
@@ -50,6 +50,6 @@ function loadData() {
 
 // 调用位于JSController中的请求表格数据方法
 function requestData() {
-    $js.runjs({ "func": "com$yonyou$placeorder$InfoListController$requestData()" })
+    $js.runjs({ "func": "com$yonyou$placeorder$InfoListController$requestData()" });
 }
 

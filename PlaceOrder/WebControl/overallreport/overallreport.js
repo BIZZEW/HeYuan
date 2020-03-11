@@ -12,7 +12,7 @@ window.onload = function () {
         $cache.write("searchType", checkValue);
 
         if (checkValue == "advanced")
-            $js.runjs({ "func": "com$yonyou$placeorder$OverallreportController$goSearch()" })
+            $js.runjs({ "func": "com$yonyou$placeorder$OverallreportController$goSearch()" });
         else
             requestData();
     });
@@ -44,7 +44,7 @@ function loadData() {
 
 // 调用位于JSController中的请求表格数据方法
 function requestData() {
-    $js.runjs({ "func": "com$yonyou$placeorder$OverallreportController$requestData()" })
+    $js.runjs({ "func": "com$yonyou$placeorder$OverallreportController$requestData()" });
 }
 
 // 把json转换成table

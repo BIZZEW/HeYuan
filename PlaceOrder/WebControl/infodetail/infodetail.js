@@ -51,7 +51,7 @@ function loadData() {
 
 // 调用位于JSController中的请求表格数据方法
 function requestData() {
-    $js.runjs({ "func": "com$yonyou$placeorder$InfoDetailController$requestData()" })
+    $js.runjs({ "func": "com$yonyou$placeorder$InfoDetailController$requestData()" });
 }
 
 
