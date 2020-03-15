@@ -32,7 +32,7 @@ public class DeliveryOrderUMController extends AbstractUMController{
 	}
 	
 	/**
-	 * 作废提货通知单
+	 * 取消提货通知单
 	 * @param param
 	 * @return
 	 * @throws Exception

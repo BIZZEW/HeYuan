@@ -45,7 +45,7 @@ public class ReceiveOrderUMController extends AbstractUMController {
 	}
 	
 	/**
-	 * 作废收货通知单
+	 * 取消收货通知单
 	 * @param param
 	 * @return
 	 * @throws Exception

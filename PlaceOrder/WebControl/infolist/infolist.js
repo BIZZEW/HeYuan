@@ -5,7 +5,7 @@ window.onload = function () {
     initPage();
 
     // 页面加载请求数据
-    requestData();
+    // requestData();
 }
 
 var infolist = null;

@@ -113,6 +113,60 @@ try {
 		$alert("访问MA服务器错误:" + JSON.stringify(args));
 	}
 
+	function com$yonyou$placeorder$OverallreportController$pageOnload(sender, args) {
+		$js.runjs({
+			"controlid": "webcontrol0",//webControl的id
+			"func": "bindCLick()"//要执行位于webControl中的js方法名
+		})
+
+		$js.showLoadingBar();
+
+		try {
+			var param = {};
+
+			var user = JSON.parse($ctx.getApp("appuser"));
+
+			var searchType = $cache.read("searchType") || "currentday";
+
+			if (searchType == "advanced") {
+				// 从高级查询过来的,所以取出额外参数
+
+				var searchParam = $cache.read("searchParam");
+				// alert("searchParam: " + searchParam);
+
+				var parsedSearchParam = JSON.parse(searchParam);
+
+				if (parsedSearchParam)
+					param = parsedSearchParam;
+				else
+					alert("抱歉，获取数据出错！code: 05");
+			}
+
+			var dfltsaleorg = user.dfltsaleorg;
+			var pk_org = "";
+			if (dfltsaleorg)
+				pk_org = dfltsaleorg.pk_org
+
+			param.pk_appuser = $cache.read("pk_appuser");
+			param.usercode = $cache.read("telephone");
+			param.searchType = searchType;
+			param.pk_org = pk_org;
+
+			$service.callAction({
+				"user": $cache.read("telephone"),
+				"appid": "PlaceOrder",
+				"viewid": "com.yonyou.placeorder.ReportController",
+				"action": "DeliverySummaryAction",
+				"params": param,
+				"timeout": 300,
+				"autoDataBinding": false,
+				"contextmapping": searchType,
+				"callback": "callbackSuccess()",
+				"error": "callbackFail()"
+			});
+		} catch (e) { $alert(e + "，查询出错！code: 07"); }
+	}
+
 	var pageIndex = 1;
 	var pageCount = 20;
 	var action;
@@ -122,18 +176,18 @@ try {
 		userName = $cache.read("userName");
 
 		//调用MA获取数据
-		action = "getPendingReports";
-		$service.callAction({
-			"viewid": "com.yonyou.uap.haiguan.HaiguanController", //后台Controller(带包名)的类名
-			"action": action, //后台Controller的方法名,
-			"userName": userName,
-			"pageIndex": pageIndex,
-			"pageCount": pageCount,
-			"autoDataBinding": false, //请求回来会是否进行数据绑定，默认不绑定
-			"contextmapping": "fieldPath", //将返回结果映射到指定的Context字段上，默认为替换整个Context
-			"callback": "pendingReportsCallBack()", //请求成功后回调js方法
-			"error": "pendingReportsErrCallBack()"//请求失败回调的js方法
-		});
+		// action = "getPendingReports";
+		// $service.callAction({
+		// 	"viewid": "com.yonyou.uap.haiguan.HaiguanController", //后台Controller(带包名)的类名
+		// 	"action": action, //后台Controller的方法名,
+		// 	"userName": userName,
+		// 	"pageIndex": pageIndex,
+		// 	"pageCount": pageCount,
+		// 	"autoDataBinding": false, //请求回来会是否进行数据绑定，默认不绑定
+		// 	"contextmapping": "fieldPath", //将返回结果映射到指定的Context字段上，默认为替换整个Context
+		// 	"callback": "pendingReportsCallBack()", //请求成功后回调js方法
+		// 	"error": "pendingReportsErrCallBack()"//请求失败回调的js方法
+		// });
 	}
 
 	function changetogglebutton(sender, args) {
@@ -264,6 +318,7 @@ try {
 		button0_onclick: com$yonyou$placeorder$OverallreportController$button0_onclick,
 		requestData: com$yonyou$placeorder$OverallreportController$requestData,
 		goSearch: com$yonyou$placeorder$OverallreportController$goSearch,
+		pageOnload: com$yonyou$placeorder$OverallreportController$pageOnload,
 	};
 	com.yonyou.placeorder.OverallreportController.registerClass('com.yonyou.placeorder.OverallreportController', UMP.UI.Mvc.Controller);
 } catch (e) {

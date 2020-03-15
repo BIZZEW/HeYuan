@@ -37,7 +37,9 @@ try {
 	}
 
 	function com$yonyou$placeorder$InfoListController$button0_onclick(sender, args) {
-		$view.close()
+		$view.close({
+			"resultcode": "15",
+		});
 	}
 
 	function com$yonyou$placeorder$InfoListController$menu11_onclick(sender, args) {
@@ -48,8 +50,36 @@ try {
 	}
 
 	function com$yonyou$placeorder$InfoListController$onload(sender, args) {
-		$id("label1").set("value", $cache.read("userName"));
-		$js.backConfirm();
+		// $id("label1").set("value", $cache.read("userName"));
+		// $js.backConfirm();
+
+		$js.showLoadingBar();
+
+		try {
+			var param = {};
+
+			var mestype = $param.getString("mestype");
+			$cache.write("mestype", mestype);
+
+			param.pk_appuser = $cache.read("pk_appuser");
+			param.usercode = $cache.read("telephone");
+
+			param.telephone = $cache.read("telephone");
+			param.mestype = mestype;
+
+			$service.callAction({
+				"user": $cache.read("telephone"),
+				"appid": "PlaceOrder",
+				"viewid": "com.yonyou.placeorder.MessageBillUMController",
+				"action": "queryMessageCenter",
+				"params": param,
+				"timeout": 300,
+				"autoDataBinding": false,
+				"contextmapping": "resultList" + mestype,
+				"callback": "callbackSuccess()",
+				"error": "callbackFail()"
+			});
+		} catch (e) { $alert(e + "，查询出错！code: 07"); }
 	}
 
 	function com$yonyou$placeorder$InfoListController$openDeclareList(sender, args) {

@@ -5,8 +5,20 @@ window.onload = function () {
     $cache.write("searchType", "currentday");
 
     // 页面加载请求数据
-    requestData();
+    // requestData();
 
+    $('input:radio[name="searchType"]').click(function () {
+        var checkValue = $('input:radio[name="searchType"]:checked').val();
+        $cache.write("searchType", checkValue);
+
+        if (checkValue == "advanced")
+            $js.runjs({ "func": "com$yonyou$placeorder$OverallreportController$goSearch()" });
+        else
+            requestData();
+    });
+}
+
+function bindCLick() {
     $('input:radio[name="searchType"]').click(function () {
         var checkValue = $('input:radio[name="searchType"]:checked').val();
         $cache.write("searchType", checkValue);

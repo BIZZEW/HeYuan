@@ -44,8 +44,30 @@ try {
 	}
 
 	function com$yonyou$placeorder$InfoDetailController$onload(sender, args) {
-		$id("label1").set("value", $cache.read("userName"));
-		$js.backConfirm();
+		$js.showLoadingBar();
+
+		try {
+			var param = {};
+
+			param.pk_appuser = $cache.read("pk_appuser");
+			param.usercode = $cache.read("telephone");
+
+			param.telephone = $cache.read("telephone");
+			param.billno = $cache.read("currbillno");
+
+			$service.callAction({
+				"user": $cache.read("telephone"),
+				"appid": "PlaceOrder",
+				"viewid": "com.yonyou.placeorder.MessageBillUMController",
+				"action": "queryMessageCenterDetail",
+				"params": param,
+				"timeout": 300,
+				"autoDataBinding": false,
+				"contextmapping": "resultDetail",
+				"callback": "callbackSuccess()",
+				"error": "callbackFail()"
+			});
+		} catch (e) { $alert(e + "，查询出错！code: 07"); }
 	}
 
 	function com$yonyou$placeorder$InfoDetailController$openDeclareList(sender, args) {

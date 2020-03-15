@@ -4,7 +4,7 @@
 window.onload = function () {
 
     // 页面加载请求数据
-    requestData();
+    // requestData();
 }
 
 // JSController中获取到数据之后会调用该方法以在页面上加载获得到的数据

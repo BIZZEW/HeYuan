@@ -49,13 +49,24 @@
      font-size: 15;
      valign: center;
      font-family: default;
-     halign: right;
+     halign: center;
      height: fill;
+     background: #ffffff;
  }
 
- #panel10 {
+ #paneleft {
+    layout: hbox;
+    background: #ffffff;
+    width: 0;
+    weight: 1;
+    valign: center;
+    halign: RIGHT;
+    height: fill;
+}
+
+ #panelright {
      layout: hbox;
-     background: #f7f7f7;
+     background: #ffffff;
      width: 0;
      weight: 1;
      valign: center;

@@ -126,6 +126,7 @@ try {
 			"viewid": "com.yonyou.placeorder.InfoList",//目标页面（首字母大写）全名，
 			"isKeep": "true",
 			"mestype": "1",
+			"callback": "com$yonyou$placeorder$NotificationMenuController$onload()",
 		});
 	}
 
@@ -134,6 +135,7 @@ try {
 			"viewid": "com.yonyou.placeorder.InfoList",//目标页面（首字母大写）全名，
 			"isKeep": "true",
 			"mestype": "2",
+			"callback": "com$yonyou$placeorder$NotificationMenuController$onload()",
 		});
 	}
 
@@ -142,6 +144,7 @@ try {
 			"viewid": "com.yonyou.placeorder.InfoList",//目标页面（首字母大写）全名，
 			"isKeep": "true",
 			"mestype": "3",
+			"callback": "com$yonyou$placeorder$NotificationMenuController$onload()",
 		});
 	}
 

@@ -572,7 +572,7 @@ try {
 		$window.showModalDialog({
 			dialogId: "com.yonyou.placeorder.ConfirmDlg",
 			arguments: {
-				"content": "是否确认作废本预订单？"
+				"content": "是否确认取消本预订单？"
 			},
 			features: {
 				"dialogWidth": 250,
@@ -612,7 +612,7 @@ try {
 		var json = eval('(' + result + ')');
 		var status = json.statuscode;
 		if (status == "0") {
-			$alert("已作废");
+			$alert("已取消");
 			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.billstatus.code = 7;
 			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.billstatus.name = "单据失效";
 			$view.closeWithCallBack({

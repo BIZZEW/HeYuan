@@ -247,7 +247,7 @@ try {
 
 	function com$yonyou$placeorder$ReportSearchController$picker0_onload(sender, args) {
 		var context = {
-			statuses: ["未完成", "已作废", "已完成"],
+			statuses: ["未完成", "已取消", "已完成"],
 		}
 		$ctx.push(context); //数据绑定,将context的值与picker进行绑定
 	}

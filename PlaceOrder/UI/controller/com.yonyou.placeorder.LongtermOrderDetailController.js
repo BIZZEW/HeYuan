@@ -458,7 +458,7 @@ try {
 		$window.showModalDialog({
 			dialogId: "com.yonyou.placeorder.ConfirmDlg",
 			arguments: {
-				"content": "是否确认作废本收货单？"
+				"content": "是否确认取消本收货单？"
 			},
 			features: {
 				"dialogWidth": 250,
@@ -550,14 +550,14 @@ try {
 		$js.hideLoadingBar();
 		var result = $ctx.getJSONObject("result");
 		if (result && result.statuscode == "0") {
-			$alert("作废收货单成功！");
+			$alert("取消收货单成功！");
 			com.yonyou.placeorder.LongtermOrderDetailController.oldorder.status.code = -1;
-			com.yonyou.placeorder.LongtermOrderDetailController.oldorder.status.name = "作废";
+			com.yonyou.placeorder.LongtermOrderDetailController.oldorder.status.name = "取消";
 			$view.closeWithCallBack({
 				"result": com.yonyou.placeorder.LongtermOrderDetailController.oldorder
 			});
 		} else {
-			var errinfo = "作废收货单失败，失败原因：";
+			var errinfo = "取消收货单失败，失败原因：";
 			if (result.errinfo) {
 				errinfo = errinfo + result.errinfo + "!";
 			} else {

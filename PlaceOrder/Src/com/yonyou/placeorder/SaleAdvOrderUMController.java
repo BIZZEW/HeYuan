@@ -36,7 +36,7 @@ public class SaleAdvOrderUMController extends AbstractUMController {
 	}
 	
 	/**
-	 * 作废销售预订单
+	 * 取消销售预订单
 	 * @param param
 	 * @return
 	 * @throws Exception
