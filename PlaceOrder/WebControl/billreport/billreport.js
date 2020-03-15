@@ -5,14 +5,26 @@ window.onload = function () {
     $cache.write("searchType", "currentday");
 
     // 页面加载请求数据
-    requestData();
+    // requestData();
 
+    // $('input:radio[name="searchType"]').click(function () {
+    //     var checkValue = $('input:radio[name="searchType"]:checked').val();
+    //     $cache.write("searchType", checkValue);
+
+    //     if (checkValue == "advanced")
+    //         $js.runjs({ "func": "com$yonyou$placeorder$BIllreportController$goSearch()" });
+    //     else
+    //         requestData();
+    // });
+}
+
+function bindClick() {
     $('input:radio[name="searchType"]').click(function () {
         var checkValue = $('input:radio[name="searchType"]:checked').val();
         $cache.write("searchType", checkValue);
 
         if (checkValue == "advanced")
-            $js.runjs({ "func": "com$yonyou$placeorder$BillreportController$goSearch()" });
+            $js.runjs({ "func": "com$yonyou$placeorder$BIllreportController$goSearch()" });
         else
             requestData();
     });
@@ -44,7 +56,7 @@ function loadData() {
 
 // 调用位于JSController中的请求表格数据方法
 function requestData() {
-    $js.runjs({ "func": "com$yonyou$placeorder$BillreportController$requestData()" });
+    $js.runjs({ "func": "com$yonyou$placeorder$BIllreportController$requestData()" });
 }
 
 // 把json转换成table

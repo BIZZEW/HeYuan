@@ -136,6 +136,46 @@ try {
 		$alert("访问MA服务器错误:" + JSON.stringify(args));
 	}
 
+	function com$yonyou$placeorder$DetailreportController$pageOnload(sender, args) {
+		$js.runjs({
+			"controlid": "webcontrol1",//webControl的id
+			"func": "bindClick()"//要执行位于webControl中的js方法名
+		})
+		
+		$cache.write("searchType", "currentday");
+
+		$js.showLoadingBar();
+
+		try {
+			var param = {};
+
+			var user = JSON.parse($ctx.getApp("appuser"));
+
+			var dfltsaleorg = user.dfltsaleorg;
+			var pk_org = "";
+			if (dfltsaleorg)
+				pk_org = dfltsaleorg.pk_org
+
+			param.pk_appuser = $cache.read("pk_appuser");
+			param.usercode = $cache.read("telephone");
+			param.searchType = "currentday";
+			param.pk_org = pk_org;
+
+			$service.callAction({
+				"user": $cache.read("telephone"),
+				"appid": "PlaceOrder",
+				"viewid": "com.yonyou.placeorder.ReportController",
+				"action": "DeliveryDetailsAction",
+				"params": param,
+				"timeout": 300,
+				"autoDataBinding": false,
+				"contextmapping": "currentday",
+				"callback": "callbackSuccess()",
+				"error": "callbackFail()"
+			});
+		} catch (e) { $alert(e + "，查询出错！code: 07"); }
+	}
+
 	function changetogglebutton(sender, args) {
 		var value = $id("togglebuttongroup0").get("selectedValue");
 		if (value == "0") {
@@ -264,6 +304,7 @@ try {
 		button0_onclick: com$yonyou$placeorder$DetailreportController$button0_onclick,
 		requestData: com$yonyou$placeorder$DetailreportController$requestData,
 		goSearch: com$yonyou$placeorder$DetailreportController$goSearch,
+		pageOnload: com$yonyou$placeorder$DetailreportController$pageOnload,
 	};
 	com.yonyou.placeorder.DetailreportController.registerClass('com.yonyou.placeorder.DetailreportController', UMP.UI.Mvc.Controller);
 } catch (e) {

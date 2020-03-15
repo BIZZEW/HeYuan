@@ -7,18 +7,18 @@ window.onload = function () {
     // 页面加载请求数据
     // requestData();
 
-    $('input:radio[name="searchType"]').click(function () {
-        var checkValue = $('input:radio[name="searchType"]:checked').val();
-        $cache.write("searchType", checkValue);
+    // $('input:radio[name="searchType"]').click(function () {
+    //     var checkValue = $('input:radio[name="searchType"]:checked').val();
+    //     $cache.write("searchType", checkValue);
 
-        if (checkValue == "advanced")
-            $js.runjs({ "func": "com$yonyou$placeorder$OverallreportController$goSearch()" });
-        else
-            requestData();
-    });
+    //     if (checkValue == "advanced")
+    //         $js.runjs({ "func": "com$yonyou$placeorder$OverallreportController$goSearch()" });
+    //     else
+    //         requestData();
+    // });
 }
 
-function bindCLick() {
+function bindClick() {
     $('input:radio[name="searchType"]').click(function () {
         var checkValue = $('input:radio[name="searchType"]:checked').val();
         $cache.write("searchType", checkValue);

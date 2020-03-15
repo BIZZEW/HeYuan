@@ -5,8 +5,20 @@ window.onload = function () {
     $cache.write("searchType", "currentday");
 
     // 页面加载请求数据
-    requestData();
+    // requestData();
 
+    // $('input:radio[name="searchType"]').click(function () {
+    //     var checkValue = $('input:radio[name="searchType"]:checked').val();
+    //     $cache.write("searchType", checkValue);
+
+    //     if (checkValue == "advanced")
+    //         $js.runjs({ "func": "com$yonyou$placeorder$DetailreportController$goSearch()" });
+    //     else
+    //         requestData();
+    // });
+}
+
+function bindClick() {
     $('input:radio[name="searchType"]').click(function () {
         var checkValue = $('input:radio[name="searchType"]:checked').val();
         $cache.write("searchType", checkValue);
@@ -21,7 +33,7 @@ window.onload = function () {
 // JSController中获取到数据之后会调用该方法以在页面上加载获得到的数据
 function loadData() {
     var searchType = $cache.read("searchType") || "currentday";
-    
+
     var result = $ctx.get(searchType);
     // alert(searchType + " 的原始数据： " + result);
 

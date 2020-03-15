@@ -63,7 +63,7 @@ try {
 		});
 	}
 
-	function com$yonyou$placeorder$BillreportController$requestData() {
+	function com$yonyou$placeorder$BIllreportController$requestData() {
 		$js.showLoadingBar();
 
 		try {
@@ -112,12 +112,12 @@ try {
 		} catch (e) { $alert(e + "，查询出错！code: 07"); }
 	}
 
-	function com$yonyou$placeorder$BillreportController$goSearch() {
+	function com$yonyou$placeorder$BIllreportController$goSearch() {
 		// 如果点击的是高级查询则跳转到对应的页面
 		$view.open({
 			viewid: "com.yonyou.placeorder.ReportSearchBill",
 			isKeep: "true",
-			callback: "com$yonyou$placeorder$BillreportController$requestData()"
+			callback: "com$yonyou$placeorder$BIllreportController$requestData()"
 		})
 	}
 
@@ -134,6 +134,46 @@ try {
 		$js.hideLoadingBar();
 
 		$alert("访问MA服务器错误:" + JSON.stringify(args));
+	}
+
+	function com$yonyou$placeorder$BIllreportController$pageOnload(sender, args) {
+		$js.runjs({
+			"controlid": "webcontrol2",//webControl的id
+			"func": "bindClick()"//要执行位于webControl中的js方法名
+		})
+
+		$cache.write("searchType", "currentday");
+
+		$js.showLoadingBar();
+
+		try {
+			var param = {};
+
+			var user = JSON.parse($ctx.getApp("appuser"));
+
+			var dfltsaleorg = user.dfltsaleorg;
+			var pk_org = "";
+			if (dfltsaleorg)
+				pk_org = dfltsaleorg.pk_org
+
+			param.pk_appuser = $cache.read("pk_appuser");
+			param.usercode = $cache.read("telephone");
+			param.searchType = "currentday";
+			param.pk_org = pk_org;
+
+			$service.callAction({
+				"user": $cache.read("telephone"),
+				"appid": "PlaceOrder",
+				"viewid": "com.yonyou.placeorder.ReportController",
+				"action": "BillReportAction",
+				"params": param,
+				"timeout": 300,
+				"autoDataBinding": false,
+				"contextmapping": "currentday",
+				"callback": "callbackSuccess()",
+				"error": "callbackFail()"
+			});
+		} catch (e) { $alert(e + "，查询出错！code: 07"); }
 	}
 
 	function changetogglebutton(sender, args) {
@@ -262,8 +302,9 @@ try {
 		initialize: com$yonyou$placeorder$BIllreportController$initialize,
 		evaljs: com$yonyou$placeorder$BIllreportController$evaljs,
 		button0_onclick: com$yonyou$placeorder$BIllreportController$button0_onclick,
-		requestData: com$yonyou$placeorder$BillreportController$requestData,
-		goSearch: com$yonyou$placeorder$BillreportController$goSearch,
+		requestData: com$yonyou$placeorder$BIllreportController$requestData,
+		goSearch: com$yonyou$placeorder$BIllreportController$goSearch,
+		pageOnload: com$yonyou$placeorder$BIllreportController$pageOnload,
 	};
 	com.yonyou.placeorder.BIllreportController.registerClass('com.yonyou.placeorder.BIllreportController', UMP.UI.Mvc.Controller);
 } catch (e) {

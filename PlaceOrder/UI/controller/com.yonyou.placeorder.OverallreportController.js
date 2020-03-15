@@ -116,8 +116,10 @@ try {
 	function com$yonyou$placeorder$OverallreportController$pageOnload(sender, args) {
 		$js.runjs({
 			"controlid": "webcontrol0",//webControl的id
-			"func": "bindCLick()"//要执行位于webControl中的js方法名
+			"func": "bindClick()"//要执行位于webControl中的js方法名
 		})
+		
+		$cache.write("searchType", "currentday");
 
 		$js.showLoadingBar();
 
@@ -126,22 +128,6 @@ try {
 
 			var user = JSON.parse($ctx.getApp("appuser"));
 
-			var searchType = $cache.read("searchType") || "currentday";
-
-			if (searchType == "advanced") {
-				// 从高级查询过来的,所以取出额外参数
-
-				var searchParam = $cache.read("searchParam");
-				// alert("searchParam: " + searchParam);
-
-				var parsedSearchParam = JSON.parse(searchParam);
-
-				if (parsedSearchParam)
-					param = parsedSearchParam;
-				else
-					alert("抱歉，获取数据出错！code: 05");
-			}
-
 			var dfltsaleorg = user.dfltsaleorg;
 			var pk_org = "";
 			if (dfltsaleorg)
@@ -149,7 +135,7 @@ try {
 
 			param.pk_appuser = $cache.read("pk_appuser");
 			param.usercode = $cache.read("telephone");
-			param.searchType = searchType;
+			param.searchType = "currentday";
 			param.pk_org = pk_org;
 
 			$service.callAction({
@@ -160,7 +146,7 @@ try {
 				"params": param,
 				"timeout": 300,
 				"autoDataBinding": false,
-				"contextmapping": searchType,
+				"contextmapping": "currentday",
 				"callback": "callbackSuccess()",
 				"error": "callbackFail()"
 			});
