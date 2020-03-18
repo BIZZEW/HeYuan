@@ -369,32 +369,32 @@ try {
 		}
 		com.yonyou.placeorder.LongtermOrderDetailController.carno = vlicense;
 		var drivername = $id("txt_drivername").get("value");
-		if (typeof (drivername) == "undefined" || drivername == null || drivername == "") {
-			$alert("司机姓名不能为空");
-			return;
-		}
+		// if (typeof (drivername) == "undefined" || drivername == null || drivername == "") {
+		// 	$alert("司机姓名不能为空");
+		// 	return;
+		// }
 
 		if (Globals.checktruename(drivername)) {
 			$alert("请输入正确的司机姓名");
 			return;
 		}
 
-		var drivertelephone = $id("txt_drivertelephone").get("value");
-		if (typeof (drivertelephone) == "undefined" || drivertelephone == null || drivertelephone == "") {
-			$alert("手机号不能为空");
-			return;
-		}
+		// var drivertelephone = $id("txt_drivertelephone").get("value");
+		// if (typeof (drivertelephone) == "undefined" || drivertelephone == null || drivertelephone == "") {
+		// 	$alert("手机号不能为空");
+		// 	return;
+		// }
 
 		if (Globals.checktelephone(drivertelephone)) {
 			$alert("请输入正确的手机号码");
 			return
 		}
 
-		var driveridcode = $id("txt_driverid").get("value");
-		if (typeof (driveridcode) == "undefined" || driveridcode == null || driveridcode == "") {
-			$alert("身份证号不能为空");
-			return;
-		}
+		// var driveridcode = $id("txt_driverid").get("value");
+		// if (typeof (driveridcode) == "undefined" || driveridcode == null || driveridcode == "") {
+		// 	$alert("身份证号不能为空");
+		// 	return;
+		// }
 
 		if (Globals.checkidnum(driveridcode)) {
 			$alert("请输入正确的身份证号");
