@@ -368,16 +368,16 @@ try {
 			return;
 		}
 		com.yonyou.placeorder.LongtermOrderDetailController.carno = vlicense;
-		var drivername = $id("txt_drivername").get("value");
+		// var drivername = $id("txt_drivername").get("value");
 		// if (typeof (drivername) == "undefined" || drivername == null || drivername == "") {
 		// 	$alert("司机姓名不能为空");
 		// 	return;
 		// }
 
-		if (Globals.checktruename(drivername)) {
-			$alert("请输入正确的司机姓名");
-			return;
-		}
+		// if (Globals.checktruename(drivername)) {
+		// 	$alert("请输入正确的司机姓名");
+		// 	return;
+		// }
 
 		// var drivertelephone = $id("txt_drivertelephone").get("value");
 		// if (typeof (drivertelephone) == "undefined" || drivertelephone == null || drivertelephone == "") {
@@ -385,10 +385,10 @@ try {
 		// 	return;
 		// }
 
-		if (Globals.checktelephone(drivertelephone)) {
-			$alert("请输入正确的手机号码");
-			return
-		}
+		// if (Globals.checktelephone(drivertelephone)) {
+		// 	$alert("请输入正确的手机号码");
+		// 	return
+		// }
 
 		// var driveridcode = $id("txt_driverid").get("value");
 		// if (typeof (driveridcode) == "undefined" || driveridcode == null || driveridcode == "") {
@@ -396,10 +396,10 @@ try {
 		// 	return;
 		// }
 
-		if (Globals.checkidnum(driveridcode)) {
-			$alert("请输入正确的身份证号");
-			return
-		}
+		// if (Globals.checkidnum(driveridcode)) {
+		// 	$alert("请输入正确的身份证号");
+		// 	return
+		// }
 		var orderobj = com.yonyou.placeorder.LongtermOrderDetailController.ReceiveOrderObj;
 		var params = {
 			"usercode": $cache.read("telephone"),
