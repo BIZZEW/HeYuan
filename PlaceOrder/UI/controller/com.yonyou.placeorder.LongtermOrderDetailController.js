@@ -368,7 +368,7 @@ try {
 			return;
 		}
 		com.yonyou.placeorder.LongtermOrderDetailController.carno = vlicense;
-		// var drivername = $id("txt_drivername").get("value");
+		var drivername = $id("txt_drivername").get("value");
 		// if (typeof (drivername) == "undefined" || drivername == null || drivername == "") {
 		// 	$alert("司机姓名不能为空");
 		// 	return;
@@ -379,7 +379,7 @@ try {
 		// 	return;
 		// }
 
-		// var drivertelephone = $id("txt_drivertelephone").get("value");
+		var drivertelephone = $id("txt_drivertelephone").get("value");
 		// if (typeof (drivertelephone) == "undefined" || drivertelephone == null || drivertelephone == "") {
 		// 	$alert("手机号不能为空");
 		// 	return;
@@ -390,7 +390,7 @@ try {
 		// 	return
 		// }
 
-		// var driveridcode = $id("txt_driverid").get("value");
+		var driveridcode = $id("txt_driverid").get("value");
 		// if (typeof (driveridcode) == "undefined" || driveridcode == null || driveridcode == "") {
 		// 	$alert("身份证号不能为空");
 		// 	return;
