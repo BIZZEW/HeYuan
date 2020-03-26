@@ -59,7 +59,7 @@ try {
 
 	function com$yonyou$placeorder$HomePageController$addseleorder_onclick(sender, args) {
 		$view.open({
-			viewid: "com.yonyou.placeorder.SalesAdvOrderDetail", //目标页面（首字母大写）全名
+			viewid: "com.yonyou.placeorder.SalesAdvOrderMulti", //目标页面（首字母大写）全名
 			isKeep: "true"//打开新页面的同时是否保留当前页面，true为保留，false为不保留
 		})
 	}

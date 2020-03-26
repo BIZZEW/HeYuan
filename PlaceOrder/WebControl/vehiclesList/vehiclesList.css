@@ -1,0 +1,66 @@
+body {
+    background: #3e74c7;
+    margin: 0;
+}
+
+#addInfo{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px #0f3c82;
+    color: #0d397d;
+}
+
+#addInfo:active{
+    opacity: 0.3;
+}
+
+#plusicon{
+    
+}
+
+body {
+    background: #3e74c7;
+    margin: 0;
+}
+
+#vehiclesList{
+    margin: 3%;
+    width: 94%;
+}
+
+#vehiclesList .vehicleItem{
+    background: white;
+    margin: 0 0 10px 0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 5px 0px #325b9a;
+    position: relative;
+}
+
+#vehiclesList .vehicleItem .status{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    background: #3e74c7;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    text-align: center;
+}
+
+#nomoreInfo{
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    color: #003079;
+}
+
+
+
+
+

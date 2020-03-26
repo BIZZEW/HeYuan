@@ -1,0 +1,35 @@
+ #VehiclesList {
+layout:vbox;
+width:fill;
+valign:TOP;
+halign:center;
+height:569;
+}
+ #viewPage0 {
+layout:vbox;
+background:#f7f8f8;
+width:fill;
+valign:TOP;
+halign:center;
+height:fill;
+}
+ #navigatorbar0 {
+background:#0aa9ff;
+font-size:18;
+halign:LEFT;
+}
+ #back {
+padding-left:20;
+width:88;
+background-image:btn_back;
+halign:left;
+height:44;
+pressed-image:btn_back_touch;
+}
+ #webcontrolvehiclelist {
+layout:vbox;
+width:fill;
+valign:TOP;
+halign:center;
+height:fill;
+}

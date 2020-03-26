@@ -174,7 +174,10 @@
   <view id="ReportSearchDetail" ref="ReportSearchDetail.dsl" include="true"/>  
   <view id="ReportSearchBill" ref="ReportSearchBill.dsl" include="true"/>  
   <view id="InfoList" ref="InfoList.dsl" include="true"/>  
-  <view id="InfoDetail" ref="InfoDetail.dsl" include="true"/> 
+  <view id="InfoDetail" ref="InfoDetail.dsl" include="true"/>  
+  <view id="SalesAdvOrderMulti" ref="SalesAdvOrderMulti.dsl" include="true"/>  
+  <view id="VehiclesList" ref="VehiclesList.dsl" include="true"/>  
+  <view id="VehicleDetail" ref="VehicleDetail.dsl" include="true"/>
 </application>
 <!--
 【屏幕显示方向】

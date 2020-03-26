@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="vehicleDetail.css">
+    <!-- <link type="text/css" rel="stylesheet" href="../common/public.css"> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script> -->
+    <script language="JavaScript" src="./js/jquery-3.4.1.slim.min.js"></script>
+    <script language="JavaScript" src="./js/vue.common.dev.js"></script>
+    <script language="JavaScript" src="../../Frameworks/iuapmobile.native.all.js"></script>
+    <script type="text/javascript" src="vehicleDetail.js"></script>
+
+</head>
+
+<body>
+    <div class="um-content" id="vehicleDetail">
+        <div class="ultra-item">
+            <label class="ultra-label">车牌号码</label>
+            <div class="ultra-content"><input placeholder="车牌号码" type="text" v-model="platenum"></div>
+        </div>
+
+        <div class="ultra-item">
+            <label class="ultra-label">司机姓名</label>
+            <div class="ultra-content"><input placeholder="司机姓名" type="text" v-model="driver">
+            </div>
+        </div>
+
+        <div class="ultra-item">
+            <label class="ultra-label">手&nbsp;机&nbsp;号</label>
+            <div class="ultra-content"><input placeholder="手机号" type="text" v-model="phone"></div>
+        </div>
+
+        <div class="ultra-item">
+            <label class="ultra-label">身份证号</label>
+            <div class="ultra-content"><input placeholder="身份证号" type="text" v-model="id"></div>
+        </div>
+
+        <div class="ultra-item">
+            <label class="ultra-label">车数</label>
+            <div class="ultra-content"><input placeholder="车数" type="number" v-model="amount"></div>
+        </div>
+
+        <div class="confirmBtn" @click="submit()">提交</div>
+    </div>
+</body>
+
+</html>

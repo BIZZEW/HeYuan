@@ -11,7 +11,10 @@
     <file name="SalesAdvOrderList.dsl"/>  
     <file name="SalesAdvOrderDetail.dsl"/>  
     <file name="OrderListbrowsing.dsl"/>  
-    <file name="SalesAdvOrderSearch.dsl"/> 
+    <file name="SalesAdvOrderSearch.dsl"/>  
+    <file name="SalesAdvOrderMulti.dsl"/>  
+    <file name="VehiclesList.dsl"/>  
+    <file name="VehicleDetail.dsl"/>
   </SalesAdvOrder>  
   <ReceiveOrder> 
     <file name="ReceiveOrderSearch.dsl"/>  
@@ -77,6 +80,6 @@
   <Notification> 
     <file name="NotificationMenu.dsl"/>  
     <file name="InfoList.dsl"/>  
-    <file name="InfoDetail.dsl"/>
+    <file name="InfoDetail.dsl"/> 
   </Notification> 
 </windows>
