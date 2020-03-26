@@ -56,6 +56,11 @@ try {
 		$js.backConfirm();
 	}
 
+	function com$yonyou$placeorder$VehiclesListController$updateDetail(sender, args) {
+		var vehicleslistmp = $cache.read("vehicleslist");
+		vehicleslist = eval(vehicleslistmp);
+	}
+
 	function reload(sender, args) {
 		var vehicleslistmp = $param.getString("returnvehicleslist");
 		vehicleslist = eval(vehicleslistmp);
@@ -82,14 +87,13 @@ try {
 		});
 	}
 
-	function com$yonyou$placeorder$VehiclesListController$goDetail() {
-		var index = $cache.read("index");
+	function com$yonyou$placeorder$VehiclesListController$goDetail(i) {
 		// 如果点击的是高级查询则跳转到对应的页面
 		$view.open({
 			viewid: "com.yonyou.placeorder.VehicleDetail",
 			isKeep: "true",
 			callback: "reload()",
-			index: index,
+			index: parseInt(i),
 			vehicleslist: vehicleslist,
 		})
 	}
@@ -109,6 +113,7 @@ try {
 		initialize: com$yonyou$placeorder$VehiclesListController$initialize,
 		evaljs: com$yonyou$placeorder$VehiclesListController$evaljs,
 		button0_onclick: com$yonyou$placeorder$VehiclesListController$button0_onclick,
+		updateDetail: com$yonyou$placeorder$VehiclesListController$updateDetail,
 	};
 	com.yonyou.placeorder.VehiclesListController.registerClass('com.yonyou.placeorder.VehiclesListController', UMP.UI.Mvc.Controller);
 } catch (e) {

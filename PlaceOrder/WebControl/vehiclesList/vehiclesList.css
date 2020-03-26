@@ -53,6 +53,20 @@ body {
     text-align: center;
 }
 
+
+#vehiclesList .vehicleItem .delete{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: #c73e50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    text-align: center;
+    z-index: 100000;
+}
+
 #nomoreInfo{
     width: 100%;
     text-align: center;

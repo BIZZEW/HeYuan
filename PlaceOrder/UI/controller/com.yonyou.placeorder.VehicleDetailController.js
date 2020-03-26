@@ -52,7 +52,7 @@ try {
 
 		index = parseInt($cache.read("index"));
 
-		if (index > 0) {
+		if (index >= 0) {
 			currentVehicle = vehicleslist[index];
 
 			$js.runjs({
@@ -68,7 +68,7 @@ try {
 		if (currentVehicletmp)
 			currentVehicle = JSON.parse(currentVehicletmp);
 
-		if (index > 0)
+		if (index >= 0)
 			vehicleslist[index] = currentVehicle
 		else
 			vehicleslist.push(currentVehicle)

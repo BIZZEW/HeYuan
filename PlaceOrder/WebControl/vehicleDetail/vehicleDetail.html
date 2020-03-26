@@ -18,34 +18,36 @@
 </head>
 
 <body>
-    <div class="um-content" id="vehicleDetail">
-        <div class="ultra-item">
-            <label class="ultra-label">车牌号码</label>
-            <div class="ultra-content"><input placeholder="车牌号码" type="text" v-model="platenum"></div>
-        </div>
+    <div id="vehicleDetail">
+        <div class="um-content">
+            <div class="ultra-item">
+                <label class="ultra-label">车牌号码</label>
+                <div class="ultra-content"><input placeholder="车牌号码" type="text" v-model="vlicense"></div>
+            </div>
 
-        <div class="ultra-item">
-            <label class="ultra-label">司机姓名</label>
-            <div class="ultra-content"><input placeholder="司机姓名" type="text" v-model="driver">
+            <div class="ultra-item">
+                <label class="ultra-label">司机姓名</label>
+                <div class="ultra-content"><input placeholder="司机姓名" type="text" v-model="drivername">
+                </div>
+            </div>
+
+            <div class="ultra-item">
+                <label class="ultra-label">手&nbsp;机&nbsp;号</label>
+                <div class="ultra-content"><input placeholder="手机号" type="number" v-model="drivertelephone"></div>
+            </div>
+
+            <div class="ultra-item">
+                <label class="ultra-label">身份证号</label>
+                <div class="ultra-content"><input placeholder="身份证号" type="number" v-model="driveridcode"></div>
+            </div>
+
+            <div class="ultra-item">
+                <label class="ultra-label">车数</label>
+                <div class="ultra-content"><input placeholder="车数" type="number" v-model="amount"></div>
             </div>
         </div>
 
-        <div class="ultra-item">
-            <label class="ultra-label">手&nbsp;机&nbsp;号</label>
-            <div class="ultra-content"><input placeholder="手机号" type="text" v-model="phone"></div>
-        </div>
-
-        <div class="ultra-item">
-            <label class="ultra-label">身份证号</label>
-            <div class="ultra-content"><input placeholder="身份证号" type="text" v-model="id"></div>
-        </div>
-
-        <div class="ultra-item">
-            <label class="ultra-label">车数</label>
-            <div class="ultra-content"><input placeholder="车数" type="number" v-model="amount"></div>
-        </div>
-
-        <div class="confirmBtn" @click="submit()">提交</div>
+        <div class="confirmBtn" @click="submit()" v-if="inputStatus">提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交</div>
     </div>
 </body>
 

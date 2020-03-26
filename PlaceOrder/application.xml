@@ -177,7 +177,7 @@
   <view id="InfoDetail" ref="InfoDetail.dsl" include="true"/>  
   <view id="SalesAdvOrderMulti" ref="SalesAdvOrderMulti.dsl" include="true"/>  
   <view id="VehiclesList" ref="VehiclesList.dsl" include="true"/>  
-  <view id="VehicleDetail" ref="VehicleDetail.dsl" include="true"/>
+  <view id="VehicleDetail" ref="VehicleDetail.dsl" include="true"/> 
 </application>
 <!--
 【屏幕显示方向】

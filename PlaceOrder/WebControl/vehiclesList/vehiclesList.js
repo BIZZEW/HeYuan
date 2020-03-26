@@ -15,8 +15,13 @@ function initPage() {
         },
         methods: {
             goDetail: function (index) {
-                $cache.write("index", index);
-                $js.runjs({ "func": "com$yonyou$placeorder$VehiclesListController$goDetail()" });
+                $cache.write("index", index + "");
+                $js.runjs({ "func": "com$yonyou$placeorder$VehiclesListController$goDetail('" + index + "')" });
+            },
+            deleteItem: function (index) {
+                vehicleslist.items.splice(index, 1);
+                $cache.write("vehicleslist", JSON.stringify(vehicleslist.items));
+                $js.runjs({ "func": "com$yonyou$placeorder$VehiclesListController$updateDetail()" });
             }
         }
     })

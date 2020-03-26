@@ -21,9 +21,10 @@
 <body>
     <div id="vehiclesList">
         <div class="vehicleItem" v-for="(item, index) in items" @click="goDetail(index)">
-            车牌：{{ item.platenum}}</br></br>
-            司机：{{item.driver}}
+            车牌：{{ item.vlicense}}</br></br>
+            司机：{{item.drivername}}
             <div class="status">{{item.amount+"辆"}}</div>
+            <div class="delete" @click.stop="deleteItem(index)">删除</div>
         </div>
         <div id="nomoreInfo" v-if="(items.length==0)">——— 当前无车辆信息 ———</div>
         <div id="addInfo" @click="goDetail('-99')">
