@@ -15,7 +15,7 @@ function initPage() {
             vlicense: "",
             drivername: "",
             drivertelephone: "",
-            driveridcode: "",
+            vdriverid: "",
             amount: "",
             inputStatus: true,
         },
@@ -28,7 +28,7 @@ function initPage() {
                             vlicense: vehicledetail.vlicense,
                             drivername: vehicledetail.drivername,
                             drivertelephone: vehicledetail.drivertelephone,
-                            driveridcode: vehicledetail.driveridcode,
+                            vdriverid: vehicledetail.vdriverid,
                             amount: parseInt(vehicledetail.amount),
                         };
 
@@ -54,8 +54,8 @@ function initPage() {
             drivertelephone: function (val) {
                 this.drivertelephone = checkNumber(val);
             },
-            driveridcode: function (val) {
-                this.driveridcode = checkNumber(val);
+            vdriverid: function (val) {
+                this.vdriverid = checkNumber(val);
             },
             amount: function (val) {
                 this.amount = checkNumber(val);
@@ -123,7 +123,7 @@ function loadData() {
         vehicledetail.vlicense = vehicleslist[vehicledetail.index].vlicense;
         vehicledetail.drivername = vehicleslist[vehicledetail.index].drivername;
         vehicledetail.drivertelephone = vehicleslist[vehicledetail.index].drivertelephone;
-        vehicledetail.driveridcode = vehicleslist[vehicledetail.index].driveridcode;
+        vehicledetail.vdriverid = vehicleslist[vehicledetail.index].vdriverid;
         vehicledetail.amount = vehicleslist[vehicledetail.index].amount;
     }
 }
@@ -139,7 +139,7 @@ function updateDriver() {
 
     if (retvalue) {
         if (retvalue.pk)
-            vehicledetail.driveridcode = retvalue.pk;
+            vehicledetail.vdriverid = retvalue.pk;
         if (retvalue.code)
             vehicledetail.drivername = retvalue.code;
         if (retvalue.name)
