@@ -21,14 +21,15 @@
     <div id="vehicleDetail">
         <div class="um-content">
             <div class="ultra-item">
-                <label class="ultra-label">车牌号码</label>
-                <div class="ultra-content"><input placeholder="车牌号码" type="text" v-model="vlicense"></div>
+                <label class="ultra-label" style="color:#3e74c7">车牌号码</label>
+                <div class="ultra-content withbtn"><input placeholder="车牌号码" type="text" v-model="vlicense"></div>
+                <div class="selectBtn" @click="selectPlatenum">选车牌</div>
             </div>
 
             <div class="ultra-item">
                 <label class="ultra-label">司机姓名</label>
-                <div class="ultra-content"><input placeholder="司机姓名" type="text" v-model="drivername">
-                </div>
+                <div class="ultra-content withbtn"><input placeholder="司机姓名" type="text" v-model="drivername"></div>
+                <div class="selectBtn" @click="selectDriver">选司机</div>
             </div>
 
             <div class="ultra-item">
@@ -42,7 +43,7 @@
             </div>
 
             <div class="ultra-item">
-                <label class="ultra-label">车数</label>
+                <label class="ultra-label" style="color:#3e74c7">车数</label>
                 <div class="ultra-content"><input placeholder="车数" type="number" v-model="amount"></div>
             </div>
         </div>

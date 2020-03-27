@@ -69,7 +69,8 @@ try {
 		drivertelephone, //司机手机
 		driveridcode, //司机身份证
 		cpreorderid,
-		cpreorderbid;
+		cpreorderbid,
+		vehicleslistNum;//车辆信息数
 	var vehicleslist = [];
 	function com$yonyou$placeorder$SalesAdvOrderMultiController$changebill(sender, args) {
 		var data = $param.getJSONObject("data");
@@ -106,17 +107,17 @@ try {
 			$id("seller").set("value", data.saleorg.name);
 			$id("sender").set("value", data.sendstockorg.name);
 			$id("customer").set("value", data.ccustomerid.name);
-			$id("carno").set("value", data.vlicense);
+			// $id("carno").set("value", data.vlicense);
 			$id("billdate").set("value", data.dbilldate);
-			$id("drivertel").set("value", data.drivertelephone);
-			$id("drivername").set("value", data.drivername);
-			$id("driverid").set("value", data.vdriverid);
-			vlicense = data.vlicense;
-			if (Globals.checkvlicense(vlicense)) {
-				$id("pnl_carno").set("display", "block");
-			} else {
-				$id("lbl_fmtvlicense").set("value", vlicense);
-			}
+			// $id("drivertel").set("value", data.drivertelephone);
+			// $id("drivername").set("value", data.drivername);
+			// $id("driverid").set("value", data.vdriverid);
+			// vlicense = data.vlicense;
+			// if (Globals.checkvlicense(vlicense)) {
+			// 	$id("pnl_carno").set("display", "block");
+			// } else {
+			// 	$id("lbl_fmtvlicense").set("value", vlicense);
+			// }
 			saleorg = data.saleorg.pk_org;
 			sendstockorg = data.sendstockorg.pk_org;
 			ccustomerid = data.ccustomerid.pk_customer;
@@ -314,6 +315,7 @@ try {
 			// 	"pk_stockorg": sendstockorg,
 			// 	"pk_customer": ccustomerid,
 			// },
+			"ccustomerid": ccustomerid,
 			"vehicleslist": JSON.stringify(vehicleslist),
 			// "reftype": Globals.RefInfoType.AVAILGOODS,
 			"callback": "updatevehicles()"
@@ -325,8 +327,11 @@ try {
 		var vehicleslistmp = $param.getJSONObject("vehicleslist");
 		if (vehicleslistmp)
 			vehicleslist = eval(vehicleslistmp)
-		var vehicleslistNum = vehicleslist.length ? vehicleslist.length : 0;
-		$id("labelvehicles").set("value", "当前 " + vehicleslistNum + " 条信息");
+
+		try {
+			vehicleslistNum = vehicleslist.length ? vehicleslist.length : 0;
+			$id("labelvehicles").set("value", "当前 " + vehicleslistNum + " 条信息");
+		} catch (e) { console.log(e) }
 	}
 
 
@@ -462,20 +467,26 @@ try {
 			$alert("数量必须大于0");
 			return;
 		}
-		var isfldisplay = $id("pnl_carno").get("display");
-		var carno = "";
-		if (isfldisplay == "none") {
-			if ($id("lbl_fmtvlicense").get("value") != "点击输入车号") {
-				carno = $id("lbl_fmtvlicense").get("value")
-			}
-		} else {
-			carno = $id("carno").get("value");
-			if (!carno) {
-				$alert("请输入自定义车牌号码");
-				return;
-			}
+
+		if (vehicleslistNum <= 0) {
+			$alert("请至少录入一条车辆信息");
+			return;
 		}
-		com.yonyou.placeorder.SalesAdvOrderMultiController.carno = carno;
+
+		// var isfldisplay = $id("pnl_carno").get("display");
+		// var carno = "";
+		// if (isfldisplay == "none") {
+		// 	if ($id("lbl_fmtvlicense").get("value") != "点击输入车号") {
+		// 		carno = $id("lbl_fmtvlicense").get("value")
+		// 	}
+		// } else {
+		// 	carno = $id("carno").get("value");
+		// 	if (!carno) {
+		// 		$alert("请输入自定义车牌号码");
+		// 		return;
+		// 	}
+		// }
+		// com.yonyou.placeorder.SalesAdvOrderMultiController.carno = carno;
 
 		// if ($id("drivername").get("value") == "") {
 		// 	$alert("请输入司机姓名");
@@ -509,12 +520,13 @@ try {
 				"ccustomerid": ccustomerid, //客户主键
 				"cmaterialid": cmaterialid, //物料主键
 				"ordernum": $id("weight").get("value"), //订单数量
-				"vlicense": carno, //车牌号
-				"drivername": $id("drivername").get("value"), //司机姓名
-				"drivertelephone": $id("drivertel").get("value"), //司机手机
-				"vdriverid": $id("driverid").get("value"),
+				// "vlicense": carno, //车牌号
+				// "drivername": $id("drivername").get("value"), //司机姓名
+				// "drivertelephone": $id("drivertel").get("value"), //司机手机
+				// "vdriverid": $id("driverid").get("value"),
 				"cpreorderid": cpreorderid,
-				"cpreorderbid": cpreorderbid//司机身份证
+				"cpreorderbid": cpreorderbid,//司机身份证
+				"vehicles": vehicleslist
 			};
 			$service.callAction({
 				"usercode": $cache.read("telephone"),
@@ -538,10 +550,11 @@ try {
 				"ccustomerid": ccustomerid, //客户主键
 				"cmaterialid": cmaterialid, //物料主键
 				"ordernum": $id("weight").get("value"), //订单数量
-				"vlicense": carno, //车牌号
-				"drivername": $id("drivername").get("value"), //司机姓名
-				"drivertelephone": $id("drivertel").get("value"), //司机手机
-				"vdriverid": $id("driverid").get("value")//司机身份证
+				// "vlicense": carno, //车牌号
+				// "drivername": $id("drivername").get("value"), //司机姓名
+				// "drivertelephone": $id("drivertel").get("value"), //司机手机
+				// "vdriverid": $id("driverid").get("value")//司机身份证
+				"vehicles": vehicleslist
 			};
 			// alert(JSON.stringify(json));
 			$service.callAction({

@@ -3,6 +3,7 @@
 <window xmlns:web="http://www.yonyou.com/uapmobile/dsl" controller="VehicleDetailController" namespace="com.yonyou.placeorder" id="VehicleDetail">
     <import ref="VehicleDetail.css" type="css"/>
     <link href="sys/theme.css" type="text/css"/>
+    <script src="#{path.controller}/common/global.js" type="text/javascript"/>  
     <script src="#{path.controller}/common/sqliteutil.js" type="text/javascript"/>
     <action method="UMView.open" id="ddd" animation-direction="right" iskeep="false" animation-type="Push"/>
     <div id="viewPage0" onload="this.onload()">

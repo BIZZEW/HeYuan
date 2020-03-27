@@ -21,32 +21,46 @@ function initPage() {
         },
         methods: {
             submit: function () {
-                var currentVehicle = {
-                    vlicense: vehicledetail.vlicense,
-                    drivername: vehicledetail.drivername,
-                    drivertelephone: vehicledetail.drivertelephone,
-                    driveridcode: vehicledetail.driveridcode,
-                    amount: parseInt(vehicledetail.amount),
-                };
+                if (this.vlicense.trim() != "" && this.amount.trim() != "") {
+                    this.vlicense = this.vlicense.replace(/\s/g, "").toUpperCase();
+                    if (isVehicleNumber(this.vlicense)) {
+                        var currentVehicle = {
+                            vlicense: vehicledetail.vlicense,
+                            drivername: vehicledetail.drivername,
+                            drivertelephone: vehicledetail.drivertelephone,
+                            driveridcode: vehicledetail.driveridcode,
+                            amount: parseInt(vehicledetail.amount),
+                        };
 
-                $cache.write("currentVehicle", JSON.stringify(currentVehicle));
-                $js.runjs({ "func": "com$yonyou$placeorder$VehicleDetailController$confirm()" });
+                        $cache.write("currentVehicle", JSON.stringify(currentVehicle));
+                        $js.runjs({ "func": "com$yonyou$placeorder$VehicleDetailController$confirm()" });
+                    } else
+                        alert("抱歉，车牌格式不正确！");
+                } else
+                    alert("抱歉，车牌号码和车数为必填项！");
+            },
+            selectPlatenum: function () {
+                $js.runjs({ "func": "com$yonyou$placeorder$VehicleDetailController$selectPlatenum()" });
+            },
+            selectDriver: function () {
+                if (this.vlicense.trim() != "")
+                    $js.runjs({ "func": "com$yonyou$placeorder$VehicleDetailController$selectDriver('" + this.vlicense + "')" });
+                else
+                    alert("请先填选车牌！");
             }
+        },
+        watch: {
+            drivertelephone: function (val) {
+                this.drivertelephone = checkNumber(val);
+            },
+            driveridcode: function (val) {
+                this.driveridcode = checkNumber(val);
+            },
+            amount: function (val) {
+                this.amount = checkNumber(val);
+            },
         }
     });
-
-    // var winHeight = $(window).height();
-    // //获取当前页面高度
-    // $(window).resize(function () {
-    //     var thisHeight = $(this).height();
-    //     if (winHeight - thisHeight > 50) {
-    //         //当软键盘弹出，在这里面操作
-    //         vehicledetail.inputStatus = 1;
-    //     } else {
-    //         //当软键盘收起，在此处操作
-    //         vehicledetail.inputStatus = 0;
-    //     }
-    // });
 
     var u = navigator.userAgent; //获取到的是个字符串，包括很多信息，我只匹配我想要的信息
     var isAnd = u.indexOf("Android") > -1 || u.indexOf("Linux") > -1; //判断是安卓手机
@@ -66,6 +80,7 @@ function initPage() {
             }
         })
     }
+
     //苹果中不会触发resize，但是可以用focusin/focusout
     if (isIOS) {
         document.body.addEventListener("focusin", function () {
@@ -77,6 +92,21 @@ function initPage() {
             vehicledetail.inputStatus = true;
         })
     }
+}
+
+function checkNumber(origin) {
+    return origin.replace(/\D/g, "");
+    // .replace(/[\ |\~|\`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\-|\_|\+|\=|\||\\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?]/g, "")
+}
+
+
+function isVehicleNumber(vehicleNumber) {
+    var result = false;
+    if (vehicleNumber.length == 7) {
+        var express = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$/;
+        result = express.test(vehicleNumber);
+    }
+    return result;
 }
 
 // JSController中获取到数据之后会调用该方法以在页面上加载获得到的数据
@@ -94,6 +124,28 @@ function loadData() {
         vehicledetail.drivertelephone = vehicleslist[vehicledetail.index].drivertelephone;
         vehicledetail.driveridcode = vehicleslist[vehicledetail.index].driveridcode;
         vehicledetail.amount = vehicleslist[vehicledetail.index].amount;
+    }
+}
+
+function updatePlatenum() {
+    var retvalue = $param.getJSONObject("result");
+    vehicledetail.vlicense = retvalue.code;
+}
+
+function updateDriver() {
+    var retvalue = $param.getJSONObject("result");
+    var driverinfo = [];
+
+    if (retvalue) {
+        if (retvalue.pk)
+            vehicledetail.driveridcode = retvalue.pk;
+        if (retvalue.code)
+            vehicledetail.drivername = retvalue.code;
+        if (retvalue.name)
+            driverinfo = retvalue.name.split(" ");
+        try {
+            vehicledetail.drivertelephone = driverinfo[1];
+        } catch (e) { console.log(e) }
     }
 }
 
