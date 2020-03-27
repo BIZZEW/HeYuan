@@ -561,6 +561,7 @@ try {
 				"usercode": $cache.read("telephone"),
 				"user": $cache.read("telephone"),
 				"appid": "PlaceOrder",
+				"timeout": 60,
 				"viewid": "com.yonyou.placeorder.SaleAdvOrderUMController", //后台Controller(带包名)的类名
 				"action": "add", //后台Controller的方法名,
 				"params": json, //自定义参数
