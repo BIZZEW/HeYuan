@@ -43,9 +43,10 @@ function initPage() {
                 $js.runjs({ "func": "com$yonyou$placeorder$VehicleDetailController$selectPlatenum()" });
             },
             selectDriver: function () {
-                if (this.vlicense.trim() != "")
-                    $js.runjs({ "func": "com$yonyou$placeorder$VehicleDetailController$selectDriver('" + this.vlicense + "')" });
-                else
+                if (this.vlicense.trim() != "") {
+                    $cache.write("vlicense", this.vlicense);
+                    $js.runjs({ "func": "com$yonyou$placeorder$VehicleDetailController$selectDriver()" });
+                } else
                     alert("请先填选车牌！");
             }
         },

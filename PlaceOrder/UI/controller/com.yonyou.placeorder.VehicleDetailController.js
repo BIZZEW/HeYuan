@@ -106,11 +106,12 @@ try {
 
 	//修改司机参照
 	function com$yonyou$placeorder$VehicleDetailController$selectDriver(sender, args) {
+		var vlicense = $cache.read("vlicense");
 		$view.open({
 			viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
 			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
 			"otherparams": {
-				"vlicense": args.param
+				"vlicense": vlicense
 			},
 			"reftype": Globals.RefInfoType.VEHICLE_DRIVER,
 			"callback": "selectDriverCallback()"
