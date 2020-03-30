@@ -16,7 +16,7 @@ function initPage() {
             drivername: "",
             drivertelephone: "",
             driveridcode: "",
-            amount: 1,
+            amount: "1",
             inputStatus: true,
         },
         methods: {
