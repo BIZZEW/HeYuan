@@ -280,7 +280,7 @@ try {
 				"callback": "updatevehicles()"
 			})
 		} else {
-			alert("请先选择采购订单再选车牌");
+			alert("请先选择采购订单再编辑车辆信息");
 		}
 	}
 
