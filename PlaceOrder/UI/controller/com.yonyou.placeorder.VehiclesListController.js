@@ -44,12 +44,12 @@ try {
 	}
 
 	var vehicleslist = [];
-	var ccustomerid;
+	var otherparams;
 	function com$yonyou$placeorder$VehiclesListController$onload(sender, args) {
 		var vehicleslistmp = $param.getString("vehicleslist");
 		vehicleslist = eval(vehicleslistmp);
 
-		ccustomerid = $param.getString("ccustomerid");
+		otherparams = $param.getJSONObject("otherparams");
 
 		$js.runjs({
 			"controlid": "webcontrolvehiclelist",//webControl的id
@@ -96,7 +96,7 @@ try {
 			viewid: "com.yonyou.placeorder.VehicleDetail",
 			isKeep: "true",
 			callback: "reload()",
-			ccustomerid: ccustomerid,
+			otherparams: otherparams,
 			index: parseInt(i),
 			vehicleslist: vehicleslist,
 		})

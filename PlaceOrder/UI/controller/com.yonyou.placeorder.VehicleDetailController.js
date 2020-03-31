@@ -44,13 +44,13 @@ try {
 	}
 
 	var vehicleslist = [];
-	var currentVehicle, index, ccustomerid;
+	var currentVehicle, index, otherparams;
 	function com$yonyou$placeorder$VehicleDetailController$onload(sender, args) {
 		var vehicleslistmp = $param.getString("vehicleslist");
 		if (eval(vehicleslistmp))
 			vehicleslist = eval(vehicleslistmp);
 
-		ccustomerid = $param.getString("ccustomerid");
+		otherparams = $param.getJSONObject("otherparams");
 
 		index = parseInt($cache.read("index"));
 
@@ -86,9 +86,7 @@ try {
 		$view.open({
 			viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
 			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
-			"otherparams": {
-				"pk_customer": ccustomerid
-			},
+			"otherparams": otherparams,
 			"reftype": Globals.RefInfoType.CURUSER_VEHICLE,
 			"callback": "selectPlatenumCallback()"
 		})

@@ -311,10 +311,10 @@ try {
 		$view.open({
 			viewid: "com.yonyou.placeorder.VehiclesList", //目标页面（首字母大写）全名
 			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
-			// "otherparams": {
-			// 	"pk_stockorg": sendstockorg,
-			// 	"pk_customer": ccustomerid,
-			// },
+			"otherparams": {
+				// "pk_stockorg": sendstockorg,
+				"pk_customer": ccustomerid,
+			},
 			"ccustomerid": ccustomerid,
 			"vehicleslist": JSON.stringify(vehicleslist),
 			// "reftype": Globals.RefInfoType.AVAILGOODS,
