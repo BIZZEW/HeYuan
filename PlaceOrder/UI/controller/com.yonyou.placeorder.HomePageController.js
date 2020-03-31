@@ -52,7 +52,7 @@ try {
 
 	function com$yonyou$placeorder$HomePageController$myposts(sender, args) {
 		$view.open({
-			viewid: "com.yonyou.placeorder.ReceiveOrderDetail", //目标页面（首字母大写）全名
+			viewid: "com.yonyou.placeorder.ReceiveOrderMulti", //目标页面（首字母大写）全名
 			isKeep: "true"//打开新页面的同时是否保留当前页面，true为保留，false为不保留
 		})
 	}
@@ -129,7 +129,7 @@ try {
 
 	function com$yonyou$placeorder$HomePageController$longtermclick(sender, args) {
 		$view.open({
-			viewid: "com.yonyou.placeorder.LongtermOrderDetail", //目标页面（首字母大写）全名
+			viewid: "com.yonyou.placeorder.LongtermOrderMulti", //目标页面（首字母大写）全名
 			isKeep: "true"//打开新页面的同时是否保留当前页面，true为保留，false为不保留
 		})
 	}

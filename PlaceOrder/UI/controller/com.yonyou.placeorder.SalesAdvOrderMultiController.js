@@ -315,7 +315,6 @@ try {
 				// "pk_stockorg": sendstockorg,
 				"pk_customer": ccustomerid,
 			},
-			"ccustomerid": ccustomerid,
 			"vehicleslist": JSON.stringify(vehicleslist),
 			// "reftype": Globals.RefInfoType.AVAILGOODS,
 			"callback": "updatevehicles()"

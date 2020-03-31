@@ -51,6 +51,8 @@ try {
 
 		otherparams = $param.getJSONObject("otherparams");
 
+		// alert(JSON.stringify(otherparams));
+
 		$js.runjs({
 			"controlid": "webcontrolvehiclelist",//webControl的id
 			"func": "loadData()"//要执行位于webControl中的js方法名

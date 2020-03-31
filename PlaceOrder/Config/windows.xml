@@ -14,14 +14,15 @@
     <file name="SalesAdvOrderSearch.dsl"/>  
     <file name="SalesAdvOrderMulti.dsl"/>  
     <file name="VehiclesList.dsl"/>  
-    <file name="VehicleDetail.dsl"/>
+    <file name="VehicleDetail.dsl"/> 
   </SalesAdvOrder>  
   <ReceiveOrder> 
     <file name="ReceiveOrderSearch.dsl"/>  
     <file name="ReceiveOrders.dsl"/>  
     <file name="ReceiveOrderList.dsl"/>  
     <file name="ReceiveOrderDetail.dsl"/>  
-    <file name="PurchaseOrderList.dsl"/> 
+    <file name="PurchaseOrderList.dsl"/>  
+    <file name="ReceiveOrderMulti.dsl"/> 
   </ReceiveOrder>  
   <CanBeDeleted> 
     <file name="CustomerProfiles.dsl"/>  
@@ -66,7 +67,8 @@
   <LongtermOrder> 
     <file name="LongtermOrderDetail.dsl"/>  
     <file name="LongtermOrderSearch.dsl"/>  
-    <file name="LongtermOrderList.dsl"/> 
+    <file name="LongtermOrderList.dsl"/>  
+    <file name="LongtermOrderMulti.dsl"/>
   </LongtermOrder>  
   <StatisticalReport> 
     <file name="StatisticalReportMenu.dsl"/>  
