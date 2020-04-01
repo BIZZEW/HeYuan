@@ -74,6 +74,11 @@ try {
 			action: "FixInferterAction",
 			title: "司机档案信息"
 		},
+		MINE: {
+			code: "1014",
+			action: "getRefOrespot",
+			title: "矿点信息"
+		},
 		// MATERIAL: {
 		// 	code: "1013",
 		// 	action: "SearchMaterialAction",

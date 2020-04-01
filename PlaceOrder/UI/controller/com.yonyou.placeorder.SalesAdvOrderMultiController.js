@@ -70,8 +70,7 @@ try {
 		driveridcode, //司机身份证
 		cpreorderid,
 		cpreorderbid,
-		vehicleslistNum;//车辆信息数
-	var vehicleslist = [];
+		vehicleslistNum = 0, vehicleslist = [];
 	function com$yonyou$placeorder$SalesAdvOrderMultiController$changebill(sender, args) {
 		var data = $param.getJSONObject("data");
 

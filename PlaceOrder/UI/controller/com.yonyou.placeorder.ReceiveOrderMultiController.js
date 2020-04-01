@@ -83,8 +83,7 @@ try {
 	}
 
 
-	var vehicleslistNum;//车辆信息数
-	var vehicleslist = [];
+	var vehicleslistNum = 0, vehicleslist = [];
 
 	function com$yonyou$placeorder$ReceiveOrderMultiController$pageOnload(sender, args) {
 		var oldorder = $param.getJSONObject("oldorder");

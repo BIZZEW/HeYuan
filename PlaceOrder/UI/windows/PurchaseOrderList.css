@@ -556,3 +556,50 @@ width:wrap;
 font-family:default;
 valign:center;
 }
+
+
+#panel_mine {
+    margin-right:15;
+    halign:LEFT;
+    height:30;
+    layout:hbox;
+    background:#fcfcfc;
+    width:fill;
+    margin-left:15;
+    margin-top:5;
+    valign:center;
+    }
+     #label_mine {
+    halign:center;
+    height:fill;
+    widthWrap:60.0;
+    color:#585858;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+     #panel_mine_inner {
+    halign:LEFT;
+    height:fill;
+    layout:hbox;
+    width:fill;
+    valign:center;
+    }
+     #lbl_mine {
+    halign:right;
+    height:fill;
+    weight:1;
+    color:#000000;
+    background:#fcfcfc;
+    font-size:14;
+    width:0;
+    font-family:default;
+    valign:center;
+    }
+     #image_mine {
+    margin-right:5;
+    height:16;
+    width:11;
+    margin-left:5;
+    }

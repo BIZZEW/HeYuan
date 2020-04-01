@@ -83,9 +83,8 @@ try {
 		var denddate = Globals.getFormatDate(null, 0);
 		$id("denddate").set("value", denddate);
 	}
-	
-	var vehicleslistNum;//车辆信息数
-	var vehicleslist = [];
+
+	var vehicleslistNum = 0, vehicleslist = [];
 
 	function com$yonyou$placeorder$LongtermOrderMultiController$pageOnload(sender, args) {
 		var denddate = Globals.getFormatDate(null, 0);
@@ -397,8 +396,8 @@ try {
 		var transporter = $id("txt_transporter").get("value");
 		var transporterpk = $id("imgbtn_selectTransporter").get("value");
 		// var isfldisplay = $id("txt_vlicense").get("display");
-		
-		
+
+
 		// if (isfldisplay == "none") {
 		// 	if ($id("lbl_fmtvlicense").get("value") != "点击输入车号") {
 		// 		vlicense = $id("lbl_fmtvlicense").get("value");

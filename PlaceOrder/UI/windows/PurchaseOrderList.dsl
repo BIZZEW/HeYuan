@@ -27,6 +27,13 @@
                             <image id="image3" scaletype="fitcenter" src="arrow.png"/> 
                         </div> 
                     </div>
+                    <div id="panel_mine">
+                        <label id="label_mine">矿点：</label>
+                        <div id="panel_mine_inner" onlongclick="this.mineOnlongClick()" onclick="this.selectMine()">
+                            <label id="lbl_mine">请选择矿点</label>
+                            <image id="image_mine" scaletype="fitcenter" src="arrow.png"/> 
+                        </div> 
+                    </div>
                     <div id="panel4">
                         <label id="label3">采购单位：</label>
                         <div id="panel9" onlongclick="this.purorgOnlongClick()" onclick="this.selectPurchaseOrg()">
