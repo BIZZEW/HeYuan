@@ -75,7 +75,7 @@ try {
 			},
 			"callback": function () {
 				var retvalue = $param.getJSONObject("result");
-				alert(JSON.stringify(retvalue));
+				// alert(JSON.stringify(retvalue));
 				SqliteUtil.updateRctMostUseData(Globals.RefInfoType.ORESPOT, retvalue);
 				com.yonyou.placeorder.PurchaseOrderListController.queryparam["pk_orespot"] = retvalue.pk;
 				$id("lbl_mine").set("value", retvalue.name);
