@@ -222,7 +222,7 @@ try {
     function getAllRefInfo() {
         var reftype = $param.getJSONObject("reftype");
         var otherparam = $param.getJSONObject("otherparams");
-        alert("otherparam: " + JSON.stringify(otherparam));
+        // alert("otherparam: " + JSON.stringify(otherparam));
         var user = JSON.parse($ctx.getApp("appuser"));
         var param = {
             "usercode": $cache.read("telephone"),
@@ -253,7 +253,7 @@ try {
     function connectSuccess() {
         $js.hideLoadingBar();
         var result = $ctx.get("result");
-        alert("result: " + JSON.stringify(result));
+        // alert("result: " + JSON.stringify(result));
         if (result) {
             result = JSON.parse(result);
         } else {
