@@ -175,6 +175,9 @@ try {
 		if (com.yonyou.placeorder.LongtermOrderSearchController.cmaterialid) {
 			queryparam["cmaterialid"] = com.yonyou.placeorder.LongtermOrderSearchController.cmaterialid;
 		}
+		if (com.yonyou.placeorder.LongtermOrderSearchController.pk_orespot) {
+			queryparam["pk_orespot"] = com.yonyou.placeorder.LongtermOrderSearchController.pk_orespot;
+		}
 		var vlicense = $id("txt_vlicense").get("value");
 		if (vlicense) {
 			if (Globals.checkSpecialChar(vlicense)) {
