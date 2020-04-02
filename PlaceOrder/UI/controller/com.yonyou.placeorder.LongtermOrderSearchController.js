@@ -80,6 +80,26 @@ try {
 			}
 		});
 	}
+	function com$yonyou$placeorder$LongtermOrderSearchController$changeMine(sender, args) {
+		$view.open({
+			"viewid": "com.yonyou.placeorder.BaseInfoRefWindow",
+			"isKeep": "true",
+			"reftype": Globals.RefInfoType.ORESPOT,
+			"otherparams": {
+				"pk_stockorg": com.yonyou.placeorder.LongtermOrderSearchController.pk_stockorg,
+			},
+			"callback": function () {
+				var retvalue = $param.getJSONObject("result");
+				SqliteUtil.updateRctMostUseData(Globals.RefInfoType.ORESPOT, retvalue);
+				com.yonyou.placeorder.LongtermOrderSearchController.pk_orespot = retvalue.pk;
+				$id("txt_mine").set("value", retvalue.name);
+			}
+		});
+	}
+	function com$yonyou$placeorder$LongtermOrderSearchController$clearMine(sender, args) {
+		delete com.yonyou.placeorder.LongtermOrderSearchController.pk_orespot;
+		$id("txt_mine").set("value", "请选择矿点");
+	}
 
 	function com$yonyou$placeorder$LongtermOrderSearchController$clearSliper(sender, args) {
 		delete com.yonyou.placeorder.LongtermOrderSearchController.pk_supplier;
@@ -182,6 +202,8 @@ try {
 		clearMaterial: com$yonyou$placeorder$LongtermOrderSearchController$clearMaterial,
 		clearSliper: com$yonyou$placeorder$LongtermOrderSearchController$clearSliper,
 		changeSliper: com$yonyou$placeorder$LongtermOrderSearchController$changeSliper,
+		clearMine: com$yonyou$placeorder$LongtermOrderSearchController$clearMine,
+		changeMine: com$yonyou$placeorder$LongtermOrderSearchController$changeMine,
 		clearstock: com$yonyou$placeorder$LongtermOrderSearchController$clearstock,
 		back: com$yonyou$placeorder$LongtermOrderSearchController$back,
 		searchOnclick: com$yonyou$placeorder$LongtermOrderSearchController$searchOnclick,

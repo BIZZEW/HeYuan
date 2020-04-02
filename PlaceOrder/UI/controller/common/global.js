@@ -74,7 +74,7 @@ try {
 			action: "FixInferterAction",
 			title: "司机档案信息"
 		},
-		MINE: {
+		ORESPOT: {
 			code: "1014",
 			action: "getRefOrespot",
 			title: "矿点信息"

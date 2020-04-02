@@ -20,6 +20,13 @@
                     <image id="image1" scaletype="fitcenter" src="arrow.png"/> 
                 </div> 
             </div>
+            <div id="panel_mine">
+                <label id="label_mine">矿点：</label>
+                <div id="div_mine" onlongclick="this.clearMine()" onclick="this.changeMine()">
+                    <label id="txt_mine">请选择矿点</label>
+                    <image id="image_mine" scaletype="fitcenter" src="arrow.png"/> 
+                </div> 
+            </div>
             <div id="startdatepanel">
                 <label id="startdatelabel">开始日期：</label>
                 <input id="begindate" placeholder="2016-12-09" format="yyyy-MM-dd" type="date"/> 

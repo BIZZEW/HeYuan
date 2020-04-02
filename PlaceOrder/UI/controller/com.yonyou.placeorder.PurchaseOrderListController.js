@@ -69,11 +69,14 @@ try {
 		$view.open({
 			viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
 			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
-			"reftype": Globals.RefInfoType.MINE,
+			"reftype": Globals.RefInfoType.ORESPOT,
+			"otherparams": {
+				pk_stockorg: com.yonyou.placeorder.PurchaseOrderListController.queryparam["pk_stockorg"],
+			},
 			"callback": function () {
 				var retvalue = $param.getJSONObject("result");
 				alert(JSON.stringify(retvalue));
-				SqliteUtil.updateRctMostUseData(Globals.RefInfoType.MINE, retvalue);
+				SqliteUtil.updateRctMostUseData(Globals.RefInfoType.ORESPOT, retvalue);
 				com.yonyou.placeorder.PurchaseOrderListController.queryparam["pk_orespot"] = retvalue.pk;
 				$id("lbl_mine").set("value", retvalue.name);
 				com.yonyou.placeorder.PurchaseOrderListController.minename = retvalue.name;

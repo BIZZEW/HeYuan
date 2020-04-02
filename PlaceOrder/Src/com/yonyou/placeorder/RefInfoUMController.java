@@ -29,6 +29,10 @@ public class RefInfoUMController extends AbstractUMController {
 	public String getCurUserCstmRefInfo(String param) throws Exception {
 		return this.getRefInfo(IRefInfoService4MA.REFINFO_CURUSER_CUSTOMER, param);
 	}
+
+	public String getRefOrespot(String param) throws Exception {
+  		return this.getRefInfo(IRefInfoService4MA.REFINFO_ORESPOT, param);
+	}
 	
 	/**
 	 * 获取供应商参照信息

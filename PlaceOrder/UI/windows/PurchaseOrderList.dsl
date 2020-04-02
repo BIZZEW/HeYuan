@@ -27,6 +27,13 @@
                             <image id="image3" scaletype="fitcenter" src="arrow.png"/> 
                         </div> 
                     </div>
+                    <div id="panel10">
+                        <label id="label7">收货企业：</label>
+                        <div id="panel11" onlongclick="this.stockorgOnlongClick()" onclick="this.selectStockOrg()">
+                            <label id="lbl_querystockorg">请选择收货企业</label>
+                            <image id="image2" scaletype="fitcenter" src="arrow.png"/> 
+                        </div> 
+                    </div>
                     <div id="panel_mine">
                         <label id="label_mine">矿点：</label>
                         <div id="panel_mine_inner" onlongclick="this.mineOnlongClick()" onclick="this.selectMine()">
@@ -39,13 +46,6 @@
                         <div id="panel9" onlongclick="this.purorgOnlongClick()" onclick="this.selectPurchaseOrg()">
                             <label id="lbl_querypurorg">请选择采购单位</label>
                             <image id="image1" scaletype="fitcenter" src="arrow.png"/> 
-                        </div> 
-                    </div>
-                    <div id="panel10">
-                        <label id="label7">收货企业：</label>
-                        <div id="panel11" onlongclick="this.stockorgOnlongClick()" onclick="this.selectStockOrg()">
-                            <label id="lbl_querystockorg">请选择收货企业</label>
-                            <image id="image2" scaletype="fitcenter" src="arrow.png"/> 
                         </div> 
                     </div>
                     <div id="pnl_query4">
