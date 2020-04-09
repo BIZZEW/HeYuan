@@ -13,12 +13,12 @@
                 <div id="panel0">
                     <label id="label0" visible="false">*</label>
                     <label id="label1">IP</label>
-                    <input id="textip" bindfield="ip" maxlength="256" onload="this.loadhost()" value="172.16.4.242" type="text"/> 
+                    <input id="textip" bindfield="ip" maxlength="256" onload="this.loadhost()" value="www.jysn.com" type="text"/> 
                 </div>
                 <div id="panel2">
                     <label id="label4" visible="false">*</label>
                     <label id="label5">PORT</label>
-                    <input id="textport" bindfield="port" maxlength="256" value="9081" type="text"/> 
+                    <input id="textport" bindfield="port" maxlength="256" value="8089" type="text"/> 
                 </div>
                 <input id="wloginbutton" value="MA连接测试" class="buttonclass loginbuttonclass" onclick="this.wloginbutton_onclick()" type="button"/> 
             </div> 

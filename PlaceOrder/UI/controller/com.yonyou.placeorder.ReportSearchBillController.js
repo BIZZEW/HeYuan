@@ -249,7 +249,7 @@ try {
 
 	function com$yonyou$placeorder$ReportSearchBillController$picker0_onload(sender, args) {
 		var context = {
-			statuses: ["已付款", "应付款"],
+			statuses: ["已付款", "应付款", "奖扣"],
 		}
 		$ctx.push(context); //数据绑定,将context的值与picker进行绑定
 	}

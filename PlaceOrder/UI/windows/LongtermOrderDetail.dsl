@@ -85,6 +85,13 @@
                         <input imagebuttontype="icon" istogglebutton="false" checked="false" id="imgbtn_selectTransporter" type="imagebutton" value="" class="imagebuttonclass" readonly="readonly"/> 
                     </div> 
                 </div> 
+                <div id="panelorespot"> 
+                    <label id="labelorespot">矿点：</label>  
+                    <div id="panel1orespotinner"> 
+                        <label id="txt_orespot" maxlength="256">请选择矿点</label>  
+                        <input imagebuttontype="icon" istogglebutton="false" checked="false" id="imgbtn_orespot" type="imagebutton" value="" class="imagebuttonclass" readonly="readonly"/> 
+                    </div> 
+                </div> 
             </div>  
             <div id="panel2"> 
                 <label id="label5">车牌号码：</label>  

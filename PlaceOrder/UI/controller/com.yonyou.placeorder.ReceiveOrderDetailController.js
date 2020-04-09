@@ -115,6 +115,7 @@ try {
 				$id("txt_transporter").set("value", oldorder["sendsupplier"]["name"]);
 				$id("imgbtn_selectTransporter").set("value", oldorder["sendsupplier"]["pk_supplier"]);
 			}
+			$id("txt_orespot").set("value", oldorder["orespotname"]);
 			$id("txt_vlicense").set("value", oldorder["vlicense"]);
 			if (Globals.checkvlicense(oldorder["vlicense"])) {
 				$id("txt_vlicense").set("display", "block");

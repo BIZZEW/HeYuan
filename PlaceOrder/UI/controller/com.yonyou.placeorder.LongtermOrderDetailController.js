@@ -118,6 +118,7 @@ try {
 				$id("imgbtn_selectTransporter").set("value", oldorder["sendsupplier"]["pk_supplier"]);
 			}
 			$id("denddate").set("value", (oldorder["denddate"]).substring(0, 10));
+			$id("txt_orespot").set("value", oldorder["orespotname"]);
 			$id("txt_vlicense").set("value", oldorder["vlicense"]);
 			if (Globals.checkvlicense(oldorder["vlicense"])) {
 				$id("txt_vlicense").set("display", "block");

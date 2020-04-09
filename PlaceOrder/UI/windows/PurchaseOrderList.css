@@ -394,7 +394,7 @@ valign:TOP;
  #panel5 {
 border-bottom-width:1;
 halign:LEFT;
-height:100;
+height:125;
 layout:hbox;
 background:#FFFFFF;
 width:fill;
@@ -463,7 +463,16 @@ width:fill;
 font-family:default;
 valign:center;
 }
- #label6 {
+#label6 {
+halign:left;
+height:20;
+color:#000000;
+font-size:14;
+width:fill;
+font-family:default;
+valign:center;
+}
+#labelorespot {
 halign:left;
 height:20;
 color:#000000;

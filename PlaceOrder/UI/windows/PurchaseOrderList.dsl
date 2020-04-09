@@ -78,6 +78,7 @@
                             <label id="lbl_supplier" bindfield="supplier.name">供应商</label>
                             <label id="label1" bindfield="rcvstockorg.name">库存组织</label>
                             <label id="label6" bindfield="material.name">物料</label> 
+                            <label id="labelorespot" bindfield="orespotname">矿点</label> 
                         </div>
                         <div id="panel8">
                             <div id="panel2">

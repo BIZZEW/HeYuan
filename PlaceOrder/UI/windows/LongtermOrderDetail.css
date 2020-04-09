@@ -381,7 +381,7 @@
     valign: TOP;
     margin-top: 3;
     halign: center;
-    height: 220;
+    height: 255;
 }
 
 #panel15 {
@@ -929,4 +929,59 @@
     width: 60;
     icon-width: 60;
     height: 60;
+}
+
+#panelorespot {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 35;
+}
+
+#labelorespot {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: center;
+    widthWrap: 75.0;
+    height: fill;
+}
+
+#panel1orespotinner {
+    layout: hbox;
+    width: fill;
+    valign: center;
+    halign: LEFT;
+    height: fill;
+}
+
+#txt_orespot {
+    color: #167ef8;
+    background: #ffffff;
+    padding-left: 4;
+    width: 0;
+    weight: 1;
+    font-size: 15;
+    font-family: default;
+    halign: RIGHT;
+    height: fill;
+}
+
+#imgbtn_orespot {
+    icon-pressed-image: arrow.png;
+    icon-height: 15;
+    font-size: 10;
+    icon-text-spacing: 3;
+    background: #FFFFFF;
+    icon-background-image: arrow.png;
+    width: 32;
+    icon-width: 15;
+    height: 32;
 }
