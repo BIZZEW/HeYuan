@@ -5,7 +5,7 @@
     <link href="sys/theme.css" type="text/css"/>
     <script src="#{path.controller}/common/global.js" type="text/javascript"/>
     <script src="#{path.controller}/common/sqliteutil.js" type="text/javascript"/>
-    <div id="viewPage0" onload="this.pageOnload()"> 
+    <div id="viewPage0"> 
         <navigatorbar id="navigatorbar0" title="账单报表" class="navigatorbarclass">
             <input onclick="this.button0_onclick()" id="back" type="button" class="ngbbuttonclass"/> 
         </navigatorbar>
