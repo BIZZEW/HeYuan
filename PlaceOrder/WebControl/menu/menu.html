@@ -1,0 +1,53 @@
+<!--by ZHUHY-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="./css/iuapmobile.um.css">
+	<link rel="stylesheet" type="text/css" href="./css/islider.css">
+	<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="./css/util.css" />
+	<link rel="stylesheet" type="text/css" href="menu.css" />
+
+	<script language="JavaScript" src="./js/islider.js"></script>
+	<script language="JavaScript" src="./js/vue.common.dev.js"></script>
+	<script language="JavaScript" src="../../Frameworks/iuapmobile.native.all.js"></script>
+	<script language="JavaScript" src="menu.js"></script>
+</head>
+
+<body>
+	<div class="um-win cement" id="index">
+		<div class="um-content bg">
+			<div class="um-row section-wrapper">
+				<div class="section-shadow"></div>
+				<div class="section-dpt" v-text="usrname"></div>
+				<i class="icon iconfont icon-portrait"></i>
+				<div id="iSlider-wrapper" class="iSlider-wrapper"></div>
+			</div>
+
+			<div class="ultra-mask"></div>
+
+			<div class="um-grid">
+				<div class="um-listview-wrap" id="listview">
+					<ul class="tile-ul">
+						<li class="tile-li" v-for="(item, index) in modules">
+							<div class="tile-inner">
+								<a @touchstart="tapHold(index)" @touchmove="moveTapHold(index)"
+									@touchend="cancelTapHold(index)"> <i class="icon iconfont"
+										:class="'icon-'+item.module_id"></i>
+									<div class="tile-shadow"></div>
+									<p class="tile-title" v-text="item.module_title"></p>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

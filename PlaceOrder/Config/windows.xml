@@ -39,7 +39,8 @@
     <file name="PersonalCenter.dsl"/>  
     <file name="HomePage.dsl"/>  
     <file name="ModifyPassword.dsl"/>  
-    <file name="PWRecovery.dsl"/> 
+    <file name="PWRecovery.dsl"/>  
+    <file name="HomePageNew.dsl"/>
   </User>  
   <System> 
     <file name="Matest.dsl"/>  
@@ -68,7 +69,7 @@
     <file name="LongtermOrderDetail.dsl"/>  
     <file name="LongtermOrderSearch.dsl"/>  
     <file name="LongtermOrderList.dsl"/>  
-    <file name="LongtermOrderMulti.dsl"/>
+    <file name="LongtermOrderMulti.dsl"/> 
   </LongtermOrder>  
   <StatisticalReport> 
     <file name="StatisticalReportMenu.dsl"/>  
