@@ -8,7 +8,7 @@
         <div id="panel0" onload="this.pageOnload()">
             <div id="panel3">
                 <div id="paneleft"/>
-                <label id="label0">金圆水泥</label>
+                <label id="label0">金 圆 水 泥</label>
                 <div id="panelright">
                     <input imagebuttontype="icon" istogglebutton="false" onclick="this.usercenter_onclick()" checked="false" id="usercenter" type="imagebutton" value="图标名称" class="imagebuttonclass"/> 
                 </div> 
