@@ -1,6 +1,7 @@
 /*by zhuhy*/
 window.onload = function () {
     initPage();
+    // initModules();
 }
 
 var vue = null;
@@ -11,30 +12,32 @@ function initPage() {
         el: '#index',
         data: {
             modules: [],
-            touchStatus: 0,
+            // touchStatus: 0,
             usrname: "",
         },
         methods: {
-            tapHold: function (index) {
-                this.touchStatus = 1;
-            },
-            moveTapHold: function (index) {
-                this.touchStatus = 0;
-            },
-            cancelTapHold: function (index) {
+            // tapHold: function (index) {
+            //     this.touchStatus = 1;
+            // },
+            // moveTapHold: function (index) {
+            //     this.touchStatus = 0;
+            // },
+            // cancelTapHold: function (index) {
+            //     var item = this.modules[index];
+            //     // 取消长按
+            //     if (this.touchStatus)
+            //         $js.runjs({ "func": "com$yonyou$placeorder$HomePageNewController$" + item["module_id"] + "()" });
+            //     this.touchStatus = 0;
+            // },
+            goModule: function (index) {
                 var item = this.modules[index];
-                // 取消长按
-                if (this.touchStatus)
-                    $js.runjs({ "func": "com$yonyou$placeorder$HomePageNewController$" + item["module_id"] + "()" });
-                this.touchStatus = 0;
+                $js.runjs({ "func": "com$yonyou$placeorder$HomePageNewController$" + item["module_id"] + "()" });
             },
         }
     });
 }
 
-function initFunk() {
-    vue.usrname = $cache.read("telephone");
-
+function initModules() {
     var allList = [{
         "module_title": "车辆下单",
         "module_id": "addseleorder_onclick",
@@ -76,8 +79,9 @@ function initFunk() {
         allList.splice(6, 4);
 
     vue.modules = allList;
+}
 
-
+function initSlider() {
     var imgPath = "https://raw.githubusercontent.com/BIZZEW/rnbupdate/master/banner/";
     var list = [{
         content: imgPath + "receive/bg1.jpg"
@@ -102,4 +106,12 @@ function initFunk() {
         isAutoplay: true,
         animateTime: 800
     });
+}
+
+function initFunk() {
+    vue.usrname = $cache.read("telephone");
+
+    initModules();
+
+    initSlider();
 }

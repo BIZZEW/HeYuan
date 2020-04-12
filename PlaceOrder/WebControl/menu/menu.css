@@ -1,15 +1,15 @@
 /*收款样式*/
 
 .cement li:nth-child(3n+1) .tile-shadow {
-    background: rgba(35, 70, 160, 1);
+    background: rgba(23, 102, 210);
 }
 
 .cement li:nth-child(3n+2) .tile-shadow {
-    background: rgba(35, 154, 163, 1);
+    background: rgba(183, 24, 101);
 }
 
 .cement li:nth-child(3n+3) .tile-shadow {
-    background: rgba(158, 163, 35, 1);
+    background: rgba(149, 31, 183);
 }
 
 .ultra-mask {

@@ -24,7 +24,7 @@
 			<div class="um-row section-wrapper">
 				<div class="section-shadow"></div>
 				<div class="section-dpt" v-text="usrname"></div>
-				<i class="icon iconfont icon-portrait"></i>
+				<i class="icon iconfont iconportrait"></i>
 				<div id="iSlider-wrapper" class="iSlider-wrapper"></div>
 			</div>
 
@@ -35,9 +35,8 @@
 					<ul class="tile-ul">
 						<li class="tile-li" v-for="(item, index) in modules">
 							<div class="tile-inner">
-								<a @touchstart="tapHold(index)" @touchmove="moveTapHold(index)"
-									@touchend="cancelTapHold(index)"> <i class="icon iconfont"
-										:class="'icon-'+item.module_id"></i>
+								<a @click="goModule(index)"> <i class="icon iconfont"
+										:class="'icon'+item.module_id"></i>
 									<div class="tile-shadow"></div>
 									<p class="tile-title" v-text="item.module_title"></p>
 								</a>

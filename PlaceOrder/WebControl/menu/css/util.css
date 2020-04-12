@@ -166,14 +166,14 @@
 }
 
 .tile-inner .icon, .section-wrapper .icon {
-    font-size: 70px;
+    font-size: 58px;
     color: white;
     position: absolute;
     z-index: 3;
     width: 100%;
     text-align: center;
     pointer-events: none;
-    top: 0%;
+    top: 5%;
 }
 
 .um-grid {
@@ -202,12 +202,11 @@
 
 .section-dpt {
     position: absolute;
-    bottom: 10%;
+    bottom: 12%;
     width: 100%;
     color: white;
     z-index: 3;
     font-size: 18px;
-    ;
     text-align: center;
     text-shadow: 1px 1px 9px #000000;
     pointer-events: none;
@@ -280,11 +279,10 @@
 
 .tile-title {
     position: absolute;
-    top: 75%;
+    top: 70%;
     width: 100%;
     color: white;
     font-size: 18px;
-    ;
     text-align: center;
     z-index: 3;
     text-shadow: 1px 1px 9px rgba(0, 0, 0, 0.64);
