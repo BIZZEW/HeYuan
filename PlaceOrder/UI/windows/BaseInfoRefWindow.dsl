@@ -6,10 +6,13 @@
     <script src="#{path.controller}/common/global.js" type="text/javascript"/>  
     <script src="#{path.controller}/common/sqliteutil.js" type="text/javascript"/>  
     <div id="viewPage0" onload="this.pageonload()"> 
-        <navigatorbar id="navbar" title="默认库存组织" class="navigatorbarclass"> 
+        <!-- <navigatorbar id="navbar" title="默认库存组织" class="navigatorbarclass"> 
             <input id="btn_back" class="buttonclass" onclick="this.btn_back_onclick()" type="button"/>  
             <label id="lbl_title"/> 
-        </navigatorbar>  
+        </navigatorbar>   -->
+        <navigatorbar id="navigatorbar0" title="默认库存组织" class="navigatorbarclass">
+            <input id="back" class="ngbbuttonclass" onclick="this.btn_back_onclick()" type="button"/> 
+        </navigatorbar>
         <div id="wpanel0"> 
             <search id="txt_search" placeholder="搜索" onsearch="this.txt_search_onsearch()"/>  
             <toggleButtonGroup id="tgbtngrp" value="buttongroup" onchange="this.tgbtnchange()"> 

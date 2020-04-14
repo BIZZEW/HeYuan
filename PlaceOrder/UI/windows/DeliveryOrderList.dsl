@@ -5,7 +5,7 @@
     <link type="text/css" href="sys/theme.css"/>
     <div id="viewPage0" onload="this.pageOnload()">
         <navigatorbar id="navigatorbar0" title="提货单" class="navigatorbarclass">
-            <input id="button0" class="ngbbuttonclass" onclick="this.button0_onclick()" type="button"/> 
+            <input id="back" class="ngbbuttonclass" onclick="this.button0_onclick()" type="button"/> 
         </navigatorbar>
         <div id="panel0">
             <div id="panel1">

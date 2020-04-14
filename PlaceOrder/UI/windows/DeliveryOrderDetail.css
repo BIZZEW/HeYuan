@@ -12,20 +12,19 @@ valign:TOP;
 halign:center;
 height:wrap;
 }
- #navigatorbar0 {
-background:#13b5f2;
-font-size:16;
-halign:LEFT;
-height:35;
+#navigatorbar0 {
+    halign: LEFT;
+    background: #0aa9ff;
+    font-size: 18;
 }
- #back {
-width:115;
-font-size:17;
-background-image:btn_back;
-halign:right;
-padding-right:3;
-height:35;
-pressed-image:btn_back_touch;
+
+#back {
+   padding-left: 20;
+   width: 88;
+   background-image: btn_back;
+   halign: left;
+   height: 44;
+   pressed-image: btn_back_touch;
 }
  #panel4 {
 layout:hbox;

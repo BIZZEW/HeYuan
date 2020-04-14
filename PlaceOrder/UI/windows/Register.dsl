@@ -6,7 +6,7 @@
     <script src="#{path.controller}/common/global.js" type="text/javascript"/>
     <div id="viewPage0">
         <navigatorbar id="navigatorbar0" title="用户注册" class="navigatorbarclass">
-            <input id="button0" class="ngbbuttonclass" onclick="this.button0_onclick()" type="button"/> 
+            <input id="back" class="ngbbuttonclass" onclick="this.button0_onclick()" type="button"/> 
         </navigatorbar>
         <div id="panel0">
             <input id="textbox0" maxlength="256" placeholder="请输入您的手机号" type="text"/> 

@@ -9,7 +9,6 @@
         <div id="panel1">
             <navigatorbar id="navigatorbar0" title="送货单查询" class="navigatorbarclass">
                 <input id="back" class="ngbbuttonclass" onclick="this.back()" type="button"/>
-                <label id="label0"/> 
             </navigatorbar> 
         </div>
         <div id="panel0">

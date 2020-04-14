@@ -7,10 +7,13 @@
     <script src="#{path.controller}/common/sqliteutil.js" type="text/javascript"/>
     <div id="viewPage0" onload="this.pageOnload()">
         <div id="panel1">
-            <navigatorbar id="navigatorbar0" title="长期送货单查询" class="navigatorbarclass">
+            <!-- <navigatorbar id="navigatorbar0" title="长期送货单查询" class="navigatorbarclass">
                 <input id="back" class="ngbbuttonclass" onclick="this.back()" type="button"/>
                 <label id="label0"/> 
-            </navigatorbar> 
+            </navigatorbar>  -->
+            <navigatorbar id="navigatorbar0" title="长期送货单查询" class="navigatorbarclass">
+                <input id="back" class="ngbbuttonclass" onclick="this.back()" type="button"/> 
+            </navigatorbar>
         </div>
         <div id="panel0">
             <div id="panel6">

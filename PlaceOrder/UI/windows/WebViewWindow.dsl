@@ -5,8 +5,7 @@
     <link type="text/css" href="sys/theme.css"/>
     <div id="viewPage0" onload="this.pageOnload()">
         <navigatorbar id="navigatorbar0" title="用户协议" class="navigatorbarclass">
-            <input id="btn_back" value="返回" class="ngbbuttonclass" onclick="this.backOnclick()" type="button"/>
-            <label id="label0"/> 
+            <input id="back" class="ngbbuttonclass" onclick="this.backOnclick()" type="button"/> 
         </navigatorbar>
         <webView id="webview"/> 
     </div> 

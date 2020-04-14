@@ -39,14 +39,17 @@ try {
 		$view.close();
 	}
 	function com$yonyou$placeorder$MyCreditController$onpageloader(sender, args) {
-		var ret = $param.getJSONObject("result");
-		if (ret) {
-			var datas = ret.datas;
-			var tcredit = { "result": datas }
-			//$alert(tcredit);
-			$ctx.push(tcredit);
-		}
-
+		// var ret = $param.getJSONObject("result");
+		// if (ret) {
+		// 	var datas = ret.datas;
+		// 	var tcredit = { "result": datas }
+		// 	//$alert(tcredit);
+		// 	$ctx.push(tcredit);
+		// }
+		$js.runjs({
+			"controlid": "webcontrolcredit",
+			"func": "loadData()"
+		})
 	}
 
 	function com$yonyou$placeorder$MyCreditController$label1_onclick(sender, args) {

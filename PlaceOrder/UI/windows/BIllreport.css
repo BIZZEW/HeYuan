@@ -13,19 +13,19 @@ valign:TOP;
 halign:center;
 height:fill;
 }
- #navigatorbar0 {
-background:#0aa9ff;
-padding-left:0;
-font-size:18;
-halign:LEFT;
+#navigatorbar0 {
+    halign: LEFT;
+    background: #0aa9ff;
+    font-size: 18;
 }
- #back {
-padding-left:20;
-width:88;
-background-image:btn_back;
-halign:left;
-height:44;
-pressed-image:btn_back_touch;
+
+#back {
+   padding-left: 20;
+   width: 88;
+   background-image: btn_back;
+   halign: left;
+   height: 44;
+   pressed-image: btn_back_touch;
 }
  #webcontrol2 {
 layout:vbox;

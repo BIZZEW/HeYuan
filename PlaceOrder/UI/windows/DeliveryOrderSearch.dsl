@@ -7,11 +7,14 @@
     <script src="#{path.controller}/common/sqliteutil.js" type="text/javascript"/>
     <div id="viewPage0" onload="this.pageonload()">
         <div id="panel1">
-            <navigatorbar id="navigatorbar0" title="提货单查询" class="navigatorbarclass">
+            <!-- <navigatorbar id="navigatorbar0" title="提货单查询" class="navigatorbarclass">
                 <input id="back" class="ngbbuttonclass" onclick="this.back_onclick()" type="button"/>
                 <label id="label0"/>
                 <input id="imagebutton0" imagebuttontype="icon" value="图标名称" istogglebutton="false" class="imagebuttonclass" type="imagebutton" checked="false" disabled="disabled"/> 
-            </navigatorbar> 
+            </navigatorbar>  -->
+            <navigatorbar id="navigatorbar0" title="提货单查询" class="navigatorbarclass">
+                <input id="back" class="ngbbuttonclass" onclick="this.back_onclick()" type="button"/> 
+            </navigatorbar>
         </div>
         <div id="panel0">
             <div id="panel6">

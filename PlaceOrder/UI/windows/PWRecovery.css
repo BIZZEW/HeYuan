@@ -22,20 +22,19 @@ width:fill;
 valign:center;
 border-bottom-color:#808080;
 }
- #navigatorbar0 {
-halign:CENTER;
-height:fill;
-font-size:16;
-background:#13b5f2;
-valign:bottom;
+#navigatorbar0 {
+    halign: LEFT;
+    background: #0aa9ff;
+    font-size: 18;
 }
- #button0 {
-padding-left:20;
-halign:left;
-pressed-image:btn_back_touch;
-width:88;
-valign:bottom;
-background-image:btn_back.png;
+
+#back {
+   padding-left: 20;
+   width: 88;
+   background-image: btn_back;
+   halign: left;
+   height: 44;
+   pressed-image: btn_back_touch;
 }
  #label0 {
 halign:center;

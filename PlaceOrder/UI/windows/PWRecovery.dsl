@@ -7,8 +7,7 @@
     <div id="viewPage0">
         <div id="panel0">
             <navigatorbar id="navigatorbar0" title="找回密码" class="navigatorbarclass">
-                <input id="button0" class="ngbbuttonclass" onclick="this.button0_onclick()" type="button"/>
-                <label id="label0"/> 
+                <input id="back" class="ngbbuttonclass" onclick="this.button0_onclick()" type="button"/>
             </navigatorbar> 
         </div>
         <div id="panel1">

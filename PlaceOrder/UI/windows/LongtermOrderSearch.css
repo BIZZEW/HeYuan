@@ -23,19 +23,18 @@
 }
 
 #navigatorbar0 {
-    halign: CENTER;
-    height: 50;
-    background: #13b5f2;
-    font-size: 16;
+    halign: LEFT;
+    background: #0aa9ff;
+    font-size: 18;
 }
 
 #back {
-    padding-left: 20;
-    halign: left;
-    height: 44;
-    pressed-image: btn_back_touch;
-    width: 88;
-    background-image: btn_back;
+   padding-left: 20;
+   width: 88;
+   background-image: btn_back;
+   halign: left;
+   height: 44;
+   pressed-image: btn_back_touch;
 }
 
 #label0 {

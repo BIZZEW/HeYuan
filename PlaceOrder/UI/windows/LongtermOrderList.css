@@ -17,17 +17,17 @@
 
 #navigatorbar0 {
     halign: LEFT;
-    font-size: 16;
-    background: #13b5f2;
+    background: #0aa9ff;
+    font-size: 18;
 }
 
-#button0 {
-    padding-left: 20;
-    halign: left;
-    height: 44;
-    pressed-image: btn_back_touch;
-    width: 88;
-    background-image: btn_back;
+#back {
+   padding-left: 20;
+   width: 88;
+   background-image: btn_back;
+   halign: left;
+   height: 44;
+   pressed-image: btn_back_touch;
 }
 
 #panel0 {

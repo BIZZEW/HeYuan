@@ -38,7 +38,7 @@ try {
     function com$yonyou$placeorder$BaseInfoRefWindowController$pageonload(sender, args) {
         //SqliteUtil.createRctMostUseTbl();
         var reftype = $param.getJSONObject("reftype");
-        $id("navbar").set("title", reftype.title);
+        $id("navigatorbar0").set("title", reftype.title);
         //初始化最近常用
         var result = SqliteUtil.getRctMostUseData(reftype);
         if (reftype.code == "1008" || reftype.code == "1009") {

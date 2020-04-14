@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="mycredit.css">
+    <!-- <link type="text/css" rel="stylesheet" href="../common/public.css"> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script> -->
+    <script language="JavaScript" src="./js/jquery-3.4.1.slim.min.js"></script>
+    <script language="JavaScript" src="./js/vue.common.dev.js"></script>
+    <script language="JavaScript" src="../../Frameworks/iuapmobile.native.all.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script> -->
+    <script type="text/javascript" src="mycredit.js"></script>
+
+</head>
+
+<body>
+    <div id="infoList">
+        <div class="infoItem" v-for="(item, index) in items">
+            {{ item.customer.name}}</br></br>
+            余额: {{item.money}} 元
+        </div>
+    </div>
+    <div id="nomoreInfo">——— 无更多信息 ———</div>
+</body>
+
+</html>

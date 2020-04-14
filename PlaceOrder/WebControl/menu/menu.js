@@ -2,6 +2,7 @@
 window.onload = function () {
     initPage();
     // initModules();
+    // initSlider();
 }
 
 var vue = null;

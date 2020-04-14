@@ -5,8 +5,7 @@
     <link type="text/css" href="sys/theme.css"/>
     <div id="viewPage0" onload="this.pageOnload()">
         <navigatorbar id="navigatorbar0" title="消息" class="navigatorbarclass">
-            <input id="button0" class="buttonclass" onclick="this.returnOnclick()" type="button"/>
-            <label id="label0"/> 
+            <input id="back" class="buttonclass" onclick="this.returnOnclick()" type="button"/>
         </navigatorbar>
         <search id="txt_search" placeholder="搜索" localstorage="true" onsearch="this.onsearch()"/>
         <listView id="listviewdefine0" bindfield="datas" onuprefresh="this.onup()" ondownrefresh="this.ondown()" collapsed="true">

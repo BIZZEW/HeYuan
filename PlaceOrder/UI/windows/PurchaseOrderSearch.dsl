@@ -9,8 +9,6 @@
         <div id="panel1">
             <navigatorbar id="navigatorbar0" title="采购订单查询" class="navigatorbarclass">
                 <input id="back" class="ngbbuttonclass" onclick="this.back()" type="button"/>
-                <label id="label0"/>
-                <input id="imagebutton0" imagebuttontype="icon" value="图标名称" istogglebutton="false" class="imagebuttonclass" type="imagebutton" checked="false"/> 
             </navigatorbar> 
         </div>
         <div id="panel0">

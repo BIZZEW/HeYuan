@@ -155,6 +155,7 @@
   height: 100%;
   overflow: hidden;
   position: relative;
+  z-index:3;
 }
 .iSlider-wrapper ul {
   list-style: none;
@@ -162,6 +163,9 @@
   padding: 0;
   height: 100%;
   overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  z-index:2;
 }
 .iSlider-wrapper li {
   position: absolute;
@@ -173,6 +177,7 @@
   -webkit-box-pack: center;
   -webkit-box-align: center;
   list-style: none;
+  z-index:1;
 }
 .iSlider-wrapper li img {
   width: 100%;

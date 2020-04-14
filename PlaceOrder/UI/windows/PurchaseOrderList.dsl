@@ -7,7 +7,7 @@
     <script src="#{path.controller}/common/sqliteutil.js" type="text/javascript"/>
     <div id="viewPage0" onload="this.pageOnload()">
         <navigatorbar id="navigatorbar0" title="采购订单" class="navigatorbarclass">
-            <input id="btn_back" class="ngbbuttonclass" onclick="this.btn_back_onclick()" type="button"/> 
+            <input id="back" class="ngbbuttonclass" onclick="this.btn_back_onclick()" type="button"/> 
         </navigatorbar>
         <div id="panel0">
             <div id="panel1">
