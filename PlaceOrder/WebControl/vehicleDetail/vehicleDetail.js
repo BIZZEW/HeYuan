@@ -54,9 +54,9 @@ function initPage() {
             drivertelephone: function (val) {
                 this.drivertelephone = checkNumber(val);
             },
-            driveridcode: function (val) {
-                this.driveridcode = checkNumber(val);
-            },
+            // driveridcode: function (val) {
+            //     this.driveridcode = checkNumber(val);
+            // },
             amount: function (val) {
                 this.amount = checkNumber(val);
             },
