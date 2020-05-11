@@ -80,14 +80,14 @@ try {
 		var nowdate = Globals.getFormatDate(null, 0);
 		$id("lbl_rcvorderdate").set("value", nowdate);
 
-		var denddate = Globals.getFormatDate(null, 0);
+		var denddate = Globals.getFormatDate2(3);
 		$id("denddate").set("value", denddate);
 	}
 
 	var vehicleslistNum = 0, vehicleslist = [];
 
 	function com$yonyou$placeorder$LongtermOrderMultiController$pageOnload(sender, args) {
-		var denddate = Globals.getFormatDate(null, 0);
+		var denddate = Globals.getFormatDate2(3);
 		$id("denddate").set("value", denddate);
 
 		var oldorder = $param.getJSONObject("oldorder");

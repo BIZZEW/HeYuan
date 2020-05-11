@@ -22,6 +22,7 @@
                             <label id="label6" bindfield="sendstockorg.name">发货企业</label>  
                             <label id="label5" bindfield="ccustomerid.name">客户</label>  
                             <label id="name" bindfield="cmaterialid.name">PO42.5散装水泥</label> 
+                            <label id="vnote" bindfield="vnote">备注</label> 
                         </div>  
                         <div id="panel8"> 
                             <div id="panel22"> 

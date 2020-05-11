@@ -102,6 +102,7 @@ try {
 			com.yonyou.placeorder.SalesAdvOrderDetailController.olddata = data;
 			$id("goods").set("value", data.cmaterialid.name);
 			$id("weight").set("value", data.ordernum);
+			$id("vnote").set("value", data.vnote);
 			$id("seller").set("value", data.saleorg.name);
 			$id("sender").set("value", data.sendstockorg.name);
 			$id("customer").set("value", data.ccustomerid.name);
@@ -142,7 +143,7 @@ try {
 		}
 		var customer = $id("customer").get("value");//客户
 		var matname = $id("goods").get("value");//物料
-		
+
 		// var fetchnum = $id("txt_fetchnum").get("value");//提货数量
 		// var sendstockorg = $id("lbl_sendstockorg").get("value");//提货库存组织
 		// var pickwarehouse = "pickwarehouse";//提货仓库，待加入(待修改)
@@ -482,6 +483,7 @@ try {
 				"ccustomerid": ccustomerid, //客户主键
 				"cmaterialid": cmaterialid, //物料主键
 				"ordernum": $id("weight").get("value"), //订单数量
+				"vnote": $id("vnote").get("value"), //订单数量
 				"vlicense": carno, //车牌号
 				"drivername": $id("drivername").get("value"), //司机姓名
 				"drivertelephone": $id("drivertel").get("value"), //司机手机
@@ -511,6 +513,7 @@ try {
 				"ccustomerid": ccustomerid, //客户主键
 				"cmaterialid": cmaterialid, //物料主键
 				"ordernum": $id("weight").get("value"), //订单数量
+				"vnote": $id("vnote").get("value"), //订单数量
 				"vlicense": carno, //车牌号
 				"drivername": $id("drivername").get("value"), //司机姓名
 				"drivertelephone": $id("drivertel").get("value"), //司机手机
@@ -548,6 +551,7 @@ try {
 			$alert("提交成功");
 			if (com.yonyou.placeorder.SalesAdvOrderDetailController.olddata) {
 				com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.ordernum = $id("weight").get("value");
+				com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.vnote = $id("vnote").get("value");
 				com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.vlicense = com.yonyou.placeorder.SalesAdvOrderDetailController.carno;
 				com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.vdriverid = $id("driverid").get("value");
 				com.yonyou.placeorder.SalesAdvOrderDetailController.olddata.drivertelephone = $id("drivertel").get("value");

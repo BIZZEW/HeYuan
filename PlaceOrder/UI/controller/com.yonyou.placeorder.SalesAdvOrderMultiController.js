@@ -103,6 +103,7 @@ try {
 			com.yonyou.placeorder.SalesAdvOrderMultiController.olddata = data;
 			$id("goods").set("value", data.cmaterialid.name);
 			$id("weight").set("value", data.ordernum);
+			$id("vnote").set("value", data.vnote);
 			$id("seller").set("value", data.saleorg.name);
 			$id("sender").set("value", data.sendstockorg.name);
 			$id("customer").set("value", data.ccustomerid.name);
@@ -518,6 +519,7 @@ try {
 				"ccustomerid": ccustomerid, //客户主键
 				"cmaterialid": cmaterialid, //物料主键
 				"ordernum": $id("weight").get("value"), //订单数量
+				"vnote": $id("vnote").get("value"), //备注
 				// "vlicense": carno, //车牌号
 				// "drivername": $id("drivername").get("value"), //司机姓名
 				// "drivertelephone": $id("drivertel").get("value"), //司机手机
@@ -548,6 +550,7 @@ try {
 				"ccustomerid": ccustomerid, //客户主键
 				"cmaterialid": cmaterialid, //物料主键
 				"ordernum": $id("weight").get("value"), //订单数量
+				"vnote": $id("vnote").get("value"), //备注
 				// "vlicense": carno, //车牌号
 				// "drivername": $id("drivername").get("value"), //司机姓名
 				// "drivertelephone": $id("drivertel").get("value"), //司机手机
@@ -587,6 +590,7 @@ try {
 			$alert("提交成功");
 			if (com.yonyou.placeorder.SalesAdvOrderMultiController.olddata) {
 				com.yonyou.placeorder.SalesAdvOrderMultiController.olddata.ordernum = $id("weight").get("value");
+				com.yonyou.placeorder.SalesAdvOrderMultiController.olddata.vnote = $id("vnote").get("value");
 				com.yonyou.placeorder.SalesAdvOrderMultiController.olddata.vlicense = com.yonyou.placeorder.SalesAdvOrderMultiController.carno;
 				com.yonyou.placeorder.SalesAdvOrderMultiController.olddata.vdriverid = $id("driverid").get("value");
 				com.yonyou.placeorder.SalesAdvOrderMultiController.olddata.drivertelephone = $id("drivertel").get("value");

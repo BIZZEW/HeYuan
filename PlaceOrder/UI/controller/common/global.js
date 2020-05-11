@@ -107,6 +107,26 @@ try {
 		var formatdate = year + "-" + month + "-" + date;
 		return formatdate;
 	};
+	Globals.getFormatDate2 = function (offset) {
+		var thedate = new Date();
+		var currentDate = thedate.getDate();//得到之前的日期
+		thedate.setDate(1);//日期设置为这个月的1号
+		thedate.setMonth(thedate.getMonth() + offset);//修改月份
+		var daysInMonth = new Date(thedate.getYear(), thedate.getMonth() + 1, 0).getDate();//得到新的日期月份最大有几天
+		thedate.setDate(Math.min(currentDate, daysInMonth));//日期设置为两者较小的一个。
+
+		var year = thedate.getFullYear();
+		var month = thedate.getMonth() + 1;
+		var date = thedate.getDate();
+		if (month >= 1 && month <= 9) {
+			month = "0" + month;
+		}
+		if (date >= 1 && date <= 9) {
+			date = "0" + date;
+		}
+		var formatdate = year + "-" + month + "-" + date;
+		return formatdate;
+	};
 	Globals.compareDate = function (date1, date2) {
 		var time1 = new Date(date1).getTime();
 		var time2 = new Date(date2).getTime();

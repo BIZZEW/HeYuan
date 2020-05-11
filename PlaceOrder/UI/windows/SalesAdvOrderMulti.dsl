@@ -40,6 +40,10 @@
                     <input id="weight" min="-9.99999999E8" autofocus="autofocus" precision="2" max="9.99999999E8" roundValue="5" placeholder="0.0" type="number" roundType="value"/>  
                     <label id="lbl_dw">单位</label> 
                 </div> 
+                <div id="panelvnote"> 
+                    <label id="labelvnote">备注：</label>  
+                    <input id="vnote" autofocus="autofocus" placeholder="请输入备注" type="text" roundType="value"/>  
+                </div> 
             </div>  
             <div id="panel55"> 
                 <label id="label9">车辆信息</label>  
