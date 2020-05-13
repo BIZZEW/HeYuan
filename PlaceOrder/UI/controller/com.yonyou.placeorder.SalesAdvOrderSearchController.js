@@ -118,7 +118,9 @@ try {
 	function com$yonyou$placeorder$SalesAdvOrderSearchController$changegoods(sender, args) {
 		// if (pk_stockorg) {
 		var otherparams = {
-			"pk_stockorg": pk_stockorg
+			"pk_stockorg": pk_stockorg,
+			"pk_customer": pk_customer,
+			"issaleorder": true
 		};
 		$view.open({
 			viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名

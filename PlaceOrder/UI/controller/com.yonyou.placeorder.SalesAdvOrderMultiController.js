@@ -299,7 +299,8 @@ try {
 			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
 			"otherparams": {
 				"pk_stockorg": sendstockorg,
-				"pk_customer": ccustomerid
+				"pk_customer": ccustomerid,
+				"issaleorder": true
 			},
 			"reftype": Globals.RefInfoType.AVAILGOODS,
 			"callback": "changgoods()"
