@@ -70,12 +70,45 @@ try {
 	}
 
 	function com$yonyou$placeorder$HomePageNewController$pageOnload(sender, args) {
+		var appKey = (CurrentEnvironment.DeviceType == CurrentEnvironment.DeviceAndroid) ? "bd24063406da86e43c3e313534e6ae3a" : "fd8887fdf449ad62eda4e0a489edc3fe";
+		var accountkey = "706dea0e787c151c278696fa885e38c4";
+		var version = $ctx.getApp("versionName");
+		var url = "http://www.pgyer.com/apiv2/app/check?_api_key=" + accountkey + "&appKey=" + appKey + "&buildVersion=" + version;
+
+		//检查版本是否需要更新
+		$service.post({
+			"url": url,
+			"callback": "checkUpdateCallBack()",
+			"timeout": "5"
+		});
+
+
+
 		SqliteUtil.createRctMostUseTbl();
 
 		$js.runjs({
 			"controlid": "webcontrolmenu",
 			"func": "initFunk()"
 		})
+	}
+
+	function checkUpdateCallBack() {
+		var result = $stringToJSON($ctx.param("result"));
+		if (!result) {
+			return;
+		}
+		var data = result.data;
+		if (!data) {
+			return;
+		}
+
+		if (data.buildHaveNewVersion) {
+			if (confirm("发现新版本：" + data.buildVersion + "，更新内容：" + data.buildUpdateDescription + "，需要更新吗？")) {
+				$device.openWebView({
+					url: data.downloadURL
+				});
+			}
+		}
 	}
 
 	function com$yonyou$placeorder$HomePageNewController$addpickup(sender, args) {
