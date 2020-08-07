@@ -43,6 +43,12 @@ function initModules() {
         "module_title": "车辆下单",
         "module_id": "addseleorder_onclick",
     }, {
+        "module_title": "大票提货通知单",
+        "module_id": "addseleorder_onclick",
+    }, {
+        "module_title": "长期销售订单",
+        "module_id": "addseleorder_onclick",
+    }, {
         "module_title": "订单查询",
         "module_id": "myseles",
     }, {
