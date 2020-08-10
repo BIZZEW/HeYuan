@@ -1,0 +1,579 @@
+ #HugeDeliverOrder {
+layout:vbox;
+width:fill;
+valign:TOP;
+halign:center;
+height:fill;
+}
+ #viewPage0 {
+layout:vbox;
+background:#f7f7f7;
+width:fill;
+valign:TOP;
+halign:center;
+height:wrap;
+}
+ #navigatorbar0 {
+background:#0aa9ff;
+font-size:18;
+halign:LEFT;
+}
+ #back {
+padding-left:20;
+width:88;
+background-image:btn_back;
+halign:left;
+height:44;
+pressed-image:btn_back_touch;
+}
+ #goodsname {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:5;
+halign:LEFT;
+margin-right:5;
+height:30;
+}
+ #label0 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:90.0;
+height:fill;
+}
+ #panel14 {
+layout:hbox;
+background:#FFFFFF;
+width:fill;
+valign:center;
+halign:LEFT;
+height:fill;
+}
+ #lbl_orderno {
+color:#737373;
+font-weight:bold;
+width:0;
+weight:1;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #imgbtn_selectorder {
+icon-pressed-image:arrow.png;
+icon-height:15;
+font-size:10;
+icon-text-spacing:3;
+icon-background-image:arrow.png;
+width:15;
+icon-width:15;
+height:15;
+}
+ #pnl_posimple {
+layout:hbox;
+width:fill;
+valign:center;
+halign:LEFT;
+height:30;
+}
+ #lbl_posimple {
+color:#000000;
+width:0;
+weight:1;
+font-size:14;
+valign:center;
+font-family:default;
+halign:center;
+height:fill;
+}
+ #btn_showdetail {
+border-bottom-color:#c0c0c0;
+border-top-width:1;
+border-right-width:1;
+border-left-color:#c0c0c0;
+border-right-color:#c0c0c0;
+border-left-width:1;
+border-radius:5;
+border-bottom-width:1;
+width:30;
+border-top-color:#c0c0c0;
+height:30;
+}
+ #pnl_podetail {
+layout:vbox;
+display:none;
+width:fill;
+valign:TOP;
+halign:center;
+height:190;
+}
+ #panel6 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:1;
+halign:LEFT;
+margin-right:5;
+height:30;
+}
+ #label14 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:105.0;
+height:fill;
+}
+ #lbl_dbilldate {
+color:#737373;
+width:fill;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #panel4 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:1;
+halign:LEFT;
+margin-right:5;
+height:30;
+}
+ #label6 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:75.0;
+height:fill;
+}
+ #lbl_porgname {
+color:#737373;
+width:fill;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #panel7 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:1;
+halign:LEFT;
+margin-right:5;
+height:35;
+}
+ #label10 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:75.0;
+height:fill;
+}
+ #lbl_rcvstockorg {
+color:#737373;
+width:fill;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #panel0 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:1;
+halign:LEFT;
+margin-right:5;
+height:30;
+}
+ #label1 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:60.0;
+height:fill;
+}
+ #lbl_splrname {
+color:#737373;
+width:fill;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #panel9 {
+layout:hbox;
+margin-left:5;
+border-bottom-color:#eeeeee;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:1;
+halign:LEFT;
+margin-right:5;
+height:30;
+}
+ #label2 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:45.0;
+height:fill;
+}
+ #lbl_matname {
+color:#737373;
+width:fill;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #panel3 {
+layout:hbox;
+margin-left:5;
+border-bottom-color:#eeeeee;
+background:#ffffff;
+border-bottom-width:1;
+width:fill;
+valign:center;
+margin-top:1;
+halign:LEFT;
+margin-right:5;
+height:30;
+}
+ #label7 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:45.0;
+height:fill;
+}
+ #lbl_remainnum {
+font-pressed-color:#459dfe;
+color:#737373;
+width:0;
+weight:1;
+font-size:14;
+valign:center;
+halign:right;
+padding-right:4;
+}
+ #label8 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:center;
+widthWrap:15.0;
+height:fill;
+}
+ #pnl_rcvorder {
+layout:vbox;
+width:fill;
+valign:TOP;
+margin-top:3;
+halign:center;
+height:150;
+}
+ #panel15 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:1;
+halign:LEFT;
+margin-right:5;
+height:35;
+}
+ #label18 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:75.0;
+height:fill;
+}
+ #lbl_rcvordercode {
+color:#737373;
+width:fill;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #panel16 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:1;
+halign:LEFT;
+margin-right:5;
+height:35;
+}
+ #label20 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:90.0;
+height:fill;
+}
+ #lbl_rcvorderdate {
+color:#737373;
+width:fill;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #panel11 {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:1;
+halign:LEFT;
+margin-right:5;
+height:35;
+}
+ #label17 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:60.0;
+height:fill;
+}
+ #num_dhl {
+color:#167ef8;
+background:#ffffff;
+padding-left:4;
+width:0;
+weight:1;
+font-size:17;
+font-family:default;
+halign:RIGHT;
+padding-right:4;
+height:32;
+}
+ #lbl_dw2 {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:center;
+widthWrap:30.0;
+height:fill;
+}
+ #panel55 {
+layout:vbox;
+width:fill;
+valign:TOP;
+halign:center;
+height:100;
+}
+ #label9 {
+margin-left:5;
+color:#ff8080;
+width:fill;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+margin-right:5;
+height:20;
+}
+ #vehiclespanel {
+layout:hbox;
+margin-left:5;
+background:#ffffff;
+width:fill;
+valign:center;
+margin-top:5;
+halign:LEFT;
+margin-right:5;
+height:35;
+}
+ #labelvehicles {
+color:#414141;
+width:wrap;
+font-size:14;
+valign:center;
+font-family:default;
+halign:left;
+widthWrap:155.0;
+height:fill;
+}
+ #vehicles {
+color:#737373;
+width:0;
+weight:1;
+font-size:14;
+valign:center;
+font-family:default;
+halign:right;
+height:fill;
+}
+ #vehiclesarrow {
+margin-left:5;
+width:11;
+height:16;
+}
+ #panel8 {
+layout:hbox;
+width:fill;
+valign:center;
+margin-top:5;
+halign:CENTER;
+margin-bottom:20;
+height:35;
+}
+ #btn_submit {
+color:#ffffff;
+margin-right:4;
+border-radius:8;
+margin-left:4;
+background-color-dis:#808080;
+background:#ff8f59;
+width:110;
+}
+ #pnl_share {
+layout:hbox;
+background:#ffffff;
+display:none;
+width:fill;
+valign:center;
+halign:CENTER;
+height:70;
+}
+ #imgbtn_wechatshare {
+icon-pressed-image:button_image_touch;
+icon-height:60;
+font-size:10;
+icon-text-spacing:3;
+margin-right:10;
+margin-left:10;
+icon-background-image:wechatshare.png;
+width:60;
+icon-width:60;
+height:60;
+}
+ #imgbtn_qqshare {
+icon-pressed-image:qqshare.png;
+icon-height:60;
+font-size:10;
+icon-text-spacing:3;
+margin-right:10;
+margin-left:10;
+icon-background-image:qqshare.png;
+width:60;
+icon-width:60;
+height:60;
+}
+ #imgbtn_msgshare {
+icon-pressed-image:messageshare.png;
+icon-height:60;
+font-size:10;
+icon-text-spacing:3;
+margin-right:10;
+margin-left:10;
+icon-background-image:messageshare.png;
+width:60;
+icon-width:60;
+height:60;
+}
+
+
+
+#panelvnote {
+    border-bottom-width: 1;
+    margin-right: 5;
+    halign: LEFT;
+    height: 35;
+    layout: hbox;
+    background: #ffffff;
+    width: fill;
+    margin-left: 5;
+    margin-top: 1;
+    valign: center;
+    border-bottom-color: #eeeeee;
+ }
+ 
+ #labelvnote {
+    halign: left;
+    height: fill;
+    widthWrap: 75.0;
+    color: #414141;
+    font-size: 14;
+    width: wrap;
+    font-family: default;
+    valign: center;
+ }
+ 
+ #vnote {
+    padding-left: 4;
+    padding-right: 4;
+    halign: RIGHT;
+    height: fill;
+    weight: 1;
+    color: #808080;
+    background: #ffffff;
+    font-size: 15;
+    width: 0;
+    font-family: default;
+ }
+ 

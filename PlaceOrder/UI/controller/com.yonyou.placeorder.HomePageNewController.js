@@ -91,7 +91,7 @@ try {
 	// 大票提货通知单
 	function com$yonyou$placeorder$HomePageNewController$addhugepickups_onclick(sender, args) {
 		$view.open({
-			viewid: "com.yonyou.placeorder.SalesAdvOrderMulti",
+			viewid: "com.yonyou.placeorder.HugeDeliverOrder",
 			isKeep: "true"
 		})
 	}

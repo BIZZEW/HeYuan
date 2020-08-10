@@ -5,7 +5,8 @@
     <file name="DeliveryOrderDetail.dsl"/>  
     <file name="DeliveryOrderList.dsl"/>  
     <file name="DeliveryOrderSearch.dsl"/>  
-    <file name="SalesOrderList.dsl"/> 
+    <file name="SalesOrderList.dsl"/>  
+    <file name="HugeDeliverOrder.dsl"/>
   </DeliveryOrder>  
   <SalesAdvOrder> 
     <file name="SalesAdvOrderList.dsl"/>  
@@ -85,7 +86,7 @@
     <file name="InfoList.dsl"/>  
     <file name="InfoDetail.dsl"/> 
   </Notification>  
-  <LongtermSale>
-    <file name="LongtermSaleMulti.dsl"/>
+  <LongtermSale> 
+    <file name="LongtermSaleMulti.dsl"/> 
   </LongtermSale> 
 </windows>
