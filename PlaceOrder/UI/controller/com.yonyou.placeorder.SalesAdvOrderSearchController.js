@@ -89,6 +89,8 @@ try {
 			"cmaterialid": pk_material,
 			"vlicense": $id("vlicense").get("value"),
 			// "driver_name": $id("txt_drivername").get("value"),
+			// 长期订单
+			"longterm": $id("switch0").get("value"),
 			// 订单状态
 			"status": $ctx.getString("status"),
 		};
@@ -301,6 +303,7 @@ try {
 	function com$yonyou$placeorder$SalesAdvOrderSearchController$picker0_onload(sender, args) {
 		var context = {
 			statuses: ["未完成", "已取消", "已完成"],
+			types: ["是", "否"],
 		}
 		$ctx.push(context); //数据绑定,将context的值与picker进行绑定
 	}

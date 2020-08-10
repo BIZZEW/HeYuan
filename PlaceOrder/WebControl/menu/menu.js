@@ -43,11 +43,8 @@ function initModules() {
         "module_title": "车辆下单",
         "module_id": "addseleorder_onclick",
     }, {
-        "module_title": "大票提货通知单",
-        "module_id": "addseleorder_onclick",
-    }, {
         "module_title": "长期销售订单",
-        "module_id": "addseleorder_onclick",
+        "module_id": "addlongtermsale_onclick",
     }, {
         "module_title": "订单查询",
         "module_id": "myseles",
@@ -55,15 +52,21 @@ function initModules() {
         "module_title": "余额查询",
         "module_id": "creditonclick",
     }, {
-        "module_title": "统计报表",
-        "module_id": "report_onclick",
+        "module_title": "大票提货通知单",
+        "module_id": "addhugepickups_onclick",
     }, {
         "module_title": "提货单查询",
         "module_id": "mypickups",
     }, {
+        "module_title": "统计报表",
+        "module_id": "report_onclick",
+    }, {
         "module_title": "消息中心",
         "module_id": "goNotif",
-    }, {
+    },
+
+
+    {
         "module_title": "新增送货单",
         "module_id": "myposts",
     }, {
@@ -80,10 +83,10 @@ function initModules() {
     var user = JSON.parse($ctx.getApp("appuser"));
 
     if (user.dfltcstm == undefined || user.dfltcstm == null)
-        allList.splice(0, 6);
+        allList.splice(0, 8);
 
     if (user.dfltsupplier == undefined || user.dfltsupplier == null)
-        allList.splice(6, 4);
+        allList.splice(8, 4);
 
     vue.modules = allList;
 }

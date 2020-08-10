@@ -20,20 +20,7 @@ try {
 		})
 	}
 
-	function com$yonyou$placeorder$HomePageNewController$mypickups(sender, args) {
-		$view.open({
-			viewid: "com.yonyou.placeorder.DeliveryOrderSearch",
-			isKeep: "true"
-		})
-	}
-
-	function com$yonyou$placeorder$HomePageNewController$myposts(sender, args) {
-		$view.open({
-			viewid: "com.yonyou.placeorder.ReceiveOrderMulti",
-			isKeep: "true"
-		})
-	}
-
+	// 车辆下单
 	function com$yonyou$placeorder$HomePageNewController$addseleorder_onclick(sender, args) {
 		$view.open({
 			viewid: "com.yonyou.placeorder.SalesAdvOrderMulti",
@@ -41,13 +28,15 @@ try {
 		})
 	}
 
-	function com$yonyou$placeorder$HomePageNewController$report_onclick(sender, args) {
+	// 长期销售订单
+	function com$yonyou$placeorder$HomePageNewController$addlongtermsale_onclick(sender, args) {
 		$view.open({
-			viewid: "com.yonyou.placeorder.StatisticalReportMenu",
+			viewid: "com.yonyou.placeorder.LongtermSaleMulti",
 			isKeep: "true"
 		})
 	}
 
+	// 订单查询
 	function com$yonyou$placeorder$HomePageNewController$myseles(sender, args) {
 		$view.open({
 			viewid: "com.yonyou.placeorder.SalesAdvOrderSearch",
@@ -55,12 +44,121 @@ try {
 		})
 	}
 
+	// 余额查询
+	function com$yonyou$placeorder$HomePageNewController$creditonclick(sender, args) {
+		var param = {};
+		// if ($cache.read("roletype") == "worker") {
+		// 	param.pk_ncuser = $cache.read("pk_appuser");
+		// } else {
+		// 	param.pk_appuser = $cache.read("pk_appuser");
+		// }
+
+		param.pk_appuser = $cache.read("pk_appuser");
+		param.usercode = $cache.read("telephone");
+
+		//$alert($environment.DeviceType == $environment.DeviceAndroid)
+		if ($environment.DeviceType == $environment.DeviceAndroid) {
+			$service.callAction({
+				"user": $cache.read("telephone"),
+				"appid": "PlaceOrder",
+				"viewid": "com.yonyou.placeorder.SaleOrderUMController",
+				"action": "querySaleOrderCredit",
+				"params": param,
+				"timeout": 300,
+				"autoDataBinding": false,
+				"contextmapping": "result",
+				"callback": "creditSuccess()",
+				"error": "creditError()"
+			});
+		} else {
+			$service.callAction({
+				"user": $cache.read("telephone"),
+				"appid": "PlaceOrder",
+				"viewid": "com.yonyou.placeorder.SaleOrderUMController",
+				"action": "querySaleOrderCredit",
+				"params": param,
+				//"timeout" : 30,
+				"autoDataBinding": false,
+				"contextmapping": "result",
+				"callback": "creditSuccess()",
+				"error": "creditError()"
+			});
+		}
+
+		$js.showLoadingBar();
+	}
+
+	// 大票提货通知单
+	function com$yonyou$placeorder$HomePageNewController$addhugepickups_onclick(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.SalesAdvOrderMulti",
+			isKeep: "true"
+		})
+	}
+
+	// 提货单查询
+	function com$yonyou$placeorder$HomePageNewController$mypickups(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.DeliveryOrderSearch",
+			isKeep: "true"
+		})
+	}
+
+	// 统计报表
+	function com$yonyou$placeorder$HomePageNewController$report_onclick(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.StatisticalReportMenu",
+			isKeep: "true"
+		})
+	}
+
+	// 消息中心
 	function com$yonyou$placeorder$HomePageNewController$goNotif(sender, args) {
 		$view.open({
 			viewid: "com.yonyou.placeorder.NotificationMenu",
 			isKeep: "true"
 		})
 	}
+
+
+
+
+
+
+	// 新增送货单
+	function com$yonyou$placeorder$HomePageNewController$myposts(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.ReceiveOrderMulti",
+			isKeep: "true"
+		})
+	}
+
+	// 送货单查询
+	function com$yonyou$placeorder$HomePageNewController$deliverydetailclick(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.ReceiveOrderSearch",
+			isKeep: "true"
+		})
+	}
+
+	// 新增长期送货单
+	function com$yonyou$placeorder$HomePageNewController$longtermclick(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.LongtermOrderMulti",
+			isKeep: "true"
+		})
+	}
+
+	// 长期送货单查询
+	function com$yonyou$placeorder$HomePageNewController$longtermclickquery(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.LongtermOrderSearch",
+			isKeep: "true"
+		})
+	}
+
+
+
 
 	function com$yonyou$placeorder$HomePageNewController$balancequery(sender, args) {
 		$view.open({
@@ -118,27 +216,6 @@ try {
 		})
 	}
 
-	function com$yonyou$placeorder$HomePageNewController$deliverydetailclick(sender, args) {
-		$view.open({
-			viewid: "com.yonyou.placeorder.ReceiveOrderSearch",
-			isKeep: "true"
-		})
-	}
-
-	function com$yonyou$placeorder$HomePageNewController$longtermclickquery(sender, args) {
-		$view.open({
-			viewid: "com.yonyou.placeorder.LongtermOrderSearch",
-			isKeep: "true"
-		})
-	}
-
-	function com$yonyou$placeorder$HomePageNewController$longtermclick(sender, args) {
-		$view.open({
-			viewid: "com.yonyou.placeorder.LongtermOrderMulti",
-			isKeep: "true"
-		})
-	}
-
 	function com$yonyou$placeorder$HomePageNewController$testOnclick(sender, args) {
 		$view.open({
 			viewid: "com.yonyou.placeorder.NotifcationWindow",
@@ -190,71 +267,34 @@ try {
 		$alert("访问MA服务器错误:" + JSON.stringify(args));
 	}
 
-	function com$yonyou$placeorder$HomePageNewController$creditonclick(sender, args) {
-		var param = {};
-		// if ($cache.read("roletype") == "worker") {
-		// 	param.pk_ncuser = $cache.read("pk_appuser");
-		// } else {
-		// 	param.pk_appuser = $cache.read("pk_appuser");
-		// }
-
-		param.pk_appuser = $cache.read("pk_appuser");
-		param.usercode = $cache.read("telephone");
-
-		//$alert($environment.DeviceType == $environment.DeviceAndroid)
-		if ($environment.DeviceType == $environment.DeviceAndroid) {
-			$service.callAction({
-				"user": $cache.read("telephone"),
-				"appid": "PlaceOrder",
-				"viewid": "com.yonyou.placeorder.SaleOrderUMController",
-				"action": "querySaleOrderCredit",
-				"params": param,
-				"timeout": 300,
-				"autoDataBinding": false,
-				"contextmapping": "result",
-				"callback": "creditSuccess()",
-				"error": "creditError()"
-			});
-		} else {
-			$service.callAction({
-				"user": $cache.read("telephone"),
-				"appid": "PlaceOrder",
-				"viewid": "com.yonyou.placeorder.SaleOrderUMController",
-				"action": "querySaleOrderCredit",
-				"params": param,
-				//"timeout" : 30,
-				"autoDataBinding": false,
-				"contextmapping": "result",
-				"callback": "creditSuccess()",
-				"error": "creditError()"
-			});
-		}
-
-		$js.showLoadingBar();
-	}
-
 	com.yonyou.placeorder.HomePageNewController.prototype = {
+		addseleorder_onclick: com$yonyou$placeorder$HomePageNewController$addseleorder_onclick,
+		addlongtermsale_onclick: com$yonyou$placeorder$HomePageNewController$addlongtermsale_onclick,
+		myseles: com$yonyou$placeorder$HomePageNewController$myseles,
 		creditonclick: com$yonyou$placeorder$HomePageNewController$creditonclick,
+		addhugepickups_onclick: com$yonyou$placeorder$HomePageNewController$addhugepickups_onclick,
+		mypickups: com$yonyou$placeorder$HomePageNewController$mypickups,
+		report_onclick: com$yonyou$placeorder$HomePageNewController$report_onclick,
+		goNotif: com$yonyou$placeorder$HomePageNewController$goNotif,
+
+
+		myposts: com$yonyou$placeorder$HomePageNewController$myposts,
+		deliverydetailclick: com$yonyou$placeorder$HomePageNewController$deliverydetailclick,
+		longtermclick: com$yonyou$placeorder$HomePageNewController$longtermclick,
+		longtermclickquery: com$yonyou$placeorder$HomePageNewController$longtermclickquery,
+
+
+
 		unloadCfmOnclick: com$yonyou$placeorder$HomePageNewController$unloadCfmOnclick,
 		loadCfmOnclick: com$yonyou$placeorder$HomePageNewController$loadCfmOnclick,
 		restart: com$yonyou$placeorder$HomePageNewController$restart,
 		testOnclick: com$yonyou$placeorder$HomePageNewController$testOnclick,
-		deliverydetailclick: com$yonyou$placeorder$HomePageNewController$deliverydetailclick,
-		longtermclickquery: com$yonyou$placeorder$HomePageNewController$longtermclickquery,
 		addpickup: com$yonyou$placeorder$HomePageNewController$addpickup,
 		pageOnload: com$yonyou$placeorder$HomePageNewController$pageOnload,
-		myseles: com$yonyou$placeorder$HomePageNewController$myseles,
-		myposts: com$yonyou$placeorder$HomePageNewController$myposts,
-		longtermclick: com$yonyou$placeorder$HomePageNewController$longtermclick,
 		balancequery: com$yonyou$placeorder$HomePageNewController$balancequery,
-		addseleorder_onclick: com$yonyou$placeorder$HomePageNewController$addseleorder_onclick,
-		mypickups: com$yonyou$placeorder$HomePageNewController$mypickups,
-		report_onclick: com$yonyou$placeorder$HomePageNewController$report_onclick,
 		usercenter_onclick: com$yonyou$placeorder$HomePageNewController$usercenter_onclick,
-		creditonclick: com$yonyou$placeorder$HomePageNewController$creditonclick,
 		initialize: com$yonyou$placeorder$HomePageNewController$initialize,
 		evaljs: com$yonyou$placeorder$HomePageNewController$evaljs,
-		goNotif: com$yonyou$placeorder$HomePageNewController$goNotif
 	};
 	com.yonyou.placeorder.HomePageNewController.registerClass('com.yonyou.placeorder.HomePageNewController', UMP.UI.Mvc.Controller);
 } catch (e) {

@@ -180,7 +180,8 @@
   <view id="VehicleDetail" ref="VehicleDetail.dsl" include="true"/>  
   <view id="ReceiveOrderMulti" ref="ReceiveOrderMulti.dsl" include="true"/>  
   <view id="LongtermOrderMulti" ref="LongtermOrderMulti.dsl" include="true"/>  
-  <view id="HomePageNew" ref="HomePageNew.dsl" include="true"/> 
+  <view id="HomePageNew" ref="HomePageNew.dsl" include="true"/>  
+  <view id="LongtermSaleMulti" ref="LongtermSaleMulti.dsl" include="true"/>
 </application>
 <!--
 【屏幕显示方向】

@@ -40,7 +40,7 @@
     <file name="HomePage.dsl"/>  
     <file name="ModifyPassword.dsl"/>  
     <file name="PWRecovery.dsl"/>  
-    <file name="HomePageNew.dsl"/>
+    <file name="HomePageNew.dsl"/> 
   </User>  
   <System> 
     <file name="Matest.dsl"/>  
@@ -84,5 +84,8 @@
     <file name="NotificationMenu.dsl"/>  
     <file name="InfoList.dsl"/>  
     <file name="InfoDetail.dsl"/> 
-  </Notification> 
+  </Notification>  
+  <LongtermSale>
+    <file name="LongtermSaleMulti.dsl"/>
+  </LongtermSale> 
 </windows>

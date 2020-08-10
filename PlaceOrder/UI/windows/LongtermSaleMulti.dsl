@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<window xmlns:web="http://www.yonyou.com/uapmobile/dsl" id="SalesAdvOrderMulti" controller="SalesAdvOrderMultiController" namespace="com.yonyou.placeorder">  
-    <import ref="SalesAdvOrderMulti.css" type="css"/>  
+<window xmlns:web="http://www.yonyou.com/uapmobile/dsl" id="LongtermSaleMulti" controller="LongtermSaleMultiController" namespace="com.yonyou.placeorder">  
+    <import ref="LongtermSaleMulti.css" type="css"/>  
     <link type="text/css" href="sys/theme.css"/>  
     <script src="#{path.controller}/common/global.js" type="text/javascript"/>  
     <script src="#{path.controller}/common/sqliteutil.js" type="text/javascript"/>  
     <Scrollview id="Scrollview_viewPage0" height="fill" width="fill" hScrollEnabled="disabled"> 
         <div id="viewPage0" onload="this.changebill()"> 
-            <navigatorbar id="navigatorbar0" title="车辆下单" class="navigatorbarclass"> 
+            <navigatorbar id="navigatorbar0" title="新增长期销售订单" class="navigatorbarclass"> 
                 <input id="back" class="ngbbuttonclass" onclick="this.button0_onclick()" type="button"/> 
             </navigatorbar>  
             <div id="panel0"> 
@@ -40,6 +40,10 @@
                     <input id="weight" min="-9.99999999E8" precision="2" max="9.99999999E8" roundValue="5" placeholder="0.0" type="number" roundType="value"/>  
                     <label id="lbl_dw">单位</label> 
                 </div> 
+				<div id="startdatepanel">
+					<label id="startdatelabel">失效日期：</label>
+					<input id="denddate" placeholder="2016-12-09" format="yyyy-MM-dd" type="date"/> 
+				</div>
                 <div id="panelvnote"> 
                     <label id="labelvnote">备注：</label>  
                     <input id="vnote" placeholder="请输入备注" type="text" roundType="value"/>  
