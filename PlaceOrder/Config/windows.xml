@@ -6,7 +6,8 @@
     <file name="DeliveryOrderList.dsl"/>  
     <file name="DeliveryOrderSearch.dsl"/>  
     <file name="SalesOrderList.dsl"/>  
-    <file name="HugeDeliverOrder.dsl"/>
+    <file name="HugeDeliverOrder.dsl"/>  
+    <file name="HugeSalesOrderList.dsl"/>
   </DeliveryOrder>  
   <SalesAdvOrder> 
     <file name="SalesAdvOrderList.dsl"/>  

@@ -1,0 +1,590 @@
+#HugeSalesOrderList {
+    halign:center;
+    height:fill;
+    width:fill;
+    layout:vbox;
+    valign:TOP;
+    }
+     #viewPage0 {
+    halign:center;
+    height:fill;
+    layout:vbox;
+    width:fill;
+    valign:TOP;
+    }
+     #navigatorbar0 {
+    halign:LEFT;
+    font-size:16;
+    background:#13b5f2;
+    }
+     #back {
+    padding-left:20;
+    halign:left;
+    height:44;
+    pressed-image:btn_back_touch;
+    width:88;
+    background-image:btn_back;
+    }
+     #panel0 {
+    halign:center;
+    height:fill;
+    layout:vbox;
+    width:fill;
+    valign:TOP;
+    }
+     #pnl_queryarea {
+    halign:center;
+    height:330;
+    layout:vbox;
+    width:fill;
+    valign:TOP;
+    }
+     #panel1 {
+    margin-right:15;
+    halign:CENTER;
+    height:30;
+    background:#fcfcfc;
+    layout:hbox;
+    width:fill;
+    margin-left:15;
+    margin-top:5;
+    valign:center;
+    }
+     #label7 {
+    halign:center;
+    height:fill;
+    widthWrap:75.0;
+    color:#585858;
+    background:#fcfcfc;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+     #begindate {
+    halign:RIGHT;
+    height:fill;
+    color:#167ef8;
+    background:#fcfcfc;
+    font-size:15;
+    width:fill;
+    font-family:default;
+    }
+     #panel2 {
+    margin-right:15;
+    halign:CENTER;
+    height:30;
+    background:#fcfcfc;
+    layout:hbox;
+    width:fill;
+    margin-left:15;
+    margin-top:5;
+    valign:center;
+    }
+     #label8 {
+    halign:center;
+    height:fill;
+    widthWrap:75.0;
+    color:#585858;
+    background:#fcfcfc;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+     #enddate {
+    halign:RIGHT;
+    height:fill;
+    color:#167ef8;
+    background:#fcfcfc;
+    font-size:15;
+    width:fill;
+    font-family:default;
+    }
+     #panel17 {
+    margin-right:15;
+    halign:LEFT;
+    height:30;
+    background:#fcfcfc;
+    layout:hbox;
+    width:fill;
+    margin-left:15;
+    margin-top:5;
+    valign:center;
+    }
+     #label20 {
+    halign:center;
+    height:fill;
+    widthWrap:45.0;
+    color:#585858;
+    background:#fcfcfc;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+     #pnl_selectcustomer {
+    halign:LEFT;
+    height:fill;
+    layout:hbox;
+    width:fill;
+    valign:center;
+    }
+     #lbl_querycustomer {
+    halign:right;
+    height:fill;
+    weight:1;
+    color:#000000;
+    font-size:14;
+    background:#fcfcfc;
+    width:0;
+    font-family:default;
+    valign:center;
+    }
+     #image5 {
+    margin-right:5;
+    height:16;
+    width:11;
+    margin-left:5;
+    }
+     #panel13 {
+    margin-right:15;
+    halign:LEFT;
+    height:30;
+    background:#fcfcfc;
+    layout:hbox;
+    width:fill;
+    margin-left:15;
+    margin-top:5;
+    valign:center;
+    }
+     #label16 {
+    halign:center;
+    height:fill;
+    widthWrap:75.0;
+    color:#585858;
+    background:#fcfcfc;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+     #pnl_selectsaleorg {
+    halign:LEFT;
+    height:fill;
+    layout:hbox;
+    width:fill;
+    valign:center;
+    }
+     #lbl_querysaleorg {
+    halign:right;
+    height:fill;
+    weight:1;
+    color:#000000;
+    font-size:14;
+    background:#fcfcfc;
+    width:0;
+    font-family:default;
+    valign:center;
+    }
+     #image3 {
+    margin-right:5;
+    height:16;
+    width:11;
+    margin-left:5;
+    }
+     #panel15 {
+    margin-right:15;
+    halign:LEFT;
+    height:30;
+    background:#fcfcfc;
+    layout:hbox;
+    width:fill;
+    margin-left:15;
+    margin-top:5;
+    valign:center;
+    }
+     #label18 {
+    halign:center;
+    height:fill;
+    widthWrap:75.0;
+    color:#585858;
+    background:#fcfcfc;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+     #pnl_selectstockorg {
+    halign:LEFT;
+    height:fill;
+    layout:hbox;
+    width:fill;
+    valign:center;
+    }
+     #lbl_querystockorg {
+    halign:right;
+    height:fill;
+    weight:1;
+    color:#000000;
+    font-size:14;
+    background:#fcfcfc;
+    width:0;
+    font-family:default;
+    valign:center;
+    }
+     #image4 {
+    margin-right:5;
+    height:16;
+    width:11;
+    margin-left:5;
+    }
+     #panel4 {
+    margin-right:15;
+    halign:LEFT;
+    height:30;
+    layout:hbox;
+    background:#fcfcfc;
+    width:fill;
+    margin-left:15;
+    margin-top:5;
+    valign:center;
+    }
+     #label10 {
+    halign:center;
+    height:fill;
+    widthWrap:45.0;
+    color:#585858;
+    background:#fcfcfc;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+     #div_selectmat {
+    halign:LEFT;
+    height:fill;
+    layout:hbox;
+    background:#fcfcfc;
+    width:fill;
+    valign:center;
+    }
+     #lbl_matname {
+    halign:right;
+    height:fill;
+    weight:1;
+    color:#000000;
+    background:#fcfcfc;
+    font-size:14;
+    width:0;
+    font-family:default;
+    valign:center;
+    }
+     #image1 {
+    margin-right:5;
+    height:16;
+    width:11;
+    margin-left:5;
+    }
+     #panel10 {
+    halign:LEFT;
+    height:fill;
+    layout:hbox;
+    background:#fcfcfc;
+    width:fill;
+    valign:center;
+    }
+     #textbox2 {
+    padding-left:4;
+    halign:LEFT;
+    height:40;
+    weight:1;
+    color:#167ef8;
+    background:#ffffff;
+    font-size:15;
+    width:0;
+    font-family:default;
+    }
+     #image2 {
+    margin-right:10;
+    height:16;
+    width:11;
+    margin-left:10;
+    }
+     #panel11 {
+    margin-right:15;
+    halign:LEFT;
+    height:30;
+    layout:hbox;
+    background:#fcfcfc;
+    width:fill;
+    margin-left:15;
+    margin-top:5;
+    valign:center;
+    }
+     #label11 {
+    halign:center;
+    height:fill;
+    widthWrap:75.0;
+    color:#585858;
+    background:#fcfcfc;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+     #txt_vlicense {
+    halign:RIGHT;
+    height:fill;
+    weight:1;
+    color:#167ef8;
+    background:#fcfcfc;
+    font-size:14;
+    width:0;
+    font-family:default;
+    }
+     #imgbtn_selectcar {
+    margin-right:5;
+    icon-height:16;
+    height:16;
+    font-size:10;
+    width:11;
+    margin-left:5;
+    icon-background-image:arrow.png;
+    icon-width:11;
+    icon-pressed-image:arrow.png;
+    icon-text-spacing:3;
+    }
+     #panel3 {
+    margin-right:15;
+    halign:LEFT;
+    height:30;
+    layout:hbox;
+    background:#fcfcfc;
+    width:fill;
+    margin-left:15;
+    margin-top:5;
+    valign:center;
+    }
+     #label9 {
+    halign:center;
+    height:fill;
+    widthWrap:60.0;
+    color:#585858;
+    background:#fcfcfc;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+     #txt_vbillcode {
+    halign:RIGHT;
+    height:fill;
+    color:#167ef8;
+    background:#fcfcfc;
+    font-size:14;
+    width:fill;
+    font-family:default;
+    }
+     #btn_search {
+    height:40;
+    border-radius:5;
+    color:#ffffff;
+    background:#ff8000;
+    width:130;
+    margin-top:5;
+    font-pressed-color:#f2adb2;
+    }
+     #imgbtn_showquery {
+    icon-height:10;
+    height:20;
+    font-size:10;
+    width:64;
+    icon-background-image:spread2.png;
+    icon-width:20;
+    icon-pressed-image:spread2.png;
+    icon-text-spacing:3;
+    }
+     #list_saleorder {
+    halign:center;
+    height:fill;
+    layout:vbox;
+    width:fill;
+    valign:TOP;
+    }
+     #panel5 {
+    border-bottom-width:1;
+    halign:CENTER;
+    height:100;
+    layout:hbox;
+    background:#FFFFFF;
+    width:fill;
+    margin-top:7;
+    valign:center;
+    border-bottom-color:#C7C7C7;
+    }
+     #panel6 {
+    halign:CENTER;
+    height:fill;
+    layout:hbox;
+    width:44;
+    margin-left:7;
+    valign:center;
+    }
+     #image0 {
+    height:44;
+    width:44;
+    }
+     #panel7 {
+    halign:left;
+    height:fill;
+    weight:3;
+    layout:vbox;
+    width:0;
+    margin-left:7;
+    valign:TOP;
+    }
+     #label2 {
+    halign:left;
+    height:wrap;
+    widthWrap:161.0;
+    color:#363636;
+    heightWrap:20.0;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+     #label3 {
+    halign:left;
+    height:wrap;
+    widthWrap:136.0;
+    color:#707070;
+    heightWrap:18.0;
+    font-size:12;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+     #label26 {
+    halign:left;
+    height:20;
+    color:#707070;
+    font-size:12;
+    width:fill;
+    font-family:default;
+    valign:center;
+    }
+     #label1 {
+    halign:left;
+    height:20;
+    color:#707070;
+    font-size:12;
+    width:fill;
+    font-family:default;
+    valign:center;
+    }
+     #label6 {
+    halign:left;
+    height:20;
+    color:#000000;
+    font-size:14;
+    width:fill;
+    font-family:default;
+    valign:center;
+    }
+     #panel8 {
+    margin-right:7;
+    halign:center;
+    height:fill;
+    weight:2;
+    layout:vbox;
+    width:0;
+    valign:CENTER;
+    }
+     #label4 {
+    halign:center;
+    height:20;
+    color:#000000;
+    font-size:14;
+    width:fill;
+    font-family:default;
+    valign:center;
+    }
+     #panel9 {
+    halign:CENTER;
+    height:20;
+    layout:hbox;
+    width:fill;
+    margin-top:5;
+    valign:center;
+    }
+     #label0 {
+    halign:center;
+    height:fill;
+    widthWrap:45.0;
+    color:#000000;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+     #label5 {
+    halign:center;
+    height:fill;
+    widthWrap:8.0;
+    color:#000000;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+     #label12 {
+    halign:center;
+    height:fill;
+    widthWrap:30.0;
+    color:#000000;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+     #panel12 {
+    halign:CENTER;
+    height:20;
+    layout:hbox;
+    width:120.0;
+    margin-top:5;
+    valign:center;
+    }
+     #label13 {
+    halign:center;
+    height:fill;
+    widthWrap:45.0;
+    color:#000000;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+     #label14 {
+    halign:center;
+    height:fill;
+    widthWrap:8.0;
+    color:#000000;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+     #label15 {
+    halign:center;
+    height:fill;
+    widthWrap:30.0;
+    color:#000000;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+    
