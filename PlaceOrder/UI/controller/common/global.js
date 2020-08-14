@@ -138,6 +138,25 @@ try {
 			return 1;
 		}
 	};
+	//日期格式化，返回值形式为yy-mm-dd
+	function timeFormat(date) {
+		if (!date || typeof (date) === "string") {
+			this.error("参数异常，请检查...");
+		}
+		var y = date.getFullYear(); //年
+		var m = date.getMonth() + 1; //月
+		var d = date.getDate(); //日
+
+		return y + "-" + m + "-" + d;
+	}
+	Globals.firstDatein = function (type) {
+		var date = new Date();
+		if (type = "year") {
+			date.setDate(1);
+			date.setMonth(0);
+			return timeFormat(date);
+		}
+	};
 	Globals.checkSpecialChar = function (str) {
 		if (str && (str.indexOf("%") >= 0 || str.indexOf("_") >= 0)) {
 			return true;

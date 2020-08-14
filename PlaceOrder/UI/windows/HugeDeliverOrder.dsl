@@ -61,7 +61,16 @@
                 <input min="0.0" max="9.99999999E8" precision="2" roundType="value" id="txt_fetchnum" roundValue="5" placeholder="0.0" type="number"/>
                 <label id="lbl_dw">单位</label> 
             </div>
-            <div id="panel6">
+
+            <div id="panel55"> 
+                <label id="label9">车辆信息</label>  
+                <div id="vehiclespanel" onclick="changevehicles()"> 
+                    <label id="labelvehicles">当前0条信息</label>  
+                    <label id="vehicles">编辑</label>  
+                    <image id="vehiclesarrow" scaletype="fitcenter" src="arrow.png"/> 
+                </div>  
+            </div>  
+            <!-- <div id="panel6">
                 <label id="label14">车号：</label>
                 <label onclick="this.fmtvlicenseOnclick()" id="lbl_fmtvlicense">点击输入车号</label>
                 <input onclick="this.showFreeLicense()" id="button0" type="button" value="自定义" class="textbtnclass"/>
@@ -80,7 +89,7 @@
             <div id="panel11">
                 <label id="label17">身份证号：</label>
                 <input maxlength="256" id="txt_driveridcode" placeholder="身份证号" type="text"/> 
-            </div>
+            </div> -->
             <div id="panel8">
                 <input onclick="this.submitOnclick()" id="btn_submit" type="button" value="提交订单" class="textbtnclass"/>
                 <!-- <input onclick="this.invalidOnclick()" disabled="disabled" id="btn_invalid" type="button" value="取消订单" class="textbtnclass"/>

@@ -670,4 +670,64 @@
    icon-width:60;
    height:60;
    }
+
+   #panel55 {
+      halign: center;
+      height: 100;
+      layout: vbox;
+      width: fill;
+      valign: TOP;
+   }
+  
+   #label9 {
+      margin-right: 5;
+      halign: left;
+      height: 20;
+      color: #ff8080;
+      font-size: 14;
+      width: fill;
+      margin-left: 5;
+      font-family: default;
+      valign: center;
+  }
+  
+  #vehiclespanel {
+      margin-right: 5;
+      halign: LEFT;
+      height: 35;
+      layout: hbox;
+      background: #ffffff;
+      width: fill;
+      margin-left: 5;
+      margin-top: 5;
+      valign: center;
+  }
+  
+  #labelvehicles {
+      halign: left;
+      height: fill;
+      widthWrap: 155.0;
+      color: #414141;
+      font-size: 14;
+      width: wrap;
+      font-family: default;
+      valign: center;
+   }
+  
+   #vehicles {
+      halign: right;
+      height: fill;
+      weight: 1;
+      color: #737373;
+      font-size: 14;
+      width: 0;
+      font-family: default;
+      valign: center;
+   }
+  
+   #vehiclesarrow {
+      height: 16;
+      width: 11;
+      margin-left: 5;
+  }
    

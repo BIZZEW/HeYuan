@@ -26,20 +26,20 @@
                         <image id="image5" scaletype="fitcenter" src="arrow.png"/> 
                     </div> 
                 </div>
-                <!-- <div id="panel13">
+                <div id="panel13">
                     <label id="label16">销售单位：</label>
                     <div id="pnl_selectsaleorg" onlongclick="this.saleorgOnlongClick()" onclick="this.selectSaleorg()">
                         <label id="lbl_querysaleorg">请选择销售单位</label>
                         <image id="image3" scaletype="fitcenter" src="arrow.png"/> 
                     </div> 
-                </div> -->
-                <div id="panel15">
+                </div>
+                <!-- <div id="panel15">
                     <label id="label18">发货企业：</label>
                     <div id="pnl_selectstockorg" onlongclick="this.stockorgOnlongClick()" onclick="this.selectStockorg()">
                         <label id="lbl_querystockorg">请选择发货企业</label>
                         <image id="image4" scaletype="fitcenter" src="arrow.png"/> 
                     </div> 
-                </div>
+                </div> -->
                 <div id="panel4">
                     <label id="label10">货物：</label>
                     <div id="div_selectmat" onlongclick="this.matOnlongClick()" onclick="this.selectMatOnclick()">
