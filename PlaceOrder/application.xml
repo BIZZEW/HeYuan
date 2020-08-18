@@ -185,7 +185,8 @@
   <view id="HugeDeliverOrder" ref="HugeDeliverOrder.dsl" include="true"/>  
   <view id="HugeSalesOrderList" ref="HugeSalesOrderList.dsl" include="true"/>  
   <view id="DriverDelivery" ref="DriverDelivery.dsl" include="true"/>  
-  <view id="DriverPickup" ref="DriverPickup.dsl" include="true"/>
+  <view id="DriverPickup" ref="DriverPickup.dsl" include="true"/>  
+  <view id="DriverDetailQR" ref="DriverDetailQR.dsl" include="true"/>
 </application>
 <!--
 【屏幕显示方向】

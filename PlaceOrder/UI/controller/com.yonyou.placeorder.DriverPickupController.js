@@ -69,13 +69,15 @@ try {
 		getDatas();
 	}
 	function com$yonyou$placeorder$DriverPickupController$alllistOnitemclick(sender, args) {
-		var item = $id("list_all").get("row");
+		var item = JSON.parse($id("list_all").get("row"));
 		com.yonyou.placeorder.DriverPickupController.clickItemIndex = $id("list_all").get("rowindex");
+
+		item.billtype = "pickup";
+
 		$view.open({
-			viewid: "com.yonyou.placeorder.ReceiveOrderDetail", //目标页面（首字母大写）全名
-			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
-			"oldorder": item,
-			callback: "itemClickCallback()"
+			"viewid": "com.yonyou.placeorder.DriverDetailQR",
+			"isKeep": "true",
+			"shareparams": item
 		});
 	}
 	function itemClickCallback() {
@@ -88,7 +90,7 @@ try {
 		param["pk_appuser"] = $cache.read("pk_appuser");
 		param["page"] = com.yonyou.placeorder.DriverPickupController.page
 		param["vehicle"] = com.yonyou.placeorder.DriverPickupController.vehicle;
-		param["vehiclesaleorg"] = com.yonyou.placeorder.DriverPickupController.vehiclesaleorg;
+		param["vehiclesaleorg"] = com.yonyou.placeorder.DriverPickupController.vehiclesaleorg.pk_org;
 		param["usercode"] = $cache.read("telephone");
 		$service.callAction({
 			"usercode": $cache.read("telephone"),

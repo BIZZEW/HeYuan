@@ -92,6 +92,7 @@
   </LongtermSale>  
   <Driver> 
     <file name="DriverDelivery.dsl"/>  
-    <file name="DriverPickup.dsl"/>
+    <file name="DriverPickup.dsl"/>  
+    <file name="DriverDetailQR.dsl"/>
   </Driver> 
 </windows>

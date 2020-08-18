@@ -15,6 +15,7 @@ function initPage() {
             modules: [],
             // touchStatus: 0,
             usrname: "",
+            platenum: "",
         },
         methods: {
             // tapHold: function (index) {
@@ -108,6 +109,8 @@ function initModules() {
             }
         ];
 
+        // alert(JSON.stringify(user))
+
         if ((user.vehiclesaleorg == undefined || user.vehiclesaleorg == null) && (user.vehiclebuyorg == undefined || user.vehiclebuyorg == null))
             allList = []
         else {
@@ -149,6 +152,11 @@ function initSlider() {
 }
 
 function initFunk() {
+    var user = JSON.parse($ctx.getApp("appuser"));
+
+    if (user.vehicle)
+        vue.platenum = user.vehicle;
+
     vue.usrname = $cache.read("telephone");
 
     initModules();
