@@ -183,7 +183,9 @@
   <view id="HomePageNew" ref="HomePageNew.dsl" include="true"/>  
   <view id="LongtermSaleMulti" ref="LongtermSaleMulti.dsl" include="true"/>  
   <view id="HugeDeliverOrder" ref="HugeDeliverOrder.dsl" include="true"/>  
-  <view id="HugeSalesOrderList" ref="HugeSalesOrderList.dsl" include="true"/>
+  <view id="HugeSalesOrderList" ref="HugeSalesOrderList.dsl" include="true"/>  
+  <view id="DriverDelivery" ref="DriverDelivery.dsl" include="true"/>  
+  <view id="DriverPickup" ref="DriverPickup.dsl" include="true"/>
 </application>
 <!--
 【屏幕显示方向】

@@ -148,11 +148,13 @@ try {
 					// orderobj.pk_sendstockorg = saleorder["sendstockorg"]["pk_org"];
 					orderobj.cmaterialid = saleorder["cmaterialid"]["pk_material"];
 					orderobj.pk_customer = saleorder["ccustomerid"]["pk_customer"];
+					orderobj.pk_org = saleorder["saleorg"]["pk_org"];
 					//更新返回列表数据
 					com.yonyou.placeorder.HugeDeliverOrderController.oldorder.cmaterialid.pk_material = saleorder["cmaterialid"]["pk_material"];
 					com.yonyou.placeorder.HugeDeliverOrderController.oldorder.cmaterialid.name = saleorder["cmaterialid"]["name"];
 					com.yonyou.placeorder.HugeDeliverOrderController.oldorder.cmaterialid.dw = saleorder["cmaterialid"]["dw"];
 					com.yonyou.placeorder.HugeDeliverOrderController.oldorder.saleorg.name = saleorder["saleorg"]["name"];
+					com.yonyou.placeorder.HugeDeliverOrderController.oldorder.saleorg.pk = saleorder["saleorg"]["pk"];
 					// com.yonyou.placeorder.HugeDeliverOrderController.oldorder.sendstockorg.pk_org = saleorder["sendstockorg"]["pk_org"];
 					// com.yonyou.placeorder.HugeDeliverOrderController.oldorder.sendstockorg.name = saleorder["sendstockorg"]["name"];
 					com.yonyou.placeorder.HugeDeliverOrderController.oldorder.ccustomerid.pk_customer = saleorder["ccustomerid"]["pk_customer"];
@@ -343,6 +345,7 @@ try {
 			"ordercode": orderobj["ordercode"],
 			"pk_customer": orderobj["pk_customer"],
 			"cmaterialid": orderobj["cmaterialid"],
+			"pk_org": orderobj["pk_org"],
 			"num": fetchnum,
 			// "vlicense": vlicense,
 			// "drivername": drivername,

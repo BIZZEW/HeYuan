@@ -466,7 +466,6 @@ try {
 			return;
 		}
 
-
 		if (!cmaterialid) {
 			$alert("请选择物料");
 			return;
@@ -548,7 +547,7 @@ try {
 				"usercode": $cache.read("telephone"),
 				"user": $cache.read("telephone"),
 				"appid": "PlaceOrder",
-				"viewid": "com.yonyou.placeorder.SaleAdvOrderUMController", //后台Controller(带包名)的类名
+				"viewid": "com.yonyou.placeorder.LongTimeSaleUMController", //后台Controller(带包名)的类名
 				"action": "update", //后台Controller的方法名,
 				"params": json, //自定义参数
 				"autoDataBinding": false, //请求回来会是否进行数据绑定，默认不绑定
@@ -580,8 +579,8 @@ try {
 				"user": $cache.read("telephone"),
 				"appid": "PlaceOrder",
 				"timeout": 60,
-				"viewid": "com.yonyou.placeorder.SaleAdvOrderUMController", //后台Controller(带包名)的类名
-				"action": "add", //后台Controller的方法名,
+				"viewid": "com.yonyou.placeorder.LongTimeSaleUMController", //后台Controller(带包名)的类名
+				"action": "LongTimeSale", //后台Controller的方法名,
 				"params": json, //自定义参数
 				"autoDataBinding": false, //请求回来会是否进行数据绑定，默认不绑定
 				"contextmapping": "result", //将返回结果映射到指定的Context字段上，默认为替换整个Context
@@ -655,7 +654,7 @@ try {
 				"usercode": $cache.read("telephone"),
 				"user": $cache.read("telephone"),
 				"appid": "PlaceOrder",
-				"viewid": "com.yonyou.placeorder.SaleAdvOrderUMController", //后台Controller(带包名)的类名
+				"viewid": "com.yonyou.placeorder.LongTimeSaleUMController", //后台Controller(带包名)的类名
 				"action": "invalid", //后台Controller的方法名,
 				"params": json, //自定义参数
 				"autoDataBinding": false, //请求回来会是否进行数据绑定，默认不绑定

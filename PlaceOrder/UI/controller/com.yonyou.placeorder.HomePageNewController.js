@@ -20,6 +20,27 @@ try {
 		})
 	}
 
+	// 司机送货
+	function com$yonyou$placeorder$HomePageNewController$driver_deliver(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.DriverDelivery",
+			isKeep: "true"
+		})
+	}
+
+	// 司机提货
+	function com$yonyou$placeorder$HomePageNewController$driver_pickup(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.DriverPickup",
+			isKeep: "true"
+		})
+	}
+
+
+
+
+
+
 	// 车辆下单
 	function com$yonyou$placeorder$HomePageNewController$addseleorder_onclick(sender, args) {
 		$view.open({
@@ -268,6 +289,10 @@ try {
 	}
 
 	com.yonyou.placeorder.HomePageNewController.prototype = {
+		driver_deliver: com$yonyou$placeorder$HomePageNewController$driver_deliver,
+		driver_pickup: com$yonyou$placeorder$HomePageNewController$driver_pickup,
+
+
 		addseleorder_onclick: com$yonyou$placeorder$HomePageNewController$addseleorder_onclick,
 		addlongtermsale_onclick: com$yonyou$placeorder$HomePageNewController$addlongtermsale_onclick,
 		myseles: com$yonyou$placeorder$HomePageNewController$myseles,

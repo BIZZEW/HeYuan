@@ -39,54 +39,84 @@ function initPage() {
 }
 
 function initModules() {
-    var allList = [{
-        "module_title": "车辆下单",
-        "module_id": "addseleorder_onclick",
-    }, {
-        "module_title": "长期销售订单",
-        "module_id": "addlongtermsale_onclick",
-    }, {
-        "module_title": "订单查询",
-        "module_id": "myseles",
-    }, {
-        "module_title": "余额查询",
-        "module_id": "creditonclick",
-    }, {
-        "module_title": "大票提货通知单",
-        "module_id": "addhugepickups_onclick",
-    }, {
-        "module_title": "提货单查询",
-        "module_id": "mypickups",
-    }, {
-        "module_title": "统计报表",
-        "module_id": "report_onclick",
-    }, {
-        "module_title": "消息中心",
-        "module_id": "goNotif",
-    },
-
-
-    {
-        "module_title": "新增送货单",
-        "module_id": "myposts",
-    }, {
-        "module_title": "送货单查询",
-        "module_id": "deliverydetailclick",
-    }, {
-        "module_title": "新增长期送货单",
-        "module_id": "longtermclick",
-    }, {
-        "module_title": "长期送货单查询",
-        "module_id": "longtermclickquery",
-    }];
-
+    var allList = [];
     var user = JSON.parse($ctx.getApp("appuser"));
+    if (user.vehicle == undefined || user.vehicle == null) {
+        // 不是司机
+        allList = [
+            // 销售
+            {
+                "module_title": "车辆下单",
+                "module_id": "addseleorder_onclick",
+            }, {
+                "module_title": "长期销售订单",
+                "module_id": "addlongtermsale_onclick",
+            }, {
+                "module_title": "订单查询",
+                "module_id": "myseles",
+            }, {
+                "module_title": "余额查询",
+                "module_id": "creditonclick",
+            }, {
+                "module_title": "大票提货通知单",
+                "module_id": "addhugepickups_onclick",
+            }, {
+                "module_title": "提货单查询",
+                "module_id": "mypickups",
+            }, {
+                "module_title": "统计报表",
+                "module_id": "report_onclick",
+            }, {
+                "module_title": "消息中心",
+                "module_id": "goNotif",
+            },
 
-    if (user.dfltcstm == undefined || user.dfltcstm == null)
-        allList.splice(0, 8);
 
-    if (user.dfltsupplier == undefined || user.dfltsupplier == null)
-        allList.splice(8, 4);
+            // 采购
+            {
+                "module_title": "新增送货单",
+                "module_id": "myposts",
+            }, {
+                "module_title": "送货单查询",
+                "module_id": "deliverydetailclick",
+            }, {
+                "module_title": "新增长期送货单",
+                "module_id": "longtermclick",
+            }, {
+                "module_title": "长期送货单查询",
+                "module_id": "longtermclickquery",
+            }
+        ];
+
+        if (user.dfltcstm == undefined || user.dfltcstm == null)
+            allList.splice(0, 8);
+        if (user.dfltsupplier == undefined || user.dfltsupplier == null)
+            allList.splice(8, 4);
+    } else {
+        // 是司机
+        allList = [
+            // 销售 
+            {
+                "module_title": "司机提货",
+                "module_id": "driver_pickup",
+            },
+
+            //采购
+            {
+                "module_title": "司机送货",
+                "module_id": "driver_deliver",
+            }
+        ];
+
+        if ((user.vehiclesaleorg == undefined || user.vehiclesaleorg == null) && (user.vehiclebuyorg == undefined || user.vehiclebuyorg == null))
+            allList = []
+        else {
+            if (user.vehiclesaleorg == undefined || user.vehiclesaleorg == null)
+                allList.splice(0, 1);
+            if (user.vehiclebuyorg == undefined || user.vehiclebuyorg == null)
+                allList.splice(1, 1);
+        }
+    }
 
     vue.modules = allList;
 }

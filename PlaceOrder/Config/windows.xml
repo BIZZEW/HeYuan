@@ -7,7 +7,7 @@
     <file name="DeliveryOrderSearch.dsl"/>  
     <file name="SalesOrderList.dsl"/>  
     <file name="HugeDeliverOrder.dsl"/>  
-    <file name="HugeSalesOrderList.dsl"/>
+    <file name="HugeSalesOrderList.dsl"/> 
   </DeliveryOrder>  
   <SalesAdvOrder> 
     <file name="SalesAdvOrderList.dsl"/>  
@@ -89,5 +89,9 @@
   </Notification>  
   <LongtermSale> 
     <file name="LongtermSaleMulti.dsl"/> 
-  </LongtermSale> 
+  </LongtermSale>  
+  <Driver> 
+    <file name="DriverDelivery.dsl"/>  
+    <file name="DriverPickup.dsl"/>
+  </Driver> 
 </windows>
