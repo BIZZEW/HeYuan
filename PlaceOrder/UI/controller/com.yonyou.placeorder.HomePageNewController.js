@@ -222,11 +222,11 @@ try {
 		}
 
 		if (data.buildHaveNewVersion) {
-			if (confirm("发现新版本：" + data.buildVersion + "，更新内容：" + data.buildUpdateDescription + "，需要更新吗？")) {
-				$device.openWebView({
-					url: data.downloadURL
-				});
-			}
+			// if (confirm("发现新版本：" + data.buildVersion + "，更新内容：" + data.buildUpdateDescription + "，需要更新吗？")) {
+			$device.openWebView({
+				url: data.downloadURL
+			});
+			// }
 		}
 	}
 
