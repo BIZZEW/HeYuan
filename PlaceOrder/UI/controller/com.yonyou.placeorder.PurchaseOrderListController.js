@@ -83,6 +83,24 @@ try {
 			}
 		})
 	}
+	function com$yonyou$placeorder$PurchaseOrderListController$selectWarehouse(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
+			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
+			"reftype": Globals.RefInfoType.WAREHOUSE,
+			"otherparams": {
+				pk_stockorg: com.yonyou.placeorder.PurchaseOrderListController.queryparam["pk_stockorg"],
+			},
+			"callback": function () {
+				var retvalue = $param.getJSONObject("result");
+				// alert(JSON.stringify(retvalue));
+				SqliteUtil.updateRctMostUseData(Globals.RefInfoType.WAREHOUSE, retvalue);
+				com.yonyou.placeorder.PurchaseOrderListController.queryparam["pk_warehouse"] = retvalue.pk;
+				$id("lbl_warehouse").set("value", retvalue.name);
+				com.yonyou.placeorder.PurchaseOrderListController.warehousename = retvalue.name;
+			}
+		})
+	}
 	function com$yonyou$placeorder$PurchaseOrderListController$supplierOnlongClick(sender, args) {
 		delete com.yonyou.placeorder.PurchaseOrderListController.queryparam["pk_supplier"];
 		$id("lbl_querysupplier").set("value", "请选择供应商");
@@ -92,6 +110,11 @@ try {
 		delete com.yonyou.placeorder.PurchaseOrderListController.queryparam["pk_orespot"];
 		$id("lbl_mine").set("value", "请选择矿点");
 		delete com.yonyou.placeorder.PurchaseOrderListController.minename;
+	}
+	function com$yonyou$placeorder$PurchaseOrderListController$warehouseOnlongClick(sender, args) {
+		delete com.yonyou.placeorder.PurchaseOrderListController.queryparam["pk_warehouse"];
+		$id("lbl_warehouse").set("value", "请选择仓库");
+		delete com.yonyou.placeorder.PurchaseOrderListController.warehousename;
 	}
 	function com$yonyou$placeorder$PurchaseOrderListController$selectPurchaseOrg(sender, args) {
 		var pk_supplier = com.yonyou.placeorder.PurchaseOrderListController.queryparam["pk_supplier"];
@@ -323,9 +346,11 @@ try {
 		purorgOnlongClick: com$yonyou$placeorder$PurchaseOrderListController$purorgOnlongClick,
 		supplierOnlongClick: com$yonyou$placeorder$PurchaseOrderListController$supplierOnlongClick,
 		mineOnlongClick: com$yonyou$placeorder$PurchaseOrderListController$mineOnlongClick,
+		warehouseOnlongClick: com$yonyou$placeorder$PurchaseOrderListController$warehouseOnlongClick,
 		selectCar: com$yonyou$placeorder$PurchaseOrderListController$selectCar,
 		selectSupplier: com$yonyou$placeorder$PurchaseOrderListController$selectSupplier,
 		selectMine: com$yonyou$placeorder$PurchaseOrderListController$selectMine,
+		selectWarehouse: com$yonyou$placeorder$PurchaseOrderListController$selectWarehouse,
 		selectStockOrg: com$yonyou$placeorder$PurchaseOrderListController$selectStockOrg,
 		selectPurchaseOrg: com$yonyou$placeorder$PurchaseOrderListController$selectPurchaseOrg,
 		showqueryOnclick: com$yonyou$placeorder$PurchaseOrderListController$showqueryOnclick,

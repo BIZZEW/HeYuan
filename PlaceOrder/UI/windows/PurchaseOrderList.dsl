@@ -41,6 +41,13 @@
                             <image id="image_mine" scaletype="fitcenter" src="arrow.png"/> 
                         </div> 
                     </div>
+                    <div id="panel_warehouse">
+                        <label id="label_warehouse">仓库：</label>
+                        <div id="panel_warehouse_inner" onlongclick="this.warehouseOnlongClick()" onclick="this.selectWarehouse()">
+                            <label id="lbl_warehouse">请选择仓库</label>
+                            <image id="image_warehouse" scaletype="fitcenter" src="arrow.png"/> 
+                        </div> 
+                    </div>
                     <div id="panel4">
                         <label id="label3">采购单位：</label>
                         <div id="panel9" onlongclick="this.purorgOnlongClick()" onclick="this.selectPurchaseOrg()">
@@ -79,6 +86,7 @@
                             <label id="label1" bindfield="rcvstockorg.name">库存组织</label>
                             <label id="label6" bindfield="material.name">物料</label> 
                             <label id="labelorespot" bindfield="orespotname">矿点</label> 
+                            <label id="labelwarehouse" bindfield="warehousename">仓库</label> 
                         </div>
                         <div id="panel8">
                             <div id="panel2">

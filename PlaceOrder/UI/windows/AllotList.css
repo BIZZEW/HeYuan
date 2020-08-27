@@ -1,0 +1,305 @@
+#AllotList {
+    halign:center;
+    height:fill;
+    layout:vbox;
+    width:fill;
+    valign:TOP;
+    }
+     #viewPage0 {
+    halign:center;
+    height:fill;
+    background:#F7F8F8;
+    layout:vbox;
+    width:fill;
+    valign:TOP;
+    }
+     #navigatorbar0 {
+    halign:LEFT;
+    background:#13b5f2;
+    font-size:16;
+    }
+     #back {
+    padding-left:20;
+    halign:left;
+    height:44;
+    color:#ffffff;
+    pressed-image:btn_back_touch.png;
+    font-size:20;
+    width:88;
+    font-family:default;
+    valign:center;
+    background-image:btn_back.png;
+    }
+     #panel0 {
+    halign:center;
+    height:fill;
+    layout:vbox;
+    width:fill;
+    valign:TOP;
+    }
+     #panel1 {
+    halign:center;
+    height:fill;
+    layout:vbox;
+    width:fill;
+    valign:TOP;
+    }
+     #totallist {
+    halign:center;
+    height:0;
+    weight:1;
+    layout:vbox;
+    width:fill;
+    valign:TOP;
+    }
+     #panel5 {
+    border-bottom-width:1;
+    halign:CENTER;
+    height:125;
+    background:#FFFFFF;
+    layout:hbox;
+    width:fill;
+    valign:center;
+    border-bottom-color:#C7C7C7;
+    }
+     #panel6 {
+    halign:LEFT;
+    height:fill;
+    layout:hbox;
+    width:44;
+    margin-left:5;
+    valign:center;
+    }
+     #image0 {
+    height:44;
+    width:44;
+    }
+     #panel7 {
+    halign:left;
+    height:fill;
+    layout:vbox;
+    width:200;
+    margin-left:3;
+    valign:CENTER;
+    }
+     #billcode {
+    halign:left;
+    height:20.0;
+    color:#363636;
+    font-size:14;
+    width:fill;
+    font-family:default;
+    valign:center;
+    }
+     #billdate {
+    halign:left;
+    height:20;
+    color:#707070;
+    font-size:12;
+    width:fill;
+    font-family:default;
+    valign:center;
+    }
+     #label6 {
+    halign:left;
+    height:20;
+    color:#707070;
+    font-size:12;
+    width:fill;
+    font-family:default;
+    valign:center;
+    }
+     #label5 {
+    halign:left;
+    height:20;
+    color:#707070;
+    font-size:12;
+    width:fill;
+    font-family:default;
+    valign:center;
+    }
+     #name {
+    halign:left;
+    height:20;
+    color:#000000;
+    font-size:14;
+    width:fill;
+    font-family:default;
+    valign:center;
+    }
+     #panel8 {
+    margin-right:5;
+    halign:center;
+    height:fill;
+    weight:1;
+    layout:vbox;
+    width:0;
+    valign:CENTER;
+    }
+     #panel22 {
+    halign:CENTER;
+    height:wrap;
+    widthWrap:48.0;
+    heightWrap:25.0;
+    layout:hbox;
+    background:#ffffff;
+    width:wrap;
+    valign:center;
+    }
+    #panel33 {
+   halign:CENTER;
+   height:wrap;
+   widthWrap:48.0;
+   heightWrap:25.0;
+   layout:hbox;
+   background:#ffffff;
+   width:wrap;
+   valign:center;
+   }
+   #panel44 {
+  halign:CENTER;
+  height:wrap;
+  widthWrap:48.0;
+  heightWrap:25.0;
+  layout:hbox;
+  background:#ffffff;
+  width:wrap;
+  valign:center;
+  }
+     #weight {
+    halign:center;
+    height:25.0;
+    widthWrap:18.0;
+    color:#363636;
+    font-size:17;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+    #noutnumlabel {
+   halign:center;
+   height:25.0;
+   widthWrap:18.0;
+   color:#363636;
+   font-size:17;
+   width:wrap;
+   font-family:default;
+   valign:center;
+   }
+   #ninnumlabel {
+  halign:center;
+  height:25.0;
+  widthWrap:18.0;
+  color:#363636;
+  font-size:17;
+  width:wrap;
+  font-family:default;
+  valign:center;
+  }
+     #label2 {
+    halign:center;
+    height:wrap;
+    widthWrap:30.0;
+    color:#363636;
+    heightWrap:20.0;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+    #noutnum {
+   halign:center;
+   height:wrap;
+   widthWrap:30.0;
+   color:#363636;
+   heightWrap:20.0;
+   font-size:14;
+   width:wrap;
+   font-family:default;
+   valign:center;
+   }
+   #ninnum {
+  halign:center;
+  height:wrap;
+  widthWrap:30.0;
+  color:#363636;
+  heightWrap:20.0;
+  font-size:14;
+  width:wrap;
+  font-family:default;
+  valign:center;
+  }
+     #label1 {
+    halign:center;
+    height:wrap;
+    widthWrap:60.0;
+    color:#000000;
+    heightWrap:20.0;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+    #label22 {
+   halign:center;
+   height:wrap;
+   widthWrap:60.0;
+   color:#000000;
+   heightWrap:20.0;
+   font-size:14;
+   width:wrap;
+   font-family:default;
+   valign:center;
+   }
+   #label3 {
+  halign:center;
+  height:wrap;
+  widthWrap:60.0;
+  color:#000000;
+  heightWrap:20.0;
+  font-size:14;
+  width:wrap;
+  font-family:default;
+  valign:center;
+  }
+  #label4 {
+ halign:center;
+ height:wrap;
+ widthWrap:60.0;
+ color:#000000;
+ heightWrap:20.0;
+ font-size:14;
+ width:wrap;
+ font-family:default;
+ valign:center;
+ }
+     #orderstatus {
+    halign:center;
+    height:wrap;
+    widthWrap:39.0;
+    color:#707070;
+    heightWrap:18.0;
+    font-size:12;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+     #pnl_down {
+    halign:center;
+    height:40;
+    layout:vbox;
+    width:fill;
+    valign:CENTER;
+    }
+     #lbl_nums {
+    halign:center;
+    height:wrap;
+    widthWrap:20.0;
+    color:#000000;
+    heightWrap:20.0;
+    font-size:14;
+    width:wrap;
+    font-family:default;
+    valign:center;
+    }
+    

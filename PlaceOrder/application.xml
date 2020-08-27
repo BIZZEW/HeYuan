@@ -186,7 +186,10 @@
   <view id="HugeSalesOrderList" ref="HugeSalesOrderList.dsl" include="true"/>  
   <view id="DriverDelivery" ref="DriverDelivery.dsl" include="true"/>  
   <view id="DriverPickup" ref="DriverPickup.dsl" include="true"/>  
-  <view id="DriverDetailQR" ref="DriverDetailQR.dsl" include="true"/>
+  <view id="DriverDetailQR" ref="DriverDetailQR.dsl" include="true"/>  
+  <view id="AllotSearch" ref="AllotSearch.dsl" include="true"/>  
+  <view id="AllotList" ref="AllotList.dsl" include="true"/>  
+  <view id="AllotOrder" ref="AllotOrder.dsl" include="true"/>
 </application>
 <!--
 【屏幕显示方向】

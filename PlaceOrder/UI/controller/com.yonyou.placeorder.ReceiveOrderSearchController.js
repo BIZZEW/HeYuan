@@ -104,6 +104,29 @@ try {
 		delete com.yonyou.placeorder.ReceiveOrderSearchController.pk_orespot;
 		$id("txt_mine").set("value", "请选择矿点");
 	}
+
+
+	function com$yonyou$placeorder$ReceiveOrderSearchController$changeWh(sender, args) {
+		$view.open({
+			"viewid": "com.yonyou.placeorder.BaseInfoRefWindow",
+			"isKeep": "true",
+			"reftype": Globals.RefInfoType.WAREHOUSE,
+			"otherparams": {
+				"pk_stockorg": com.yonyou.placeorder.ReceiveOrderSearchController.pk_stockorg,
+			},
+			"callback": function () {
+				var retvalue = $param.getJSONObject("result");
+				SqliteUtil.updateRctMostUseData(Globals.RefInfoType.ORESPOT, retvalue);
+				com.yonyou.placeorder.ReceiveOrderSearchController.pk_warehouse = retvalue.pk;
+				$id("txt_wh").set("value", retvalue.name);
+			}
+		});
+	}
+	function com$yonyou$placeorder$ReceiveOrderSearchController$clearWh(sender, args) {
+		delete com.yonyou.placeorder.ReceiveOrderSearchController.pk_warehouse;
+		$id("txt_wh").set("value", "请选择仓库");
+	}
+
 	function com$yonyou$placeorder$ReceiveOrderSearchController$materialOnclick(sender, args) {
 		if (com.yonyou.placeorder.ReceiveOrderSearchController.pk_stockorg) {
 			var otherparams = {
@@ -206,6 +229,8 @@ try {
 		changeSliper: com$yonyou$placeorder$ReceiveOrderSearchController$changeSliper,
 		clearMine: com$yonyou$placeorder$ReceiveOrderSearchController$clearMine,
 		changeMine: com$yonyou$placeorder$ReceiveOrderSearchController$changeMine,
+		clearWh: com$yonyou$placeorder$ReceiveOrderSearchController$clearWh,
+		changeWh: com$yonyou$placeorder$ReceiveOrderSearchController$changeWh,
 		clearstock: com$yonyou$placeorder$ReceiveOrderSearchController$clearstock,
 		back: com$yonyou$placeorder$ReceiveOrderSearchController$back,
 		searchOnclick: com$yonyou$placeorder$ReceiveOrderSearchController$searchOnclick,

@@ -26,6 +26,13 @@
                     <image id="image_mine" scaletype="fitcenter" src="arrow.png"/> 
                 </div> 
             </div>
+            <div id="panel_wh">
+                <label id="label_wh">仓库：</label>
+                <div id="div_wh" onlongclick="this.clearWh()" onclick="this.changeWh()">
+                    <label id="txt_wh">请选择仓库</label>
+                    <image id="image_wh" scaletype="fitcenter" src="arrow.png"/> 
+                </div> 
+            </div>
             <div id="startdatepanel">
                 <label id="startdatelabel">开始日期：</label>
                 <input id="begindate" placeholder="2016-12-09" format="yyyy-MM-dd" type="date"/> 

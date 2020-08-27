@@ -109,6 +109,22 @@ try {
 		$js.showLoadingBar();
 	}
 
+	// 调拨订单维护
+	function com$yonyou$placeorder$HomePageNewController$addallot_onclick(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.AllotOrder",
+			isKeep: "true"
+		})
+	}
+
+	// 调拨订单查询
+	function com$yonyou$placeorder$HomePageNewController$myallot(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.AllotSearch",
+			isKeep: "true"
+		})
+	}
+
 	// 大票提货通知单
 	function com$yonyou$placeorder$HomePageNewController$addhugepickups_onclick(sender, args) {
 		$view.open({
@@ -222,11 +238,11 @@ try {
 		}
 
 		if (data.buildHaveNewVersion) {
-			// if (confirm("发现新版本：" + data.buildVersion + "，更新内容：" + data.buildUpdateDescription + "，需要更新吗？")) {
-			$device.openWebView({
-				url: data.downloadURL
-			});
-			// }
+			if (confirm("发现新版本：" + data.buildVersion + "，更新内容：" + data.buildUpdateDescription + "，需要更新吗？")) {
+				$device.openWebView({
+					url: data.downloadURL
+				});
+			}
 		}
 	}
 
@@ -296,6 +312,7 @@ try {
 		addseleorder_onclick: com$yonyou$placeorder$HomePageNewController$addseleorder_onclick,
 		addlongtermsale_onclick: com$yonyou$placeorder$HomePageNewController$addlongtermsale_onclick,
 		myseles: com$yonyou$placeorder$HomePageNewController$myseles,
+		myallot: com$yonyou$placeorder$HomePageNewController$myallot,
 		creditonclick: com$yonyou$placeorder$HomePageNewController$creditonclick,
 		addhugepickups_onclick: com$yonyou$placeorder$HomePageNewController$addhugepickups_onclick,
 		mypickups: com$yonyou$placeorder$HomePageNewController$mypickups,

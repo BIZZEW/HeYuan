@@ -59,6 +59,12 @@ function initModules() {
                 "module_title": "余额查询",
                 "module_id": "creditonclick",
             }, {
+                "module_title": "调拨订单维护",
+                "module_id": "addallot_onclick",
+            }, {
+                "module_title": "调拨订单查询",
+                "module_id": "myallot",
+            }, {
                 "module_title": "大票提货通知单",
                 "module_id": "addhugepickups_onclick",
             }, {
@@ -90,9 +96,9 @@ function initModules() {
         ];
 
         if (user.dfltcstm == undefined || user.dfltcstm == null)
-            allList.splice(0, 8);
+            allList.splice(0, 10);
         if (user.dfltsupplier == undefined || user.dfltsupplier == null)
-            allList.splice(8, 4);
+            allList.splice(10, 4);
     } else {
         // 是司机
         allList = [

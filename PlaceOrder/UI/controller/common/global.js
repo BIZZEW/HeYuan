@@ -79,6 +79,11 @@ try {
 			action: "getRefOrespot",
 			title: "矿点信息"
 		},
+		WAREHOUSE: {
+			code: "1015",
+			action: "getCangKuInfo",
+			title: "仓库信息"
+		},
 		// MATERIAL: {
 		// 	code: "1013",
 		// 	action: "SearchMaterialAction",

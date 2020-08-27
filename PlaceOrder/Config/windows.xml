@@ -93,6 +93,11 @@
   <Driver> 
     <file name="DriverDelivery.dsl"/>  
     <file name="DriverPickup.dsl"/>  
-    <file name="DriverDetailQR.dsl"/>
-  </Driver> 
+    <file name="DriverDetailQR.dsl"/> 
+  </Driver>  
+  <Allot> 
+    <file name="AllotSearch.dsl"/>  
+    <file name="AllotList.dsl"/>  
+    <file name="AllotOrder.dsl"/>
+  </Allot> 
 </windows>

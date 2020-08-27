@@ -407,3 +407,50 @@ margin-top:20;
     width:11;
     margin-left:5;
     }
+    #panel_wh {
+        margin-right:15;
+        halign:LEFT;
+        height:30;
+        layout:hbox;
+        background:#fcfcfc;
+        width:fill;
+        margin-left:15;
+        margin-top:5;
+        valign:center;
+        }
+         #label_wh {
+        halign:left;
+        height:fill;
+        widthWrap:75.0;
+        color:#585858;
+        font-size:14;
+        background:#fcfcfc;
+        width:wrap;
+        font-family:default;
+        valign:center;
+        }
+         #div_wh {
+        halign:LEFT;
+        height:fill;
+        layout:hbox;
+        background:#ffffff;
+        width:fill;
+        valign:center;
+        }
+         #txt_wh {
+        halign:right;
+        height:fill;
+        weight:1;
+        color:#000000;
+        font-size:14;
+        background:#fcfcfc;
+        width:0;
+        font-family:default;
+        valign:center;
+        }
+         #image_wh {
+        margin-right:5;
+        height:16;
+        width:11;
+        margin-left:5;
+        }
