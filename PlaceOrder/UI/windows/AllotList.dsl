@@ -11,7 +11,7 @@
         </navigatorbar>  
         <div id="panel0"> 
             <div id="panel1" onload="this.pageOnload()"> 
-                <listView id="totallist" bindfield="list" onuprefresh="this.listup()" onitemclick="this.itemclick()" ondownrefresh="this.listdown()" collapsed="true"> 
+                <listView id="totallist" bindfield="list" onuprefresh="this.listup()" ondownrefresh="this.listdown()" collapsed="true"> 
                     <div id="panel5"> 
                         <div id="panel6"> 
                             <image id="image0" scaletype="fitcenter" src="order11copy.png"/> 

@@ -20,6 +20,22 @@ try {
 		})
 	}
 
+	// 司机提货
+	function com$yonyou$placeorder$HomePageNewController$driver_pickup(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.DriverPickup",
+			isKeep: "true"
+		})
+	}
+
+	// 调拨出库
+	function com$yonyou$placeorder$HomePageNewController$allotout(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.AllotOut",
+			isKeep: "true"
+		})
+	}
+
 	// 司机送货
 	function com$yonyou$placeorder$HomePageNewController$driver_deliver(sender, args) {
 		$view.open({
@@ -28,10 +44,10 @@ try {
 		})
 	}
 
-	// 司机提货
-	function com$yonyou$placeorder$HomePageNewController$driver_pickup(sender, args) {
+	// 调拨入库
+	function com$yonyou$placeorder$HomePageNewController$allotin(sender, args) {
 		$view.open({
-			viewid: "com.yonyou.placeorder.DriverPickup",
+			viewid: "com.yonyou.placeorder.AllotIn",
 			isKeep: "true"
 		})
 	}
@@ -305,8 +321,10 @@ try {
 	}
 
 	com.yonyou.placeorder.HomePageNewController.prototype = {
-		driver_deliver: com$yonyou$placeorder$HomePageNewController$driver_deliver,
 		driver_pickup: com$yonyou$placeorder$HomePageNewController$driver_pickup,
+		allotout: com$yonyou$placeorder$HomePageNewController$allotout,
+		driver_deliver: com$yonyou$placeorder$HomePageNewController$driver_deliver,
+		allotin: com$yonyou$placeorder$HomePageNewController$allotin,
 
 
 		addseleorder_onclick: com$yonyou$placeorder$HomePageNewController$addseleorder_onclick,

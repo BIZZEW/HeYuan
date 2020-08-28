@@ -114,6 +114,8 @@ try {
 			"orderno": $id("billcode").get("value"),
 			"cmaterialid": pk_material,
 
+			"pk_stockorg": pk_stockorg,
+
 
 
 			// "driver_name": $id("txt_drivername").get("value"),
@@ -124,7 +126,6 @@ try {
 
 			// "pk_customer": pk_customer,
 			// "pk_saleorg": pk_saleorg,
-			// "pk_stockorg": pk_stockorg,
 		};
 
 		// alert("json: " + JSON.stringify(json));

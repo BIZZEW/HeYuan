@@ -107,11 +107,19 @@ function initModules() {
                 "module_title": "司机提货",
                 "module_id": "driver_pickup",
             },
+            {
+                "module_title": "调拨出库",
+                "module_id": "allotout",
+            },
 
             //采购
             {
                 "module_title": "司机送货",
                 "module_id": "driver_deliver",
+            },
+            {
+                "module_title": "调拨入库",
+                "module_id": "allotin",
             }
         ];
 
@@ -121,9 +129,9 @@ function initModules() {
             allList = []
         else {
             if (user.vehiclesaleorg == undefined || user.vehiclesaleorg == null)
-                allList.splice(0, 1);
+                allList.splice(0, 2);
             if (user.vehiclebuyorg == undefined || user.vehiclebuyorg == null)
-                allList.splice(1, 1);
+                allList.splice(2, 2);
         }
     }
 

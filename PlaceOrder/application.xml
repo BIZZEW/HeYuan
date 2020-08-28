@@ -189,7 +189,9 @@
   <view id="DriverDetailQR" ref="DriverDetailQR.dsl" include="true"/>  
   <view id="AllotSearch" ref="AllotSearch.dsl" include="true"/>  
   <view id="AllotList" ref="AllotList.dsl" include="true"/>  
-  <view id="AllotOrder" ref="AllotOrder.dsl" include="true"/>
+  <view id="AllotOrder" ref="AllotOrder.dsl" include="true"/>  
+  <view id="AllotIn" ref="AllotIn.dsl" include="true"/>  
+  <view id="AllotOut" ref="AllotOut.dsl" include="true"/>
 </application>
 <!--
 【屏幕显示方向】
