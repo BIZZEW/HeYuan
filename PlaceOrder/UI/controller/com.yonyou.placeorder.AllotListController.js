@@ -79,6 +79,9 @@ try {
 		var param = com.yonyou.placeorder.AllotListController.queryparam;
 		param["page"] = com.yonyou.placeorder.AllotListController.page;
 		param["usercode"] = $cache.read("telephone");
+
+		// alert(JSON.stringify(param))
+
 		$service.callAction({
 			"usercode": $cache.read("telephone"),
 			"user": $cache.read("telephone"),

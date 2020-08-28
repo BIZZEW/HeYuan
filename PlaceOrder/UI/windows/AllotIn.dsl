@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<window xmlns:web="http://www.yonyou.com/uapmobile/dsl" id="Allotin" controller="AllotinController" namespace="com.yonyou.placeorder">
-    <import ref="Allotin.css" type="css"/>
+<window xmlns:web="http://www.yonyou.com/uapmobile/dsl" id="AllotIn" controller="AllotInController" namespace="com.yonyou.placeorder">
+    <import ref="AllotIn.css" type="css"/>
     <link type="text/css" href="sys/theme.css"/>
     <div id="viewPage0" onload="this.pageOnload()">
         <navigatorbar id="navigatorbar0" title="调拨入库" class="navigatorbarclass">

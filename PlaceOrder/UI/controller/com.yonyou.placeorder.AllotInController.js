@@ -90,7 +90,7 @@ try {
 		param["pk_appuser"] = $cache.read("pk_appuser");
 		param["page"] = com.yonyou.placeorder.AllotInController.page;
 		param["vehicle"] = com.yonyou.placeorder.AllotInController.vehicle;
-		param["vehiclebuyorg"] = com.yonyou.placeorder.AllotInController.vehiclebuyorg.pk_org;
+		param["pk_stockorg"] = com.yonyou.placeorder.AllotInController.vehiclebuyorg.pk_org;
 		param["usercode"] = $cache.read("telephone");
 		$service.callAction({
 			"usercode": $cache.read("telephone"),

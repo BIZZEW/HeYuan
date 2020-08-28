@@ -20,14 +20,14 @@
                             <label id="billcode" bindfield="vbillcode">B1SYSO2016100300306</label>  
                             <label id="billdate" bindfield="dbilldate">2016年10月3日17:20:09</label>  
 
-                            <label id="label6" bindfield="pk_org">调出库存组织</label>  
-                            <label id="label5" bindfield="cinstockorgid">调入库存组织</label>  
+                            <label id="label6" bindfield="pk_org.name">调出库存组织</label>  
+                            <label id="label5" bindfield="cinstockorgid.name">调入库存组织</label>  
 
                             <label id="name" bindfield="nnum">数量</label> 
                         </div>  
                         <div id="panel8"> 
-                            <label id="label1" bindfield="coutstordocid">调出仓库</label>
-                            <label id="label22" bindfield="cinstordocid">调入仓库</label>
+                            <label id="label1" bindfield="coutstordocid.name">调出仓库</label>
+                            <label id="label22" bindfield="cinstordocid.name">调入仓库</label>
 
                             <div id="panel33"> 
                                 <label id="noutnumlabel">调出数量：</label>  
