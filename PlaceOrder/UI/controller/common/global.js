@@ -84,6 +84,11 @@ try {
 			action: "getCangKuInfo",
 			title: "仓库信息"
 		},
+		VEHICLE_STOCK_ORG: {
+			code: "1016",
+			action: "getVehicleStockOrgInfo",
+			title: "库存组织信息"
+		},
 		// MATERIAL: {
 		// 	code: "1013",
 		// 	action: "SearchMaterialAction",

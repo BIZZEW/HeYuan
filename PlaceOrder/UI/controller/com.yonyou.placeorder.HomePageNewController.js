@@ -47,7 +47,7 @@ try {
 	// 调拨入库
 	function com$yonyou$placeorder$HomePageNewController$allotin(sender, args) {
 		$view.open({
-			viewid: "com.yonyou.placeorder.AllotIn",
+			viewid: "com.yonyou.placeorder.AllotInSearch",
 			isKeep: "true"
 		})
 	}

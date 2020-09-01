@@ -95,13 +95,17 @@
     <file name="DriverPickup.dsl"/>  
     <file name="DriverDetailQR.dsl"/>  
     <file name="AllotIn.dsl"/>  
-    <file name="AllotOut.dsl"/> 
+    <file name="AllotOut.dsl"/>  
+    <file name="AllotInSearch.dsl"/>  
+    <file name="AllotOutSearch.dsl"/>  
+    <file name="DriverDeliverySearch.dsl"/>  
+    <file name="DriverPickupSearch.dsl"/>
   </Driver>  
   <Allot> 
     <file name="AllotSearch.dsl"/>  
     <file name="AllotList.dsl"/>  
     <file name="AllotOrder.dsl"/>  
     <file name="AllotOrderList.dsl"/>  
-    <file name="LongAllotOrder.dsl"/>
+    <file name="LongAllotOrder.dsl"/> 
   </Allot> 
 </windows>

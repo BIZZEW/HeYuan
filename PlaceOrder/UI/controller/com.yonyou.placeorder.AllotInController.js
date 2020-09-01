@@ -86,12 +86,15 @@ try {
 		$ctx.push(com.yonyou.placeorder.AllotInController.listdatas);
 	}
 	function getDatas(status) {
-		var param = {};
+		var param = $param.getJSONObject("param");
 		param["pk_appuser"] = $cache.read("pk_appuser");
 		param["page"] = com.yonyou.placeorder.AllotInController.page;
 		param["vehicle"] = com.yonyou.placeorder.AllotInController.vehicle;
-		param["pk_stockorg"] = com.yonyou.placeorder.AllotInController.vehiclebuyorg.pk_org;
+		// param["pk_stockorg"] = com.yonyou.placeorder.AllotInController.vehiclebuyorg.pk_org;
 		param["usercode"] = $cache.read("telephone");
+
+		// alert(JSON.stringify(param))
+
 		$service.callAction({
 			"usercode": $cache.read("telephone"),
 			"appid": "PlaceOrder",
