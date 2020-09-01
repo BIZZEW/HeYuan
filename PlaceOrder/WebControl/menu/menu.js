@@ -59,11 +59,11 @@ function initModules() {
                 "module_title": "余额查询",
                 "module_id": "creditonclick",
             }, {
-                "module_title": "调拨订单维护",
-                "module_id": "addallot_onclick",
-            }, {
                 "module_title": "调拨订单查询",
                 "module_id": "myallot",
+            }, {
+                "module_title": "调拨通知单维护",
+                "module_id": "addallot_onclick",
             }, {
                 "module_title": "大票提货通知单",
                 "module_id": "addhugepickups_onclick",

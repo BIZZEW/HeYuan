@@ -125,18 +125,18 @@ try {
 		$js.showLoadingBar();
 	}
 
-	// 调拨订单维护
-	function com$yonyou$placeorder$HomePageNewController$addallot_onclick(sender, args) {
-		$view.open({
-			viewid: "com.yonyou.placeorder.AllotOrder",
-			isKeep: "true"
-		})
-	}
-
 	// 调拨订单查询
 	function com$yonyou$placeorder$HomePageNewController$myallot(sender, args) {
 		$view.open({
 			viewid: "com.yonyou.placeorder.AllotSearch",
+			isKeep: "true"
+		})
+	}
+
+	// 调拨通知单维护
+	function com$yonyou$placeorder$HomePageNewController$addallot_onclick(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.AllotOrder",
 			isKeep: "true"
 		})
 	}

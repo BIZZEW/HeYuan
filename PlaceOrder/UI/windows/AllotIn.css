@@ -124,6 +124,15 @@
     font-family:default;
     valign:center;
     }
+    #label9 {
+    halign:left;
+    height:20;
+    color:#000000;
+    font-size:14;
+    width:fill;
+    font-family:default;
+    valign:center;
+    }
     #labelorespot {
     halign:left;
     height:20;

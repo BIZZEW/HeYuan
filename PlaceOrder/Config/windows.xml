@@ -95,11 +95,12 @@
     <file name="DriverPickup.dsl"/>  
     <file name="DriverDetailQR.dsl"/>  
     <file name="AllotIn.dsl"/>  
-    <file name="AllotOut.dsl"/>
+    <file name="AllotOut.dsl"/> 
   </Driver>  
   <Allot> 
     <file name="AllotSearch.dsl"/>  
     <file name="AllotList.dsl"/>  
-    <file name="AllotOrder.dsl"/> 
+    <file name="AllotOrder.dsl"/>  
+    <file name="AllotOrderList.dsl"/>
   </Allot> 
 </windows>

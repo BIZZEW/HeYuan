@@ -157,7 +157,7 @@
     width: fill;
     valign: TOP;
     halign: center;
-    height: 190;
+    height: 310;
 }
 
 #panel6 {
@@ -225,6 +225,148 @@
     halign: right;
     height: fill;
 }
+
+
+
+
+#panel41 {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 30;
+}
+
+#label61 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 75.0;
+    height: fill;
+}
+
+#inorg {
+    color: #737373;
+    width: fill;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: right;
+    height: fill;
+}
+
+
+
+#panel42 {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 30;
+}
+
+#label62 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 75.0;
+    height: fill;
+}
+
+#outorg {
+    color: #737373;
+    width: fill;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: right;
+    height: fill;
+}
+
+
+
+#panel43 {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 30;
+}
+
+#label63 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 75.0;
+    height: fill;
+}
+
+#inwh {
+    color: #737373;
+    width: fill;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: right;
+    height: fill;
+}
+
+
+
+#panel44 {
+    layout: hbox;
+    margin-left: 5;
+    background: #ffffff;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 30;
+}
+
+#label64 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 75.0;
+    height: fill;
+}
+
+#outwh {
+    color: #737373;
+    width: fill;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: right;
+    height: fill;
+}
+
 
 #panel7 {
     layout: hbox;
@@ -373,13 +515,154 @@
     height: fill;
 }
 
+#panel32 {
+    layout: hbox;
+    margin-left: 5;
+    border-bottom-color: #eeeeee;
+    background: #ffffff;
+    border-bottom-width: 1;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 30;
+}
+
+#label72 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 45.0;
+    height: fill;
+}
+
+#lbl_num {
+    font-pressed-color: #459dfe;
+    color: #737373;
+    width: 0;
+    weight: 1;
+    font-size: 14;
+    valign: center;
+    halign: right;
+    padding-right: 4;
+}
+
+#label82 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: center;
+    widthWrap: 15.0;
+    height: fill;
+}
+
+#panel33 {
+    layout: hbox;
+    margin-left: 5;
+    border-bottom-color: #eeeeee;
+    background: #ffffff;
+    border-bottom-width: 1;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 30;
+}
+
+#label73 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 45.0;
+    height: fill;
+}
+
+#lbl_outnum {
+    font-pressed-color: #459dfe;
+    color: #737373;
+    width: 0;
+    weight: 1;
+    font-size: 14;
+    valign: center;
+    halign: right;
+    padding-right: 4;
+}
+
+#label83 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: center;
+    widthWrap: 15.0;
+    height: fill;
+}
+
+#panel34 {
+    layout: hbox;
+    margin-left: 5;
+    border-bottom-color: #eeeeee;
+    background: #ffffff;
+    border-bottom-width: 1;
+    width: fill;
+    valign: center;
+    margin-top: 1;
+    halign: LEFT;
+    margin-right: 5;
+    height: 30;
+}
+
+#label74 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: left;
+    widthWrap: 45.0;
+    height: fill;
+}
+
+#lbl_innum {
+    font-pressed-color: #459dfe;
+    color: #737373;
+    width: 0;
+    weight: 1;
+    font-size: 14;
+    valign: center;
+    halign: right;
+    padding-right: 4;
+}
+
+#label84 {
+    color: #414141;
+    width: wrap;
+    font-size: 14;
+    valign: center;
+    font-family: default;
+    halign: center;
+    widthWrap: 15.0;
+    height: fill;
+}
+
 #pnl_rcvorder {
     layout: vbox;
     width: fill;
     valign: TOP;
     margin-top: 3;
     halign: center;
-    height: 255;
+    height: 110;
 }
 
 #panel15 {
@@ -929,57 +1212,62 @@
     height: 60;
 }
 
-#panelorespot {
-    layout: hbox;
-    margin-left: 5;
-    background: #ffffff;
-    width: fill;
-    valign: center;
-    margin-top: 1;
-    halign: LEFT;
-    margin-right: 5;
-    height: 35;
-}
-
-#labelorespot {
-    color: #414141;
-    width: wrap;
-    font-size: 14;
-    valign: center;
-    font-family: default;
+#panel55 {
     halign: center;
-    widthWrap: 75.0;
-    height: fill;
-}
-
-#panel1orespotinner {
-    layout: hbox;
+    height: 100;
+    layout: vbox;
     width: fill;
-    valign: center;
-    halign: LEFT;
-    height: fill;
-}
+    valign: TOP;
+ }
 
-#txt_orespot {
-    color: #167ef8;
-    background: #ffffff;
-    padding-left: 4;
-    width: 0;
-    weight: 1;
-    font-size: 15;
+ #label9 {
+    margin-right: 5;
+    halign: left;
+    height: 20;
+    color: #ff8080;
+    font-size: 14;
+    width: fill;
+    margin-left: 5;
     font-family: default;
-    halign: RIGHT;
-    height: fill;
+    valign: center;
 }
 
-#imgbtn_orespot {
-    icon-pressed-image: arrow.png;
-    icon-height: 15;
-    font-size: 10;
-    icon-text-spacing: 3;
-    background: #FFFFFF;
-    icon-background-image: arrow.png;
-    width: 32;
-    icon-width: 15;
-    height: 32;
+#vehiclespanel {
+    margin-right: 5;
+    halign: LEFT;
+    height: 35;
+    layout: hbox;
+    background: #ffffff;
+    width: fill;
+    margin-left: 5;
+    margin-top: 5;
+    valign: center;
+}
+
+#labelvehicles {
+    halign: left;
+    height: fill;
+    widthWrap: 155.0;
+    color: #414141;
+    font-size: 14;
+    width: wrap;
+    font-family: default;
+    valign: center;
+ }
+
+ #vehicles {
+    halign: right;
+    height: fill;
+    weight: 1;
+    color: #737373;
+    font-size: 14;
+    width: 0;
+    font-family: default;
+    valign: center;
+ }
+
+ #vehiclesarrow {
+    height: 16;
+    width: 11;
+    margin-left: 5;
 }

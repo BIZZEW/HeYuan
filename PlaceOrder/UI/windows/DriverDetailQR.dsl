@@ -37,10 +37,10 @@
             <label id="label_rcvorpick_stockorg">库存组织：</label>  
             <label id="label_rcvorpick_stockorg_name" type="multiline"/> 
         </div>  
-        <!-- <div id="panel8"> 
+        <div id="panel8"> 
             <label id="label_rcvorpick_warehouse">收货仓库：</label>  
             <label id="label_rcvorpick_warehouse_name"/> 
-        </div>   -->
+        </div>  
         <div id="panel9"> 
             <label id="label_fetchorscv_dt">收货日期：</label>  
             <label id="label_fetchorrcv_date"/> 

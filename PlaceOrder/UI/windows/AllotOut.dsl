@@ -20,6 +20,7 @@
                             <label id="label1" bindfield="stockorg.name">收货库存组织</label>
                             <label id="label6" bindfield="customer.name">客户</label>
                             <label id="label7" bindfield="material.name">物料名称</label> 
+                            <label id="label9" bindfield="receivestore.name">仓库名称</label> 
                         </div>
                         <div id="panel8">
                             <div id="panel18">

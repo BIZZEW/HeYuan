@@ -53,7 +53,8 @@ try {
 				$id("label_rcvorpick_no").set("value", shareinfo.num);
 			if (shareinfo.stockorg)
 				$id("label_rcvorpick_stockorg_name").set("value", shareinfo.stockorg.name);
-			// $id("label_rcvorpick_warehouse_name").set("value", shareinfo.rcvwarehouse);
+			if (shareinfo.receivestore)
+				$id("label_rcvorpick_warehouse_name").set("value", shareinfo.receivestore.name);
 			if (shareinfo.dbilldate)
 				$id("label_fetchorrcv_date").set("value", shareinfo.dbilldate);
 		}
@@ -77,8 +78,10 @@ try {
 			if (shareinfo.stockorg)
 				$id("label_rcvorpick_stockorg_name").set("value", shareinfo.stockorg.name);
 
-			// $id("label_rcvorpick_warehouse").set("value", "提货仓库：");
-			// $id("label_rcvorpick_warehouse_name").set("value", shareinfo.pickwarehouse);
+			$id("label_rcvorpick_warehouse").set("value", "提货仓库：");
+
+			if (shareinfo.receivestore)
+				$id("label_rcvorpick_warehouse_name").set("value", shareinfo.receivestore.name);
 
 			$id("label_fetchorscv_dt").set("value", "提货日期：");
 			if (shareinfo.dbilldate)
