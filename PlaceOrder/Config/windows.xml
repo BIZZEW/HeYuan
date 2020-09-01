@@ -101,6 +101,7 @@
     <file name="AllotSearch.dsl"/>  
     <file name="AllotList.dsl"/>  
     <file name="AllotOrder.dsl"/>  
-    <file name="AllotOrderList.dsl"/>
+    <file name="AllotOrderList.dsl"/>  
+    <file name="LongAllotOrder.dsl"/>
   </Allot> 
 </windows>

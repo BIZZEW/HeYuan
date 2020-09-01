@@ -140,11 +140,8 @@
                             <label id="lbl_billdate" bindfield="dbilldate">2016年10月3日17:20:09</label>
                             
                             <label id="label61" bindfield="pk_org.name">调出库存组织</label>  
-                            <label id="label51" bindfield="cinstockorgid.name">调入库存组织</label>  
-
-                            <label id="name1" bindfield="nnum">数量</label> 
-
-
+                            <label id="label51" bindfield="cinstockorgid.name">调入库存组织</label>
+                            <label id="label444" bindfield="cinventoryid.name">货物</label>
                             <!-- <label id="lbl_supplier" bindfield="supplier.name">供应商</label>
                             <label id="label1" bindfield="rcvstockorg.name">库存组织</label>
                             <label id="label6" bindfield="material.name">物料</label> 
@@ -163,12 +160,8 @@
                             <div id="panel44"> 
                                 <label id="ninnumlabel">调入数量：</label>  
                                 <label id="ninnum" bindfield="ninnum">调入数量</label>
-                            </div> 
-
-
-
-
-
+                            </div>
+                            <label id="label33" bindfield="nnum">数量</label>
                             <!-- <div id="panel2">
                                 <label id="label8">总量：</label>
                                 <label id="lbl_nnum" bindfield="nnum">0</label>

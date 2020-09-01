@@ -21,9 +21,10 @@
                             <label id="billdate" bindfield="dbilldate">2016年10月3日17:20:09</label>  
 
                             <label id="label6" bindfield="pk_org.name">调出库存组织</label>  
-                            <label id="label5" bindfield="cinstockorgid.name">调入库存组织</label>  
+                            <label id="label5" bindfield="cinstockorgid.name">调入库存组织</label> 
 
-                            <label id="name" bindfield="nnum">数量</label> 
+                            <label id="label44" bindfield="cinventoryid.name">货物</label>  
+
                         </div>  
                         <div id="panel8"> 
                             <label id="label1" bindfield="coutstordocid.name">调出仓库</label>
@@ -38,6 +39,8 @@
                                 <label id="ninnumlabel">调入数量：</label>  
                                 <label id="ninnum" bindfield="ninnum">调入数量</label>
                             </div>  
+
+                            <label id="label33" bindfield="nnum">数量</label> 
                         </div> 
                     </div> 
                 </listView>  

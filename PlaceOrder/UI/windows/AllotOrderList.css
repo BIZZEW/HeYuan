@@ -985,15 +985,24 @@
                     font-family:default;
                     valign:center;
                     }
-                     #label51 {
-                    halign:left;
-                    height:20;
-                    color:#707070;
-                    font-size:12;
-                    width:fill;
-                    font-family:default;
-                    valign:center;
-                    }
+                    #label51 {
+                   halign:left;
+                   height:20;
+                   color:#707070;
+                   font-size:12;
+                   width:fill;
+                   font-family:default;
+                   valign:center;
+                   }
+                   #label444 {
+                  halign:left;
+                  height:20;
+                  color:#707070;
+                  font-size:12;
+                  width:fill;
+                  font-family:default;
+                  valign:center;
+                  }
                      #name1 {
                     halign:left;
                     height:20;
@@ -1028,6 +1037,17 @@
        font-family:default;
        valign:center;
        }
+       #label33 {
+      halign:center;
+      height:wrap;
+      widthWrap:60.0;
+      color:#000000;
+      heightWrap:20.0;
+      font-size:14;
+      width:wrap;
+      font-family:default;
+      valign:center;
+      }
        #panel33 {
       halign:CENTER;
       height:wrap;
@@ -1094,6 +1114,7 @@
   font-family:default;
   valign:center;
   }
+
 
 
             

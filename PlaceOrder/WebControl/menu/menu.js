@@ -65,6 +65,9 @@ function initModules() {
                 "module_title": "调拨通知单维护",
                 "module_id": "addallot_onclick",
             }, {
+                "module_title": "长期调拨通知单维护",
+                "module_id": "addlongallot_onclick",
+            }, {
                 "module_title": "大票提货通知单",
                 "module_id": "addhugepickups_onclick",
             }, {
@@ -96,9 +99,9 @@ function initModules() {
         ];
 
         if (user.dfltcstm == undefined || user.dfltcstm == null)
-            allList.splice(0, 10);
+            allList.splice(0, 11);
         if (user.dfltsupplier == undefined || user.dfltsupplier == null)
-            allList.splice(10, 4);
+            allList.splice(11, 4);
     } else {
         // 是司机
         allList = [

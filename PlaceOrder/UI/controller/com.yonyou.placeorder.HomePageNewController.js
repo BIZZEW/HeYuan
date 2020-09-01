@@ -141,6 +141,14 @@ try {
 		})
 	}
 
+	// 长期调拨通知单维护
+	function com$yonyou$placeorder$HomePageNewController$addlongallot_onclick(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.LongAllotOrder",
+			isKeep: "true"
+		})
+	}
+
 	// 大票提货通知单
 	function com$yonyou$placeorder$HomePageNewController$addhugepickups_onclick(sender, args) {
 		$view.open({

@@ -327,7 +327,7 @@ try {
 		fetchDatas();
 	}
 	function com$yonyou$placeorder$AllotOrderListController$itemOnclick(sender, args) {
-		alert(JSON.stringify($id("list_allotorder").get("row")))
+		// alert(JSON.stringify($id("list_allotorder").get("row")))
 		$view.closeWithCallBack({
 			"allotOrder": $id("list_allotorder").get("row")
 		});
@@ -337,7 +337,7 @@ try {
 		queryparam["page"] = com.yonyou.placeorder.AllotOrderListController.page;
 		queryparam["usercode"] = $cache.read("telephone");
 
-		alert(JSON.stringify(queryparam))
+		// alert(JSON.stringify(queryparam))
 
 		$service.callAction({
 			"usercode": $cache.read("telephone"),
@@ -356,7 +356,7 @@ try {
 		$js.hideLoadingBar();
 		var result = $ctx.getJSONObject("result");
 
-		alert(JSON.stringify(result))
+		// alert(JSON.stringify(result))
 
 		var olddatajson = com.yonyou.placeorder.AllotOrderListController.datajson;
 		if (result) {
@@ -439,12 +439,12 @@ try {
 		$id("inorg").set("value", retvalue.name);
 		$id("inwh").set("value", "请选择调入仓库");
 
-		alert(retvalue.pk)
+		// alert(retvalue.pk)
 
 		com.yonyou.placeorder.AllotOrderListController.queryparam["cinstockorgvid"] = retvalue.pk;
 		delete com.yonyou.placeorder.AllotOrderListController.queryparam["cinstordocid"];
 
-		alert(JSON.stringify(com.yonyou.placeorder.AllotOrderListController.queryparam))
+		// alert(JSON.stringify(com.yonyou.placeorder.AllotOrderListController.queryparam))
 
 		cinstockorgvid = retvalue.pk;
 		cinstordocid = "";
@@ -564,6 +564,7 @@ try {
 		clearoutorg: com$yonyou$placeorder$AllotOrderListController$clearoutorg,
 		clearinwh: com$yonyou$placeorder$AllotOrderListController$clearinwh,
 		clearoutwh: com$yonyou$placeorder$AllotOrderListController$clearoutwh,
+		cleargoods: com$yonyou$placeorder$AllotOrderListController$cleargoods,
 		changeinorg: com$yonyou$placeorder$AllotOrderListController$changeinorg,
 		changeoutorg: com$yonyou$placeorder$AllotOrderListController$changeoutorg,
 		changeinwh: com$yonyou$placeorder$AllotOrderListController$changeinwh,

@@ -1,11 +1,11 @@
 //JavaScript Framework 2.0 Code
 try {
-	Type.registerNamespace('com.yonyou.placeorder.AllotOrderController');
-	com.yonyou.placeorder.AllotOrderController = function () {
-		com.yonyou.placeorder.AllotOrderController.initializeBase(this);
+	Type.registerNamespace('com.yonyou.placeorder.LongAllotOrderController');
+	com.yonyou.placeorder.LongAllotOrderController = function () {
+		com.yonyou.placeorder.LongAllotOrderController.initializeBase(this);
 		this.initialize();
 	}
-	function com$yonyou$placeorder$AllotOrderController$initialize() {
+	function com$yonyou$placeorder$LongAllotOrderController$initialize() {
 		//you can programing by $ctx API
 		//get the context data through $ctx.get()
 		//set the context data through $ctx.push(json)
@@ -32,11 +32,11 @@ try {
 
 	}
 
-	function com$yonyou$placeorder$AllotOrderController$evaljs(js) {
+	function com$yonyou$placeorder$LongAllotOrderController$evaljs(js) {
 		eval(js)
 	}
 
-	function com$yonyou$placeorder$AllotOrderController$back_onclick(sender, args) {
+	function com$yonyou$placeorder$LongAllotOrderController$back_onclick(sender, args) {
 		$view.close();
 	}
 
@@ -59,7 +59,7 @@ try {
 		$id("lbl_rcvstockorg").set("value", "");
 		$id("lbl_splrname").set("value", "");
 		$id("lbl_dbilldate").set("value", "");
-		$id("lbl_rcvordercode").set("value", "调拨通知单号");
+		$id("lbl_rcvordercode").set("value", "长期调拨通知单号");
 		$id("lbl_rcvorderdate").set("value", "");
 		$id("lbl_remainnum").set("value", "");
 		$id("num_yfjz").set("value", "");
@@ -86,7 +86,7 @@ try {
 
 	var vehicleslistNum = 0, vehicleslist = [];
 
-	function com$yonyou$placeorder$AllotOrderController$pageOnload(sender, args) {
+	function com$yonyou$placeorder$LongAllotOrderController$pageOnload(sender, args) {
 		var denddate = Globals.getFormatDate2(3);
 		$id("denddate").set("value", denddate);
 
@@ -101,7 +101,7 @@ try {
 		}
 		if (oldorder) {
 			$ctx.put("oldorder", oldorder);
-			com.yonyou.placeorder.AllotOrderController.oldorder = oldorder;
+			com.yonyou.placeorder.LongAllotOrderController.oldorder = oldorder;
 			$id("lbl_orderno").set("value", oldorder["vbillcode"]);
 			$id("lbl_matname").set("value", oldorder["material"]["name"]);
 			$id("lbl_dw1").set("value", oldorder["material"]["dw"]);// add by wangkem 20180625
@@ -130,7 +130,7 @@ try {
 			$id("txt_drivertelephone").set("value", oldorder["drivertelephone"]);
 			$id("txt_driverid").set("value", oldorder["driveridcode"]);
 			$id("lbl_posimple").set("value", oldorder["material"]["name"] + "  余量" + oldorder["remainnum"]);
-			com.yonyou.placeorder.AllotOrderController.AllotOrderObj = {
+			com.yonyou.placeorder.LongAllotOrderController.AllotOrderObj = {
 				"pk_noticeorder": oldorder["pk_noticeorder"],
 				"ordercode": oldorder["vbillcode"],
 				// "pk_allotOrder": oldorder["pk_order"],
@@ -145,19 +145,19 @@ try {
 				$id("btn_submit").set("disabled", "disabled");
 			}
 		} else {
-			com.yonyou.placeorder.AllotOrderController.AllotOrderObj = {};
-			com.yonyou.placeorder.AllotOrderController.oldorder = {};
-			com.yonyou.placeorder.AllotOrderController.oldorder.material = {};
-			com.yonyou.placeorder.AllotOrderController.oldorder.purchaseorg = {};
-			com.yonyou.placeorder.AllotOrderController.oldorder.rcvstockorg = {};
-			com.yonyou.placeorder.AllotOrderController.oldorder.supplier = {};
+			com.yonyou.placeorder.LongAllotOrderController.AllotOrderObj = {};
+			com.yonyou.placeorder.LongAllotOrderController.oldorder = {};
+			com.yonyou.placeorder.LongAllotOrderController.oldorder.material = {};
+			com.yonyou.placeorder.LongAllotOrderController.oldorder.purchaseorg = {};
+			com.yonyou.placeorder.LongAllotOrderController.oldorder.rcvstockorg = {};
+			com.yonyou.placeorder.LongAllotOrderController.oldorder.supplier = {};
 
 			var nowdate = Globals.getFormatDate(null, 0);
 			$id("lbl_rcvorderdate").set("value", nowdate);
 		}
 	}
 
-	function com$yonyou$placeorder$AllotOrderController$changevender(sender, args) {
+	function com$yonyou$placeorder$LongAllotOrderController$changevender(sender, args) {
 		var json = {
 			"usercode": $cache.read("telephone"),
 			"pk_appuser": $ctx.getApp("pk_appuser"),
@@ -178,7 +178,7 @@ try {
 		})
 	}
 
-	function com$yonyou$placeorder$AllotOrderController$selectOrderOnclick(sender, args) {
+	function com$yonyou$placeorder$LongAllotOrderController$selectOrderOnclick(sender, args) {
 		$view.open({
 			"viewid": "com.yonyou.placeorder.AllotOrderList",
 			"isKeep": "true",
@@ -225,7 +225,7 @@ try {
 					// $id("lbl_porgname").set("value", allotOrder["purchaseorg"]["name"]);
 					// $id("lbl_rcvstockorg").set("value", allotOrder["rcvstockorg"]["name"]);
 					// $id("lbl_splrname").set("value", allotOrder["supplier"]["name"]);
-					var orderobj = com.yonyou.placeorder.AllotOrderController.AllotOrderObj;
+					var orderobj = com.yonyou.placeorder.LongAllotOrderController.AllotOrderObj;
 					// orderobj.pk_allotOrder = allotOrder["pk_order"];
 					orderobj.ordercode = allotOrder["vbillcode"];
 					orderobj.pk_stockorg=allotOrder["pk_org"]["pk_org"];
@@ -234,23 +234,23 @@ try {
 					// orderobj.cmaterialid = allotOrder["material"]["pk_material"];
 					// orderobj.pk_supplier = allotOrder["supplier"]["pk_supplier"];
 					//更新返回列表数据
-					// com.yonyou.placeorder.AllotOrderController.oldorder.material.pk_material = allotOrder["material"]["pk_material"];
-					// com.yonyou.placeorder.AllotOrderController.oldorder.material.name = allotOrder["material"]["name"];
-					// com.yonyou.placeorder.AllotOrderController.oldorder.material.dw = allotOrder["material"]["dw"];
-					// com.yonyou.placeorder.AllotOrderController.oldorder.purchaseorg.name = allotOrder["purchaseorg"]["name"];
-					// com.yonyou.placeorder.AllotOrderController.oldorder.rcvstockorg.pk_org = allotOrder["rcvstockorg"]["pk_org"];
-					// com.yonyou.placeorder.AllotOrderController.oldorder.rcvstockorg.name = allotOrder["rcvstockorg"]["name"];
-					// com.yonyou.placeorder.AllotOrderController.oldorder.supplier.pk_supplier = allotOrder["supplier"]["pk_supplier"];
-					// com.yonyou.placeorder.AllotOrderController.oldorder.supplier.name = allotOrder["supplier"]["name"];
-					com.yonyou.placeorder.AllotOrderController.oldorder.pdbilldate = allotOrder["dbilldate"];
-					com.yonyou.placeorder.AllotOrderController.oldorder.remainnum = allotOrder["remainnum"];
-					// com.yonyou.placeorder.AllotOrderController.oldorder.pk_order = allotOrder["pk_order"];
-					com.yonyou.placeorder.AllotOrderController.oldorder.vbillcode = allotOrder["vbillcode"];
+					// com.yonyou.placeorder.LongAllotOrderController.oldorder.material.pk_material = allotOrder["material"]["pk_material"];
+					// com.yonyou.placeorder.LongAllotOrderController.oldorder.material.name = allotOrder["material"]["name"];
+					// com.yonyou.placeorder.LongAllotOrderController.oldorder.material.dw = allotOrder["material"]["dw"];
+					// com.yonyou.placeorder.LongAllotOrderController.oldorder.purchaseorg.name = allotOrder["purchaseorg"]["name"];
+					// com.yonyou.placeorder.LongAllotOrderController.oldorder.rcvstockorg.pk_org = allotOrder["rcvstockorg"]["pk_org"];
+					// com.yonyou.placeorder.LongAllotOrderController.oldorder.rcvstockorg.name = allotOrder["rcvstockorg"]["name"];
+					// com.yonyou.placeorder.LongAllotOrderController.oldorder.supplier.pk_supplier = allotOrder["supplier"]["pk_supplier"];
+					// com.yonyou.placeorder.LongAllotOrderController.oldorder.supplier.name = allotOrder["supplier"]["name"];
+					com.yonyou.placeorder.LongAllotOrderController.oldorder.pdbilldate = allotOrder["dbilldate"];
+					com.yonyou.placeorder.LongAllotOrderController.oldorder.remainnum = allotOrder["remainnum"];
+					// com.yonyou.placeorder.LongAllotOrderController.oldorder.pk_order = allotOrder["pk_order"];
+					com.yonyou.placeorder.LongAllotOrderController.oldorder.vbillcode = allotOrder["vbillcode"];
 				}
 			}
 		});
 	}
-	function com$yonyou$placeorder$AllotOrderController$showDetail(sender, args) {
+	function com$yonyou$placeorder$LongAllotOrderController$showDetail(sender, args) {
 		var isDetailShow = $id("pnl_podetail").get("display");
 		if (isDetailShow == "none") {
 			$id("pnl_podetail").set("display", "block");
@@ -260,7 +260,7 @@ try {
 			$id("btn_showdetail").set("value", "+");
 		}
 	}
-	function com$yonyou$placeorder$AllotOrderController$fmtvlicenseOnclick(sender, args) {
+	function com$yonyou$placeorder$LongAllotOrderController$fmtvlicenseOnclick(sender, args) {
 		var vlicense = $id("lbl_fmtvlicense").get("value");
 		if (vlicense == "点击输入车号") {
 			vlicense = "";
@@ -284,7 +284,7 @@ try {
 			$id("lbl_fmtvlicense").set("value", vlicense);
 		}
 	}
-	function com$yonyou$placeorder$AllotOrderController$showFreeLicense(sender, args) {
+	function com$yonyou$placeorder$LongAllotOrderController$showFreeLicense(sender, args) {
 		var isfldisplay = $id("txt_vlicense").get("display");
 		if (isfldisplay == "none") {
 			$id("txt_vlicense").set("display", "block");
@@ -295,7 +295,7 @@ try {
 
 	//修改车辆信息
 	function changevehicles(sender, args) {
-		// var pk_supplier = com.yonyou.placeorder.AllotOrderController.AllotOrderObj.pk_supplier;
+		// var pk_supplier = com.yonyou.placeorder.LongAllotOrderController.AllotOrderObj.pk_supplier;
 
 		var user = JSON.parse($ctx.getApp("appuser"));
 		// alert(JSON.stringify(user))
@@ -338,8 +338,8 @@ try {
 		} catch (e) { console.log(e) }
 	}
 
-	function com$yonyou$placeorder$AllotOrderController$goselectcar(sender, args) {
-		var pk_supplier = com.yonyou.placeorder.AllotOrderController.AllotOrderObj.pk_supplier;
+	function com$yonyou$placeorder$LongAllotOrderController$goselectcar(sender, args) {
+		var pk_supplier = com.yonyou.placeorder.LongAllotOrderController.AllotOrderObj.pk_supplier;
 		$view.open({
 			"viewid": "com.yonyou.placeorder.BaseInfoRefWindow",
 			"isKeep": "true",
@@ -365,7 +365,7 @@ try {
 			}
 		});
 	}
-	function com$yonyou$placeorder$AllotOrderController$selectDriver(sender, args) {
+	function com$yonyou$placeorder$LongAllotOrderController$selectDriver(sender, args) {
 		var isfldisplay = $id("txt_vlicense").get("display");
 		var carno = "";
 		if (isfldisplay == "none") {
@@ -396,11 +396,11 @@ try {
 			}
 		})
 	}
-	function com$yonyou$placeorder$AllotOrderController$yfjzOnchange(sender, args) {
+	function com$yonyou$placeorder$LongAllotOrderController$yfjzOnchange(sender, args) {
 		$id("num_dhl").set("value", $id("num_yfjz").get("value"));
 	}
 
-	function com$yonyou$placeorder$AllotOrderController$submitOnclick(sender, args) {
+	function com$yonyou$placeorder$LongAllotOrderController$submitOnclick(sender, args) {
 		var denddate = $id("denddate").get("value");
 		// alert(denddate);
 		if (!denddate) {
@@ -453,7 +453,7 @@ try {
 		// 	$alert("车号不能为空");
 		// 	return;
 		// }
-		// com.yonyou.placeorder.AllotOrderController.carno = vlicense;
+		// com.yonyou.placeorder.LongAllotOrderController.carno = vlicense;
 		// var drivername = $id("txt_drivername").get("value");
 		// if (typeof (drivername) == "undefined" || drivername == null || drivername == "") {
 		// 	$alert("司机姓名不能为空");
@@ -486,13 +486,13 @@ try {
 		// 	$alert("请输入正确的身份证号");
 		// 	return
 		// }
-		var orderobj = com.yonyou.placeorder.AllotOrderController.AllotOrderObj;
+		var orderobj = com.yonyou.placeorder.LongAllotOrderController.AllotOrderObj;
 		var params = {
 			"usercode": $cache.read("telephone"),
 
 
 			"pk_appuser": $ctx.getApp("pk_appuser"),
-			// "isFixed": "Y",
+			"isFixed": "Y",
 			"pk_stockorg": orderobj["pk_stockorg"],
 			"vehicles": vehicleslist,
 			"ordercode": orderobj["ordercode"],
@@ -535,12 +535,12 @@ try {
 		$js.showLoadingBar();
 	}
 
-	function com$yonyou$placeorder$AllotOrderController$invalidOnclick(sender, args) {
+	function com$yonyou$placeorder$LongAllotOrderController$invalidOnclick(sender, args) {
 
 		$window.showModalDialog({
 			dialogId: "com.yonyou.placeorder.ConfirmDlg",
 			arguments: {
-				"content": "是否确认取消本调拨通知单？"
+				"content": "是否确认取消本长期调拨通知单？"
 			},
 			features: {
 				"dialogWidth": 250,
@@ -555,7 +555,7 @@ try {
 
 		var result = $jsonToString($param.getString("code"));
 		if (result == "0") {
-			var orderobj = com.yonyou.placeorder.AllotOrderController.AllotOrderObj;
+			var orderobj = com.yonyou.placeorder.LongAllotOrderController.AllotOrderObj;
 			if (orderobj.pk_noticeorder) {
 				var params = {
 					"usercode": $cache.read("telephone"),
@@ -584,16 +584,16 @@ try {
 		$js.hideLoadingBar();
 		var result = $ctx.getJSONObject("result");
 		if (result && result.statuscode == "0") {
-			$alert("新增调拨通知单成功！");
+			$alert("新增长期调拨通知单成功！");
 			pageFresh();
 			//$view.close();
 			// add by wangkem 20180625
-			com.yonyou.placeorder.AllotOrderController.pk_noticeorder = result.datas.pk_noticeorder;
+			com.yonyou.placeorder.LongAllotOrderController.pk_noticeorder = result.datas.pk_noticeorder;
 			$id("btn_share").set("disabled", "false");
 			$id("btn_invalid").set("disabled", "false");
 			//end
 		} else {
-			var errinfo = "新增调拨通知单失败，失败原因：";
+			var errinfo = "新增长期调拨通知单失败，失败原因：";
 			if (result.errinfo) {
 				errinfo = errinfo + result.errinfo + "!";
 			} else {
@@ -607,18 +607,18 @@ try {
 		$js.hideLoadingBar();
 		var result = $ctx.getJSONObject("result");
 		if (result && result.statuscode == "0") {
-			$alert("修改调拨通知单成功！");
-			com.yonyou.placeorder.AllotOrderController.oldorder.srcsendnum = $id("num_yfjz").get("value");
-			com.yonyou.placeorder.AllotOrderController.oldorder.num = $id("num_dhl").get("value");
-			com.yonyou.placeorder.AllotOrderController.oldorder.vlicense = com.yonyou.placeorder.AllotOrderController.carno;
-			com.yonyou.placeorder.AllotOrderController.oldorder.driveridcode = $id("txt_driverid").get("value");
-			com.yonyou.placeorder.AllotOrderController.oldorder.drivertelephone = $id("txt_drivertelephone").get("value");
-			com.yonyou.placeorder.AllotOrderController.oldorder.drivername = $id("txt_drivername").get("value");
+			$alert("修改长期调拨通知单成功！");
+			com.yonyou.placeorder.LongAllotOrderController.oldorder.srcsendnum = $id("num_yfjz").get("value");
+			com.yonyou.placeorder.LongAllotOrderController.oldorder.num = $id("num_dhl").get("value");
+			com.yonyou.placeorder.LongAllotOrderController.oldorder.vlicense = com.yonyou.placeorder.LongAllotOrderController.carno;
+			com.yonyou.placeorder.LongAllotOrderController.oldorder.driveridcode = $id("txt_driverid").get("value");
+			com.yonyou.placeorder.LongAllotOrderController.oldorder.drivertelephone = $id("txt_drivertelephone").get("value");
+			com.yonyou.placeorder.LongAllotOrderController.oldorder.drivername = $id("txt_drivername").get("value");
 			$view.closeWithCallBack({
-				"result": com.yonyou.placeorder.AllotOrderController.oldorder
+				"result": com.yonyou.placeorder.LongAllotOrderController.oldorder
 			});
 		} else {
-			var errinfo = "修改调拨通知单失败，失败原因：";
+			var errinfo = "修改长期调拨通知单失败，失败原因：";
 			if (result.errinfo) {
 				errinfo = errinfo + result.errinfo + "!";
 			} else {
@@ -632,14 +632,14 @@ try {
 		$js.hideLoadingBar();
 		var result = $ctx.getJSONObject("result");
 		if (result && result.statuscode == "0") {
-			$alert("取消调拨通知单成功！");
-			com.yonyou.placeorder.AllotOrderController.oldorder.status.code = -1;
-			com.yonyou.placeorder.AllotOrderController.oldorder.status.name = "取消";
+			$alert("取消长期调拨通知单成功！");
+			com.yonyou.placeorder.LongAllotOrderController.oldorder.status.code = -1;
+			com.yonyou.placeorder.LongAllotOrderController.oldorder.status.name = "取消";
 			$view.closeWithCallBack({
-				"result": com.yonyou.placeorder.AllotOrderController.oldorder
+				"result": com.yonyou.placeorder.LongAllotOrderController.oldorder
 			});
 		} else {
-			var errinfo = "取消调拨通知单失败，失败原因：";
+			var errinfo = "取消长期调拨通知单失败，失败原因：";
 			if (result.errinfo) {
 				errinfo = errinfo + result.errinfo + "!";
 			} else {
@@ -654,10 +654,10 @@ try {
 		$alert("访问MA服务器错误");
 	}
 
-	function com$yonyou$placeorder$AllotOrderController$button0_onclick(sender, args) {
+	function com$yonyou$placeorder$LongAllotOrderController$button0_onclick(sender, args) {
 		$view.close();
 	}
-	function com$yonyou$placeorder$AllotOrderController$shareOnClick(sender, args) {
+	function com$yonyou$placeorder$LongAllotOrderController$shareOnClick(sender, args) {
 		var isDisplay = $id("pnl_share").get("display");
 		if (isDisplay == "none") {
 			$id("pnl_share").set("display", "block");
@@ -667,7 +667,7 @@ try {
 	}
 
 	//begin add by wangkem 20180625
-	function com$yonyou$placeorder$AllotOrderController$jumpToSharePage(sender, args) {
+	function com$yonyou$placeorder$LongAllotOrderController$jumpToSharePage(sender, args) {
 		var vlicense = $id("txt_vlicense").get("value");
 		//车牌号
 		var isfldisplay = $id("txt_vlicense").get("display");
@@ -687,12 +687,12 @@ try {
 		var rcvorderdate = $id("lbl_rcvorderdate").get("value");
 		//收货日期
 		var billtype = "rcvbill";
-		//表示类型为调拨通知单
+		//表示类型为长期调拨通知单
 		var pk_rcvbill = "PK00000000";
-		if (com.yonyou.placeorder.AllotOrderController.AllotOrderObj && com.yonyou.placeorder.AllotOrderController.AllotOrderObj.pk_noticeorder) {
-			pk_rcvbill = com.yonyou.placeorder.AllotOrderController.AllotOrderObj.pk_noticeorder;
+		if (com.yonyou.placeorder.LongAllotOrderController.AllotOrderObj && com.yonyou.placeorder.LongAllotOrderController.AllotOrderObj.pk_noticeorder) {
+			pk_rcvbill = com.yonyou.placeorder.LongAllotOrderController.AllotOrderObj.pk_noticeorder;
 		} else {
-			pk_rcvbill = com.yonyou.placeorder.AllotOrderController.pk_noticeorder;
+			pk_rcvbill = com.yonyou.placeorder.LongAllotOrderController.pk_noticeorder;
 		}
 		var params = {
 			"vlicense": vlicense,
@@ -712,26 +712,26 @@ try {
 		});
 	}
 	//end
-	com.yonyou.placeorder.AllotOrderController.prototype = {
-		jumpToSharePage: com$yonyou$placeorder$AllotOrderController$jumpToSharePage,
-		fmtvlicenseOnclick: com$yonyou$placeorder$AllotOrderController$fmtvlicenseOnclick,
-		shareOnClick: com$yonyou$placeorder$AllotOrderController$shareOnClick,
-		selectDriver: com$yonyou$placeorder$AllotOrderController$selectDriver,
-		showFreeLicense: com$yonyou$placeorder$AllotOrderController$showFreeLicense,
-		showDetail: com$yonyou$placeorder$AllotOrderController$showDetail,
-		button0_onclick: com$yonyou$placeorder$AllotOrderController$button0_onclick,
-		selectOrderOnclick: com$yonyou$placeorder$AllotOrderController$selectOrderOnclick,
-		invalidOnclick: com$yonyou$placeorder$AllotOrderController$invalidOnclick,
-		submitOnclick: com$yonyou$placeorder$AllotOrderController$submitOnclick,
-		yfjzOnchange: com$yonyou$placeorder$AllotOrderController$yfjzOnchange,
-		goselectcar: com$yonyou$placeorder$AllotOrderController$goselectcar,
-		pageOnload: com$yonyou$placeorder$AllotOrderController$pageOnload,
-		back_onclick: com$yonyou$placeorder$AllotOrderController$back_onclick,
-		initialize: com$yonyou$placeorder$AllotOrderController$initialize,
-		evaljs: com$yonyou$placeorder$AllotOrderController$evaljs,
-		changevender: com$yonyou$placeorder$AllotOrderController$changevender,
+	com.yonyou.placeorder.LongAllotOrderController.prototype = {
+		jumpToSharePage: com$yonyou$placeorder$LongAllotOrderController$jumpToSharePage,
+		fmtvlicenseOnclick: com$yonyou$placeorder$LongAllotOrderController$fmtvlicenseOnclick,
+		shareOnClick: com$yonyou$placeorder$LongAllotOrderController$shareOnClick,
+		selectDriver: com$yonyou$placeorder$LongAllotOrderController$selectDriver,
+		showFreeLicense: com$yonyou$placeorder$LongAllotOrderController$showFreeLicense,
+		showDetail: com$yonyou$placeorder$LongAllotOrderController$showDetail,
+		button0_onclick: com$yonyou$placeorder$LongAllotOrderController$button0_onclick,
+		selectOrderOnclick: com$yonyou$placeorder$LongAllotOrderController$selectOrderOnclick,
+		invalidOnclick: com$yonyou$placeorder$LongAllotOrderController$invalidOnclick,
+		submitOnclick: com$yonyou$placeorder$LongAllotOrderController$submitOnclick,
+		yfjzOnchange: com$yonyou$placeorder$LongAllotOrderController$yfjzOnchange,
+		goselectcar: com$yonyou$placeorder$LongAllotOrderController$goselectcar,
+		pageOnload: com$yonyou$placeorder$LongAllotOrderController$pageOnload,
+		back_onclick: com$yonyou$placeorder$LongAllotOrderController$back_onclick,
+		initialize: com$yonyou$placeorder$LongAllotOrderController$initialize,
+		evaljs: com$yonyou$placeorder$LongAllotOrderController$evaljs,
+		changevender: com$yonyou$placeorder$LongAllotOrderController$changevender,
 	};
-	com.yonyou.placeorder.AllotOrderController.registerClass('com.yonyou.placeorder.AllotOrderController', UMP.UI.Mvc.Controller);
+	com.yonyou.placeorder.LongAllotOrderController.registerClass('com.yonyou.placeorder.LongAllotOrderController', UMP.UI.Mvc.Controller);
 } catch (e) {
 	$e(e);
 }
