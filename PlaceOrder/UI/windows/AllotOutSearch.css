@@ -1,291 +1,409 @@
- #AllotOutSearch {
-halign:center;
-height:569;
-width:fill;
-layout:vbox;
-valign:TOP;
-}
- #viewPage0 {
-halign:center;
-height:fill;
-width:fill;
-background:#f7f8f8;
-layout:vbox;
-valign:TOP;
-}
- #navigatorbar0 {
-halign:LEFT;
-background:#0aa9ff;
-font-size:18;
-}
- #label0 {
-halign:center;
-weight:1;
-height:fill;
+#AllotOutSearch {
+    layout:vbox;
+    width:fill;
+    valign:TOP;
+    halign:center;
+    height:fill;
+    }
+     #viewPage0 {
+    layout:vbox;
+    width:fill;
+    valign:TOP;
+    halign:center;
+    height:fill;
+    }
+     #panel1 {
+    layout:hbox;
+    width:fill;
+    valign:top;
+    halign:LEFT;
+    height:50;
+    }
+     #navigatorbar0 {
+    background:#0aa9ff;
+    font-size:18;
+    halign:LEFT;
+    }
+     #back {
+    padding-left:20;
+    width:88;
+    background-image:btn_back;
+    halign:left;
+    height:44;
+    pressed-image:btn_back_touch;
+    }
+     #label0 {
+    color:#000000;
+    width:0;
+    weight:1;
+    font-size:14;
+    valign:center;
+    font-family:default;
+    halign:center;
+    height:fill;
+    }
+     #panel0 {
+    layout:vbox;
+    width:fill;
+    valign:TOP;
+    margin-top:10;
+    halign:center;
+    height:fill;
+    }
+     #startdatepanel {
+    layout:hbox;
+    margin-left:15;
+    background:#fcfcfc;
+    width:fill;
+    valign:center;
+    halign:CENTER;
+    margin-right:15;
+    height:30;
+    }
+     #startdatelabel {
+    color:#585858;
+    background:#fcfcfc;
+    width:wrap;
+    font-size:14;
+    valign:center;
+    font-family:default;
+    halign:left;
+    widthWrap:75.0;
+    margin-right:5;
+    height:fill;
+    }
+     #begindate {
+    color:#167ef8;
+    background:#fcfcfc;
+    padding-left:4;
+    width:fill;
+    font-size:15;
+    font-family:default;
+    halign:RIGHT;
+    padding-right:4;
+    height:fill;
+    }
+     #overdatepanel {
+    layout:hbox;
+    margin-left:15;
+    background:#fcfcfc;
+    width:fill;
+    valign:center;
+    margin-top:5;
+    halign:CENTER;
+    margin-right:15;
+    height:30;
+    }
+     #overdatelabel {
+    color:#585858;
+    background:#fcfcfc;
+    width:wrap;
+    font-size:14;
+    valign:center;
+    font-family:default;
+    halign:left;
+    widthWrap:75.0;
+    margin-right:5;
+    height:fill;
+    }
+     #enddate {
+    color:#167ef8;
+    background:#fcfcfc;
+    padding-left:4;
+    width:fill;
+    font-size:15;
+    font-family:default;
+    halign:RIGHT;
+    padding-right:4;
+    height:fill;
+    }
+     #panel6 {
+    layout:hbox;
+    margin-left:15;
+    background:#fcfcfc;
+    width:fill;
+    valign:center;
+    margin-top:5;
+    halign:CENTER;
+    margin-right:15;
+    height:30;
+    }
+     #label4 {
+    color:#585858;
+    background:#fcfcfc;
+    width:wrap;
+    font-size:14;
+    valign:center;
+    font-family:default;
+    halign:left;
+    widthWrap:45.0;
+    margin-right:5;
+    height:fill;
+    }
+    #changecustomer {
+   layout:hbox;
+   width:fill;
+   valign:center;
+   halign:LEFT;
+   height:fill;
+   }
+   #changeorg {
+  layout:hbox;
+  width:fill;
+  valign:center;
+  halign:LEFT;
+  height:fill;
+  }
+  #customer {
+ color:#000000;
+ background:#fcfcfc;
+ width:0;
+ weight:1;
+ font-size:14;
+ valign:center;
+ font-family:default;
+ halign:right;
+ height:fill;
+ }
+ #org {
 color:#000000;
+background:#fcfcfc;
 width:0;
-font-size:20;
-font-family:default;
+weight:1;
+font-size:14;
 valign:center;
-}
- #button1 {
+font-family:default;
 halign:right;
-height:44;
-pressed-image:setting_pressed.png;
-width:44;
-font-size:16;
-background-image:setting.png;
+height:fill;
 }
- #panel4 {
-halign:center;
-weight:1;
-height:wrap;
-width:fill;
-layout:vbox;
-valign:TOP;
-}
- #maintitle {
-halign:LEFT;
-height:46;
-width:fill;
-layout:hbox;
-background:#ffffff;
-margin-top:24;
-valign:center;
-}
- #image2 {
-margin-right:24;
-height:44;
-width:44;
-margin-left:15;
-}
- #label1 {
-halign:left;
-height:46;
-color:#595757;
-width:fill;
-font-size:15;
-font-family:default;
-valign:center;
-}
- #row0 {
-halign:LEFT;
-height:96;
-width:fill;
-layout:hbox;
-margin-top:18;
-valign:center;
-}
- #th00 {
-height:20;
-width:30;
-layout:relative;
-}
- #menu11 {
-icon-height:30;
-height:76;
-border-radius:38;
-color:#ffffff;
-background:#ffcd40;
-font-size:11;
-width:76;
-icon-background-image:poster.png;
-icon-width:30;
-icon-text-spacing:6;
-}
- #th01 {
-weight:1;
-height:20;
-width:0;
-layout:relative;
-}
- #menu12 {
-icon-height:30;
-height:76;
-border-radius:38;
-color:#ffffff;
-background:#fe9137;
-font-size:11;
-width:76;
-icon-background-image:aftercall.png;
-icon-width:30;
-icon-pressed-image:aftercall.png;
-icon-text-spacing:6;
-}
- #th02 {
-weight:1;
-height:20;
-width:0;
-layout:relative;
-}
- #menu13 {
-icon-height:30;
-height:76;
-border-radius:38;
-color:#ffffff;
-background:#ff4081;
-font-size:11;
-width:76;
-icon-background-image:contacts.png;
-icon-width:30;
-icon-pressed-image:contacts.png;
-icon-text-spacing:6;
-}
- #th03 {
-height:20;
-width:30;
-layout:relative;
-}
- #row1 {
-halign:LEFT;
-height:96;
-width:fill;
-layout:hbox;
-valign:center;
-}
- #panel7 {
-height:20;
-width:30;
-layout:relative;
-}
- #menu21 {
-icon-height:30;
-height:76;
-border-radius:38;
-color:#ffffff;
-background:#9a3a52;
-font-size:11;
-width:76;
-icon-background-image:massages.png;
-icon-width:30;
-icon-text-spacing:10;
-}
- #panel15 {
-weight:1;
-height:20;
-width:0;
-layout:relative;
-}
- #menu22 {
-icon-height:30;
-height:76;
-border-radius:38;
-color:#ffffff;
-background:#5baef5;
-font-size:11;
-width:76;
-icon-background-image:aftercall.png;
-icon-width:30;
-icon-pressed-image:aftercall.png;
-icon-text-spacing:10;
-}
- #panel11 {
-weight:1;
-height:20;
-width:0;
-layout:relative;
-}
- #menu23 {
-icon-height:30;
-height:76;
-border-radius:38;
-color:#ffffff;
-background:#52c168;
-font-size:11;
-width:76;
-icon-background-image:aftercall.png;
-icon-width:30;
-icon-pressed-image:aftercall.png;
-icon-text-spacing:10;
-}
- #panel19 {
-height:20;
-width:30;
-layout:relative;
-}
- #lineTop {
-height:1;
-background:#f1f1f1;
-width:fill;
-layout:relative;
-margin-top:18;
-}
- #tj0 {
-halign:LEFT;
-height:44;
-width:fill;
-layout:hbox;
-background:#ffffff;
-valign:center;
-pressed-color:#2D5AA7;
-}
- #label7 {
-halign:center;
-widthWrap:64.0;
-height:wrap;
-color:#595757;
-heightWrap:22.0;
-width:wrap;
-font-size:15;
-margin-left:15;
-font-family:default;
-valign:center;
-}
- #panel12 {
-weight:1;
-height:20;
-width:0;
-layout:relative;
-pressed-color:#2D5AA7;
-}
- #image0 {
-margin-right:15;
-height:12;
-width:8;
-}
- #line1 {
-height:1;
-background:#f1f1f1;
-width:fill;
-layout:relative;
-margin-left:10;
-}
- #tj1 {
-halign:LEFT;
-height:44;
-width:fill;
-layout:hbox;
-background:#ffffff;
-valign:center;
-pressed-color:#2D5AA7;
-}
- #label8 {
-halign:center;
-widthWrap:64.0;
-height:wrap;
-color:#595757;
-heightWrap:22.0;
-width:wrap;
-font-size:15;
-margin-left:15;
-font-family:default;
-valign:center;
-}
- #panel16 {
-weight:1;
-height:20;
-width:0;
-layout:relative;
-pressed-color:#2D5AA7;
-}
- #image1 {
-margin-right:15;
-height:12;
-width:8;
-}
- #lineBottom {
-height:1;
-background:#f1f1f1;
-width:fill;
-layout:relative;
-}
+     #image1 {
+    margin-left:5;
+    width:11;
+    margin-right:5;
+    height:16;
+    }
+     #panel4 {
+    layout:hbox;
+    margin-left:15;
+    background:#fcfcfc;
+    width:fill;
+    valign:center;
+    margin-top:5;
+    halign:CENTER;
+    margin-right:15;
+    height:30;
+    }
+     #label2 {
+    color:#585858;
+    background:#fcfcfc;
+    width:wrap;
+    font-size:14;
+    valign:center;
+    font-family:default;
+    halign:left;
+    widthWrap:45.0;
+    margin-right:5;
+    height:fill;
+    }
+     #changegoodsname {
+    layout:hbox;
+    width:fill;
+    valign:center;
+    halign:LEFT;
+    height:fill;
+    }
+     #goodsname {
+    color:#000000;
+    background:#fcfcfc;
+    width:0;
+    weight:1;
+    font-size:14;
+    valign:center;
+    font-family:default;
+    halign:right;
+    height:fill;
+    }
+     #image0 {
+    margin-left:5;
+    width:11;
+    margin-right:5;
+    height:16;
+    }
+     #panel5 {
+    layout:hbox;
+    margin-left:15;
+    background:#fcfcfc;
+    width:fill;
+    valign:center;
+    margin-top:5;
+    halign:LEFT;
+    margin-right:15;
+    height:30;
+    }
+     #label3 {
+    color:#585858;
+    background:#fcfcfc;
+    width:wrap;
+    font-size:14;
+    valign:center;
+    font-family:default;
+    halign:left;
+    widthWrap:75.0;
+    margin-right:5;
+    height:fill;
+    }
+     #vlicense {
+    color:#167ef8;
+    background:#fcfcfc;
+    padding-left:4;
+    width:0;
+    weight:1;
+    font-size:15;
+    font-family:default;
+    halign:RIGHT;
+    padding-right:4;
+    height:fill;
+    }
+     #imgbtn_selectcar {
+    icon-pressed-image:arrow.png;
+    icon-height:16;
+    font-size:10;
+    icon-text-spacing:3;
+    margin-right:5;
+    margin-left:5;
+    icon-background-image:arrow.png;
+    width:11;
+    icon-width:11;
+    height:16;
+    }
+     #panel3 {
+    layout:hbox;
+    margin-left:15;
+    background:#fcfcfc;
+    width:fill;
+    valign:center;
+    margin-top:5;
+    halign:CENTER;
+    margin-right:15;
+    height:30;
+    }
+     #label1 {
+    color:#585858;
+    background:#fcfcfc;
+    width:wrap;
+    font-size:14;
+    valign:center;
+    font-family:default;
+    halign:left;
+    widthWrap:60.0;
+    margin-right:5;
+    height:fill;
+    }
+     #panel2 {
+    layout:hbox;
+    background:#fcfcfc;
+    width:fill;
+    valign:center;
+    halign:LEFT;
+    height:fill;
+    }
+     #billcode {
+    color:#167ef8;
+    background:#fcfcfc;
+    padding-left:4;
+    width:fill;
+    font-size:15;
+    font-family:default;
+    halign:RIGHT;
+    padding-right:4;
+    height:fill;
+    }
+     #panel3333 {
+    layout:hbox;
+    margin-left:15;
+    background:#fcfcfc;
+    width:fill;
+    valign:center;
+    margin-top:15;
+    halign:CENTER;
+    margin-right:15;
+    height:50;
+    }
+     #label111 {
+    color:#585858;
+    background:#fcfcfc;
+    width:wrap;
+    font-size:14;
+    valign:center;
+    font-family:default;
+    halign:left;
+    widthWrap:60.0;
+    margin-right:5;
+    height:fill;
+    }
+     #panel222 {
+    layout:hbox;
+    background:#fcfcfc;
+    width:fill;
+    valign:center;
+    halign:RIGHT;
+    height:fill;
+    padding-right:5;
+    }
+     #switch0 {
+    background:#167ef8;
+    width:51;
+    height:32;
+    }
+     #panel333 {
+    layout:hbox;
+    margin-left:15;
+    background:#fcfcfc;
+    width:fill;
+    valign:center;
+    margin-top:15;
+    halign:CENTER;
+    margin-right:15;
+    height:100;
+    }
+     #label11 {
+    color:#585858;
+    background:#fcfcfc;
+    width:wrap;
+    font-size:14;
+    valign:center;
+    font-family:default;
+    halign:left;
+    widthWrap:60.0;
+    margin-right:5;
+    height:fill;
+    }
+     #panel22 {
+    layout:hbox;
+    background:#fcfcfc;
+    width:fill;
+    valign:center;
+    halign:LEFT;
+    height:fill;
+    }
+     #picker0 {
+    color:#167ef8;
+    background:#fcfcfc;
+    padding-left:4;
+    width:fill;
+    font-size:15;
+    font-family:default;
+    halign:RIGHT;
+    padding-right:4;
+    height:fill;
+    }
+     #searchbutton {
+    border-radius:8;
+    font-pressed-color:#13b5f2;
+    color:#ffffff;
+    background:#ff8f59;
+    width:150;
+    margin-top:20;
+    height:35;
+    }
+    

@@ -31,6 +31,11 @@ try {
 		//your initialize code below...
 	}
 
+	var pk_customer,
+		pk_saleorg,
+		pk_stockorg,
+		pk_material;
+
 	function com$yonyou$placeorder$AllotInSearchController$evaljs(js) {
 		eval(js)
 	}
@@ -121,10 +126,6 @@ try {
 		}
 	}
 
-	var pk_customer,
-		pk_saleorg,
-		pk_stockorg,
-		pk_material;
 	function callbackseller() {
 		var retvalue = $param.getJSONObject("result");
 		SqliteUtil.updateRctMostUseData(Globals.RefInfoType.SALE_ORG, retvalue);
@@ -164,6 +165,8 @@ try {
 		if (user.vehiclebuyorg != null && typeof (user.vehiclebuyorg) != undefined) {
 			com.yonyou.placeorder.AllotInSearchController.vehiclebuyorg = user.vehiclebuyorg;
 			com.yonyou.placeorder.AllotInSearchController.vehicle = user.vehicle;
+
+			pk_stockorg = user.vehiclebuyorg.pk_org;
 
 			if (user.vehiclebuyorg)
 				$id("org").set("value", user.vehiclebuyorg.name);

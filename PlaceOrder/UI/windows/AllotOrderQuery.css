@@ -1,4 +1,4 @@
-#DriverDeliverySearch {
+#AllotOrderQuery {
     layout:vbox;
     width:fill;
     valign:TOP;
@@ -140,42 +140,24 @@
     margin-right:5;
     height:fill;
     }
-    #changecustomer {
-   layout:hbox;
-   width:fill;
-   valign:center;
-   halign:LEFT;
-   height:fill;
-   }
-   #changeorg {
-  layout:hbox;
-  width:fill;
-  valign:center;
-  halign:LEFT;
-  height:fill;
-  }
-  #customer {
- color:#000000;
- background:#fcfcfc;
- width:0;
- weight:1;
- font-size:14;
- valign:center;
- font-family:default;
- halign:right;
- height:fill;
- }
- #org {
-color:#000000;
-background:#fcfcfc;
-width:0;
-weight:1;
-font-size:14;
-valign:center;
-font-family:default;
-halign:right;
-height:fill;
-}
+     #changecustomer {
+    layout:hbox;
+    width:fill;
+    valign:center;
+    halign:LEFT;
+    height:fill;
+    }
+     #customer {
+    color:#000000;
+    background:#fcfcfc;
+    width:0;
+    weight:1;
+    font-size:14;
+    valign:center;
+    font-family:default;
+    halign:right;
+    height:fill;
+    }
      #image1 {
     margin-left:5;
     width:11;
@@ -318,43 +300,48 @@ height:fill;
     padding-right:4;
     height:fill;
     }
-     #panel3333 {
-    layout:hbox;
-    margin-left:15;
-    background:#fcfcfc;
-    width:fill;
-    valign:center;
-    margin-top:15;
-    halign:CENTER;
-    margin-right:15;
-    height:50;
-    }
-     #label111 {
-    color:#585858;
-    background:#fcfcfc;
-    width:wrap;
-    font-size:14;
-    valign:center;
-    font-family:default;
-    halign:left;
-    widthWrap:60.0;
-    margin-right:5;
-    height:fill;
-    }
-     #panel222 {
-    layout:hbox;
-    background:#fcfcfc;
-    width:fill;
-    valign:center;
-    halign:RIGHT;
-    height:fill;
-    padding-right:5;
-    }
-     #switch0 {
-    background:#167ef8;
-    width:51;
-    height:32;
-    }
+    #panel31 {
+   layout:hbox;
+   margin-left:15;
+   background:#fcfcfc;
+   width:fill;
+   valign:center;
+   margin-top:5;
+   halign:CENTER;
+   margin-right:15;
+   height:30;
+   }
+    #label11 {
+   color:#585858;
+   background:#fcfcfc;
+   width:wrap;
+   font-size:14;
+   valign:center;
+   font-family:default;
+   halign:left;
+   widthWrap:60.0;
+   margin-right:5;
+   height:fill;
+   }
+    #panel21 {
+   layout:hbox;
+   background:#fcfcfc;
+   width:fill;
+   valign:center;
+   halign:LEFT;
+   height:fill;
+   }
+    #billcode1 {
+   color:#167ef8;
+   background:#fcfcfc;
+   padding-left:4;
+   width:fill;
+   font-size:15;
+   font-family:default;
+   halign:RIGHT;
+   padding-right:4;
+   height:fill;
+   }
      #panel333 {
     layout:hbox;
     margin-left:15;
@@ -366,7 +353,7 @@ height:fill;
     margin-right:15;
     height:100;
     }
-     #label11 {
+     #label111 {
     color:#585858;
     background:#fcfcfc;
     width:wrap;
@@ -406,4 +393,210 @@ height:fill;
     margin-top:20;
     height:35;
     }
+
+
+
+
+
+
+
+
+
+    
+    #panel61 {
+        layout:hbox;
+        margin-left:15;
+        background:#fcfcfc;
+        width:fill;
+        valign:center;
+        margin-top:5;
+        halign:CENTER;
+        margin-right:15;
+        height:30;
+        }
+        #panel62 {
+       layout:hbox;
+       margin-left:15;
+       background:#fcfcfc;
+       width:fill;
+       valign:center;
+       margin-top:5;
+       halign:CENTER;
+       margin-right:15;
+       height:30;
+       }
+       #panel63 {
+      layout:hbox;
+      margin-left:15;
+      background:#fcfcfc;
+      width:fill;
+      valign:center;
+      margin-top:5;
+      halign:CENTER;
+      margin-right:15;
+      height:30;
+      }
+      #panel64 {
+     layout:hbox;
+     margin-left:15;
+     background:#fcfcfc;
+     width:fill;
+     valign:center;
+     margin-top:5;
+     halign:CENTER;
+     margin-right:15;
+     height:30;
+     }
+
+     
+    #label41 {
+        color:#585858;
+        background:#fcfcfc;
+        width:wrap;
+        font-size:14;
+        valign:center;
+        font-family:default;
+        halign:left;
+        widthWrap:45.0;
+        margin-right:5;
+        height:fill;
+        }
+        #label42 {
+       color:#585858;
+       background:#fcfcfc;
+       width:wrap;
+       font-size:14;
+       valign:center;
+       font-family:default;
+       halign:left;
+       widthWrap:45.0;
+       margin-right:5;
+       height:fill;
+       }
+       #label43 {
+      color:#585858;
+      background:#fcfcfc;
+      width:wrap;
+      font-size:14;
+      valign:center;
+      font-family:default;
+      halign:left;
+      widthWrap:45.0;
+      margin-right:5;
+      height:fill;
+      }
+      #label44 {
+     color:#585858;
+     background:#fcfcfc;
+     width:wrap;
+     font-size:14;
+     valign:center;
+     font-family:default;
+     halign:left;
+     widthWrap:45.0;
+     margin-right:5;
+     height:fill;
+     }
+
+     
+    #changeinorg {
+        layout:hbox;
+        width:fill;
+        valign:center;
+        halign:LEFT;
+        height:fill;
+        }
+        #changeoutorg {
+       layout:hbox;
+       width:fill;
+       valign:center;
+       halign:LEFT;
+       height:fill;
+       }
+       #changeinwh {
+      layout:hbox;
+      width:fill;
+      valign:center;
+      halign:LEFT;
+      height:fill;
+      }
+      #changeoutwh {
+     layout:hbox;
+     width:fill;
+     valign:center;
+     halign:LEFT;
+     height:fill;
+     }
+
+     
+    #inorg {
+        color:#000000;
+        background:#fcfcfc;
+        width:0;
+        weight:1;
+        font-size:14;
+        valign:center;
+        font-family:default;
+        halign:right;
+        height:fill;
+        }
+        #outorg {
+       color:#000000;
+       background:#fcfcfc;
+       width:0;
+       weight:1;
+       font-size:14;
+       valign:center;
+       font-family:default;
+       halign:right;
+       height:fill;
+       }
+       #outwh {
+      color:#000000;
+      background:#fcfcfc;
+      width:0;
+      weight:1;
+      font-size:14;
+      valign:center;
+      font-family:default;
+      halign:right;
+      height:fill;
+      }
+      #inwh {
+     color:#000000;
+     background:#fcfcfc;
+     width:0;
+     weight:1;
+     font-size:14;
+     valign:center;
+     font-family:default;
+     halign:right;
+     height:fill;
+     }
+
+     
+    #image11 {
+        margin-left:5;
+        width:11;
+        margin-right:5;
+        height:16;
+        }
+        #image12 {
+       margin-left:5;
+       width:11;
+       margin-right:5;
+       height:16;
+       }
+       #image13 {
+      margin-left:5;
+      width:11;
+      margin-right:5;
+      height:16;
+      }
+      #image14 {
+     margin-left:5;
+     width:11;
+     margin-right:5;
+     height:16;
+     }
     

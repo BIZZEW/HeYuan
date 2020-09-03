@@ -23,7 +23,7 @@ try {
 	// 司机提货
 	function com$yonyou$placeorder$HomePageNewController$driver_pickup(sender, args) {
 		$view.open({
-			viewid: "com.yonyou.placeorder.DriverPickup",
+			viewid: "com.yonyou.placeorder.DriverPickupSearch",
 			isKeep: "true"
 		})
 	}
@@ -31,7 +31,7 @@ try {
 	// 调拨出库
 	function com$yonyou$placeorder$HomePageNewController$allotout(sender, args) {
 		$view.open({
-			viewid: "com.yonyou.placeorder.AllotOut",
+			viewid: "com.yonyou.placeorder.AllotOutSearch",
 			isKeep: "true"
 		})
 	}
@@ -39,7 +39,7 @@ try {
 	// 司机送货
 	function com$yonyou$placeorder$HomePageNewController$driver_deliver(sender, args) {
 		$view.open({
-			viewid: "com.yonyou.placeorder.DriverDelivery",
+			viewid: "com.yonyou.placeorder.DriverDeliverySearch",
 			isKeep: "true"
 		})
 	}
@@ -145,6 +145,14 @@ try {
 	function com$yonyou$placeorder$HomePageNewController$addlongallot_onclick(sender, args) {
 		$view.open({
 			viewid: "com.yonyou.placeorder.LongAllotOrder",
+			isKeep: "true"
+		})
+	}
+
+	// 调拨通知单查询
+	function com$yonyou$placeorder$HomePageNewController$allotsearch_onclick(sender, args) {
+		$view.open({
+			viewid: "com.yonyou.placeorder.AllotOrderQuery",
 			isKeep: "true"
 		})
 	}

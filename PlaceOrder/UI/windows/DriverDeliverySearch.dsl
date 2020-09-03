@@ -1,1 +1,74 @@
-<window id="DriverDeliverySearch" controller="DriverDeliverySearchController" namespace="com.yonyou.placeorder"><import ref="DriverDeliverySearch.css" type="css"></import><link type="text/css" href="sys/theme.css"></link><action id="ddd" animation-direction="right" method="UMView.open" iskeep="false" animation-type="Push"></action><div id="viewPage0" onload="this.onload()"><navigatorbar id="navigatorbar0" title="申报系统" class="navigatorbarclass"><label id="label0"></label><input id="button1" class="ngbbuttonclass" type="button"></input>                                 </navigatorbar><Scrollview id="Scrollview_panel4" height="0" weight="1" width="fill" hScrollEnabled="disabled"><div id="panel4"><div id="maintitle"><image id="image2" scaletype="fitcenter" src="avatar.png"></image><label id="label1">user01</label>                                                         </div><div id="row0"><div id="th00"></div><input id="menu11" value="我要申报" onclick="this.menu11_onclick()" class="imagebuttonclass" istogglebutton="false" type="imagebutton" checked="false"></input><div id="th01"></div><input id="menu12" value="申报查询" onclick="this.openDeclareList()" class="imagebuttonclass" istogglebutton="false" type="imagebutton" checked="false"></input><div id="th02"></div><input id="menu13" value="通讯录" class="imagebuttonclass" istogglebutton="false" type="imagebutton" checked="false"></input><div id="th03"></div>                                                                                                                                                             </div><div id="row1"><div id="panel7"></div><input id="menu21" value="我的消息" class="imagebuttonclass" istogglebutton="false" type="imagebutton" checked="false"></input><div id="panel15"></div><input id="menu22" value="我的邮箱" class="imagebuttonclass" istogglebutton="false" type="imagebutton" checked="false"></input><div id="panel11"></div><input id="menu23" value="业绩分析" onclick="this.menu23_onclick()" class="imagebuttonclass" istogglebutton="false" type="imagebutton" checked="false"></input><div id="panel19"></div>                                                                                                                                                             </div><div id="lineTop"></div><div id="tj0"><label id="label7">申报统计</label><div id="panel12"></div><image id="image0" scaletype="fitcenter" src="arrow.png"></image>                                                                             </div><div id="line1"></div><div id="tj1"><label id="label8">新增统计</label><div id="panel16"></div><image id="image1" scaletype="fitcenter" src="arrow.png"></image>                                                                             </div><div id="lineBottom"></div>                                                                                                                                             </div>                    </Scrollview>                     </div>                 </window>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window xmlns:web="http://www.yonyou.com/uapmobile/dsl" controller="DriverDeliverySearchController" namespace="com.yonyou.placeorder" id="DriverDeliverySearch">
+    <import ref="DriverDeliverySearch.css" type="css"/>
+    <link href="sys/theme.css" type="text/css"/>
+    <script src="#{path.controller}/common/global.js" type="text/javascript"/>
+    <script src="#{path.controller}/common/sqliteutil.js" type="text/javascript"/>
+    <div id="viewPage0" onload="this.pageOnload()">
+        <div id="panel1">
+            <navigatorbar id="navigatorbar0" title="司机送货查询" class="navigatorbarclass">
+                <input onclick="this.back_onclick()" id="back" type="button" class="ngbbuttonclass"/>
+                <label id="label0"/> 
+            </navigatorbar> 
+        </div>
+        <div id="panel0">
+            <div id="panel6">
+                <label id="label4">库存组织：</label>
+                <div onlongclick="this.clearorg()" onclick="this.changeorg()" id="changeorg">
+                    <label id="org">请选择库存组织</label>
+                    <image src="arrow.png" id="image1" scaletype="fitcenter"/> 
+                </div> 
+            </div>
+
+            <!-- <div id="startdatepanel">
+                <label id="startdatelabel">开始日期：</label>
+                <input format="yyyy-MM-dd" id="begindate" placeholder="请选择开始时间" type="date" onload="this.dateOnload()"/> 
+            </div>
+            <div id="overdatepanel">
+                <label id="overdatelabel">结束日期：</label>
+                <input format="yyyy-MM-dd" id="enddate" placeholder="请选择结束时间" type="date"/> 
+            </div>
+            <div id="panel6">
+                <label id="label4">客户：</label>
+                <div onlongclick="this.clearcustomer()" onclick="this.changecustomer()" id="changecustomer">
+                    <label id="customer">请选择客户</label>
+                    <image src="arrow.png" id="image1" scaletype="fitcenter"/> 
+                </div> 
+            </div>
+            <div id="panel4">
+                <label id="label2">货物：</label>
+                <div onlongclick="this.cleargoods()" onclick="this.changegoods()" id="changegoodsname">
+                    <label id="goodsname">请选择货物</label>
+                    <image src="arrow.png" id="image0" scaletype="fitcenter"/> 
+                </div> 
+            </div>
+            <div id="panel5">
+                <label id="label3">车牌号码：</label>
+                <input maxlength="256" id="vlicense" placeholder="请选择或输入车牌号码" type="text"/>
+                <input imagebuttontype="icon" istogglebutton="false" onclick="this.selectcar()" checked="false" id="imgbtn_selectcar" type="imagebutton" value="图标名称" class="imagebuttonclass"/> 
+            </div>
+            <div id="panel3">
+                <label id="label1">订单号：</label>
+                <div id="panel2">
+                    <input maxlength="256" id="billcode" placeholder="请输入订单号" type="text"/> 
+                </div> 
+            </div>
+            <div id="panel3333">
+                <label id="label111">长期订单：</label>
+                <div id="panel222">
+                    <switch id="switch0" value="on"/> 
+                </div> 
+            </div>
+            <div id="panel333">
+                <label id="label11">订单状态：</label>
+                <div id="panel22">
+                    <picker id="picker0" showsSelectionIndicator="true" onload="this.picker0_onload()">
+                        <pickeritem bindfield="status" datasource="statuses" onselectedchange="this.selectstatus()" id="picker0_0" value="订单状态"/> 
+                    </picker> 
+                </div> 
+            </div> -->
+            <input onclick="this.searchbutton_onclick()" id="searchbutton" type="button" value="查询" class="textbtnclass"/> 
+        </div> 
+    </div> 
+</window>

@@ -7,7 +7,7 @@
     <script src="#{path.controller}/common/sqliteutil.js" type="text/javascript"/>  
     <Scrollview vScrollEnabled="always" width="fill" hScrollEnabled="disabled" id="Scrollview_viewPage0" height="fill"> 
         <div id="viewPage0" onload="this.pageOnload()"> 
-            <navigatorbar id="navigatorbar0" title="长期调拨单维护" class="navigatorbarclass"> 
+            <navigatorbar id="navigatorbar0" title="长期调拨通知单维护" class="navigatorbarclass"> 
                 <input onclick="this.button0_onclick()" id="back" type="button" class="ngbbuttonclass"/> 
             </navigatorbar>  
             <div id="goodsname"> 

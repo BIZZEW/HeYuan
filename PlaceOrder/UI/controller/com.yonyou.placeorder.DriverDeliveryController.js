@@ -86,11 +86,11 @@ try {
 		$ctx.push(com.yonyou.placeorder.DriverDeliveryController.listdatas);
 	}
 	function getDatas(status) {
-		var param = {};
+		var param = $param.getJSONObject("param");
 		param["pk_appuser"] = $cache.read("pk_appuser");
 		param["page"] = com.yonyou.placeorder.DriverDeliveryController.page;
 		param["vehicle"] = com.yonyou.placeorder.DriverDeliveryController.vehicle;
-		param["vehiclebuyorg"] = com.yonyou.placeorder.DriverDeliveryController.vehiclebuyorg.pk_org;
+		// param["vehiclebuyorg"] = com.yonyou.placeorder.DriverDeliveryController.vehiclebuyorg.pk_org;
 		param["usercode"] = $cache.read("telephone");
 		$service.callAction({
 			"usercode": $cache.read("telephone"),

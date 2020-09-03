@@ -99,13 +99,16 @@
     <file name="AllotInSearch.dsl"/>  
     <file name="AllotOutSearch.dsl"/>  
     <file name="DriverDeliverySearch.dsl"/>  
-    <file name="DriverPickupSearch.dsl"/>
+    <file name="DriverPickupSearch.dsl"/> 
   </Driver>  
   <Allot> 
     <file name="AllotSearch.dsl"/>  
     <file name="AllotList.dsl"/>  
     <file name="AllotOrder.dsl"/>  
     <file name="AllotOrderList.dsl"/>  
-    <file name="LongAllotOrder.dsl"/> 
+    <file name="LongAllotOrder.dsl"/>  
+    <file name="AllotOrderQuery.dsl"/>  
+    <file name="AllotQueryList.dsl"/>  
+    <file name="AllotQueryDetail.dsl"/>
   </Allot> 
 </windows>

@@ -197,7 +197,10 @@
   <view id="AllotInSearch" ref="AllotInSearch.dsl" include="true"/>  
   <view id="AllotOutSearch" ref="AllotOutSearch.dsl" include="true"/>  
   <view id="DriverDeliverySearch" ref="DriverDeliverySearch.dsl" include="true"/>  
-  <view id="DriverPickupSearch" ref="DriverPickupSearch.dsl" include="true"/>
+  <view id="DriverPickupSearch" ref="DriverPickupSearch.dsl" include="true"/>  
+  <view id="AllotOrderQuery" ref="AllotOrderQuery.dsl" include="true"/>  
+  <view id="AllotQueryList" ref="AllotQueryList.dsl" include="true"/>  
+  <view id="AllotQueryDetail" ref="AllotQueryDetail.dsl" include="true"/>
 </application>
 <!--
 【屏幕显示方向】
