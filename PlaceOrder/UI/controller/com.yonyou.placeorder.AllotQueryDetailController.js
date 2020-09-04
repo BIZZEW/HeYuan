@@ -83,14 +83,21 @@ try {
 		var denddate = Globals.getFormatDate2(3);
 		$id("denddate").set("value", denddate);
 	}
+	var pk_customer;
 
 	function com$yonyou$placeorder$AllotQueryDetailController$pageOnload(sender, args) {
+		var user = JSON.parse($ctx.getApp("appuser"));
+
+		if (user.dfltcstm)
+			pk_customer = user.dfltcstm.pk_customer
+
+
 		var denddate = Globals.getFormatDate2(3);
 		$id("denddate").set("value", denddate);
 
 		var oldorder = $param.getJSONObject("oldorder");
 
-		alert(JSON.stringify(oldorder));
+		// alert(JSON.stringify(oldorder));
 
 		var license1value = $cache.read("license1value");
 		if (license1value) {
@@ -123,7 +130,7 @@ try {
 				$id("inwh").set("value", oldorder["cinstordocid"]["name"]);
 
 			// 调拨订单日期
-			$id("lbl_dbilldate").set("value", oldorder["pdbilldate"]);
+			$id("lbl_dbilldate").set("value", (oldorder["pdbilldate"]).substring(0, 10));
 
 			// 货物
 			$id("lbl_matname").set("value", oldorder["cinventoryid"]["name"]);
@@ -134,16 +141,16 @@ try {
 			// 余量
 			$id("lbl_remainnum").set("value", oldorder["remainnum"]);
 			// 调出数量
-			$id("lbl_remainnum").set("value", oldorder["noutnum"]);
+			$id("lbl_outnum").set("value", oldorder["noutnum"]);
 			// 调入数量
-			$id("lbl_remainnum").set("value", oldorder["ninnum"]);
+			$id("lbl_innum").set("value", oldorder["ninnum"]);
 
 			// 调拨通知单号
 			$id("noticecode").set("value", oldorder["noticecode"]);
 			// 调拨类型
 			$id("transtype").set("value", oldorder["transtype"]);
 			// 调拨单日期
-			$id("lbl_rcvorderdate").set("value", oldorder["dbilldate"]);
+			$id("lbl_rcvorderdate").set("value", (oldorder["dbilldate"]).substring(0, 10));
 			// 失效日期
 			$id("denddate").set("value", (oldorder["denddate"]).substring(0, 10));
 			// 调拨数量
@@ -173,36 +180,12 @@ try {
 				$id("btn_invalid").set("display", "none");
 			}
 
-
-
-			// $id("lbl_porgname").set("value", oldorder["purchaseorg"]["name"]);
-			// $id("lbl_dw1").set("value", oldorder["cinventoryid"]["dw"]);
-			// $id("lbl_rcvstockorg").set("value", oldorder["rcvstockorg"]["name"]);
-			// $id("lbl_splrname").set("value", oldorder["supplier"]["name"]);
-			// $id("lbl_rcvordercode").set("value", oldorder["noticecode"]);
-			// $id("num_yfjz").set("value", oldorder["srcsendnum"]);
-			// $id("txt_orespot").set("value", oldorder["orespotname"]);
-
-
-			// if (oldorder["sendsupplier"]) {
-			// 	$id("txt_transporter").set("value", oldorder["sendsupplier"]["name"]);
-			// 	$id("imgbtn_selectTransporter").set("value", oldorder["sendsupplier"]["pk_supplier"]);
-			// }
-
 			com.yonyou.placeorder.AllotQueryDetailController.AllotOrderObj = {
 				"pk_noticeorder": oldorder["pk_noticeorder"],
 				"ordercode": oldorder["vbillcode"],
-				// "pk_purchaseorder": oldorder["pk_order"],
-				// "pk_stockorg": oldorder["rcvstockorg"]["pk_org"],
-				// "cmaterialid": oldorder["material"]["pk_material"],
-				// "pk_supplier": oldorder["supplier"]["pk_supplier"]
+				"cmaterialid": oldorder["cinventoryid"]["pk_material"],
+				"pk_stockorg": oldorder["pk_org"]["pk_org"],
 			}
-			// var statuscode = oldorder.status.code;
-			// if (oldorder.source == 'Y' && statuscode > -1 && statuscode < 4) {
-			// 	$id("btn_invalid").set("disabled", "false");
-			// } else {
-			// 	$id("btn_submit").set("disabled", "disabled");
-			// }
 		} else {
 			com.yonyou.placeorder.AllotQueryDetailController.AllotOrderObj = {};
 			com.yonyou.placeorder.AllotQueryDetailController.oldorder = {};
@@ -239,41 +222,72 @@ try {
 
 	function com$yonyou$placeorder$AllotQueryDetailController$selectOrderOnclick(sender, args) {
 		$view.open({
-			"viewid": "com.yonyou.placeorder.PurchaseOrderList",
+			"viewid": "com.yonyou.placeorder.AllotOrderList",
 			"isKeep": "true",
 			"callback": function () {
-				var purchaseOrder = $param.getJSONObject("purchaseorder");
-				if (purchaseOrder != undefined && purchaseOrder != null) {
-					$ctx.put("purchaseOrder", purchaseOrder);
-					$id("lbl_orderno").set("value", purchaseOrder["vbillcode"]);
-					$id("lbl_matname").set("value", purchaseOrder["material"]["name"]);
-					$id("lbl_dw1").set("value", purchaseOrder["material"]["dw"]);
-					$id("lbl_dw2").set("value", purchaseOrder["material"]["dw"]);
-					$id("lbl_porgname").set("value", purchaseOrder["purchaseorg"]["name"]);
-					$id("lbl_rcvstockorg").set("value", purchaseOrder["rcvstockorg"]["name"]);
-					$id("lbl_splrname").set("value", purchaseOrder["supplier"]["name"]);
-					$id("lbl_dbilldate").set("value", purchaseOrder["dbilldate"]);
-					$id("lbl_remainnum").set("value", purchaseOrder["remainnum"]);
-					$id("lbl_posimple").set("value", purchaseOrder["material"]["name"] + "  余量" + purchaseOrder["remainnum"]);
+				var allotOrder = $param.getJSONObject("allotOrder");
+				if (allotOrder != undefined && allotOrder != null) {
+					$ctx.put("allotOrder", allotOrder);
+					$id("lbl_orderno").set("value", allotOrder["vbillcode"]);
+
+					// 库存组织
+					if (allotOrder["pk_org"])
+						$id("outorg").set("value", allotOrder["pk_org"]["name"]);
+					if (allotOrder["cinstockorgid"])
+						$id("inorg").set("value", allotOrder["cinstockorgid"]["name"]);
+					// 仓库
+					if (allotOrder["coutstordocid"])
+						$id("outwh").set("value", allotOrder["coutstordocid"]["name"]);
+					if (allotOrder["cinstordocid"])
+						$id("inwh").set("value", allotOrder["cinstordocid"]["name"]);
+					// 日期
+					if (allotOrder["dbilldate"])
+						$id("lbl_dbilldate").set("value", allotOrder["dbilldate"]);
+					// 货物
+					if (allotOrder["cinventoryid"])
+						$id("lbl_matname").set("value", allotOrder["cinventoryid"]["name"]);
+					// 数量
+					if (allotOrder["nnum"])
+						$id("lbl_num").set("value", allotOrder["nnum"]);
+					// 余量
+					if (allotOrder["remainnum"])
+						$id("lbl_remainnum").set("value", allotOrder["remainnum"]);
+					// 调出数量
+					if (allotOrder["noutnum"])
+						$id("lbl_outnum").set("value", allotOrder["noutnum"]);
+					// 调入数量
+					if (allotOrder["ninnum"])
+						$id("lbl_innum").set("value", allotOrder["ninnum"]);
+
+					if (allotOrder["cinventoryid"])
+						$id("lbl_posimple").set("value", allotOrder["cinventoryid"]["name"] + "  余量" + allotOrder["remainnum"]);
+
+					// $id("lbl_dw1").set("value", allotOrder["material"]["dw"]);
+					// $id("lbl_dw2").set("value", allotOrder["material"]["dw"]);
+					// $id("lbl_porgname").set("value", allotOrder["purchaseorg"]["name"]);
+					// $id("lbl_rcvstockorg").set("value", allotOrder["rcvstockorg"]["name"]);
+					// $id("lbl_splrname").set("value", allotOrder["supplier"]["name"]);
 					var orderobj = com.yonyou.placeorder.AllotQueryDetailController.AllotOrderObj;
-					orderobj.pk_purchaseorder = purchaseOrder["pk_order"];
-					orderobj.ordercode = purchaseOrder["vbillcode"];
-					orderobj.pk_stockorg = purchaseOrder["rcvstockorg"]["pk_org"];
-					orderobj.cmaterialid = purchaseOrder["material"]["pk_material"];
-					orderobj.pk_supplier = purchaseOrder["supplier"]["pk_supplier"];
+					// orderobj.pk_allotOrder = allotOrder["pk_order"];
+					orderobj.ordercode = allotOrder["vbillcode"];
+					orderobj.pk_stockorg = allotOrder["pk_org"]["pk_org"];
+					orderobj.cmaterialid = allotOrder["cinventoryid"]["pk_material"];
+					// orderobj.pk_stockorg = allotOrder["rcvstockorg"]["pk_org"];
+					// orderobj.cmaterialid = allotOrder["material"]["pk_material"];
+					// orderobj.pk_supplier = allotOrder["supplier"]["pk_supplier"];
 					//更新返回列表数据
-					com.yonyou.placeorder.AllotQueryDetailController.oldorder.material.pk_material = purchaseOrder["material"]["pk_material"];
-					com.yonyou.placeorder.AllotQueryDetailController.oldorder.material.name = purchaseOrder["material"]["name"];
-					com.yonyou.placeorder.AllotQueryDetailController.oldorder.material.dw = purchaseOrder["material"]["dw"];
-					com.yonyou.placeorder.AllotQueryDetailController.oldorder.purchaseorg.name = purchaseOrder["purchaseorg"]["name"];
-					com.yonyou.placeorder.AllotQueryDetailController.oldorder.rcvstockorg.pk_org = purchaseOrder["rcvstockorg"]["pk_org"];
-					com.yonyou.placeorder.AllotQueryDetailController.oldorder.rcvstockorg.name = purchaseOrder["rcvstockorg"]["name"];
-					com.yonyou.placeorder.AllotQueryDetailController.oldorder.supplier.pk_supplier = purchaseOrder["supplier"]["pk_supplier"];
-					com.yonyou.placeorder.AllotQueryDetailController.oldorder.supplier.name = purchaseOrder["supplier"]["name"];
-					com.yonyou.placeorder.AllotQueryDetailController.oldorder.pdbilldate = purchaseOrder["dbilldate"];
-					com.yonyou.placeorder.AllotQueryDetailController.oldorder.remainnum = purchaseOrder["remainnum"];
-					com.yonyou.placeorder.AllotQueryDetailController.oldorder.pk_order = purchaseOrder["pk_order"];
-					com.yonyou.placeorder.AllotQueryDetailController.oldorder.vbillcode = purchaseOrder["vbillcode"];
+					// com.yonyou.placeorder.AllotQueryDetailController.oldorder.material.pk_material = allotOrder["material"]["pk_material"];
+					// com.yonyou.placeorder.AllotQueryDetailController.oldorder.material.name = allotOrder["material"]["name"];
+					// com.yonyou.placeorder.AllotQueryDetailController.oldorder.material.dw = allotOrder["material"]["dw"];
+					// com.yonyou.placeorder.AllotQueryDetailController.oldorder.purchaseorg.name = allotOrder["purchaseorg"]["name"];
+					// com.yonyou.placeorder.AllotQueryDetailController.oldorder.rcvstockorg.pk_org = allotOrder["rcvstockorg"]["pk_org"];
+					// com.yonyou.placeorder.AllotQueryDetailController.oldorder.rcvstockorg.name = allotOrder["rcvstockorg"]["name"];
+					// com.yonyou.placeorder.AllotQueryDetailController.oldorder.supplier.pk_supplier = allotOrder["supplier"]["pk_supplier"];
+					// com.yonyou.placeorder.AllotQueryDetailController.oldorder.supplier.name = allotOrder["supplier"]["name"];
+					com.yonyou.placeorder.AllotQueryDetailController.oldorder.pdbilldate = allotOrder["dbilldate"];
+					com.yonyou.placeorder.AllotQueryDetailController.oldorder.remainnum = allotOrder["remainnum"];
+					// com.yonyou.placeorder.AllotQueryDetailController.oldorder.pk_order = allotOrder["pk_order"];
+					com.yonyou.placeorder.AllotQueryDetailController.oldorder.vbillcode = allotOrder["vbillcode"];
 				}
 			}
 		});
@@ -321,13 +335,13 @@ try {
 		}
 	}
 	function com$yonyou$placeorder$AllotQueryDetailController$goselectcar(sender, args) {
-		var pk_supplier = com.yonyou.placeorder.AllotQueryDetailController.AllotOrderObj.pk_supplier;
+		// var pk_supplier = com.yonyou.placeorder.AllotQueryDetailController.AllotOrderObj.pk_supplier;
 		$view.open({
 			"viewid": "com.yonyou.placeorder.BaseInfoRefWindow",
 			"isKeep": "true",
 			"reftype": Globals.RefInfoType.CURUSER_VEHICLE,
 			"otherparams": {
-				"pk_supplier": pk_supplier
+				"pk_customer": pk_customer
 			},
 			"callback": function () {
 				var retvalue = $param.getJSONObject("result");
@@ -390,32 +404,32 @@ try {
 			return;
 		}
 
-		var pocode = $id("lbl_orderno").get("value");
-		if (!pocode) {
-			$alert("请选择调拨订单！");
-			return;
-		}
+		// var pocode = $id("lbl_orderno").get("value");
+		// if (!pocode) {
+		// 	$alert("请选择调拨订单！");
+		// 	return;
+		// }
 
 		var rcvnumstr = $id("num_dhl").get("value");
 		if (!rcvnumstr) {
-			$alert("到货量不能为空");
+			$alert("调拨数量不能为空");
 			return;
 		}
 		var rcvnum = parseFloat(rcvnumstr);
 		if (rcvnum <= 0) {
-			$alert("到货量必须大于0");
+			$alert("调拨数量必须大于0");
 			return;
 		}
 		var remainnum = parseFloat($id("lbl_remainnum").get("value"));
 		if (rcvnum > remainnum) {
-			$alert("到货量不能大于余量");
+			$alert("调拨数量不能大于余量");
 			return;
 		}
 
-		var srcsendnum = $id("num_yfjz").get("value");
+		// var srcsendnum = $id("num_yfjz").get("value");
 		var vlicense = $id("txt_vlicense").get("value");
-		var transporter = $id("txt_transporter").get("value");
-		var transporterpk = $id("imgbtn_selectTransporter").get("value");
+		// var transporter = $id("txt_transporter").get("value");
+		// var transporterpk = $id("imgbtn_selectTransporter").get("value");
 		var isfldisplay = $id("txt_vlicense").get("display");
 		if (isfldisplay == "none") {
 			if ($id("lbl_fmtvlicense").get("value") != "点击输入车号") {
@@ -431,60 +445,63 @@ try {
 		}
 		com.yonyou.placeorder.AllotQueryDetailController.carno = vlicense;
 		var drivername = $id("txt_drivername").get("value");
-		// if (typeof (drivername) == "undefined" || drivername == null || drivername == "") {
-		// 	$alert("司机姓名不能为空");
-		// 	return;
-		// }
-
-		// if (Globals.checktruename(drivername)) {
-		// 	$alert("请输入正确的司机姓名");
-		// 	return;
-		// }
-
-		var drivertelephone = $id("txt_drivertelephone").get("value");
-		// if (typeof (drivertelephone) == "undefined" || drivertelephone == null || drivertelephone == "") {
-		// 	$alert("手机号不能为空");
-		// 	return;
-		// }
-
-		// if (Globals.checktelephone(drivertelephone)) {
-		// 	$alert("请输入正确的手机号码");
-		// 	return
-		// }
-
-		var driveridcode = $id("txt_driverid").get("value");
-		// if (typeof (driveridcode) == "undefined" || driveridcode == null || driveridcode == "") {
-		// 	$alert("身份证号不能为空");
-		// 	return;
-		// }
-
-		// if (Globals.checkidnum(driveridcode)) {
-		// 	$alert("请输入正确的身份证号");
-		// 	return
-		// }
-		var orderobj = com.yonyou.placeorder.AllotQueryDetailController.AllotOrderObj;
-		var params = {
-			"usercode": $cache.read("telephone"),
-			"pk_purchaseorder": orderobj["pk_purchaseorder"],
-			"ordercode": orderobj["ordercode"],
-			"pk_stockorg": orderobj["pk_stockorg"],
-			"pk_supplier": orderobj["pk_supplier"],
-			// "pk_sendsupplier": transporterpk,
-			"denddate": denddate,
-			"cmaterialid": orderobj["cmaterialid"],
-			"num": rcvnum,
-			"srcsendnum": srcsendnum,
-			"vlicense": vlicense,
-			"drivername": drivername,
-			"drivertelephone": drivertelephone,
-			"driveridcode": driveridcode,
-			"pk_appuser": $ctx.getApp("pk_appuser"),
-			"appphone": $cache.read("telephone"),
-			"isFixed": "Y"
+		if (typeof (drivername) == "undefined" || drivername == null || drivername == "") {
+			$alert("司机姓名不能为空");
+			return;
 		}
 
-		if (transporterpk != "")
-			params.pk_sendsupplier = transporterpk;
+		if (Globals.checktruename(drivername)) {
+			$alert("请输入正确的司机姓名");
+			return;
+		}
+
+		var drivertelephone = $id("txt_drivertelephone").get("value");
+		if (typeof (drivertelephone) == "undefined" || drivertelephone == null || drivertelephone == "") {
+			$alert("手机号不能为空");
+			return;
+		}
+
+		if (Globals.checktelephone(drivertelephone)) {
+			$alert("请输入正确的手机号码");
+			return
+		}
+
+		var driveridcode = $id("txt_driverid").get("value");
+		if (typeof (driveridcode) == "undefined" || driveridcode == null || driveridcode == "") {
+			$alert("身份证号不能为空");
+			return;
+		}
+
+		if (Globals.checkidnum(driveridcode)) {
+			$alert("请输入正确的身份证号");
+			return
+		}
+
+		var orderobj = com.yonyou.placeorder.AllotQueryDetailController.AllotOrderObj;
+		var params = {
+			"pk_appuser": $ctx.getApp("pk_appuser"),
+			"pk_stockorg": orderobj["pk_stockorg"],
+			"drivertelephone": drivertelephone,
+			"drivername": drivername,
+			"driveridcode": driveridcode,
+			"vlicense": vlicense,
+			"denddate": denddate,
+			"num": rcvnum,
+			"cmaterialid": orderobj["cmaterialid"],
+			"ordercode": orderobj["ordercode"],
+
+
+
+			"usercode": $cache.read("telephone"),
+			// "pk_purchaseorder": orderobj["pk_purchaseorder"],
+			// "pk_supplier": orderobj["pk_supplier"],
+			// "pk_sendsupplier": transporterpk,
+			// "srcsendnum": srcsendnum,
+			"appphone": $cache.read("telephone"),
+		}
+
+		// if (transporterpk != "")
+		// 	params.pk_sendsupplier = transporterpk;
 
 		if (orderobj.pk_noticeorder) {
 			params["pk_noticeorder"] = orderobj.pk_noticeorder;
@@ -534,15 +551,26 @@ try {
 	function dialogcallback(sender, args) {
 
 		var result = $jsonToString($param.getString("code"));
+
+		// alert(result)
+
 		if (result == "0") {
 			var orderobj = com.yonyou.placeorder.AllotQueryDetailController.AllotOrderObj;
+
+			var pk_stockorg = "";
+			if (orderobj["pk_org"])
+				pk_stockorg = orderobj["pk_org"]["pk_org"];
+
 			if (orderobj.pk_noticeorder) {
 				var params = {
 					"usercode": $cache.read("telephone"),
 					"pk_noticeorder": orderobj.pk_noticeorder,
-					"pk_stockorg": orderobj.pk_stockorg,
-					"isFixed": "Y"
+					"pk_stockorg": pk_stockorg,
+					"pk_appuser": $ctx.getApp("pk_appuser"),
 				}
+
+				alert(JSON.stringify(params))
+
 				$service.callAction({
 					"usercode": $cache.read("telephone"),
 					"appid": "PlaceOrder",
@@ -588,7 +616,7 @@ try {
 		var result = $ctx.getJSONObject("result");
 		if (result && result.statuscode == "0") {
 			$alert("修改调拨通知单成功！");
-			com.yonyou.placeorder.AllotQueryDetailController.oldorder.srcsendnum = $id("num_yfjz").get("value");
+			// com.yonyou.placeorder.AllotQueryDetailController.oldorder.srcsendnum = $id("num_yfjz").get("value");
 			com.yonyou.placeorder.AllotQueryDetailController.oldorder.num = $id("num_dhl").get("value");
 			com.yonyou.placeorder.AllotQueryDetailController.oldorder.vlicense = com.yonyou.placeorder.AllotQueryDetailController.carno;
 			com.yonyou.placeorder.AllotQueryDetailController.oldorder.driveridcode = $id("txt_driverid").get("value");

@@ -135,7 +135,8 @@ try {
 	}
 	function itemClickCallback() {
 		var retvalue = $param.getJSONObject("result");
-		com.yonyou.placeorder.AllotQueryListController.listdatas.alldatas[com.yonyou.placeorder.AllotQueryListController.clickItemIndex] = retvalue;
+		// alert(JSON.stringify(com.yonyou.placeorder.AllotQueryListController.listdatas))
+		com.yonyou.placeorder.AllotQueryListController.listdatas.list[com.yonyou.placeorder.AllotQueryListController.clickItemIndex] = retvalue;
 		$ctx.push(com.yonyou.placeorder.AllotQueryListController.listdatas);
 	}
 

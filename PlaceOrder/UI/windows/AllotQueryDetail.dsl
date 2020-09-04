@@ -12,9 +12,9 @@
             </navigatorbar>  
             <div id="goodsname"> 
                 <label id="label0">调拨订单号：</label>  
-                <div onclick="this.selectOrderOnclick()" id="panel14"> 
-                    <label id="lbl_orderno">请选择调拨订单</label>  
-                    <input imagebuttontype="icon" istogglebutton="false" checked="false" id="imgbtn_selectorder" type="imagebutton" value="图标名称" class="imagebuttonclass"/> 
+                <div id="panel14"> 
+                    <label id="lbl_orderno">调拨订单</label>  
+                    <!-- <input imagebuttontype="icon" istogglebutton="false" checked="false" id="imgbtn_selectorder" type="imagebutton" value="图标名称" class="imagebuttonclass"/>  -->
                 </div> 
             </div>  
             <div id="pnl_posimple"> 
@@ -22,12 +22,6 @@
                 <input onclick="this.showDetail()" id="btn_showdetail" type="button" value="+" class="textbtnclass"/> 
             </div>  
             <div id="pnl_podetail"> 
-                <!-- <div id="panel4"> 
-                    <label id="label6">调拨单位：</label>  
-                    <label id="lbl_porgname">调拨单位</label> 
-                </div>  -->
-
-                 
                 <div id="panel41"> 
                     <label id="label61">调出库存组织：</label>  
                     <label id="outorg">调出库存组织</label> 
@@ -50,16 +44,6 @@
                     <label id="label14">调拨订单日期：</label>  
                     <label id="lbl_dbilldate">订单日期</label> 
                 </div>  
-
-
-                <!-- <div id="panel7"> 
-                    <label id="label10">收货企业：</label>  
-                    <label id="lbl_rcvstockorg">收货企业</label> 
-                </div>  
-                <div id="panel0"> 
-                    <label id="label1">供应商：</label>  
-                    <label id="lbl_splrname">供应商</label> 
-                </div>   -->
 
                 <div id="panel9"> 
                     <label id="label2">货物：</label>  
@@ -93,10 +77,6 @@
 
 
             <div id="pnl_rcvorder"> 
-                <!-- <div id="panel15"> 
-                    <label id="label18">长期收货单号：</label>  
-                    <label id="lbl_rcvordercode">收货单号</label> 
-                </div>   -->
                 <div id="panel161"> 
                     <label id="label201">调拨通知单号：</label>  
                     <label id="noticecode">调拨通知单号</label> 
@@ -113,30 +93,11 @@
 					<label id="startdatelabel">失效日期：</label>
 					<input id="denddate" placeholder="2016-12-09" format="yyyy-MM-dd" type="date"/> 
 				</div>
-                <!-- <div id="panel122" onclick="this.changevender()"> 
-                    <label id="label32">失效日期：</label>  
-                    <div id="panel102"> 
-                        <label id="txt_transporter" maxlength="256">请选择运输商</label>  
-                        <input imagebuttontype="icon" istogglebutton="false" checked="false" id="imgbtn_selectTransporter" type="imagebutton" value="图标名称" class="imagebuttonclass" readonly="readonly"/> 
-                    </div> 
-                </div>  -->
-                <!-- <div id="panel5"> 
-                    <label id="label12">原发净重：</label>  
-                    <input min="0.0" max="9.99999999E8" precision="2" roundType="value" onchange="this.yfjzOnchange()" id="num_yfjz" roundValue="5" placeholder="0.00" type="number"/>  
-                    <label id="lbl_dw1">单位</label> 
-                </div>   -->
                 <div id="panel11"> 
                     <label id="label17">调拨数量：</label>  
                     <input min="0.0" max="9.99999999E8" precision="2" roundType="value" id="num_dhl" roundValue="5" placeholder="0.00" type="number"/>  
                     <label id="lbl_dw2">吨</label> 
                 </div>   
-                <!-- <div id="panel122" onclick="this.changevender()"> 
-                    <label id="label32">运输商：</label>  
-                    <div id="panel102"> 
-                        <label id="txt_transporter" maxlength="256">请选择运输商</label>  
-                        <input imagebuttontype="icon" istogglebutton="false" checked="false" id="imgbtn_selectTransporter" type="imagebutton" value="" class="imagebuttonclass" readonly="readonly"/> 
-                    </div> 
-                </div>  -->
             </div>  
             
             <div id="panel2"> 
