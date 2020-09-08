@@ -127,7 +127,7 @@
             <div id="panel8"> 
                 <input onclick="this.submitOnclick()" disabled="disabled" id="btn_submit" type="button" value="提交订单" class="textbtnclass"/>  
                 <input onclick="this.invalidOnclick()" disabled="disabled" id="btn_invalid" type="button" value="取消订单" class="textbtnclass"/>  
-                <!-- <input onclick="this.jumpToSharePage()" id="btn_share" type="button" value="二维码转发" class="textbtnclass"/>  -->
+                <input onclick="this.jumpToSharePage()" id="btn_share" type="button" value="二维码转发" class="textbtnclass"/> 
             </div>  
             <div id="pnl_share"> 
                 <input imagebuttontype="icon" istogglebutton="false" checked="false" id="imgbtn_wechatshare" type="imagebutton" value="图标名称" class="imagebuttonclass"/>  

@@ -557,19 +557,19 @@ try {
 		if (result == "0") {
 			var orderobj = com.yonyou.placeorder.AllotQueryDetailController.AllotOrderObj;
 
-			var pk_stockorg = "";
-			if (orderobj["pk_org"])
-				pk_stockorg = orderobj["pk_org"]["pk_org"];
+			// var pk_stockorg = "";
+			// if (orderobj["pk_org"])
+			// 	pk_stockorg = orderobj["pk_org"]["pk_org"];
 
 			if (orderobj.pk_noticeorder) {
 				var params = {
 					"usercode": $cache.read("telephone"),
-					"pk_noticeorder": orderobj.pk_noticeorder,
-					"pk_stockorg": pk_stockorg,
+					"pk_noticeorder": orderobj["pk_noticeorder"],
+					"pk_stockorg": orderobj["pk_stockorg"],
 					"pk_appuser": $ctx.getApp("pk_appuser"),
 				}
 
-				alert(JSON.stringify(params))
+				// alert(JSON.stringify(params))
 
 				$service.callAction({
 					"usercode": $cache.read("telephone"),
@@ -618,6 +618,7 @@ try {
 			$alert("修改调拨通知单成功！");
 			// com.yonyou.placeorder.AllotQueryDetailController.oldorder.srcsendnum = $id("num_yfjz").get("value");
 			com.yonyou.placeorder.AllotQueryDetailController.oldorder.num = $id("num_dhl").get("value");
+			com.yonyou.placeorder.AllotQueryDetailController.oldorder.denddate = $id("num_dhl").get("denddate");
 			com.yonyou.placeorder.AllotQueryDetailController.oldorder.vlicense = com.yonyou.placeorder.AllotQueryDetailController.carno;
 			com.yonyou.placeorder.AllotQueryDetailController.oldorder.driveridcode = $id("txt_driverid").get("value");
 			com.yonyou.placeorder.AllotQueryDetailController.oldorder.drivertelephone = $id("txt_drivertelephone").get("value");
@@ -682,13 +683,13 @@ try {
 		if (isfldisplay == "none") {
 			vlicense = $id("lbl_fmtvlicense").get("value");
 		}
-		var splrname = $id("lbl_splrname").get("value");
+		// var splrname = $id("lbl_splrname").get("value");
 		//供应商
 		var matname = $id("lbl_matname").get("value");
 		//物料
 		var dhl = $id("num_dhl").get("value");
 		//收货数量
-		var rcvstockorg = $id("lbl_rcvstockorg").get("value");
+		// var rcvstockorg = $id("lbl_rcvstockorg").get("value");
 		//收货库存组织
 		var rcvwarehouse = "rcvwarehouse";
 		//待加入(待修改)
@@ -704,10 +705,10 @@ try {
 		}
 		var params = {
 			"vlicense": vlicense,
-			"splrname": splrname,
+			// "splrname": splrname,
 			"matname": matname,
 			"dhl": dhl,
-			"rcvstockorg": rcvstockorg,
+			// "rcvstockorg": rcvstockorg,
 			"rcvwarehouse": rcvwarehouse,
 			"rcvorderdate": rcvorderdate,
 			"billtype": billtype,
