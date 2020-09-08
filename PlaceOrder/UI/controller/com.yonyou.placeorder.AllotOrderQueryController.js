@@ -39,6 +39,7 @@ try {
 		pk_saleorg,
 		pk_stockorg,
 		pk_material,
+		pk_transtype,
 		// 调出库存组织
 		coutstockorgvid,
 		// 调入库存组织
@@ -114,20 +115,20 @@ try {
 			}
 		}
 
-		var allottype = $ctx.getString("status");
-		var transtype = "";
+		// var allottype = $ctx.getString("status");
+		// var transtype = "";
 
-		switch (allottype) {
-			case ("调拨入库通知单"):
-				transtype = "4EAC";
-				break;
-			case ("调拨出库通知"):
-				transtype = "4EAB";
-				break;
-			case ("长期调拨出库通知单"):
-				transtype = "4EAF";
-				break;
-		}
+		// switch (allottype) {
+		// 	case ("调拨入库通知单"):
+		// 		transtype = "4EAC";
+		// 		break;
+		// 	case ("调拨出库通知"):
+		// 		transtype = "4EAB";
+		// 		break;
+		// 	case ("长期调拨出库通知单"):
+		// 		transtype = "4EAF";
+		// 		break;
+		// }
 
 		var json = {
 			"pk_appuser": user.pk_appuser,
@@ -145,7 +146,7 @@ try {
 			// 车牌
 			"vlicense": $id("vlicense").get("value"),
 			// 调拨类型
-			"transtype": transtype,
+			"transtype": pk_transtype,
 			// 物料
 			"cmaterialid": pk_material,
 
@@ -204,6 +205,26 @@ try {
 		// }
 	}
 
+	//选择调拨类型
+	function com$yonyou$placeorder$AllotOrderQueryController$changetype(sender, args) {
+		// if (pk_stockorg) {
+		var otherparams = {
+			// "pk_stockorg": pk_stockorg,
+			// "pk_customer": pk_customer,
+			// "issaleorder": true
+		};
+		$view.open({
+			viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
+			isKeep: "true", //打开新页面的同时是否保留当前页面，true为保留，false为不保留
+			"reftype": Globals.RefInfoType.TRANSTYPE,
+			"otherparams": otherparams,
+			"callback": "changetypecallback()"
+		})
+		// } else {
+		// 	$alert("请先选择发货企业");
+		// }
+	}
+
 	function changegoods() {
 
 		var retvalue = $param.getJSONObject("result");
@@ -211,6 +232,15 @@ try {
 
 		$id("goodsname").set("value", retvalue.name);
 		pk_material = retvalue.pk;
+	}
+
+	function changetypecallback() {
+
+		var retvalue = $param.getJSONObject("result");
+		SqliteUtil.updateRctMostUseData(Globals.RefInfoType.TRANSTYPE, retvalue);
+
+		$id("transtype").set("value", retvalue.name);
+		pk_transtype = retvalue.pk;
 	}
 
 	function com$yonyou$placeorder$AllotOrderQueryController$changeseller(sender, args) {
@@ -291,6 +321,11 @@ try {
 		pk_material = null;
 	}
 
+	function com$yonyou$placeorder$AllotOrderQueryController$cleartype(sender, args) {
+		$id("transtype").set("value", "请选择调拨类型");
+		pk_transtype = null;
+	}
+
 	function com$yonyou$placeorder$AllotOrderQueryController$selectcar(sender, args) {
 		$view.open({
 			viewid: "com.yonyou.placeorder.BaseInfoRefWindow", //目标页面（首字母大写）全名
@@ -365,7 +400,7 @@ try {
 
 	function com$yonyou$placeorder$AllotOrderQueryController$picker0_onload(sender, args) {
 		var context = {
-			statuses: ["","调拨入库通知单", "调拨出库通知", "长期调拨出库通知单"],
+			statuses: ["", "调拨入库通知单", "调拨出库通知", "长期调拨出库通知单"],
 			values: ["4EAC", "4EAB", "4EAF"],
 		}
 		$ctx.push(context); //数据绑定,将context的值与picker进行绑定
@@ -495,6 +530,7 @@ try {
 		goSelectDriver: com$yonyou$placeorder$AllotOrderQueryController$goSelectDriver,
 		selectstatus: com$yonyou$placeorder$AllotOrderQueryController$selectstatus,
 		cleargoods: com$yonyou$placeorder$AllotOrderQueryController$cleargoods,
+		cleartype: com$yonyou$placeorder$AllotOrderQueryController$cleartype,
 		clearsender: com$yonyou$placeorder$AllotOrderQueryController$clearsender,
 		clearseller: com$yonyou$placeorder$AllotOrderQueryController$clearseller,
 		clearcustomer: com$yonyou$placeorder$AllotOrderQueryController$clearcustomer,
@@ -503,6 +539,8 @@ try {
 		changeseller: com$yonyou$placeorder$AllotOrderQueryController$changeseller,
 		dateOnload: com$yonyou$placeorder$AllotOrderQueryController$dateOnload,
 		changegoods: com$yonyou$placeorder$AllotOrderQueryController$changegoods,
+		changetype: com$yonyou$placeorder$AllotOrderQueryController$changetype,
+		changetype: com$yonyou$placeorder$AllotOrderQueryController$changetype,
 		back_onclick: com$yonyou$placeorder$AllotOrderQueryController$back_onclick,
 		searchbutton_onclick: com$yonyou$placeorder$AllotOrderQueryController$searchbutton_onclick,
 		back: com$yonyou$placeorder$AllotOrderQueryController$back,

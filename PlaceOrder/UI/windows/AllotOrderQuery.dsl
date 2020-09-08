@@ -72,14 +72,21 @@
                     <image src="arrow.png" id="image0" scaletype="fitcenter"/> 
                 </div> 
             </div>
-            <div id="panel333">
+            <div id="panel41">
+                <label id="label21">调拨类型：</label>
+                <div onlongclick="this.cleartype()" onclick="this.changetype()" id="changetype">
+                    <label id="transtype">请选择调拨类型</label>
+                    <image src="arrow.png" id="image01" scaletype="fitcenter"/> 
+                </div> 
+            </div>
+            <!-- <div id="panel333">
                 <label id="label111">调拨类型：</label>
                 <div id="panel22">
                     <picker id="picker0" showsSelectionIndicator="true" onload="this.picker0_onload()">
                         <pickeritem iscyclic="false" bindfield="status" datasource="statuses" onselectedchange="this.selectstatus()" id="picker0_0" value="订单状态"/> 
                     </picker> 
                 </div> 
-            </div>
+            </div> -->
             <input onclick="this.searchbutton_onclick()" id="searchbutton" type="button" value="查询" class="textbtnclass"/> 
         </div> 
     </div> 

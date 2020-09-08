@@ -148,7 +148,7 @@ try {
 			// 调拨通知单号
 			$id("noticecode").set("value", oldorder["noticecode"]);
 			// 调拨类型
-			$id("transtype").set("value", oldorder["transtype"]);
+			$id("transtype").set("value", oldorder["transtype"]["name"]);
 			// 调拨单日期
 			$id("lbl_rcvorderdate").set("value", (oldorder["dbilldate"]).substring(0, 10));
 			// 失效日期

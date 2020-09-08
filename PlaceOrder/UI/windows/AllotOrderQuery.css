@@ -164,53 +164,100 @@
     margin-right:5;
     height:16;
     }
-     #panel4 {
-    layout:hbox;
-    margin-left:15;
-    background:#fcfcfc;
-    width:fill;
-    valign:center;
-    margin-top:5;
-    halign:CENTER;
-    margin-right:15;
-    height:30;
-    }
-     #label2 {
-    color:#585858;
-    background:#fcfcfc;
-    width:wrap;
-    font-size:14;
-    valign:center;
-    font-family:default;
-    halign:left;
-    widthWrap:45.0;
-    margin-right:5;
-    height:fill;
-    }
-     #changegoodsname {
-    layout:hbox;
-    width:fill;
-    valign:center;
-    halign:LEFT;
-    height:fill;
-    }
-     #goodsname {
-    color:#000000;
-    background:#fcfcfc;
-    width:0;
-    weight:1;
-    font-size:14;
-    valign:center;
-    font-family:default;
-    halign:right;
-    height:fill;
-    }
-     #image0 {
-    margin-left:5;
-    width:11;
-    margin-right:5;
-    height:16;
-    }
+    #panel4 {
+   layout:hbox;
+   margin-left:15;
+   background:#fcfcfc;
+   width:fill;
+   valign:center;
+   margin-top:5;
+   halign:CENTER;
+   margin-right:15;
+   height:30;
+   }
+    #label2 {
+   color:#585858;
+   background:#fcfcfc;
+   width:wrap;
+   font-size:14;
+   valign:center;
+   font-family:default;
+   halign:left;
+   widthWrap:45.0;
+   margin-right:5;
+   height:fill;
+   }
+    #changegoodsname {
+   layout:hbox;
+   width:fill;
+   valign:center;
+   halign:LEFT;
+   height:fill;
+   }
+    #goodsname {
+   color:#000000;
+   background:#fcfcfc;
+   width:0;
+   weight:1;
+   font-size:14;
+   valign:center;
+   font-family:default;
+   halign:right;
+   height:fill;
+   }
+    #image0 {
+   margin-left:5;
+   width:11;
+   margin-right:5;
+   height:16;
+   }
+   #panel41 {
+  layout:hbox;
+  margin-left:15;
+  background:#fcfcfc;
+  width:fill;
+  valign:center;
+  margin-top:5;
+  halign:CENTER;
+  margin-right:15;
+  height:30;
+  }
+   #label21 {
+  color:#585858;
+  background:#fcfcfc;
+  width:wrap;
+  font-size:14;
+  valign:center;
+  font-family:default;
+  halign:left;
+  widthWrap:45.0;
+  margin-right:5;
+  height:fill;
+  }
+   #changetype {
+  layout:hbox;
+  width:fill;
+  valign:center;
+  halign:LEFT;
+  height:fill;
+  }
+   #transtype {
+  color:#000000;
+  background:#fcfcfc;
+  width:0;
+  weight:1;
+  font-size:14;
+  valign:center;
+  font-family:default;
+  halign:right;
+  height:fill;
+  }
+   #image01 {
+  margin-left:5;
+  width:11;
+  margin-right:5;
+  height:16;
+  }
      #panel5 {
     layout:hbox;
     margin-left:15;

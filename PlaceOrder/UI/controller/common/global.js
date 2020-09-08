@@ -89,6 +89,11 @@ try {
 			action: "getVehicleStockOrgInfo",
 			title: "库存组织信息"
 		},
+		TRANSTYPE: {
+			code: "1017",
+			action: "getTransTypeDocInfo",
+			title: "调拨类型信息"
+		},
 		// MATERIAL: {
 		// 	code: "1013",
 		// 	action: "SearchMaterialAction",
