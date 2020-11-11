@@ -16,6 +16,19 @@ body {
     font-weight: bold;
 }
 
+#confirm{
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: #c73e50;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px #0f3c82;
+    color: white;
+    z-index: 1000;
+    font-weight: bold;
+}
+
 #addInfo:active{
     opacity: 0.3;
 }

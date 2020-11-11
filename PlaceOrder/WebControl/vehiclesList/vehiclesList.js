@@ -18,6 +18,9 @@ function initPage() {
                 $cache.write("index", index + "");
                 $js.runjs({ "func": "com$yonyou$placeorder$VehiclesListController$goDetail('" + index + "')" });
             },
+            confirm: function (index) {
+                $view.close();
+            },
             deleteItem: function (index) {
                 vehicleslist.items.splice(index, 1);
                 $cache.write("vehicleslist", JSON.stringify(vehicleslist.items));

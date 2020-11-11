@@ -27,6 +27,9 @@
             <div class="delete" @click.stop="deleteItem(index)">删除</div>
         </div>
         <div id="nomoreInfo" v-if="(items.length==0)">——— 当前无车辆信息 ———</div>
+        <div id="confirm" @click="confirm">
+            确 定
+        </div>
         <div id="addInfo" @click="goDetail('-99')">
             <!-- <div id="plusicon">+</div> -->
             添加车辆信息
