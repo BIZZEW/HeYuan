@@ -19,7 +19,10 @@ function initPage() {
                 $js.runjs({ "func": "com$yonyou$placeorder$VehiclesListController$goDetail('" + index + "')" });
             },
             confirm: function (index) {
-                $view.close();
+                $view.close({
+                    "resultcode": "15",
+                    "vehicleslist": JSON.stringify(vehicleslist.items),
+                });
             },
             deleteItem: function (index) {
                 vehicleslist.items.splice(index, 1);
