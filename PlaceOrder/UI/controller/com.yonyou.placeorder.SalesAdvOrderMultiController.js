@@ -78,7 +78,7 @@ try {
 
 		var otherparam = $param.getJSONObject("otherparams");
 
-		alert(JSON.stringify(otherparam));
+		// alert(JSON.stringify(otherparam));
 
 		if (otherparam != null && typeof (otherparam) != undefined)
 			if (otherparam.flg != null && typeof (otherparam.flg) != undefined)
@@ -221,12 +221,12 @@ try {
 			ccustomerid = user.dfltcstm.pk_customer;
 		}
 		if (user.dfltsendstockorg) {
-			$alert(user.dfltsendstockorg.name);
+			// $alert(user.dfltsendstockorg.name);
 			$id("sender").set("value", user.dfltsendstockorg.name);
 			sendstockorg = user.dfltsendstockorg.pk_org;
 		}
 		if (user.dfltsaleorg) {
-			$alert(user.dfltsaleorg.name);
+			// $alert(user.dfltsaleorg.name);
 			$id("seller").set("value", user.dfltsaleorg.name);
 			saleorg = user.dfltsaleorg.pk_org;
 		}
