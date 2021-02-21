@@ -67,7 +67,7 @@ try {
 				"viewid": "com.yonyou.placeorder.MessageBillUMController",
 				"action": "queryMessageCenterNum",
 				"params": param,
-				"timeout": 300,
+				"timeout": 10000,
 				"autoDataBinding": false,
 				"contextmapping": "result",
 				"callback": "callbackSuccess()",

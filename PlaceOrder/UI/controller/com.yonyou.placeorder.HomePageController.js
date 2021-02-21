@@ -204,7 +204,7 @@ try {
 				"viewid": "com.yonyou.placeorder.SaleOrderUMController",
 				"action": "querySaleOrderCredit",
 				"params": param,
-				"timeout": 300,
+				"timeout": 10000,
 				"autoDataBinding": false,
 				"contextmapping": "result",
 				"callback": "creditSuccess()",
